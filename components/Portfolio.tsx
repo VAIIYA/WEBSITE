@@ -2,41 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { portfolioApps } from '@/lib/portfolio';
 
-const appDetails: Record<string, { name: string; description: string }> = {
-  fynder: {
-    name: 'FYNDER',
-    description: 'Premium Android dating experience. Connection, simplified. Your next chapter starts with a swipe.',
-  },
-  vynder: {
-    name: 'VYNDER',
-    description: 'Dating on the blockchain. The first Web3 PWA dating app built on Solana.',
-  },
-  nightstudio: {
-    name: 'NIGHTSTUDIO',
-    description: 'Creative digital studio crafting immersive Web3 experiences on Solana.',
-  },
-  blobio: {
-    name: 'BLOBIO',
-    description: 'Engage in thrilling blob battles and conquer the arena.',
-  },
-  dollarmilkshake: {
-    name: 'DOLLAR MILKSHAKE',
-    description: 'A dollar-cost averaging tool for Solana. Smooth out your entries and stack consistently.',
-  },
-  hunter84: {
-    name: 'HUNTER84',
-    description: 'An arcade-style challenge that pushes your reflexes to the limit.',
-  },
-  luckyhaus: {
-    name: 'LUCKYHAUS',
-    description: 'Provably fair lottery games on-chain. Enter the draw and win big.',
-  },
-  memehaus: {
-    name: 'MEMEHAUS',
-    description: 'Meme-driven token launchpad with fair launches and automatic liquidity.',
-  },
-};
-
 function PlatformBadge({ platform }: { platform: string }) {
   const styles: Record<string, string> = {
     android: 'bg-green-50 text-green-700 border-green-100',
@@ -70,7 +35,6 @@ export default function Portfolio() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {portfolioApps.map((app) => {
-            const details = appDetails[app.id] || { name: app.id, description: '' };
             return (
               <div key={app.id} className="group card-vibe overflow-hidden !p-0 flex flex-col">
                 {/* App Visual */}
@@ -78,7 +42,7 @@ export default function Portfolio() {
                   {app.image ? (
                     <Image
                       src={app.image}
-                      alt={details.name}
+                      alt={app.name}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -107,10 +71,10 @@ export default function Portfolio() {
                 {/* App Info */}
                 <div className="p-8 flex flex-col flex-grow">
                   <h3 className="text-2xl font-serif mb-3 text-gray-900 group-hover:text-metamask-orange transition-colors">
-                    {details.name}
+                    {app.name}
                   </h3>
                   <p className="text-gray-600 leading-relaxed mb-8 flex-grow">
-                    {details.description}
+                    {app.description}
                   </p>
 
                   <div className="flex flex-col gap-3 mt-auto">

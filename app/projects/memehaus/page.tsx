@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'MEMEHAUS',
+  description: 'MEMEHAUS is a meme-driven token launchpad on Solana with fair launches and automatic liquidity.',
+}
 
 export default function MemeHausPage() {
     return (

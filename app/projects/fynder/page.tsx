@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'FYNDER',
+  description: 'FYNDER is the next generation of social connection on Android. Built for speed, privacy, and genuine high-vibe interactions.',
+}
 
 export default function FynderPage() {
     return (

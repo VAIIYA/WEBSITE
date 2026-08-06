@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Games',
+  description: 'Dive into our collection of high-vibe games. From arcade classics to innovative Web3 experiences, we build for fun and engagement.',
+};
+
 export default function GamesPage() {
   return (
     <main className="min-h-screen bg-white">

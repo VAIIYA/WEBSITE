@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'NIGHTSTUDIO',
+  description: 'NIGHTSTUDIO is an elite social layer for creators who value ownership. Gate your content, build your community, and receive direct Solana payouts.',
+}
 
 export default function NightStudioPage() {
     return (

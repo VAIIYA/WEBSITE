@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Cookie Policy',
+  description: 'Learn about the cookies VAIIYA uses, how we handle your preferences, and the third-party tools that help us improve our products.',
+};
+
 export default function CookiePolicy() {
     return (
         <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-metamask-orange/10">

@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import VideoSection from '@/components/VideoSection'
+
+export const metadata: Metadata = {
+  title: 'Progress',
+  description: 'Witness the evolution of VAIIYA. We are constantly iterating and improving to deliver the best possible apps for Android and iOS.',
+}
 
 export default function ProgressPage() {
     return (

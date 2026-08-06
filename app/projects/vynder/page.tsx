@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'VYNDER',
+  description: 'Dating on the blockchain. The first Web3 PWA dating app built on Solana. No app stores. No borders. Just connections.',
+}
 
 export default function VynderPage() {
     return (

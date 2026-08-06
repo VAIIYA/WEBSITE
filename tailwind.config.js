@@ -21,8 +21,8 @@ module.exports = {
         'gradient-solana-reverse': 'linear-gradient(135deg, #14F195 0%, #9945FF 100%)',
       },
       fontFamily: {
-        serif: ['"Poly"', 'Georgia', 'serif'],
-        sans: ['"Inter"', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['var(--font-poly)', '"Poly"', 'Georgia', 'serif'],
+        sans: ['var(--font-inter)', '"Inter"', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
       },
       borderRadius: {
         '3xl': '32px',

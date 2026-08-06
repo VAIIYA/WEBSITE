@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'HUNTER84',
+  description: 'HUNTER84 is an arcade-style challenge that tests your reflexes, precision, and nerve.',
+}
 
 export default function Hunter84Page() {
     return (

@@ -1,4 +1,10 @@
+import type { Metadata } from 'next';
 import Portfolio from '@/components/Portfolio';
+
+export const metadata: Metadata = {
+  title: 'Portfolio',
+  description: 'Browse our collection of native Android and iOS applications. Every app is designed, engineered, and released by VAIIYA.',
+};
 
 export default function PortfolioPage() {
   return (

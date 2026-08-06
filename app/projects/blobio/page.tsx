@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'BLOBIO',
+  description: 'BLOBIO is the ultimate blob battle experience. Grow your blob, dominate the arena, and receive direct Solana payouts.',
+}
 
 export default function BlobioPage() {
     return (

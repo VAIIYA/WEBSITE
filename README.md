@@ -2,13 +2,13 @@
 
 **We. As One.**
 
-Building the future of Web3 on Solana. Agentic Engineering. Blockchain First.
+Building beautiful native apps for Android and iOS. Agentic Engineering. Crafted with precision.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
@@ -36,16 +36,18 @@ npm start
 ## 🎨 Design
 
 Built with:
-- **Next.js 14** - React framework
+
+- **Next.js 14** - React framework (App Router)
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Styling
-- **Solana Colors** - Purple (#9945FF) & Green (#14F195)
+- **Poly & Inter** - Self-hosted via `next/font`
 
 ## 📦 Products
 
-- [LuckyHaus](https://luckyhaus.vercel.app/) - Your luck, amplified
-- [MemeHaus](https://memehaus.vercel.app/) - Where jokes print money
-- [VYNDER](https://vynder.vercel.app/) - Dating on the blockchain
+- [FYNDER](https://vaiiya.vercel.app/projects/fynder) - Premium Android dating experience
+- [VYNDER](https://vaiiya.vercel.app/projects/vynder) - Dating on the blockchain
+- [NIGHTSTUDIO](https://vaiiya.vercel.app/projects/nightstudio) - Creator infrastructure
+- [BLOBIO](https://vaiiya.vercel.app/projects/blobio) - Blob battle arena
 
 ## 🔗 Links
 
@@ -57,4 +59,3 @@ Built with:
 ## 📄 License
 
 © 2026 VAIIYA. All rights reserved.
-

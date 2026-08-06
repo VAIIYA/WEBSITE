@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Apps',
+  description: 'Discover our suite of powerful applications designed for the modern Web3 era and beyond.',
+};
+
 export default function AppsPage() {
   return (
     <main className="min-h-screen bg-white">

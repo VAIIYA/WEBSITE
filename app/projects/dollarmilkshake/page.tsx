@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'DollarMilkshake',
+  description: 'DollarMilkshake is a dollar-cost averaging tool for Solana. Set your entry strategy and let automation handle the rest.',
+}
 
 export default function DollarMilkshakePage() {
     return (

@@ -1,5 +1,10 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import Footer from '@/components/Footer'
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'VAIIYA is a creative studio specializing in native app development for Android and iOS, powered by Agentic Engineering.',
+}
 
 export default function AboutPage() {
     return (
@@ -143,14 +148,12 @@ export default function AboutPage() {
                                 View Portfolio
                             </Link>
                             <a href="https://x.com/VAIIYA_MEDIA" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                                Follow @V4IIYA
+                                Follow @VAIIYA_MEDIA
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <Footer />
         </main>
     )
 }

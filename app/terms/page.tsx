@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  description: 'The terms governing the use of VAIIYA applications, websites, and digital products.',
+};
+
 export default function TermsOfService() {
     return (
         <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-metamask-orange/10">

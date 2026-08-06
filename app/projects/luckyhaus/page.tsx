@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'LUCKYHAUS',
+  description: 'LUCKYHAUS is a provably fair lottery experience on Solana. Transparent draws, instant payouts.',
+}
 
 export default function LuckyHausPage() {
     return (

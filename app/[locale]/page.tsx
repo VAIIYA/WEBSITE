@@ -1,6 +1,6 @@
 import Hero from '@/components/Hero'
 import VideoSection from '@/components/VideoSection'
-import Products from '@/components/Products'
+import Portfolio from '@/components/Portfolio'
 import About from '@/components/About'
 import { getTranslations } from 'next-intl/server'
 
@@ -15,7 +15,7 @@ export default async function Home() {
         description={t('videoDescription')}
       />
       <About />
-      <Products />
+      <Portfolio />
     </main>
   )
 }

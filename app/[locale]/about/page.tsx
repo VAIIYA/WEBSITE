@@ -63,7 +63,7 @@ export default async function AboutPage() {
                                         <span>{t('archModular')}</span>
                                     </div>
                                     <div className="flex gap-4 pl-4 border-l border-metamask-gray-100">
-                                        <span>{t('networkSolana')}</span>
+                                        <span>{t('networkMobile')}</span>
                                     </div>
                                     <div className="flex gap-4">
                                         <span className="text-metamask-orange">03</span>
@@ -79,14 +79,14 @@ export default async function AboutPage() {
                 </div>
             </section>
 
-            {/* The Solana Advantage */}
+            {/* The Native Advantage */}
             <section className="py-24 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto text-center">
-                    <h2 className="text-4xl font-serif mb-16">{t('whySolanaTitle')}</h2>
+                    <h2 className="text-4xl font-serif mb-16">{t('whyMobileTitle')}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="card-vibe p-10">
-                            <div className="w-14 h-14 bg-solana-purple/10 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                                <svg className="w-8 h-8 text-solana-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="w-14 h-14 bg-metamask-orange/10 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                                <svg className="w-8 h-8 text-metamask-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
                             </div>
@@ -95,8 +95,8 @@ export default async function AboutPage() {
                         </div>
 
                         <div className="card-vibe p-10">
-                            <div className="w-14 h-14 bg-solana-green/10 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                                <svg className="w-8 h-8 text-solana-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="w-14 h-14 bg-metamask-purple/10 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                                <svg className="w-8 h-8 text-metamask-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
@@ -105,9 +105,9 @@ export default async function AboutPage() {
                         </div>
 
                         <div className="card-vibe p-10">
-                            <div className="w-14 h-14 bg-metamask-orange/10 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                                <svg className="w-8 h-8 text-metamask-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            <div className="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                                <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.3 2.3-8.636-8.632z" />
                                 </svg>
                             </div>
                             <h3 className="text-xl font-medium mb-4">{t('ecoTitle')}</h3>
@@ -127,8 +127,8 @@ export default async function AboutPage() {
                     <div className="h-px w-24 bg-metamask-orange mx-auto mb-12"></div>
                     <div className="flex flex-wrap justify-center gap-8 italic text-purple-200">
                         <span>#AgenticEngineering</span>
-                        <span>#Solana</span>
-                        <span>#Web3Native</span>
+                        <span>#Android</span>
+                        <span>#iOS</span>
                     </div>
                 </div>
             </section>
@@ -142,7 +142,7 @@ export default async function AboutPage() {
                             {t('ctaDesc')}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link href="/" className="btn-primary">
+                            <Link href="/portfolio" className="btn-primary">
                                 {t('viewProjects')}
                             </Link>
                             <a href="https://x.com/VAIIYA_MEDIA" target="_blank" rel="noopener noreferrer" className="btn-secondary">

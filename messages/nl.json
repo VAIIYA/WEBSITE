@@ -1,52 +1,54 @@
 {
     "Index": {
         "title": "Welkom bij VAIIYA",
-        "videoTitle": "Ervaar de Vibe",
-        "videoDescription": "Bedenk en bouw de toekomst van Web3 op Solana, met ongeëvenaarde precisie en esthetische uitmuntendheid."
+        "videoTitle": "Gemaakt voor Elk Platform",
+        "videoDescription": "Native mobiele apps voor Android en iOS, gebouwd met precisie en esthetische uitmuntendheid."
     },
     "Hero": {
-        "poweredBy": "Aangedreven door Solana Blockchain",
-        "titleStart": "Creëren van",
-        "titleColored": "Digitale Excellence",
-        "titleEnd": "Op Elk Platform.",
-        "description": "Websites. Web3. Android-apps. We gebruiken Agentic Engineering om hoogwaardige producten te bouwen op Solana en daarbuiten. Geen compromissen. Alleen pure innovatie.",
-        "exploreProducts": "Producten Ontdekken",
+        "poweredBy": "Android & iOS App Development",
+        "titleStart": "Het Creëren van",
+        "titleColored": "Native Apps",
+        "titleEnd": "Waar Mensen Van Houden.",
+        "description": "Van concept tot App Store. Wij ontwerpen, bouwen en lanceren prachtige native applicaties voor Android en iOS. Geen compromissen. Alleen pure innovatie.",
+        "explorePortfolio": "Ontdek Onze Portfolio",
         "viewGithub": "Bekijk op GitHub"
     },
     "About": {
-        "web3Native": "Web3 Native.",
+        "nativeApps": "Native Apps.",
         "agenticEngineering": "Agentic Engineering.",
-        "intro": "Wij bouwen innovatieve Web3-applicaties op Solana. Elke regel code is bedacht met passie, precisie en een diep inzicht in blockchain-technologie.",
+        "intro": "Wij bouwen innovatieve mobiele applicaties voor Android en iOS. Elke regel code is bedacht met passie, precisie en een diep inzicht in het mobiele ecosysteem.",
         "features": {
-            "blockchain": {
-                "title": "Blockchain Eerst",
-                "description": "Gebouwd op Solana. Je portemonnee is je identiteit. Geen tussenpersonen. Gewoon pure blockchain-technologie achter elke interactie."
+            "android": {
+                "title": "Android Development",
+                "description": "Snelle, betrouwbare en prachtig vormgegeven Android-apps. Gebouwd voor prestaties en gepubliceerd op Google Play."
+            },
+            "ios": {
+                "title": "iOS Development",
+                "description": "Elegante, intuïtieve iOS-ervaringen. Met zorg ontworpen en klaar voor de App Store."
             },
             "agentic": {
                 "title": "Agentic Engineering",
                 "description": "Schone code. Moderne architectuur. Ontwikkelaarservaring staat centraal. Wij programmeren met passie en bouwen met een doel."
-            },
-            "speed": {
-                "title": "Bliksemsnel",
-                "description": "Solana snelheid. Sub-seconde finaliteit. Schaalbare infrastructuur. Ervaar de toekomst van blockchain prestaties."
             }
         }
     },
     "Header": {
         "home": "Home",
+        "portfolio": "Portfolio",
         "about": "Over ons",
-        "progress": "Voortgang",
-        "shop": "Winkel",
-        "games": "Games",
-        "apps": "Apps",
         "socials": "Socials",
-        "connect": "Connect"
+        "connect": "Verbinden"
     },
-    "Products": {
+    "Portfolio": {
         "title": "Onze",
-        "titleColored": "Producten",
-        "description": "We bouwen aan de toekomst van Web3, één product tegelijk. Elk project toont onze inzet voor innovatie en schone code.",
-
+        "titleColored": "Apps",
+        "description": "Een showcase van de apps die we hebben ontworpen, gebouwd en gelanceerd. Elk project toont onze inzet voor innovatie en schone code.",
+        "comingSoon": "Binnenkort",
+        "viewProject": "Bekijk Project",
+        "fynder": {
+            "name": "FYNDER",
+            "description": "Premium Android dating-ervaring. Verbinding, vereenvoudigd. Je volgende hoofdstuk begint met een swipe."
+        },
         "vynder": {
             "name": "VYNDER",
             "description": "Dating op de blockchain. De eerste Web3 PWA dating-app gebouwd op Solana."
@@ -59,21 +61,35 @@
             "name": "BLOBIO",
             "description": "Ga spannende blob-gevechten aan en verover de arena."
         },
-
-        "fynder": {
-            "name": "FYNDER",
-            "description": "Premium Android dating-ervaring. Verbinding, vereenvoudigd. Je volgende hoofdstuk begint met een swipe."
+        "dollarmilkshake": {
+            "name": "DOLLAR MILKSHAKE",
+            "description": "Een dollar-cost averaging tool voor Solana. Strijk je instapmomenten glad en stapel consistent."
         },
-        "visitSite": "Bezoek Website"
+        "hunter84": {
+            "name": "HUNTER84",
+            "description": "Een arcade-uitdaging die je reflexen tot het uiterste test."
+        },
+        "luckyhaus": {
+            "name": "LUCKYHAUS",
+            "description": "Verifieerbaar eerlijke loterijen op de blockchain. Doe mee en win groot."
+        },
+        "memehaus": {
+            "name": "MEMEHAUS",
+            "description": "Meme-gedreven token launchpad met eerlijke launches en automatische liquiditeit."
+        }
+    },
+    "PortfolioPage": {
+        "badge": "App Development Portfolio",
+        "titleStart": "Apps Die We",
+        "titleEnd": "Hebben Gebouwd & Gelanceerd.",
+        "description": "Bekijk onze collectie van native Android en iOS applicaties. Elke app is ontworpen, ontwikkeld en uitgebracht door VAIIYA."
     },
     "Footer": {
         "slogan": "We. Als Eén.",
-        "description": "De toekomst van Web3 bouwen op Solana. Agentic Engineering. Blockchain Eerst.",
-        "products": "Producten",
-        "games": "Games",
-        "apps": "Apps",
+        "description": "Het bouwen van prachtige native apps voor Android en iOS. Agentic Engineering. Met precisie gemaakt.",
+        "products": "Apps",
+        "portfolio": "Portfolio",
         "connect": "Verbinden",
-        "shop": "VAIIYA Winkel",
         "rights": "Alle rechten voorbehouden.",
         "builtOn": "Gebouwd met",
         "love": "Liefde",
@@ -85,31 +101,32 @@
     },
     "AboutPage": {
         "titleStart": "Het Bouwen van High-Vibe",
-        "titleEnd": "Web3 Applicaties.",
-        "description": "VAIIYA is een creatieve studio op het snijvlak van AI, blockchain en cultuur. We schrijven niet alleen code; we creëren ervaringen door middel van Agentic Engineering.",
+        "titleEnd": "Native Applicaties.",
+        "description": "VAIIYA is een creatief studio gespecialiseerd in native app development voor Android en iOS. We schrijven niet alleen code; we creëren ervaringen door middel van Agentic Engineering.",
         "whatIsTitle": "Wat is Agentic Engineering?",
         "whatIsP1": "Agentic Engineering vertegenwoordigt een paradigmaverschuiving in softwareontwikkeling. Bedacht door Andrej Karpathy, is het de praktijk van het gebruik van geavanceerde AI om de kloof tussen menselijke intentie en machine-uitvoering te overbruggen.",
-        "whatIsP2": "Bij VAIIYA hebben we dit volledig omarmd. We handelen als creatieve directeuren die krachtige AI-agenten sturen om complexe gedecentraliseerde applicaties te manifesteren met de snelheid van het denken. Dit gaat niet alleen over efficiëntie; het gaat over het behouden van een hoger niveau van creatieve flow—the 'vibe'—gedurende het hele bouwproces.",
+        "whatIsP2": "Bij VAIIYA hebben we dit volledig omarmd. We handelen als creatieve directeuren die krachtige AI-agenten sturen om complexe native applicaties te manifesteren met de snelheid van het denken. Dit gaat niet alleen over efficiëntie; het gaat over het behouden van een hoger niveau van creatieve flow—the 'vibe'—gedurende het hele bouwproces.",
         "initVision": "Initialiseer Visie",
         "setParams": "Stel Neurale Parameters In",
         "archModular": "- Architectuur: Modulair",
-        "networkSolana": "- Netwerk: Solana Mainnet",
+        "networkMobile": "- Platform: Android & iOS",
         "execVibe": "Voer Vibe Check uit...",
         "statusVibe": "> Status: Hoge Vibe Gedetecteerd",
-        "whySolanaTitle": "Waarom Solana?",
-        "speedTitle": "Ongekende Snelheid",
-        "speedDesc": "400ms bloktijden betekenen dat uw gebruikers nooit hoeven te wachten. Real-time interactie voor echte impact.",
-        "costTitle": "Lage Kosten",
-        "costDesc": "Fracties van een cent aan kosten maken Web3 toegankelijk voor iedereen, wat massale adoptie usecases mogelijk maakt.",
-        "ecoTitle": "Ecosysteem",
-        "ecoDesc": "Een bloeiende gemeenschap van bouwers en vernieuwers die de grenzen verleggen van wat mogelijk is on-chain.",
+        "whyMobileTitle": "Waarom Native?",
+        "speedTitle": "Ongeëvenaarde Prestaties",
+        "speedDesc": "Native apps leveren vlotte interacties en volledige toegang tot de mogelijkheden van het apparaat voor echte impact.",
+        "costTitle": "Langetermijnwaarde",
+        "costDesc": "Eén codebase-visie, met zorg onderhouden. Schaalbare architectuur die meegroeit met jouw product.",
+        "ecoTitle": "Bereik in het Ecosysteem",
+        "ecoDesc": "Google Play en de App Store verbinden jouw app met miljarden gebruikers wereldwijd.",
         "visionTitle": "De VAIIYA Visie",
-        "visionQuote": "\"Wij geloven dat de toekomst of software niet alleen gaat over functioneel nut, maar over hoe het je laat voelen. Door AI-gedreven ontwikkeling te combineren met sterke productintuïtie, creëren we Web3 tools die voelen als magie.\"",
+        "visionQuote": "\"Wij geloven dat de toekomst van software niet alleen gaat over functioneel nut, maar over hoe het je laat voelen. Door AI-gedreven ontwikkeling te combineren met sterke productintuïtie, creëren we apps die voelen als magie.\"",
         "ctaTitle": "Klaar om mee te doen?",
-        "ctaDesc": "Verken onze producten of neem contact op om te zien hoe we uw Web3 visie tot leven kunnen brengen.",
-        "viewProjects": "Bekijk Projecten",
+        "ctaDesc": "Verken onze portfolio of neem contact op om te zien hoe we jouw app-idee tot leven kunnen brengen.",
+        "viewProjects": "Bekijk Portfolio",
         "followVaiya": "Volg @V4IIYA"
     },
+
     "VynderPage": {
         "privateBeta": "NOG STEEDS IN PRIVATE BÈTA",
         "titleStart": "Dating.",
@@ -203,6 +220,99 @@
         "ctaTitle": "Klaar om de ware te vinden?",
         "ctaDesc": "Sluit je aan bij duizenden anderen die al een betere manier ontdekken om contact te maken op Android.",
         "viewProjects": "Ontdek Alle Projecten"
+    },
+    "DollarMilkshakePage": {
+        "titleStart": "Dollar Cost",
+        "titleEnd": "Averaging.",
+        "description": "DollarMilkshake is een dollar-cost averaging tool voor Solana. Stel je instapstrategie in en laat de automatisering de rest doen.",
+        "launchDca": "Start DCA",
+        "viewOther": "Bekijk Andere Projecten",
+        "stat1": "Actieve Strategieën",
+        "stat2": "Verwerkte Stortingen",
+        "stat3": "Verbonden Wallets",
+        "feat1Title": "Geautomatiseerde Instappen",
+        "feat1Desc": "Plan terugkerende aankopen met precisie. Dollar-cost averaging haalt de emotie uit beleggen.",
+        "feat2Title": "Volledig On-Chain",
+        "feat2Desc": "Elke strategie draait transparant op Solana. Geen verborgen kosten, geen tussenpersonen.",
+        "feat3Title": "Instellen & Vergeten",
+        "feat3Desc": "Configureer één keer en laat het protocol je strategie de klok rond uitvoeren.",
+        "philosophyTitle": "Beleggen, Vereenvoudigd.",
+        "philosophyP1": "DollarMilkshake is gebouwd om gedisciplineerd beleggen moeiteloos te maken op Solana.",
+        "philosophyP2": "Aangedreven door VAIIYA's Agentic Engineering, levert het een naadloze, vertrouwensloze ervaring.",
+        "ctaTitle": "Begin met Stapelen.",
+        "ctaDesc": "Consistentie verslaat timing. Stel vandaag je DCA-strategie in."
+    },
+    "Hunter84Page": {
+        "premiumSub": "Premium Arcade Ervaring",
+        "titleStart": "Betreed de",
+        "titleEnd": "Hunt.",
+        "description": "HUNTER84 is een arcade-uitdaging die je reflexen, precisie en zenuwen test.",
+        "exploreStudio": "Speel Nu",
+        "partnerUs": "Samenwerken met Ons",
+        "sovereignTitle": "Gebouwd voor de Competitieve Speler.",
+        "gatedTitle": "Score op Vaardigheid",
+        "gatedDesc": "Elke run wordt eerlijk gescoord. Alleen je vaardigheid telt.",
+        "directTitle": "Directe Feedback",
+        "directDesc": "Scores en leaderboards in realtime houden de adrenaline stromen.",
+        "deepTitle": "Diepe Betrokkenheid",
+        "deepDesc": "Progressieve moeilijkheidsgraad houdt spelers terug laten komen.",
+        "vibeStatus": "Hunt Toegang: VERLEEND",
+        "vibeTitle": "Hoge Vibe",
+        "philosophyTitle": "De Vibe van Competitie.",
+        "philosophyQuote": "\"Bij HUNTER84 geloven we dat games puur, snel en leuk moeten zijn.\"",
+        "ctaTitle": "Klaar om te Jagen?",
+        "ctaDesc": "Test je reflexen en klim naar de top van het klassement.",
+        "enterStudio": "Betreed HUNTER84",
+        "viewVynder": "Bekijk Vynder"
+    },
+    "LuckyHausPage": {
+        "nextDraw": "VOLGENDE TREKKING BINNENKORT",
+        "titleStart": "Win Groot.",
+        "titleEnd": "Speel Eerlijk.",
+        "description": "LUCKYHAUS is een verifieerbaar eerlijke loterij-ervaring op Solana. Transparante trekkingen, directe uitbetalingen.",
+        "enterDraw": "Doe Mee",
+        "learn": "Lees Meer",
+        "stat1": "Prijs Pot",
+        "stat2": "Winnaars Uitbetaald",
+        "stat3": "Trekkingen Voltooid",
+        "feat1Title": "Verifieerbaar Eerlijk",
+        "feat1Desc": "Elke trekking is on-chain te verifiëren. Geen bedrog, geen geheimen.",
+        "feat2Title": "Directe Uitbetalingen",
+        "feat2Desc": "Winsten worden automatisch uitbetaald op Solana, in seconden.",
+        "feat3Title": "Transparant Grootboek",
+        "feat3Desc": "Elk ticket en elke trekking wordt publiek vastgelegd op de blockchain.",
+        "redefTitle": "Loterij, Heruitgevonden.",
+        "redefP1": "LUCKYHAUS brengt transparantie in een industrie die het dringend nodig heeft.",
+        "redefP2": "Elk ticket is on-chain, elke trekking is eerlijk, en elke winnaar wordt direct betaald.",
+        "ctaTitle": "Gelukje?",
+        "ctaQuote": "Het huis verliest altijd als de wiskunde publiek is.",
+        "ctaBtn": "Doe Mee aan de Trekking"
+    },
+    "MemeHausPage": {
+        "liveOnMainnet": "LIVE OP MAINNET",
+        "titleStart": "Lanceer Je",
+        "titleEnd": "Meme Coin.",
+        "description": "MEMEHAUS is een meme-gedreven token launchpad op Solana met eerlijke launches en automatische liquiditeit.",
+        "startMinting": "Start Met Minter",
+        "joinCommunity": "Word Lid van de Community",
+        "dashboardTitle": "Creator Dashboard",
+        "kickbacksTotal": "Totaal Kickbacks",
+        "tokensCreated": "Tokens Gemaakt",
+        "volGenerated": "Volume Gegenereerd",
+        "kickbackTitle": "Het Kickback-mechanisme",
+        "kickbackDesc": "MEMEHAUS beloont creators en communities met automatische kickbacks bij elke launch.",
+        "fairLaunchTitle": "Eerlijke Launch",
+        "fairLaunchDesc": "Geen presales, geen insiders. Iedereen koopt tegen dezelfde prijs.",
+        "instantMintTitle": "Direct Minter",
+        "instantMintDesc": "Tokens worden live op het moment dat ze worden gemint.",
+        "autoLpTitle": "Auto Liquiditeit",
+        "autoLpDesc": "Liquiditeit wordt automatisch toegevoegd bij de launch.",
+        "quote": "Mint het Moment.",
+        "quoteDesc": "Elke succesvolle token launch is een verhaal. MEMEHAUS helpt communities die te schrijven.",
+        "ctaTitle": "Klaar om te Lancen?",
+        "ctaDesc": "Maak je meme-token in minuten en start het verhaal van je community.",
+        "launchApp": "Start App",
+        "allProjects": "Alle Projecten"
     },
     "GamesPage": {
         "title": "Games",

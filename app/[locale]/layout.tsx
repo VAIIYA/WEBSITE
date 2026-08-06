@@ -7,8 +7,8 @@ import { getMessages } from 'next-intl/server';
 
 export const metadata: Metadata = {
   title: 'VAIIYA - We. As One.',
-  description: 'Building the future of Web3 on Solana. Agentic Engineering. Blockchain First.',
-  keywords: ['Web3', 'Solana', 'Blockchain', 'Agentic Engineering', 'VAIIYA'],
+  description: 'Building beautiful native apps for Android and iOS. Agentic Engineering. Crafted with precision.',
+  keywords: ['Android', 'iOS', 'App Development', 'Mobile Apps', 'Agentic Engineering', 'VAIIYA'],
 }
 
 export default async function RootLayout({

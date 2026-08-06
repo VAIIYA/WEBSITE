@@ -130,27 +130,13 @@ export default function Header() {
             {t('home')}
           </Link>
 
+          <Link href="/portfolio" className="text-gray-600 hover:text-metamask-orange transition-colors font-medium">
+            {t('portfolio')}
+          </Link>
+
           <Link href="/about" className="text-gray-600 hover:text-metamask-orange transition-colors font-medium">
             {t('about')}
           </Link>
-          
-          <Link href="/games" className="text-gray-600 hover:text-metamask-orange transition-colors font-medium">
-            {t('games')}
-          </Link>
-          
-          <Link href="/apps" className="text-gray-600 hover:text-metamask-orange transition-colors font-medium">
-            {t('apps')}
-          </Link>
-
-          <Link href="/progress" className="text-gray-600 hover:text-metamask-orange transition-colors font-medium">
-            {t('progress')}
-          </Link>
-
-          <Link href="/shop" className="text-gray-600 hover:text-metamask-orange transition-colors font-medium">
-            {t('shop')}
-          </Link>
-
-
         </div>
       </nav>
 
@@ -172,32 +158,18 @@ export default function Header() {
                   {t('home')}
                 </Link>
                 <Link
+                  href="/portfolio"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block text-3xl font-serif text-metamask-purple hover:text-metamask-orange transition-colors"
+                >
+                  {t('portfolio')}
+                </Link>
+                <Link
                   href="/about"
                   onClick={() => setIsMenuOpen(false)}
                   className="block text-3xl font-serif text-metamask-purple hover:text-metamask-orange transition-colors"
                 >
                   {t('about')}
-                </Link>
-                <Link
-                  href="/games"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block text-3xl font-serif text-metamask-purple hover:text-metamask-orange transition-colors"
-                >
-                  {t('games')}
-                </Link>
-                <Link
-                  href="/apps"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block text-3xl font-serif text-metamask-purple hover:text-metamask-orange transition-colors"
-                >
-                  {t('apps')}
-                </Link>
-                <Link
-                  href="/shop"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block text-3xl font-serif text-metamask-purple hover:text-metamask-orange transition-colors"
-                >
-                  {t('shop')}
                 </Link>
               </div>
 

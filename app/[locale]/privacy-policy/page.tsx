@@ -99,7 +99,36 @@ export default function PrivacyPolicy() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">7. Children&apos;s Privacy</h2>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">7. Data Deletion</h2>
+                        <p className="text-gray-600 leading-relaxed mb-4">
+                            You may request the deletion of your account and associated personal data at any time. VAIIYA
+                            offers multiple ways to delete your data, in line with Google Play requirements:
+                        </p>
+                        <ul className="list-disc list-inside space-y-2 text-gray-600 ml-2 mb-6">
+                            <li>
+                                <strong>In-app:</strong> Use the account deletion option available within the app settings of each product.
+                            </li>
+                            <li>
+                                <strong>Email:</strong> Contact us at{" "}
+                                <a href="mailto:privacy@vaiiya.com" className="text-metamask-orange font-mono hover:text-metamask-purple transition-colors">
+                                    privacy@vaiiya.com
+                                </a>{" "}
+                                with the subject &quot;Data Deletion&quot; and your registered email or account identifier.
+                            </li>
+                        </ul>
+                        <a
+                            href="/projects/fynder/delete-account"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-metamask-orange text-white text-sm font-bold hover:bg-metamask-orange/90 transition-all hover:shadow-lg hover:shadow-orange-500/20"
+                        >
+                            Request Account Deletion
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">8. Children&apos;s Privacy</h2>
                         <p className="text-gray-600 leading-relaxed">
                             In accordance with the Children&apos;s Online Privacy Protection Act (COPPA), VAIIYA does not
                             knowingly collect any personal information from children under the age of 13. If you believe

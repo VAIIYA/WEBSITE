@@ -74,6 +74,22 @@ export default function Footer() {
 
 
               <li>
+                <Link
+                  href="/portfolio"
+                  className="text-gray-600 hover:text-metamask-orange transition-colors"
+                >
+                  {t('portfolio')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/projects/fynder"
+                  className="text-gray-600 hover:text-metamask-orange transition-colors"
+                >
+                  FYNDER
+                </Link>
+              </li>
+              <li>
                 <a
                   href="https://vynder.vercel.app/"
                   target="_blank"
@@ -102,31 +118,6 @@ export default function Footer() {
                 >
                   BLOBIO
                 </a>
-              </li>
-
-              <li>
-                <Link
-                  href="/shop"
-                  className="text-gray-600 hover:text-metamask-orange transition-colors"
-                >
-                  {t('shop')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/games"
-                  className="text-gray-600 hover:text-metamask-orange transition-colors"
-                >
-                  {t('games')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/apps"
-                  className="text-gray-600 hover:text-metamask-orange transition-colors"
-                >
-                  {t('apps')}
-                </Link>
               </li>
             </ul>
           </div>

@@ -1,52 +1,54 @@
 {
     "Index": {
         "title": "Welcome to VAIIYA",
-        "videoTitle": "Experience the Vibe",
-        "videoDescription": "Crafting the future of Web3 on Solana with unmatched precision and aesthetic excellence."
+        "videoTitle": "Crafted for Every Platform",
+        "videoDescription": "Native mobile apps for Android and iOS, engineered with precision and aesthetic excellence."
     },
     "Hero": {
-        "poweredBy": "Powered by Solana Blockchain",
+        "poweredBy": "Android & iOS App Development",
         "titleStart": "Crafting",
-        "titleColored": "Digital Excellence",
-        "titleEnd": "Across Every Platform.",
-        "description": "Websites. Web3. Android Apps. We leverage Agentic Engineering to build high-performance products on Solana and beyond. No compromises. Just pure innovation.",
-        "exploreProducts": "Explore Our Products",
+        "titleColored": "Native Apps",
+        "titleEnd": "People Love.",
+        "description": "From concept to App Store. We design, build, and ship beautiful native applications for Android and iOS. No compromises. Just pure innovation.",
+        "explorePortfolio": "Explore Our Portfolio",
         "viewGithub": "View on GitHub"
     },
     "About": {
-        "web3Native": "Web3 Native.",
+        "nativeApps": "Native Apps.",
         "agenticEngineering": "Agentic Engineering.",
-        "intro": "We build innovative Web3 applications on Solana. Every line of code is crafted with passion, precision, and a deep understanding of blockchain technology.",
+        "intro": "We build innovative mobile applications for Android and iOS. Every line of code is crafted with passion, precision, and a deep understanding of the mobile ecosystem.",
         "features": {
-            "blockchain": {
-                "title": "Blockchain First",
-                "description": "Built on Solana. Your wallet is your identity. No middlemen. Just pure blockchain technology powering every interaction."
+            "android": {
+                "title": "Android Development",
+                "description": "Fast, reliable, and beautifully crafted Android apps. Built for performance and published on Google Play."
+            },
+            "ios": {
+                "title": "iOS Development",
+                "description": "Elegant, intuitive iOS experiences. Designed with care and ready for the App Store."
             },
             "agentic": {
                 "title": "Agentic Engineering",
                 "description": "Clean code. Modern architecture. Developer experience matters. We code with passion and build with purpose."
-            },
-            "speed": {
-                "title": "Lightning Fast",
-                "description": "Solana speed. Sub-second finality. Scalable infrastructure. Experience the future of blockchain performance."
             }
         }
     },
     "Header": {
         "home": "Home",
+        "portfolio": "Portfolio",
         "about": "About",
-        "progress": "Progress",
-        "shop": "Shop",
-        "games": "Games",
-        "apps": "Apps",
         "socials": "Socials",
         "connect": "Connect"
     },
-    "Products": {
+    "Portfolio": {
         "title": "Our",
-        "titleColored": "Products",
-        "description": "Building the future of Web3, one product at a time. Each project showcases our commitment to innovation and clean code.",
-
+        "titleColored": "Apps",
+        "description": "A showcase of the apps we've designed, built, and shipped. Each project reflects our commitment to innovation and clean code.",
+        "comingSoon": "Coming Soon",
+        "viewProject": "View Project",
+        "fynder": {
+            "name": "FYNDER",
+            "description": "Premium Android dating experience. Connection, simplified. Your next chapter starts with a swipe."
+        },
         "vynder": {
             "name": "VYNDER",
             "description": "Dating on the blockchain. The first Web3 PWA dating app built on Solana."
@@ -59,21 +61,35 @@
             "name": "BLOBIO",
             "description": "Engage in thrilling blob battles and conquer the arena."
         },
-
-        "fynder": {
-            "name": "FYNDER",
-            "description": "Premium Android dating experience. Connection, simplified. Your next chapter starts with a swipe."
+        "dollarmilkshake": {
+            "name": "DOLLAR MILKSHAKE",
+            "description": "A dollar-cost averaging tool for Solana. Smooth out your entries and stack consistently."
         },
-        "visitSite": "Visit Site"
+        "hunter84": {
+            "name": "HUNTER84",
+            "description": "An arcade-style challenge that pushes your reflexes to the limit."
+        },
+        "luckyhaus": {
+            "name": "LUCKYHAUS",
+            "description": "Provably fair lottery games on-chain. Enter the draw and win big."
+        },
+        "memehaus": {
+            "name": "MEMEHAUS",
+            "description": "Meme-driven token launchpad with fair launches and automatic liquidity."
+        }
+    },
+    "PortfolioPage": {
+        "badge": "App Development Portfolio",
+        "titleStart": "Apps We've",
+        "titleEnd": "Built & Shipped.",
+        "description": "Browse our collection of native Android and iOS applications. Every app is designed, engineered, and released by VAIIYA."
     },
     "Footer": {
         "slogan": "We. As One.",
-        "description": "Building the future of Web3 on Solana. Agentic Engineering. Blockchain First.",
-        "products": "Products",
-        "games": "Games",
-        "apps": "Apps",
+        "description": "Building beautiful native apps for Android and iOS. Agentic Engineering. Crafted with precision.",
+        "products": "Apps",
+        "portfolio": "Portfolio",
         "connect": "Connect",
-        "shop": "VAIIYA Shop",
         "rights": "All rights reserved.",
         "builtOn": "Built with",
         "love": "Love",
@@ -85,29 +101,29 @@
     },
     "AboutPage": {
         "titleStart": "Crafting High-Vibe",
-        "titleEnd": "Web3 Applications.",
-        "description": "VAIIYA is a creative studio at the intersection of AI, blockchain, and culture. We don't just write code; we curate experiences through Agentic Engineering.",
+        "titleEnd": "Native Applications.",
+        "description": "VAIIYA is a creative studio specializing in native app development for Android and iOS. We don't just write code; we curate experiences through Agentic Engineering.",
         "whatIsTitle": "What is Agentic Engineering?",
         "whatIsP1": "Agentic Engineering represents a paradigm shift in software development. Coined by Andrej Karpathy, it's the practice of using advanced AI to bridge the gap between human intent and machine execution.",
-        "whatIsP2": "At VAIIYA, we've embraced this fully. We act as creative directors, guiding powerful AI agents to manifest complex decentralized applications at the speed of thought. This isn't just about efficiency; it's about maintaining a higher level of creative flow—the 'vibe'—throughout the entire building process.",
+        "whatIsP2": "At VAIIYA, we've embraced this fully. We act as creative directors, guiding powerful AI agents to manifest complex native applications at the speed of thought. This isn't just about efficiency; it's about maintaining a higher level of creative flow—the 'vibe'—throughout the entire building process.",
         "initVision": "Initialize Vision",
         "setParams": "Set Neural Parameters",
         "archModular": "- Architecture: Modular",
-        "networkSolana": "- Network: Solana Mainnet",
+        "networkMobile": "- Platform: Android & iOS",
         "execVibe": "Execute Vibe Check...",
         "statusVibe": "> Status: High Vibe Detected",
-        "whySolanaTitle": "Why Solana?",
-        "speedTitle": "Unmatched Speed",
-        "speedDesc": "400ms block times mean your users never have to wait. Real-time interaction for real-world impact.",
-        "costTitle": "Low Cost",
-        "costDesc": "Fraction-of-a-cent fees make Web3 accessible to everyone, enabling mass-adoption use cases.",
-        "ecoTitle": "Ecosystem",
-        "ecoDesc": "A thriving community of builders and innovators pushing the boundaries of what's possible on-chain.",
+        "whyMobileTitle": "Why Native?",
+        "speedTitle": "Unmatched Performance",
+        "speedDesc": "Native apps deliver buttery-smooth interactions and full access to device capabilities for real-world impact.",
+        "costTitle": "Long-Term Value",
+        "costDesc": "One codebase vision, maintained with care. Scalable architecture that grows with your product.",
+        "ecoTitle": "Ecosystem Reach",
+        "ecoDesc": "Google Play and the App Store connect your app to billions of users worldwide.",
         "visionTitle": "The VAIIYA Vision",
-        "visionQuote": "\"We believe the future of software isn't just about functional utility, but about how it makes you feel. By combining AI-augmented development with strong product intuition, we create Web3 tools that feel like magic.\"",
+        "visionQuote": "\"We believe the future of software isn't just about functional utility, but about how it makes you feel. By combining AI-augmented development with strong product intuition, we create apps that feel like magic.\"",
         "ctaTitle": "Ready to join the vibe?",
-        "ctaDesc": "Explore our products or reach out to see how we can bring your Web3 vision to life.",
-        "viewProjects": "View Projects",
+        "ctaDesc": "Explore our portfolio or reach out to see how we can bring your app idea to life.",
+        "viewProjects": "View Portfolio",
         "followVaiya": "Follow @V4IIYA"
     },
 
@@ -204,6 +220,99 @@
         "ctaTitle": "Ready to find the one?",
         "ctaDesc": "Join thousands of others who are already discovering a better way to connect on Android.",
         "viewProjects": "Explore All Projects"
+    },
+    "DollarMilkshakePage": {
+        "titleStart": "Dollar Cost",
+        "titleEnd": "Averaging.",
+        "description": "DollarMilkshake is a dollar-cost averaging tool for Solana. Set your entry strategy and let automation handle the rest.",
+        "launchDca": "Launch DCA",
+        "viewOther": "View Other Projects",
+        "stat1": "Active Strategies",
+        "stat2": "Deposits Processed",
+        "stat3": "Wallets Connected",
+        "feat1Title": "Automated Entries",
+        "feat1Desc": "Schedule recurring buys with precision. Dollar-cost averaging removes the emotion from investing.",
+        "feat2Title": "Fully On-Chain",
+        "feat2Desc": "Every strategy runs transparently on Solana. No hidden fees, no middlemen.",
+        "feat3Title": "Set & Forget",
+        "feat3Desc": "Configure once and let the protocol execute your strategy around the clock.",
+        "philosophyTitle": "Investing, Simplified.",
+        "philosophyP1": "DollarMilkshake was built to make disciplined investing effortless on Solana.",
+        "philosophyP2": "Powered by VAIIYA's Agentic Engineering, it delivers a seamless, trustless experience.",
+        "ctaTitle": "Start Stacking.",
+        "ctaDesc": "Consistency beats timing. Set up your DCA strategy today."
+    },
+    "Hunter84Page": {
+        "premiumSub": "Premium Arcade Experience",
+        "titleStart": "Enter the",
+        "titleEnd": "Hunt.",
+        "description": "HUNTER84 is an arcade-style challenge that tests your reflexes, precision, and nerve.",
+        "exploreStudio": "Play Now",
+        "partnerUs": "Partner with Us",
+        "sovereignTitle": "Built for the Competitive Player.",
+        "gatedTitle": "Skill-Based Scoring",
+        "gatedDesc": "Every run is scored fairly. Your skill is the only thing that matters.",
+        "directTitle": "Instant Feedback",
+        "directDesc": "Realtime scoring and leaderboards keep the adrenaline pumping.",
+        "deepTitle": "Deep Engagement",
+        "deepDesc": "Progressive difficulty keeps players coming back for more.",
+        "vibeStatus": "Hunt Access: GRANTED",
+        "vibeTitle": "High Vibe",
+        "philosophyTitle": "The Vibe of Competition.",
+        "philosophyQuote": "\"At HUNTER84, we believe games should be pure, fast, and fun.\"",
+        "ctaTitle": "Ready to Hunt?",
+        "ctaDesc": "Test your reflexes and climb the leaderboard.",
+        "enterStudio": "Enter HUNTER84",
+        "viewVynder": "View Vynder"
+    },
+    "LuckyHausPage": {
+        "nextDraw": "NEXT DRAW SOON",
+        "titleStart": "Win Big.",
+        "titleEnd": "Play Fair.",
+        "description": "LUCKYHAUS is a provably fair lottery experience on Solana. Transparent draws, instant payouts.",
+        "enterDraw": "Enter Draw",
+        "learn": "Learn More",
+        "stat1": "Prize Pool",
+        "stat2": "Winners Paid",
+        "stat3": "Draws Completed",
+        "feat1Title": "Provably Fair",
+        "feat1Desc": "Every draw is verifiable on-chain. No rigging, no secrets.",
+        "feat2Title": "Instant Payouts",
+        "feat2Desc": "Winnings are paid out automatically on Solana, in seconds.",
+        "feat3Title": "Transparent Ledger",
+        "feat3Desc": "Every ticket and draw is recorded publicly on the blockchain.",
+        "redefTitle": "Lottery, Redefined.",
+        "redefP1": "LUCKYHAUS brings transparency to an industry that desperately needs it.",
+        "redefP2": "Every ticket is on-chain, every draw is fair, and every winner gets paid instantly.",
+        "ctaTitle": "Feeling Lucky?",
+        "ctaQuote": "The house always loses when the math is public.",
+        "ctaBtn": "Enter the Draw"
+    },
+    "MemeHausPage": {
+        "liveOnMainnet": "LIVE ON MAINNET",
+        "titleStart": "Launch Your",
+        "titleEnd": "Meme Coin.",
+        "description": "MEMEHAUS is a meme-driven token launchpad on Solana with fair launches and automatic liquidity.",
+        "startMinting": "Start Minting",
+        "joinCommunity": "Join the Community",
+        "dashboardTitle": "Creator Dashboard",
+        "kickbacksTotal": "Total Kickbacks",
+        "tokensCreated": "Tokens Created",
+        "volGenerated": "Volume Generated",
+        "kickbackTitle": "The Kickback Mechanism",
+        "kickbackDesc": "MEMEHAUS rewards creators and communities with automatic kickbacks on every launch.",
+        "fairLaunchTitle": "Fair Launch",
+        "fairLaunchDesc": "No presales, no insiders. Everyone buys at the same price.",
+        "instantMintTitle": "Instant Mint",
+        "instantMintDesc": "Tokens go live the moment they're minted.",
+        "autoLpTitle": "Auto Liquidity",
+        "autoLpDesc": "Liquidity is added automatically on launch.",
+        "quote": "Mint the Moment.",
+        "quoteDesc": "Every successful token launch is a story. MEMEHAUS helps communities write theirs.",
+        "ctaTitle": "Ready to Launch?",
+        "ctaDesc": "Create your meme token in minutes and start your community's story.",
+        "launchApp": "Launch App",
+        "allProjects": "All Projects"
     },
     "GamesPage": {
         "title": "Games",

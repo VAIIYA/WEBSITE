@@ -9,25 +9,10 @@ export const pathnames = {
         nl: '/over-ons',
         de: '/ueber-uns'
     },
-    '/shop': {
-        en: '/shop',
-        nl: '/winkel',
-        de: '/shop'
-    },
-    '/progress': {
-        en: '/progress',
-        nl: '/voortgang',
-        de: '/fortschritt'
-    },
-    '/games': {
-        en: '/games',
-        nl: '/games',
-        de: '/spiele'
-    },
-    '/apps': {
-        en: '/apps',
-        nl: '/apps',
-        de: '/apps'
+    '/portfolio': {
+        en: '/portfolio',
+        nl: '/portfolio',
+        de: '/portfolio'
     }
 };
 

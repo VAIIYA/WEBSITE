@@ -1,8 +1,4 @@
-import { useTranslations } from 'next-intl';
-
 export default function Hero() {
-  const t = useTranslations('Hero');
-
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-white overflow-hidden py-20">
       {/* Background Decorative Elements */}
@@ -19,18 +15,18 @@ export default function Hero() {
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
               </svg>
-              {t('poweredBy')}
+              Android & iOS App Development
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif leading-[1.1] tracking-tight text-metamask-purple">
-              {t('titleStart')} <br />
-              <span className="text-metamask-orange italic font-light">{t('titleColored')}</span>
+              Crafting <br />
+              <span className="text-metamask-orange italic font-light">Native Apps</span>
               <br />
-              {t('titleEnd')}
+              People Love.
             </h1>
 
             <p className="text-xl sm:text-2xl text-gray-600 max-w-xl leading-relaxed font-light">
-              {t('description')}
+              From concept to App Store. We design, build, and ship beautiful native applications for Android and iOS. No compromises. Just pure innovation.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6">
@@ -38,7 +34,7 @@ export default function Hero() {
                 href="#portfolio"
                 className="btn-primary inline-flex items-center justify-center px-8 py-4 text-lg"
               >
-                {t('explorePortfolio')}
+                Explore Our Portfolio
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -49,7 +45,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="btn-secondary inline-flex items-center justify-center px-8 py-4 text-lg border-metamask-purple/20 text-metamask-purple hover:bg-metamask-purple/5"
               >
-                {t('viewGithub')}
+                View on GitHub
               </a>
             </div>
           </div>

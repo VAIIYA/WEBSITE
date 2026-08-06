@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl';
 
 const socialLinks = [
   {
@@ -42,8 +41,6 @@ const socialLinks = [
 ]
 
 export default function Footer() {
-  const t = useTranslations('Footer');
-
   return (
     <footer className="bg-metamask-gray-50 border-t border-metamask-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -58,17 +55,17 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-600 mb-4">
-              {t('slogan')}
+              We. As One.
             </p>
             <p className="text-sm text-gray-500">
-              {t('description')}
+              Building beautiful native apps for Android and iOS. Agentic Engineering. Crafted with precision.
             </p>
           </div>
 
           {/* Products */}
           <div>
             <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-              {t('products')}
+              Apps
             </h3>
             <ul className="space-y-3">
 
@@ -78,7 +75,7 @@ export default function Footer() {
                   href="/portfolio"
                   className="text-gray-600 hover:text-metamask-orange transition-colors"
                 >
-                  {t('portfolio')}
+                  Portfolio
                 </Link>
               </li>
               <li>
@@ -125,7 +122,7 @@ export default function Footer() {
           {/* Connect */}
           <div>
             <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-              {t('connect')}
+              Connect
             </h3>
             <ul className="space-y-3">
               {socialLinks.map((social) => (
@@ -147,7 +144,7 @@ export default function Footer() {
           {/* Legal */}
           <div>
             <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-              {t('legal')}
+              Legal
             </h3>
             <ul className="space-y-3">
               <li>
@@ -155,7 +152,7 @@ export default function Footer() {
                   href="/privacy-policy"
                   className="text-gray-600 hover:text-metamask-orange transition-colors"
                 >
-                  {t('privacy')}
+                  Privacy Policy
                 </Link>
               </li>
               <li>
@@ -163,7 +160,7 @@ export default function Footer() {
                   href="/terms"
                   className="text-gray-600 hover:text-metamask-orange transition-colors"
                 >
-                  {t('terms')}
+                  Terms of Service
                 </Link>
               </li>
               <li>
@@ -171,7 +168,7 @@ export default function Footer() {
                   href="/cookies"
                   className="text-gray-600 hover:text-metamask-orange transition-colors"
                 >
-                  {t('cookies')}
+                  Cookie Policy
                 </Link>
               </li>
             </ul>
@@ -180,11 +177,11 @@ export default function Footer() {
 
         <div className="border-t border-gray-200 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} VAIIYA. {t('rights')}
+            © {new Date().getFullYear()} VAIIYA. All rights reserved.
           </p>
           <div className="flex items-center gap-2 text-sm text-gray-500">
-            <span>{t('builtOn')}</span>
-            <span className="font-semibold text-metamask-purple">{t('love')}</span>
+            <span>Built with</span>
+            <span className="font-semibold text-metamask-purple">Love</span>
             <svg className="w-4 h-4 text-red-500 fill-current" viewBox="0 0 20 20">
               <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
             </svg>

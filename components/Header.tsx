@@ -3,9 +3,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import LanguageSwitcher from './LanguageSwitcher'
-
-import { useTranslations } from 'next-intl'
 
 const socialLinks = [
   {
@@ -50,7 +47,6 @@ const socialLinks = [
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const t = useTranslations('Header')
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
@@ -73,12 +69,12 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Right Utilities (Socials & Language Suite) */}
+          {/* Right Utilities (Socials) */}
           <div className="hidden md:flex items-center gap-6 z-10 w-full justify-end sm:w-auto">
             {/* Socials Dropdown */}
             <div className="relative group">
               <button className="flex items-center text-sm text-gray-600 hover:text-metamask-orange transition-colors font-medium">
-                {t('socials')}
+                Socials
                 <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -100,9 +96,6 @@ export default function Header() {
                 </div>
               </div>
             </div>
-
-            {/* Language Switcher */}
-            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
@@ -127,15 +120,15 @@ export default function Header() {
         {/* Bottom Row: Navigation Menu */}
         <div className="hidden md:flex justify-center items-center space-x-10 mt-6 pb-2">
           <Link href="/" className="text-gray-600 hover:text-metamask-orange transition-colors font-medium">
-            {t('home')}
+            Home
           </Link>
 
           <Link href="/portfolio" className="text-gray-600 hover:text-metamask-orange transition-colors font-medium">
-            {t('portfolio')}
+            Portfolio
           </Link>
 
           <Link href="/about" className="text-gray-600 hover:text-metamask-orange transition-colors font-medium">
-            {t('about')}
+            About
           </Link>
         </div>
       </nav>
@@ -155,21 +148,21 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                   className="block text-3xl font-serif text-metamask-purple hover:text-metamask-orange transition-colors"
                 >
-                  {t('home')}
+                  Home
                 </Link>
                 <Link
                   href="/portfolio"
                   onClick={() => setIsMenuOpen(false)}
                   className="block text-3xl font-serif text-metamask-purple hover:text-metamask-orange transition-colors"
                 >
-                  {t('portfolio')}
+                  Portfolio
                 </Link>
                 <Link
                   href="/about"
                   onClick={() => setIsMenuOpen(false)}
                   className="block text-3xl font-serif text-metamask-purple hover:text-metamask-orange transition-colors"
                 >
-                  {t('about')}
+                  About
                 </Link>
               </div>
 
@@ -177,7 +170,7 @@ export default function Header() {
 
               {/* Socials Section */}
               <div className="space-y-4 pt-4 border-t border-gray-100">
-                <h3 className="text-xs uppercase tracking-widest text-gray-400 font-semibold">{t('connect')}</h3>
+                <h3 className="text-xs uppercase tracking-widest text-gray-400 font-semibold">Connect</h3>
                 <div className="flex flex-wrap gap-6">
                   {socialLinks.map((social) => (
                     <a

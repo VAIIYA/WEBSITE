@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Poly } from 'next/font/google'
 import './globals.css'
-import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 const inter = Inter({
@@ -26,8 +25,8 @@ export const metadata: Metadata = {
     default: 'VAIIYA - We. As One.',
     template: '%s | VAIIYA',
   },
-  description: 'Building beautiful native apps for Android and iOS. Agentic Engineering. Crafted with precision.',
-  keywords: ['Android', 'iOS', 'App Development', 'Mobile Apps', 'Agentic Engineering', 'VAIIYA'],
+  description: '1-Page Interactive Experience with Three.js Tearable Physics. Building native Android, iOS, and Web3 apps.',
+  keywords: ['Android', 'iOS', 'Three.js', 'Tearable Physics', 'Web Development', 'VAIIYA'],
   authors: [{ name: 'VAIIYA', url: siteUrl }],
   creator: 'VAIIYA',
   openGraph: {
@@ -36,12 +35,12 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'VAIIYA',
     title: 'VAIIYA - We. As One.',
-    description: 'Building beautiful native apps for Android and iOS. Agentic Engineering. Crafted with precision.',
+    description: '1-Page Interactive Experience with Three.js Tearable Physics.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'VAIIYA - We. As One.',
-    description: 'Building beautiful native apps for Android and iOS. Agentic Engineering. Crafted with precision.',
+    description: '1-Page Interactive Experience with Three.js Tearable Physics.',
     site: '@VAIIYA_MEDIA',
     creator: '@VAIIYA_MEDIA',
   },
@@ -62,7 +61,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${poly.variable}`}>
       <body>
-        <Header />
         {children}
         <Footer />
       </body>

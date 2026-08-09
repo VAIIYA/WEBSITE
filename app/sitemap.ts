@@ -18,10 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/projects/vynder',
     '/projects/nightstudio',
     '/projects/blobio',
-    '/projects/dollarmilkshake',
-    '/projects/hunter84',
-    '/projects/luckyhaus',
-    '/projects/memehaus',
   ]
 
   return routes.map((route) => ({

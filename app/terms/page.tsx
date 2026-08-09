@@ -33,7 +33,7 @@ export default function TermsOfService() {
                         <p className="text-gray-600 leading-relaxed">
                             VAIIYA is a digital studio specializing in the development of Web3 applications on the Solana blockchain,
                             Android mobile applications, and high-performance web projects. Our suite of products includes but is not
-                            limited to FYNDER, VYNDER, LuckyHaus, MemeHaus, BLOBIO, HUNTER84, Dollar Milkshake, and NIGHTSTUDIO.
+                            limited to FYNDER, VYNDER, BLOBIO, and NIGHTSTUDIO.
                         </p>
                     </section>
 
@@ -69,7 +69,7 @@ export default function TermsOfService() {
                         <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">5. Intellectual Property</h2>
                         <p className="text-gray-600 leading-relaxed">
                             All content, code, designs, logos, and brands, including the names of our various products (e.g., FYNDER,
-                            LuckyHaus), are the exclusive property of VAIIYA. You are granted a limited, non-exclusive license to use
+                            VYNDER), are the exclusive property of VAIIYA. You are granted a limited, non-exclusive license to use
                             our products for their intended purposes only.
                         </p>
                     </section>

@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
                         <p className="text-gray-600 leading-relaxed">
                             At VAIIYA, we take your digital sovereignty seriously. As a studio building Web3 and mobile applications,
                             we are committed to transparency in how we collect and process your data. This policy applies to all
-                            products under the VAIIYA umbrella, including FYNDER, VYNDER, LuckyHaus, and our arcade suite.
+                            products under the VAIIYA umbrella, including FYNDER, VYNDER, and BLOBIO.
                         </p>
                     </section>
 

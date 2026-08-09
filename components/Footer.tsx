@@ -2,47 +2,47 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { socialLinks } from '@/lib/socialLinks'
 
-const appLinks = [
-  { name: 'Portfolio', href: '/portfolio' },
-  { name: 'FYNDER', href: '/projects/fynder' },
-  { name: 'VYNDER', href: '/projects/vynder' },
-  { name: 'NIGHTSTUDIO', href: '/projects/nightstudio' },
-  { name: 'BLOBIO', href: '/projects/blobio' },
+const sectionLinks = [
+  { name: 'Homepage', href: '#home' },
+  { name: 'Android Apps', href: '#android' },
+  { name: 'iOS Apps', href: '#ios' },
+  { name: 'Website Building', href: '#webbuilding' },
+  { name: 'Indestructible Socials', href: '#socials' },
 ]
 
 export default function Footer() {
   return (
-    <footer className="bg-metamask-gray-50 border-t border-metamask-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
+    <footer className="relative z-30 bg-slate-900 text-white border-t border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
           {/* Brand */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <Image src="/v-logo.jpg" alt="VAIIYA Logo" width={32} height={32} className="rounded-lg" />
+          <div className="col-span-1 md:col-span-2 space-y-4">
+            <div className="flex items-center gap-3">
+              <Image src="/v-logo.jpg" alt="VAIIYA Logo" width={40} height={40} className="rounded-xl shadow" />
               <div className="flex flex-col">
-                <span className="text-2xl font-serif text-metamask-purple leading-none">VAIIYA</span>
-                <span className="text-[9px] uppercase tracking-[0.2em] text-gray-500 font-medium">We. As One.</span>
+                <span className="text-2xl font-serif text-white leading-none">VAIIYA</span>
+                <span className="text-[9px] uppercase tracking-[0.2em] text-orange-400 font-semibold">We. As One.</span>
               </div>
             </div>
-            <p className="text-sm text-gray-500">
-              Building beautiful native apps for Android and iOS. Agentic Engineering. Crafted with precision.
+            <p className="text-sm text-slate-400 leading-relaxed font-light max-w-sm">
+              1-Page Interactive Experience featuring real-time Three.js Verlet cloth physics simulation and indestructible socials. Built for Android, iOS, and Web3.
             </p>
           </div>
 
-          {/* Apps */}
+          {/* Navigation Sections */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-              Apps
+            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
+              Sections
             </h3>
-            <ul className="space-y-3">
-              {appLinks.map((link) => (
+            <ul className="space-y-3 text-sm">
+              {sectionLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
-                    className="text-gray-600 hover:text-metamask-orange transition-colors"
+                    className="text-slate-300 hover:text-orange-400 transition-colors font-medium"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -50,17 +50,17 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-              Connect
+            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
+              Indestructible Socials
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-sm">
               {socialLinks.map((social) => (
                 <li key={social.name}>
                   <a
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-600 hover:text-metamask-orange transition-colors"
+                    className="flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors"
                   >
                     {social.icon}
                     <span>{social.name}</span>
@@ -70,50 +70,25 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Tech Stack */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-              Legal
+            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
+              Engineered With
             </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/privacy-policy"
-                  className="text-gray-600 hover:text-metamask-orange transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-gray-600 hover:text-metamask-orange transition-colors"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cookies"
-                  className="text-gray-600 hover:text-metamask-orange transition-colors"
-                >
-                  Cookie Policy
-                </Link>
-              </li>
-            </ul>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs text-slate-300">Three.js</span>
+              <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs text-slate-300">Next.js 14</span>
+              <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs text-slate-300">TailwindCSS</span>
+              <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs text-slate-300">Verlet Physics</span>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-200 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} VAIIYA. All rights reserved.
-          </p>
-          <div className="flex items-center gap-2 text-sm text-gray-500">
-            <span>Built with</span>
-            <span className="font-semibold text-metamask-purple">Love</span>
-            <svg className="w-4 h-4 text-red-500 fill-current" viewBox="0 0 20 20">
-              <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
-            </svg>
+        <div className="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+          <p>© {new Date().getFullYear()} VAIIYA. All rights reserved. Deployed on Vercel & GitHub.</p>
+          <div className="flex items-center gap-2">
+            <span>Crafted with</span>
+            <span className="font-semibold text-orange-400">Precision & Physics</span>
           </div>
         </div>
       </div>

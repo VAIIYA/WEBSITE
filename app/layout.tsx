@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Poly } from 'next/font/google'
 import './globals.css'
-import Footer from '@/components/Footer'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -25,8 +24,8 @@ export const metadata: Metadata = {
     default: 'VAIIYA - We. As One.',
     template: '%s | VAIIYA',
   },
-  description: '1-Page Interactive Experience with Three.js Tearable Physics. Building native Android, iOS, and Web3 apps.',
-  keywords: ['Android', 'iOS', 'Three.js', 'Tearable Physics', 'Web Development', 'VAIIYA'],
+  description: 'Clean Tearable UI Experience inspired by pushmatrix tearable. Native Android, iOS, and Web3 ecosystem.',
+  keywords: ['Android', 'iOS', 'Three.js', 'Tearable UI', 'VAIIYA'],
   authors: [{ name: 'VAIIYA', url: siteUrl }],
   creator: 'VAIIYA',
   openGraph: {
@@ -35,12 +34,12 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'VAIIYA',
     title: 'VAIIYA - We. As One.',
-    description: '1-Page Interactive Experience with Three.js Tearable Physics.',
+    description: 'Clean Tearable UI Experience inspired by pushmatrix tearable.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'VAIIYA - We. As One.',
-    description: '1-Page Interactive Experience with Three.js Tearable Physics.',
+    description: 'Clean Tearable UI Experience inspired by pushmatrix tearable.',
     site: '@VAIIYA_MEDIA',
     creator: '@VAIIYA_MEDIA',
   },
@@ -60,9 +59,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poly.variable}`}>
-      <body>
+      <body className="bg-slate-950 overflow-hidden m-0 p-0">
         {children}
-        <Footer />
       </body>
     </html>
   )

@@ -1,9 +1,9 @@
 import * as THREE from 'three'
 
-export function createCardTexture(
-  type: 'homepage' | 'android' | 'ios' | 'webbuilding' | 'socials',
-  width: number = 1024,
-  height: number = 1024
+export function createLayerTexture(
+  layerIndex: 1 | 2 | 3,
+  width: number = 2048,
+  height: number = 1536
 ): THREE.CanvasTexture {
   const canvas = document.createElement('canvas')
   canvas.width = width
@@ -11,239 +11,188 @@ export function createCardTexture(
   const ctx = canvas.getContext('2d')
   if (!ctx) return new THREE.CanvasTexture(canvas)
 
-  // Background Gradient
-  const grad = ctx.createLinearGradient(0, 0, width, height)
+  if (layerIndex === 1) {
+    // LAYER 1: Top Green / Sage Aesthetic Sheet (Homepage Hero)
+    const grad = ctx.createLinearGradient(0, 0, width, height)
+    grad.addColorStop(0, '#86efac')
+    grad.addColorStop(0.5, '#4ade80')
+    grad.addColorStop(1, '#22c55e')
+    ctx.fillStyle = grad
+    ctx.fillRect(0, 0, width, height)
 
-  if (type === 'homepage') {
-    grad.addColorStop(0, '#0f172a')
-    grad.addColorStop(0.5, '#1e1b4b')
-    grad.addColorStop(1, '#0f172a')
-  } else if (type === 'android') {
-    grad.addColorStop(0, '#022c22')
-    grad.addColorStop(0.5, '#064e3b')
-    grad.addColorStop(1, '#022c22')
-  } else if (type === 'ios') {
-    grad.addColorStop(0, '#0f172a')
-    grad.addColorStop(0.5, '#1e3a8a')
-    grad.addColorStop(1, '#0f172a')
-  } else if (type === 'webbuilding') {
-    grad.addColorStop(0, '#2e1065')
-    grad.addColorStop(0.5, '#3b0764')
-    grad.addColorStop(1, '#1e1b4b')
-  } else if (type === 'socials') {
-    grad.addColorStop(0, '#082f49')
-    grad.addColorStop(0.5, '#0f172a')
-    grad.addColorStop(1, '#1e1b4b')
-  }
+    // Organic Background Doodles / Waves
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.15)'
+    ctx.beginPath()
+    ctx.arc(width * 0.2, height * 0.3, 350, 0, Math.PI * 2)
+    ctx.arc(width * 0.85, height * 0.7, 450, 0, Math.PI * 2)
+    ctx.fill()
 
-  ctx.fillStyle = grad
-  ctx.fillRect(0, 0, width, height)
+    // Title & Typography
+    ctx.fillStyle = '#0f172a'
+    ctx.textAlign = 'center'
+    ctx.font = '900 110px "Special Gothic Expanded One", Georgia, serif'
+    ctx.fillText('VAIIYA', width / 2, height * 0.28)
 
-  // Card Outer Border
-  ctx.lineWidth = 12
-  if (type === 'socials') {
-    ctx.strokeStyle = '#00f0ff'
-  } else if (type === 'android') {
-    ctx.strokeStyle = '#10b981'
-  } else if (type === 'ios') {
-    ctx.strokeStyle = '#3b82f6'
-  } else {
-    ctx.strokeStyle = '#ff5c16'
-  }
-  ctx.strokeRect(12, 12, width - 24, height - 24)
+    ctx.font = 'bold 44px sans-serif'
+    ctx.fillStyle = '#14532d'
+    ctx.fillText('WE. AS ONE.', width / 2, height * 0.35)
 
-  // Content Rendering based on type
-  ctx.fillStyle = '#ffffff'
-  ctx.textAlign = 'left'
+    // Tagline / Subtitle
+    ctx.font = 'normal 48px sans-serif'
+    ctx.fillStyle = '#052e16'
+    ctx.fillText('Crafting Native Apps & Tearable Digital Experiences', width / 2, height * 0.46)
 
-  if (type === 'homepage') {
-    // Badge
-    ctx.fillStyle = '#ff5c16'
-    ctx.font = 'bold 28px sans-serif'
-    ctx.fillText('VAIIYA • WE. AS ONE.', 60, 100)
-
-    // Heading
+    // "Works with images & video" showcase box
     ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 64px Georgia, serif'
-    ctx.fillText('Crafting Native Apps', 60, 200)
-    ctx.fillStyle = '#ff5c16'
-    ctx.fillText('& 3D Tearable UI', 60, 280)
+    ctx.roundRect(width * 0.25, height * 0.55, width * 0.5, height * 0.3, 32)
+    ctx.fill()
+    ctx.lineWidth = 8
+    ctx.strokeStyle = '#15803d'
+    ctx.stroke()
 
-    // Description
-    ctx.fillStyle = '#cbd5e1'
+    ctx.fillStyle = '#15803d'
+    ctx.font = 'bold 44px sans-serif'
+    ctx.fillText('✂️ DRAG & TEAR THIS PAGE OPEN ✂️', width / 2, height * 0.72)
+
+    ctx.fillStyle = '#4b5563'
     ctx.font = '32px sans-serif'
-    ctx.fillText('We design, build, and ship native mobile applications', 60, 380)
-    ctx.fillText('and Web3 experiences. Drag or slash across cards to rip!', 60, 430)
+    ctx.fillText('Grab any corner or slash across to reveal what lies beneath', width / 2, height * 0.78)
 
-    // Stats Grid
-    ctx.fillStyle = '#1e293b'
-    ctx.fillRect(60, 520, 260, 160)
-    ctx.fillRect(360, 520, 260, 160)
-    ctx.fillRect(660, 520, 260, 160)
+  } else if (layerIndex === 2) {
+    // LAYER 2: Middle Warm Cardboard / Craft Sheet (Android, iOS & Web Building)
+    const grad = ctx.createLinearGradient(0, 0, width, height)
+    grad.addColorStop(0, '#d97706')
+    grad.addColorStop(0.5, '#b45309')
+    grad.addColorStop(1, '#92400e')
+    ctx.fillStyle = grad
+    ctx.fillRect(0, 0, width, height)
 
+    // Background Pattern
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.08)'
+    for (let i = 0; i < 15; i++) {
+      ctx.fillRect(i * 150, 0, 75, height)
+    }
+
+    ctx.fillStyle = '#ffffff'
+    ctx.textAlign = 'center'
+    ctx.font = 'bold 84px Georgia, serif'
+    ctx.fillText('OUR APPS & WEB STUDIO', width / 2, 160)
+
+    // 3 Cards: Android Apps, iOS Apps, Website Building
+    const cards = [
+      {
+        title: 'ANDROID APPS',
+        subtitle: 'FYNDER • VYNDER • BLOBIO',
+        desc: 'Kotlin & Jetpack Compose Native',
+        color: '#10b981',
+        x: width * 0.08,
+      },
+      {
+        title: 'iOS APPS',
+        subtitle: 'VYNDER iOS • BLOBIO iOS',
+        desc: 'Swift 5.10 & SwiftUI Ecosystem',
+        color: '#3b82f6',
+        x: width * 0.38,
+      },
+      {
+        title: 'WEB STUDIO',
+        subtitle: 'NIGHTSTUDIO • 3D WEBGL',
+        desc: 'Next.js 14 & Solana Web3 PWAs',
+        color: '#a855f7',
+        x: width * 0.68,
+      },
+    ]
+
+    cards.forEach((c) => {
+      ctx.fillStyle = '#ffffff'
+      ctx.roundRect(c.x, 260, width * 0.24, height * 0.52, 28)
+      ctx.fill()
+
+      ctx.fillStyle = c.color
+      ctx.fillRect(c.x, 260, width * 0.24, 24)
+
+      ctx.fillStyle = '#0f172a'
+      ctx.textAlign = 'center'
+      ctx.font = 'bold 36px sans-serif'
+      ctx.fillText(c.title, c.x + (width * 0.24) / 2, 340)
+
+      ctx.fillStyle = '#475569'
+      ctx.font = 'bold 24px sans-serif'
+      ctx.fillText(c.subtitle, c.x + (width * 0.24) / 2, 420)
+
+      ctx.fillStyle = '#64748b'
+      ctx.font = '22px sans-serif'
+      ctx.fillText(c.desc, c.x + (width * 0.24) / 2, 500)
+    })
+
+    ctx.fillStyle = '#fef3c7'
+    ctx.textAlign = 'center'
+    ctx.font = 'bold 42px sans-serif'
+    ctx.fillText('TEAR AGAIN TO REVEAL OUR INDESTRUCTIBLE SOCIALS ⬇️', width / 2, height - 120)
+
+  } else if (layerIndex === 3) {
+    // LAYER 3: Bottom Layer (INDESTRUCTABLE SOCIALS)
+    const grad = ctx.createLinearGradient(0, 0, width, height)
+    grad.addColorStop(0, '#0f172a')
+    grad.addColorStop(0.5, '#0284c7')
+    grad.addColorStop(1, '#0f172a')
+    ctx.fillStyle = grad
+    ctx.fillRect(0, 0, width, height)
+
+    // Titanium Shield Header
     ctx.fillStyle = '#00f0ff'
-    ctx.font = 'bold 44px Georgia, serif'
-    ctx.fillText('100%', 90, 590)
-    ctx.fillText('Verlet', 390, 590)
-    ctx.fillText('60 FPS', 690, 590)
-
-    ctx.fillStyle = '#94a3b8'
-    ctx.font = 'bold 22px sans-serif'
-    ctx.fillText('NATIVE CODE', 90, 640)
-    ctx.fillText('CLOTH PHYSICS', 390, 640)
-    ctx.fillText('THREE.JS WEBGL', 690, 640)
-
-    // Call to Action
-    ctx.fillStyle = '#ff5c16'
-    ctx.fillRect(60, 750, 400, 90)
-    ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 32px sans-serif'
-    ctx.fillText('DRAG OR TEAR CARD', 100, 808)
-  } else if (type === 'android') {
-    // Header Badge
-    ctx.fillStyle = '#10b981'
-    ctx.font = 'bold 28px sans-serif'
-    ctx.fillText('ANDROID APPS ECOSYSTEM', 60, 100)
+    ctx.font = 'bold 36px sans-serif'
+    ctx.textAlign = 'center'
+    ctx.fillText('🛡️ INDESTRUCTABLE ZONE • 100% UNBREAKABLE 🛡️', width / 2, 140)
 
     ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 60px Georgia, serif'
-    ctx.fillText('Native Android Apps', 60, 190)
+    ctx.font = 'bold 88px Georgia, serif'
+    ctx.fillText('As Indestructible Our Socials', width / 2, 250)
 
-    // App List
-    const apps = [
-      { name: 'FYNDER', desc: 'Premium Android Dating Experience • Google Play' },
-      { name: 'VYNDER', desc: 'Dating on Solana Blockchain • Web3 PWA & Android' },
-      { name: 'BLOBIO', desc: 'Thrilling Arena Blob Battles • Android Native' },
-    ]
+    ctx.fillStyle = '#93c5fd'
+    ctx.font = '34px sans-serif'
+    ctx.fillText('Impervious to tearing physics. Connect directly with VAIIYA.', width / 2, 320)
 
-    apps.forEach((app, idx) => {
-      const y = 300 + idx * 160
-      ctx.fillStyle = '#064e3b'
-      ctx.fillRect(60, y, width - 120, 130)
-
-      ctx.fillStyle = '#10b981'
-      ctx.font = 'bold 40px Georgia, serif'
-      ctx.fillText(app.name, 90, y + 55)
-
-      ctx.fillStyle = '#e2e8f0'
-      ctx.font = '24px sans-serif'
-      ctx.fillText(app.desc, 90, y + 100)
-    })
-
-    ctx.fillStyle = '#10b981'
-    ctx.fillRect(60, 800, 420, 90)
-    ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 30px sans-serif'
-    ctx.fillText('GET ON GOOGLE PLAY', 95, 858)
-  } else if (type === 'ios') {
-    ctx.fillStyle = '#3b82f6'
-    ctx.font = 'bold 28px sans-serif'
-    ctx.fillText('iOS APPS ECOSYSTEM', 60, 100)
-
-    ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 60px Georgia, serif'
-    ctx.fillText('Native Swift & SwiftUI Apps', 60, 190)
-
-    const iosApps = [
-      { name: 'VYNDER iOS', desc: 'Swift 5 & SwiftUI • App Store Connect' },
-      { name: 'BLOBIO iOS', desc: 'Arena Blob Battle • Metal & Combine Graphics' },
-    ]
-
-    iosApps.forEach((app, idx) => {
-      const y = 310 + idx * 200
-      ctx.fillStyle = '#1e3a8a'
-      ctx.fillRect(60, y, width - 120, 160)
-
-      ctx.fillStyle = '#60a5fa'
-      ctx.font = 'bold 44px Georgia, serif'
-      ctx.fillText(app.name, 90, y + 65)
-
-      ctx.fillStyle = '#e2e8f0'
-      ctx.font = '26px sans-serif'
-      ctx.fillText(app.desc, 90, y + 120)
-    })
-
-    ctx.fillStyle = '#3b82f6'
-    ctx.fillRect(60, 800, 420, 90)
-    ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 30px sans-serif'
-    ctx.fillText('DOWNLOAD ON APP STORE', 80, 858)
-  } else if (type === 'webbuilding') {
-    ctx.fillStyle = '#c084fc'
-    ctx.font = 'bold 28px sans-serif'
-    ctx.fillText('WEBSITE BUILDING STUDIO', 60, 100)
-
-    ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 58px Georgia, serif'
-    ctx.fillText('Custom Web & 3D WebGL', 60, 190)
-
-    ctx.fillStyle = '#3b0764'
-    ctx.fillRect(60, 260, width - 120, 420)
-
-    ctx.fillStyle = '#e9d5ff'
-    ctx.font = 'bold 36px Georgia, serif'
-    ctx.fillText('NIGHTSTUDIO', 90, 330)
-
-    ctx.fillStyle = '#cbd5e1'
-    ctx.font = '26px sans-serif'
-    ctx.fillText('Immersive 3D WebGL & Web3 experiences on Solana.', 90, 390)
-    ctx.fillText('Next.js 14 • TailwindCSS • Three.js Physics Engine', 90, 440)
-    ctx.fillText('100 Lighthouse Performance & Sub-second Edge Load', 90, 490)
-
-    ctx.fillStyle = '#a855f7'
-    ctx.fillRect(90, 540, 380, 80)
-    ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 28px sans-serif'
-    ctx.fillText('EXPLORE NIGHTSTUDIO', 115, 592)
-  } else if (type === 'socials') {
-    // Indestructible Shield Banner
-    ctx.fillStyle = '#0284c7'
-    ctx.fillRect(60, 60, width - 120, 100)
-
-    ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 32px sans-serif'
-    ctx.fillText('🛡️ INDESTRUCTABLE ZONE • 100% UNBREAKABLE', 90, 122)
-
-    ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 56px Georgia, serif'
-    ctx.fillText('As Indestructible Our Socials', 60, 240)
-
-    ctx.fillStyle = '#94a3b8'
-    ctx.font = '26px sans-serif'
-    ctx.fillText('Impervious to tearing physics. Connect with VAIIYA.', 60, 290)
-
-    // Social Channels Cards
+    // Social Links Grid
     const socials = [
-      { name: 'X (Twitter)', url: 'x.com/VAIIYA_MEDIA' },
-      { name: 'YouTube', url: 'youtube.com/@VAIIYA-MEDIA' },
-      { name: 'TikTok', url: 'tiktok.com/@vaiiya.media' },
-      { name: 'GitHub', url: 'github.com/vaiiya' },
+      { name: 'X (Twitter)', handle: '@VAIIYA_MEDIA', url: 'x.com/VAIIYA_MEDIA' },
+      { name: 'YouTube', handle: '@VAIIYA-MEDIA', url: 'youtube.com/@VAIIYA-MEDIA' },
+      { name: 'TikTok', handle: '@vaiiya.media', url: 'tiktok.com/@vaiiya.media' },
+      { name: 'GitHub', handle: 'github.com/vaiiya', url: 'github.com/vaiiya' },
     ]
 
     socials.forEach((soc, idx) => {
       const col = idx % 2
       const row = Math.floor(idx / 2)
-      const x = 60 + col * 460
-      const y = 350 + row * 180
+      const x = width * 0.12 + col * (width * 0.4)
+      const y = 420 + row * 260
 
-      ctx.fillStyle = '#0f172a'
-      ctx.fillRect(x, y, 440, 150)
+      ctx.fillStyle = '#1e293b'
+      ctx.roundRect(x, y, width * 0.36, 210, 32)
+      ctx.fill()
+      ctx.lineWidth = 6
       ctx.strokeStyle = '#00f0ff'
-      ctx.lineWidth = 4
-      ctx.strokeRect(x, y, 440, 150)
+      ctx.stroke()
 
       ctx.fillStyle = '#00f0ff'
-      ctx.font = 'bold 32px Georgia, serif'
-      ctx.fillText(soc.name, x + 30, y + 60)
+      ctx.textAlign = 'left'
+      ctx.font = 'bold 44px Georgia, serif'
+      ctx.fillText(soc.name, x + 40, y + 80)
 
-      ctx.fillStyle = '#cbd5e1'
-      ctx.font = '22px monospace'
-      ctx.fillText(soc.url, x + 30, y + 110)
+      ctx.fillStyle = '#e2e8f0'
+      ctx.font = 'bold 30px monospace'
+      ctx.fillText(soc.handle, x + 40, y + 145)
     })
 
-    ctx.fillStyle = '#38bdf8'
-    ctx.font = 'bold 28px monospace'
-    ctx.fillText('Direct Email: contact@vaiiya.com', 60, 800)
+    // Contact Email Box
+    ctx.fillStyle = '#ff5c16'
+    ctx.roundRect(width * 0.25, height - 200, width * 0.5, 110, 28)
+    ctx.fill()
+
+    ctx.fillStyle = '#ffffff'
+    ctx.textAlign = 'center'
+    ctx.font = 'bold 36px monospace'
+    ctx.fillText('Official Email: contact@vaiiya.com', width / 2, height - 132)
   }
 
   const texture = new THREE.CanvasTexture(canvas)

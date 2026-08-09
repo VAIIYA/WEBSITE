@@ -41,8 +41,8 @@ export default function Home() {
   }
 
   return (
-    <div className="relative min-h-screen bg-slate-50 text-slate-900 selection:bg-orange-500 selection:text-white">
-      {/* Three.js Tearable WebGL Cloth Canvas Overlay */}
+    <div className="relative min-h-screen bg-slate-950 text-slate-100 selection:bg-orange-500 selection:text-white overflow-x-hidden">
+      {/* Three.js Pushmatrix Tearable WebGL Canvas Layer */}
       <TearableCanvas
         ref={canvasRef}
         interactionMode={interactionMode}
@@ -50,7 +50,7 @@ export default function Home() {
         onPhysicsStatsChange={setPhysicsStats}
       />
 
-      {/* Header Navigation with Controls */}
+      {/* Header Navigation with Live Controls */}
       <Header
         interactionMode={interactionMode}
         gravityEnabled={gravityEnabled}
@@ -61,7 +61,7 @@ export default function Home() {
       />
 
       {/* 5 Single-Page Sections */}
-      <main className="relative z-20 space-y-12 pb-20">
+      <main className="relative z-20 space-y-12 pb-20 pointer-events-none">
         <HomeSection />
         <AndroidSection />
         <IosSection />

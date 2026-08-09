@@ -24,12 +24,12 @@ export default function IndestructibleSocialsSection() {
   }
 
   return (
-    <section id="socials" className="relative py-28 px-4 sm:px-6 lg:px-8 bg-transparent">
-      <div className="max-w-7xl mx-auto relative z-20">
+    <section id="socials" className="relative py-28 px-4 sm:px-6 lg:px-8 bg-transparent pointer-events-none">
+      <div className="max-w-7xl mx-auto relative z-20 pointer-events-none">
         {/* Forcefield Protected Container */}
         <div
           id="indestructible-socials-zone"
-          className="relative backdrop-blur-2xl bg-gradient-to-br from-slate-900/95 via-purple-950/90 to-slate-900/95 text-white p-8 sm:p-14 rounded-[48px] border-2 border-cyan-400/40 shadow-[0_0_80px_rgba(0,240,255,0.2)] overflow-hidden transition-all duration-500 hover:shadow-[0_0_100px_rgba(255,92,22,0.3)]"
+          className="relative backdrop-blur-2xl bg-gradient-to-br from-slate-900/95 via-purple-950/90 to-slate-900/95 text-white p-8 sm:p-14 rounded-[48px] border-2 border-cyan-400/50 shadow-[0_0_90px_rgba(0,240,255,0.25)] overflow-hidden transition-all duration-500 hover:shadow-[0_0_120px_rgba(255,92,22,0.35)] pointer-events-auto"
         >
           {/* Glowing Forcefield Background Halo */}
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden rounded-[48px]">

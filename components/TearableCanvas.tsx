@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef, useState, useImperativeHandle, forwardRef } from 'react'
+import React, { useEffect, useRef, useImperativeHandle, forwardRef } from 'react'
 import * as THREE from 'three'
 
 export interface TearableCanvasRef {
@@ -20,29 +20,16 @@ interface TearableCanvasProps {
 class Point {
   x: number
   y: number
-  z: number
   px: number
   py: number
-  pz: number
-  vx: number = 0
-  vy: number = 0
-  vz: number = 0
   pinned: boolean = false
-  initX: number
-  initY: number
-  initZ: number
   id: number
 
-  constructor(x: number, y: number, z: number, id: number, pinned: boolean = false) {
+  constructor(x: number, y: number, id: number, pinned: boolean = false) {
     this.x = x
     this.y = y
-    this.z = z
     this.px = x
     this.py = y
-    this.pz = z
-    this.initX = x
-    this.initY = y
-    this.initZ = z
     this.id = id
     this.pinned = pinned
   }
@@ -50,17 +37,14 @@ class Point {
   update(dt: number, gravity: number, friction: number) {
     if (this.pinned) return
 
-    this.vx = (this.x - this.px) * friction
-    this.vy = (this.y - this.py) * friction
-    this.vz = (this.z - this.pz) * friction
+    const vx = (this.x - this.px) * friction
+    const vy = (this.y - this.py) * friction
 
     this.px = this.x
     this.py = this.y
-    this.pz = this.z
 
-    this.x += this.vx
-    this.y += this.vy + gravity * dt * dt
-    this.z += this.vz
+    this.x += vx
+    this.y += vy + gravity * dt * dt
   }
 }
 
@@ -71,13 +55,12 @@ class Link {
   tearDist: number
   active: boolean = true
 
-  constructor(p1: Point, p2: Point, tearMultiplier: number = 3.5) {
+  constructor(p1: Point, p2: Point, tearMultiplier: number = 3.2) {
     this.p1 = p1
     this.p2 = p2
     const dx = p1.x - p2.x
     const dy = p1.y - p2.y
-    const dz = p1.z - p2.z
-    this.restingDist = Math.sqrt(dx * dx + dy * dy + dz * dz)
+    this.restingDist = Math.hypot(dx, dy)
     this.tearDist = this.restingDist * tearMultiplier
   }
 
@@ -86,8 +69,7 @@ class Link {
 
     const dx = this.p2.x - this.p1.x
     const dy = this.p2.y - this.p1.y
-    const dz = this.p2.z - this.p1.z
-    const currentDist = Math.sqrt(dx * dx + dy * dy + dz * dz)
+    const currentDist = Math.hypot(dx, dy)
 
     if (currentDist > this.tearDist) {
       this.active = false
@@ -99,17 +81,14 @@ class Link {
     const difference = (this.restingDist - currentDist) / currentDist
     const stepX = dx * difference * 0.5
     const stepY = dy * difference * 0.5
-    const stepZ = dz * difference * 0.5
 
     if (!this.p1.pinned) {
       this.p1.x -= stepX
       this.p1.y -= stepY
-      this.p1.z -= stepZ
     }
     if (!this.p2.pinned) {
       this.p2.x += stepX
       this.p2.y += stepY
-      this.p2.z += stepZ
     }
   }
 }
@@ -129,16 +108,16 @@ const TearableCanvas = forwardRef<TearableCanvasRef, TearableCanvasProps>(
       gravityRef.current = gravityEnabled
     }, [gravityEnabled])
 
-    // Physics Engine State
     const pointsRef = useRef<Point[]>([])
     const linksRef = useRef<Link[]>([])
     const grabbedPointRef = useRef<Point | null>(null)
-    const mousePosRef = useRef<{ x: number; y: number; prevX: number; prevY: number; isDown: boolean }>({
+    const mousePosRef = useRef<{ x: number; y: number; prevX: number; prevY: number; isDown: boolean; rightDown: boolean }>({
       x: 0,
       y: 0,
       prevX: 0,
       prevY: 0,
       isDown: false,
+      rightDown: false,
     })
 
     const resetTriggerRef = useRef<() => void>(() => {})
@@ -162,29 +141,28 @@ const TearableCanvas = forwardRef<TearableCanvasRef, TearableCanvasProps>(
       const container = mountRef.current
       if (!container) return
 
-      let width = container.clientWidth || window.innerWidth
-      let height = container.clientHeight || window.innerHeight
+      let width = window.innerWidth
+      let height = window.innerHeight
 
-      // Scene, Camera, Renderer
+      // Scene Setup - Orthographic Camera mapped 1-to-1 to pixels for pushmatrix accuracy!
       const scene = new THREE.Scene()
-      const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000)
-      camera.position.z = 350
+      const camera = new THREE.OrthographicCamera(0, width, 0, height, -1000, 1000)
+      camera.position.z = 100
 
       const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' })
       renderer.setSize(width, height)
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
       container.appendChild(renderer.domElement)
 
-      // Grid Dimensions
-      const cols = Math.min(Math.floor(width / 24), 55)
-      const rows = Math.min(Math.floor(height / 28), 35)
-      const clothWidth = 380
-      const clothHeight = 240
-      const startX = -clothWidth / 2
-      const startY = clothHeight / 2
+      // Pushmatrix Tearable Grid parameters
+      const cols = Math.min(Math.floor(width / 18), 70)
+      const rows = Math.min(Math.floor(height / 20), 45)
 
-      const stepX = clothWidth / (cols - 1)
-      const stepY = clothHeight / (rows - 1)
+      const startX = (width - (cols - 1) * 16) / 2
+      const startY = 40
+
+      const stepX = 16
+      const stepY = 16
 
       const createPhysicsGrid = () => {
         const points: Point[] = []
@@ -194,30 +172,25 @@ const TearableCanvas = forwardRef<TearableCanvasRef, TearableCanvasProps>(
         for (let r = 0; r < rows; r++) {
           for (let c = 0; c < cols; c++) {
             const x = startX + c * stepX
-            const y = startY - r * stepY
-            const z = Math.sin(c * 0.3) * Math.cos(r * 0.3) * 8
+            const y = startY + r * stepY
 
-            // Pin top edge and outer top corners
+            // Pin top row particles to create curtain drape
             const pinned = r === 0 && (c % 2 === 0 || c === 0 || c === cols - 1)
-            points.push(new Point(x, y, z, id++, pinned))
+            points.push(new Point(x, y, id++, pinned))
           }
         }
 
-        // Create Structural Links
+        // Structural Links
         for (let r = 0; r < rows; r++) {
           for (let c = 0; c < cols; c++) {
             const i = r * cols + c
-            // Right link
+            // Horizontal Link
             if (c < cols - 1) {
-              links.push(new Link(points[i], points[i + 1], 3.8))
+              links.push(new Link(points[i], points[i + 1], 3.2))
             }
-            // Down link
+            // Vertical Link
             if (r < rows - 1) {
-              links.push(new Link(points[i], points[i + cols], 3.8))
-            }
-            // Diagonal link (Shear)
-            if (c < cols - 1 && r < rows - 1) {
-              links.push(new Link(points[i], points[i + cols + 1], 4.2))
+              links.push(new Link(points[i], points[i + cols], 3.2))
             }
           }
         }
@@ -233,9 +206,10 @@ const TearableCanvas = forwardRef<TearableCanvasRef, TearableCanvasProps>(
         updateMeshGeometry()
       }
 
-      // Three.js LineSegments & Glowing Nodes Geometry
-      const linePositions = new Float32Array(linksRef.current.length * 6)
-      const lineColors = new Float32Array(linksRef.current.length * 6)
+      // Three.js LineSegments Geometry
+      const maxLinks = linksRef.current.length
+      const linePositions = new Float32Array(maxLinks * 6)
+      const lineColors = new Float32Array(maxLinks * 6)
 
       const lineGeometry = new THREE.BufferGeometry()
       lineGeometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3))
@@ -244,47 +218,17 @@ const TearableCanvas = forwardRef<TearableCanvasRef, TearableCanvasProps>(
       const lineMaterial = new THREE.LineBasicMaterial({
         vertexColors: true,
         transparent: true,
-        opacity: 0.65,
-        linewidth: 1.5,
+        opacity: 0.85,
+        linewidth: 2,
       })
 
       const lineMesh = new THREE.LineSegments(lineGeometry, lineMaterial)
       scene.add(lineMesh)
 
-      // Sparkles / Particles for Torn Threads
-      const sparkCount = 150
-      const sparkPositions = new Float32Array(sparkCount * 3)
-      const sparkColors = new Float32Array(sparkCount * 3)
-
-      for (let i = 0; i < sparkCount; i++) {
-        sparkPositions[i * 3] = (Math.random() - 0.5) * 400
-        sparkPositions[i * 3 + 1] = (Math.random() - 0.5) * 300
-        sparkPositions[i * 3 + 2] = (Math.random() - 0.5) * 100
-
-        sparkColors[i * 3] = 1.0 // R
-        sparkColors[i * 3 + 1] = 0.36 // G (Metamask orange)
-        sparkColors[i * 3 + 2] = 0.08 // B
-      }
-
-      const sparkGeometry = new THREE.BufferGeometry()
-      sparkGeometry.setAttribute('position', new THREE.BufferAttribute(sparkPositions, 3))
-      sparkGeometry.setAttribute('color', new THREE.BufferAttribute(sparkColors, 3))
-
-      const sparkMaterial = new THREE.PointsMaterial({
-        size: 3.5,
-        vertexColors: true,
-        transparent: true,
-        opacity: 0.7,
-        blending: THREE.AdditiveBlending,
-      })
-
-      const sparkParticles = new THREE.Points(sparkGeometry, sparkMaterial)
-      scene.add(sparkParticles)
-
-      // Colors
-      const colorNormal1 = new THREE.Color(0x3d065f) // Metamask purple
-      const colorNormal2 = new THREE.Color(0xff5c16) // Metamask orange
-      const colorTension = new THREE.Color(0x00f0ff) // Cyan tension glow
+      // Color Palette (Metamask Orange & Purple + Neon Cyan Tension)
+      const colorNormalTop = new THREE.Color(0xff5c16) // Orange
+      const colorNormalBottom = new THREE.Color(0x9945ff) // Purple/Solana
+      const colorTension = new THREE.Color(0x00f0ff) // Bright Cyan
 
       const updateMeshGeometry = () => {
         const links = linksRef.current
@@ -299,25 +243,20 @@ const TearableCanvas = forwardRef<TearableCanvasRef, TearableCanvasProps>(
           if (l.active) {
             activeCount++
 
-            posAttr.setXYZ(ptr, l.p1.x, l.p1.y, l.p1.z)
-            posAttr.setXYZ(ptr + 1, l.p2.x, l.p2.y, l.p2.z)
+            posAttr.setXYZ(ptr, l.p1.x, l.p1.y, 0)
+            posAttr.setXYZ(ptr + 1, l.p2.x, l.p2.y, 0)
 
-            // Calculate link tension for gradient color
-            const dx = l.p1.x - l.p2.x
-            const dy = l.p1.y - l.p2.y
-            const dz = l.p1.z - l.p2.z
-            const dist = Math.sqrt(dx * dx + dy * dy + dz * dz)
+            const dist = Math.hypot(l.p1.x - l.p2.x, l.p1.y - l.p2.y)
             const tension = Math.min(dist / l.restingDist - 1.0, 1.0)
 
-            const c1 = colorNormal1.clone().lerp(colorNormal2, (l.p1.y + 120) / 240)
-            if (tension > 0.4) {
-              c1.lerp(colorTension, (tension - 0.4) * 1.5)
+            const c = colorNormalTop.clone().lerp(colorNormalBottom, l.p1.y / height)
+            if (tension > 0.35) {
+              c.lerp(colorTension, (tension - 0.35) * 1.8)
             }
 
-            colAttr.setXYZ(ptr, c1.r, c1.g, c1.b)
-            colAttr.setXYZ(ptr + 1, c1.r, c1.g, c1.b)
+            colAttr.setXYZ(ptr, c.r, c.g, c.b)
+            colAttr.setXYZ(ptr + 1, c.r, c.g, c.b)
           } else {
-            // Degenerate segment for inactive link
             posAttr.setXYZ(ptr, 0, 0, 0)
             posAttr.setXYZ(ptr + 1, 0, 0, 0)
             colAttr.setXYZ(ptr, 0, 0, 0)
@@ -335,77 +274,56 @@ const TearableCanvas = forwardRef<TearableCanvasRef, TearableCanvasProps>(
         }
       }
 
-      // Convert Screen Coords (px) to Three.js World Coords at Z=0
-      const screenToWorld = (screenX: number, screenY: number) => {
-        const vec = new THREE.Vector3(
-          (screenX / width) * 2 - 1,
-          -(screenY / height) * 2 + 1,
-          0.5
-        )
-        vec.unproject(camera)
-        const dir = vec.sub(camera.position).normalize()
-        const distance = -camera.position.z / dir.z
-        const pos = camera.position.clone().add(dir.multiplyScalar(distance))
-        return pos
-      }
-
-      // Pointer Listeners
+      // Pointer Event Handlers
       const handlePointerMove = (e: PointerEvent) => {
-        const rect = container.getBoundingClientRect()
-        const mouseX = e.clientX - rect.left
-        const mouseY = e.clientY - rect.top
+        const mouseX = e.clientX
+        const mouseY = e.clientY
 
         mousePosRef.current.prevX = mousePosRef.current.x
         mousePosRef.current.prevY = mousePosRef.current.y
         mousePosRef.current.x = mouseX
         mousePosRef.current.y = mouseY
 
-        const worldPos = screenToWorld(mouseX, mouseY)
-        const prevWorldPos = screenToWorld(mousePosRef.current.prevX, mousePosRef.current.prevY)
+        // Indestructible Socials Forcefield Repeller
+        const socialsZone = document.getElementById('indestructible-socials-zone')
+        if (socialsZone) {
+          const sRect = socialsZone.getBoundingClientRect()
+          const sCenterX = sRect.left + sRect.width / 2
+          const sCenterY = sRect.top + sRect.height / 2
+          const sRadius = Math.max(sRect.width, sRect.height) * 0.55
 
-        // Indestructible Socials Forcefield Repeller logic
-        const socialsElement = document.getElementById('indestructible-socials-zone')
-        if (socialsElement) {
-          const sRect = socialsElement.getBoundingClientRect()
-          const sWorldCenter = screenToWorld(
-            sRect.left + sRect.width / 2 - rect.left,
-            sRect.top + sRect.height / 2 - rect.top
-          )
-          const sRadius = Math.max(sRect.width, sRect.height) * 0.45
-
-          // Repel points around indestructible socials
           for (let i = 0; i < pointsRef.current.length; i++) {
             const p = pointsRef.current[i]
-            const dx = p.x - sWorldCenter.x
-            const dy = p.y - sWorldCenter.y
-            const dist = Math.sqrt(dx * dx + dy * dy)
-            if (dist < sRadius + 30 && dist > 0) {
-              const force = ((sRadius + 30 - dist) / (sRadius + 30)) * 15
-              p.x += (dx / dist) * force
-              p.y += (dy / dist) * force
+            const dx = p.x - sCenterX
+            const dy = p.y - sCenterY
+            const dist = Math.hypot(dx, dy)
+
+            if (dist < sRadius + 40 && dist > 0) {
+              const repelForce = ((sRadius + 40 - dist) / (sRadius + 40)) * 22
+              p.x += (dx / dist) * repelForce
+              p.y += (dy / dist) * repelForce
             }
           }
         }
 
-        // Dragging grabbed point
+        // Dragging grabbed particle
         if (mousePosRef.current.isDown && grabbedPointRef.current) {
-          grabbedPointRef.current.x = worldPos.x
-          grabbedPointRef.current.y = worldPos.y
+          grabbedPointRef.current.x = mouseX
+          grabbedPointRef.current.y = mouseY
         }
 
-        // Cut / Rip Mode or Fast Mouse Slash
-        const isCutMode = modeRef.current === 'cut' || e.buttons === 2
-        const mouseSpeed = Math.hypot(worldPos.x - prevWorldPos.x, worldPos.y - prevWorldPos.y)
+        // Cutting / Ripping links under mouse path
+        const isCutMode = modeRef.current === 'cut' || mousePosRef.current.rightDown
+        const mouseSpeed = Math.hypot(mouseX - mousePosRef.current.prevX, mouseY - mousePosRef.current.prevY)
 
-        if (isCutMode || (mousePosRef.current.isDown && mouseSpeed > 12)) {
-          const cutRadius = isCutMode ? 25 : 18
+        if (isCutMode || (mousePosRef.current.isDown && mouseSpeed > 10)) {
+          const cutRadius = isCutMode ? 28 : 20
           for (let i = 0; i < linksRef.current.length; i++) {
             const link = linksRef.current[i]
             if (!link.active) continue
 
-            // Distance from link segment to world mouse position
-            const d1 = Math.hypot(link.p1.x - worldPos.x, link.p1.y - worldPos.y)
-            const d2 = Math.hypot(link.p2.x - worldPos.x, link.p2.y - worldPos.y)
+            const d1 = Math.hypot(link.p1.x - mouseX, link.p1.y - mouseY)
+            const d2 = Math.hypot(link.p2.x - mouseX, link.p2.y - mouseY)
 
             if (d1 < cutRadius || d2 < cutRadius) {
               link.active = false
@@ -415,19 +333,21 @@ const TearableCanvas = forwardRef<TearableCanvasRef, TearableCanvasProps>(
       }
 
       const handlePointerDown = (e: PointerEvent) => {
-        mousePosRef.current.isDown = true
-        const rect = container.getBoundingClientRect()
-        const mouseX = e.clientX - rect.left
-        const mouseY = e.clientY - rect.top
-        const worldPos = screenToWorld(mouseX, mouseY)
+        if (e.button === 2) {
+          mousePosRef.current.rightDown = true
+        } else {
+          mousePosRef.current.isDown = true
+        }
 
-        // Find closest particle
+        const mouseX = e.clientX
+        const mouseY = e.clientY
+
         let closestPoint: Point | null = null
         let minDist = 35
 
         for (let i = 0; i < pointsRef.current.length; i++) {
           const p = pointsRef.current[i]
-          const dist = Math.hypot(p.x - worldPos.x, p.y - worldPos.y)
+          const dist = Math.hypot(p.x - mouseX, p.y - mouseY)
           if (dist < minDist) {
             minDist = dist
             closestPoint = p
@@ -441,86 +361,78 @@ const TearableCanvas = forwardRef<TearableCanvasRef, TearableCanvasProps>(
         }
       }
 
-      const handlePointerUp = () => {
-        mousePosRef.current.isDown = false
+      const handlePointerUp = (e: PointerEvent) => {
+        if (e.button === 2) {
+          mousePosRef.current.rightDown = false
+        } else {
+          mousePosRef.current.isDown = false
+        }
         grabbedPointRef.current = null
       }
 
       const handleContextMenu = (e: MouseEvent) => {
-        e.preventDefault() // Prevent right-click context menu so user can cut freely!
+        e.preventDefault()
       }
 
       const handleResize = () => {
-        width = container.clientWidth || window.innerWidth
-        height = container.clientHeight || window.innerHeight
-        camera.aspect = width / height
+        width = window.innerWidth
+        height = window.innerHeight
+        camera.right = width
+        camera.bottom = height
         camera.updateProjectionMatrix()
         renderer.setSize(width, height)
       }
 
-      container.addEventListener('pointermove', handlePointerMove)
-      container.addEventListener('pointerdown', handlePointerDown)
+      window.addEventListener('pointermove', handlePointerMove)
+      window.addEventListener('pointerdown', handlePointerDown)
       window.addEventListener('pointerup', handlePointerUp)
-      container.addEventListener('contextmenu', handleContextMenu)
+      window.addEventListener('contextmenu', handleContextMenu)
       window.addEventListener('resize', handleResize)
 
-      // Animation Loop
-      let animationFrameId: number
+      // Physics Animation Loop
+      let animationId: number
       let lastTime = performance.now()
 
       const animate = (currentTime: number) => {
-        animationFrameId = requestAnimationFrame(animate)
+        animationId = requestAnimationFrame(animate)
         const dt = Math.min((currentTime - lastTime) / 1000, 0.033)
         lastTime = currentTime
 
-        const gravityVal = gravityRef.current ? -1200 : 0
+        const gravityVal = gravityRef.current ? 950 : 0
         const points = pointsRef.current
         const links = linksRef.current
 
         // 1. Particle Integration
         for (let i = 0; i < points.length; i++) {
-          points[i].update(dt, gravityVal, 0.985)
+          points[i].update(dt, gravityVal, 0.99)
         }
 
-        // 2. Constraint Resolution (4 passes for crisp stiffness)
-        for (let pass = 0; pass < 4; pass++) {
+        // 2. Constraint Resolution (5 iterations for firm cloth response)
+        for (let pass = 0; pass < 5; pass++) {
           for (let i = 0; i < links.length; i++) {
             links[i].resolve()
           }
         }
 
-        // 3. Sparkles Float Animation
-        const sparkPosAttr = sparkGeometry.attributes.position as THREE.BufferAttribute
-        for (let i = 0; i < sparkCount; i++) {
-          let y = sparkPosAttr.getY(i) - 0.4
-          if (y < -180) y = 180
-          sparkPosAttr.setY(i, y)
-        }
-        sparkPosAttr.needsUpdate = true
-
-        // 4. Update Three.js Mesh
+        // 3. Render Three.js Mesh
         updateMeshGeometry()
-
-        // 5. Render Scene
         renderer.render(scene, camera)
       }
 
       animate(performance.now())
 
       return () => {
-        cancelAnimationFrame(animationFrameId)
-        container.removeEventListener('pointermove', handlePointerMove)
-        container.removeEventListener('pointerdown', handlePointerDown)
+        cancelAnimationFrame(animationId)
+        window.removeEventListener('pointermove', handlePointerMove)
+        window.removeEventListener('pointerdown', handlePointerDown)
         window.removeEventListener('pointerup', handlePointerUp)
-        container.removeEventListener('contextmenu', handleContextMenu)
+        window.removeEventListener('contextmenu', handleContextMenu)
         window.removeEventListener('resize', handleResize)
         if (container.contains(renderer.domElement)) {
           container.removeChild(renderer.domElement)
         }
         lineGeometry.dispose()
         lineMaterial.dispose()
-        sparkGeometry.dispose()
-        sparkMaterial.dispose()
         renderer.dispose()
       }
     }, [onPhysicsStatsChange])

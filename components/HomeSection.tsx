@@ -125,14 +125,14 @@ export default function HomeSection() {
                   <>
                     <div className="text-orange-400 font-bold">$ vaiiya agent --task &quot;build multi-agent app&quot;</div>
                     <div className="text-slate-400">✓ Initializing DeepMind Agentic Workflow...</div>
-                    <div className="text-slate-400">✓ Generating Next.js + Kotlin codebase...</div>
+                    <div className="text-slate-400">✓ Generating Vite + React + Kotlin codebase...</div>
                     <div className="text-emerald-400 font-semibold">⚡ Agentic Engine: Deployed successfully</div>
                   </>
                 )}
 
                 {activeTab === 'web' && (
                   <>
-                    <div className="text-purple-400 font-bold">$ vaiiya web --framework nextjs-14</div>
+                    <div className="text-purple-400 font-bold">$ vaiiya web --framework vite-react</div>
                     <div className="text-slate-400">✓ Three.js 3D WebGL Shader Enabled</div>
                     <div className="text-slate-400">✓ 100 Lighthouse Performance Score</div>
                     <div className="text-cyan-400 font-semibold">🚀 Live URL: vaiiya.vercel.app</div>

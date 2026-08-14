@@ -33,7 +33,7 @@ export default function WebBuildingSection() {
           </h2>
 
           <p className="text-slate-600 text-lg leading-relaxed font-normal">
-            We architect ultra-fast modern websites using Next.js 14, Three.js 3D WebGL physics, TailwindCSS, and seamless cloud deployments on Vercel.
+            We architect ultra-fast modern websites using Vite, React, Next.js, Three.js 3D WebGL physics, TailwindCSS, and seamless cloud deployments on Vercel.
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
@@ -42,8 +42,8 @@ export default function WebBuildingSection() {
               <div className="text-xs text-slate-500 font-medium mt-1">Interactive 3D Canvas</div>
             </div>
             <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-              <div className="font-bold text-[#3d065f] text-xl font-serif">Next.js 14</div>
-              <div className="text-xs text-slate-500 font-medium mt-1">React App Router</div>
+              <div className="font-bold text-[#3d065f] text-xl font-serif">Vite / React</div>
+              <div className="text-xs text-slate-500 font-medium mt-1">Lightning Fast HMR</div>
             </div>
             <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
               <div className="font-bold text-cyan-600 text-xl font-serif">Vercel</div>

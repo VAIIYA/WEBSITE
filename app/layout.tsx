@@ -59,9 +59,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poly.variable}`}>
-      <body className="bg-slate-950 overflow-hidden m-0 p-0">
+      <body className="bg-white text-slate-900 m-0 p-0 antialiased">
         {children}
       </body>
     </html>
   )
 }
+

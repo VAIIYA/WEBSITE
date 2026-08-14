@@ -3,95 +3,92 @@
 import React, { useState } from 'react'
 
 export default function WebBuildingSection() {
-  const [selectedProjectType, setSelectedProjectType] = useState<string>('3d-web')
-  const [selectedBudget, setSelectedBudget] = useState<string>('premium')
+  const [selectedCategory, setSelectedCategory] = useState<string>('interactive-3d')
+  const [selectedTier, setSelectedTier] = useState<string>('pro')
+  const [emailInput, setEmailInput] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmitRequest = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    if (!emailInput) return
     setSubmitted(true)
     setTimeout(() => {
       setSubmitted(false)
+      setEmailInput('')
     }, 4000)
   }
 
   return (
-    <section id="webbuilding" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-transparent pointer-events-none">
-      <div className="max-w-7xl mx-auto relative z-20 pointer-events-none">
+    <section id="webbuilding" className="py-24 px-4 sm:px-6 lg:px-8 bg-white relative">
+      <div className="max-w-7xl mx-auto">
+        
         {/* Section Header */}
-        <div className="backdrop-blur-xl bg-slate-900/85 p-8 sm:p-12 rounded-[40px] border border-slate-700/80 shadow-2xl mb-12 text-center max-w-4xl mx-auto pointer-events-auto text-white">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/20 text-purple-300 text-xs font-bold uppercase tracking-widest border border-purple-500/30 mb-4">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            Website Building Studio
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-[#3d065f] text-xs font-bold uppercase tracking-widest">
+            <span>🌐 CORE PILLAR • WEB BUILDING STUDIO</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl font-serif text-white mb-4">
-            Custom <span className="text-purple-400 italic">Web Building</span> & 3D WebGL
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 font-serif">
+            High-Impact <span className="text-[#3d065f] italic">Websites & PWAs</span> Built for Speed
           </h2>
 
-          <p className="text-slate-300 text-lg max-w-2xl mx-auto font-light">
-            We architect ultra-fast, modern websites using Next.js 14, Three.js 3D physics, TailwindCSS, and Web3 integrations. Turn your web vision into an interactive reality.
+          <p className="text-slate-600 text-lg leading-relaxed font-normal">
+            We architect ultra-fast modern websites using Next.js 14, Three.js 3D WebGL physics, TailwindCSS, and seamless cloud deployments on Vercel.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
-            <div className="p-4 bg-slate-800/80 border border-slate-700 rounded-2xl">
-              <div className="font-bold text-cyan-400 text-lg font-serif">Three.js / WebGL</div>
-              <div className="text-xs text-slate-400 mt-1">3D Physics & Canvas</div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
+              <div className="font-bold text-[#ff5c16] text-xl font-serif">Three.js</div>
+              <div className="text-xs text-slate-500 font-medium mt-1">Interactive 3D Canvas</div>
             </div>
-            <div className="p-4 bg-slate-800/80 border border-slate-700 rounded-2xl">
-              <div className="font-bold text-orange-400 text-lg font-serif">Next.js 14</div>
-              <div className="text-xs text-slate-400 mt-1">SSR & Edge Architecture</div>
+            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
+              <div className="font-bold text-[#3d065f] text-xl font-serif">Next.js 14</div>
+              <div className="text-xs text-slate-500 font-medium mt-1">React App Router</div>
             </div>
-            <div className="p-4 bg-slate-800/80 border border-slate-700 rounded-2xl">
-              <div className="font-bold text-purple-400 text-lg font-serif">Web3 & Solana</div>
-              <div className="text-xs text-slate-400 mt-1">Smart Contract PWAs</div>
+            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
+              <div className="font-bold text-cyan-600 text-xl font-serif">Vercel</div>
+              <div className="text-xs text-slate-500 font-medium mt-1">Global Edge Host</div>
             </div>
-            <div className="p-4 bg-slate-800/80 border border-slate-700 rounded-2xl">
-              <div className="font-bold text-emerald-400 text-lg font-serif">100 Lighthouse</div>
-              <div className="text-xs text-slate-400 mt-1">SEO & Performance</div>
+            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
+              <div className="font-bold text-emerald-600 text-xl font-serif">100/100</div>
+              <div className="text-xs text-slate-500 font-medium mt-1">SEO & Performance</div>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start pointer-events-none">
-          {/* Featured Web Project Card */}
-          <div className="backdrop-blur-xl bg-slate-900/85 border border-slate-700/80 rounded-[40px] p-8 sm:p-10 shadow-2xl flex flex-col justify-between pointer-events-auto text-white">
+        {/* 2 Columns: Featured Showcase Card & Project Inquiry Tool */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          {/* Featured Web Studio Build Card */}
+          <div className="lg:col-span-6 bg-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl border border-slate-800 flex flex-col justify-between">
             <div>
-              <div className="flex justify-between items-center mb-6">
-                <span className="px-3.5 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-xs font-bold uppercase tracking-wider">
-                  FEATURED STUDIO BUILD
+              <div className="flex items-center justify-between mb-6">
+                <span className="px-3.5 py-1 rounded-full bg-purple-950 text-purple-300 text-xs font-bold uppercase tracking-wider border border-purple-800">
+                  FEATURED LIVE BUILD
                 </span>
-                <span className="text-xs text-orange-400 font-mono">LIVE PROJECT</span>
+                <span className="text-xs text-[#ff5c16] font-mono font-semibold">VERCEL DEPLOYED</span>
               </div>
 
-              <h3 className="text-3xl sm:text-4xl font-serif text-white mb-4">
+              <h3 className="text-3xl sm:text-4xl font-bold font-serif text-white mb-4">
                 NIGHTSTUDIO
               </h3>
 
-              <p className="text-slate-300 leading-relaxed font-light mb-8">
-                Creative digital studio crafting immersive Web3 experiences on Solana. Built with bespoke 3D visual language, custom interactive shaders, and responsive UI design.
+              <p className="text-slate-300 leading-relaxed font-normal mb-8">
+                Creative Web3 digital studio experience with interactive 3D WebGL visuals, custom responsive layouts, and seamless Solana wallet integration.
               </p>
 
               <div className="space-y-3 mb-8">
                 <div className="flex items-center gap-3 text-sm text-slate-300">
-                  <svg className="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Interactive 3D WebGL Canvas & Physics</span>
+                  <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">✓</span>
+                  <span>Interactive Three.js 3D WebGL Canvas</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-slate-300">
-                  <svg className="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Solana Web3 Wallet Connection</span>
+                  <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">✓</span>
+                  <span>Solana Web3 Smart Contract PWAs</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-slate-300">
-                  <svg className="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Sub-second Vercel Global Edge Deployment</span>
+                  <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">✓</span>
+                  <span>Sub-second Global Vercel Deployment</span>
                 </div>
               </div>
             </div>
@@ -100,114 +97,107 @@ export default function WebBuildingSection() {
               href="https://nightstudio.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-purple-600 hover:bg-purple-700 text-white font-semibold text-base transition-all shadow-lg shadow-purple-600/30 active:scale-95"
+              className="btn-metamask btn-purple w-full text-base"
             >
-              Explore NIGHTSTUDIO Live
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
+              Explore Live Build (NIGHTSTUDIO) &rarr;
             </a>
           </div>
 
-          {/* Interactive Project Request Builder */}
-          <div className="backdrop-blur-xl bg-slate-900/85 border border-slate-700/80 rounded-[40px] p-8 sm:p-10 shadow-2xl pointer-events-auto text-white">
-            <h3 className="text-2xl sm:text-3xl font-serif text-white mb-2">
-              Start Your Website Build
-            </h3>
-            <p className="text-slate-300 text-sm font-light mb-6">
-              Configure your desired website features below and send an instant inquiry to VAIIYA.
-            </p>
+          {/* Interactive Project Inquiry Builder */}
+          <div className="lg:col-span-6 bg-slate-50 border border-slate-200/80 rounded-3xl p-8 sm:p-10 shadow-sm flex flex-col justify-between">
+            <div>
+              <h3 className="text-2xl font-bold text-slate-900 font-serif mb-2">
+                Start Your Website Build
+              </h3>
+              <p className="text-slate-600 text-sm mb-6">
+                Configure your project requirements below to submit a direct inquiry to VAIIYA.
+              </p>
 
-            <form onSubmit={handleSubmitRequest} className="space-y-6">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-                  1. Project Category
-                </label>
-                <div className="grid grid-cols-2 gap-3">
-                  {[
-                    { id: '3d-web', name: '3D Physics / Tearable Website' },
-                    { id: 'web3-pwa', name: 'Web3 / Solana PWA' },
-                    { id: 'agency-portfolio', name: 'Agency / Studio Portfolio' },
-                    { id: 'custom-app', name: 'Custom Full-Stack App' },
-                  ].map((cat) => (
-                    <button
-                      type="button"
-                      key={cat.id}
-                      onClick={() => setSelectedProjectType(cat.id)}
-                      className={`p-3 rounded-xl text-left text-xs font-semibold border transition-all ${
-                        selectedProjectType === cat.id
-                          ? 'border-orange-500 bg-orange-500/20 text-orange-400 shadow-sm'
-                          : 'border-slate-700 bg-slate-800/80 text-slate-300 hover:bg-slate-800'
-                      }`}
-                    >
-                      {cat.name}
-                    </button>
-                  ))}
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* 1. Category */}
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                    1. Website Type
+                  </label>
+                  <div className="grid grid-cols-2 gap-2">
+                    {[
+                      { id: 'interactive-3d', label: '3D WebGL / Interactive' },
+                      { id: 'saas-pwa', label: 'SaaS App / Web3 PWA' },
+                      { id: 'studio-portfolio', label: 'Studio Showcase' },
+                      { id: 'custom-platform', label: 'Custom Enterprise App' },
+                    ].map((cat) => (
+                      <button
+                        type="button"
+                        key={cat.id}
+                        onClick={() => setSelectedCategory(cat.id)}
+                        className={`p-3 rounded-2xl text-left text-xs font-semibold border transition-all ${
+                          selectedCategory === cat.id
+                            ? 'bg-[#3d065f] text-white border-transparent shadow'
+                            : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300'
+                        }`}
+                      >
+                        {cat.label}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-                  2. Budget & Tier
-                </label>
-                <div className="grid grid-cols-3 gap-2">
-                  {[
-                    { id: 'starter', name: 'Starter' },
-                    { id: 'premium', name: 'Premium 3D' },
-                    { id: 'enterprise', name: 'Custom Enterprise' },
-                  ].map((budget) => (
-                    <button
-                      type="button"
-                      key={budget.id}
-                      onClick={() => setSelectedBudget(budget.id)}
-                      className={`py-2.5 px-3 rounded-xl text-center text-xs font-bold border transition-all ${
-                        selectedBudget === budget.id
-                          ? 'border-purple-500 bg-purple-500/20 text-purple-300 shadow-sm'
-                          : 'border-slate-700 bg-slate-800/80 text-slate-400 hover:bg-slate-800'
-                      }`}
-                    >
-                      {budget.name}
-                    </button>
-                  ))}
+                {/* 2. Scope Tier */}
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                    2. Project Scope Tier
+                  </label>
+                  <div className="grid grid-cols-3 gap-2">
+                    {[
+                      { id: 'starter', label: 'Starter Launch' },
+                      { id: 'pro', label: 'Pro 3D Web' },
+                      { id: 'custom', label: 'Custom Fullstack' },
+                    ].map((tier) => (
+                      <button
+                        type="button"
+                        key={tier.id}
+                        onClick={() => setSelectedTier(tier.id)}
+                        className={`py-2.5 px-3 rounded-2xl text-center text-xs font-bold border transition-all ${
+                          selectedTier === tier.id
+                            ? 'bg-[#ff5c16] text-white border-transparent shadow'
+                            : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300'
+                        }`}
+                      >
+                        {tier.label}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-                  3. Contact Email
-                </label>
-                <input
-                  type="email"
-                  required
-                  placeholder="your.email@company.com"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500/50"
-                />
-              </div>
+                {/* 3. Contact Email */}
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                    3. Your Contact Email
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={emailInput}
+                    onChange={(e) => setEmailInput(e.target.value)}
+                    placeholder="your.email@company.com"
+                    className="w-full px-4 py-3 rounded-2xl border border-slate-200 bg-white text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff5c16]/50"
+                  />
+                </div>
 
-              <button
-                type="submit"
-                className="w-full py-4 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-base transition-all shadow-lg shadow-orange-500/25 active:scale-95 flex items-center justify-center gap-2"
-              >
-                {submitted ? (
-                  <>
-                    <svg className="w-5 h-5 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Inquiry Received! We will be in touch.
-                  </>
-                ) : (
-                  <>
-                    Submit Website Project Request
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </>
-                )}
-              </button>
-            </form>
+                <button
+                  type="submit"
+                  className="btn-metamask btn-orange w-full text-base font-bold"
+                >
+                  {submitted ? '✓ Request Submitted! We will reply shortly.' : 'Submit Website Build Inquiry'}
+                </button>
+              </form>
+            </div>
           </div>
+
         </div>
+
       </div>
     </section>
   )
 }
+

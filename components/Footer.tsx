@@ -1,45 +1,52 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
-import { socialLinks } from '@/lib/socialLinks'
 
 const sectionLinks = [
-  { name: 'Homepage', href: '#home' },
+  { name: 'Home', href: '#home' },
+  { name: 'Agentic AI', href: '#agentic' },
+  { name: 'Web Studio', href: '#webbuilding' },
   { name: 'Android Apps', href: '#android' },
   { name: 'iOS Apps', href: '#ios' },
-  { name: 'Website Building', href: '#webbuilding' },
-  { name: 'Indestructible Socials', href: '#socials' },
+  { name: 'Socials', href: '#socials' },
 ]
 
 export default function Footer() {
   return (
-    <footer className="relative z-30 bg-slate-900 text-white border-t border-slate-800">
+    <footer className="bg-slate-950 text-white border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
-          {/* Brand */}
-          <div className="col-span-1 md:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <Image src="/v-logo.jpg" alt="VAIIYA Logo" width={40} height={40} className="rounded-xl shadow" />
-              <div className="flex flex-col">
-                <span className="text-2xl font-serif text-white leading-none">VAIIYA</span>
-                <span className="text-[9px] uppercase tracking-[0.2em] text-orange-400 font-semibold">We. As One.</span>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+          
+          {/* Brand Column */}
+          <div className="md:col-span-2 space-y-4">
+            <Link href="#home" className="flex items-center gap-3">
+              <div className="relative w-9 h-9 rounded-xl overflow-hidden shadow">
+                <Image
+                  src="/v-logo.jpg"
+                  alt="VAIIYA Logo"
+                  fill
+                  className="object-cover"
+                />
               </div>
-            </div>
-            <p className="text-sm text-slate-400 leading-relaxed font-light max-w-sm">
-              1-Page Interactive Experience featuring real-time Three.js Verlet cloth physics simulation and indestructible socials. Built for Android, iOS, and Web3.
+              <span className="text-2xl font-bold font-serif text-white tracking-tight">VAIIYA</span>
+            </Link>
+            <p className="text-slate-400 text-sm leading-relaxed max-w-md font-normal">
+              VAIIYA is an agentic engineering studio specializing in autonomous AI software development, Next.js web applications, native Android Kotlin, and iOS SwiftUI apps. Hosted on GitHub & Vercel ([vaiiya.vercel.app](https://vaiiya.vercel.app)).
             </p>
           </div>
 
-          {/* Navigation Sections */}
+          {/* Quick Links */}
           <div>
             <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
-              Sections
+              Navigation
             </h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-2.5 text-sm">
               {sectionLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-slate-300 hover:text-orange-400 transition-colors font-medium"
+                    className="text-slate-300 hover:text-[#ff5c16] transition-colors font-medium"
                   >
                     {link.name}
                   </a>
@@ -48,50 +55,32 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Connect */}
+          {/* Core Stack */}
           <div>
             <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
-              Indestructible Socials
+              Core Technologies
             </h3>
-            <ul className="space-y-3 text-sm">
-              {socialLinks.map((social) => (
-                <li key={social.name}>
-                  <a
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {social.icon}
-                    <span>{social.name}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Tech Stack */}
-          <div>
-            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
-              Engineered With
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs text-slate-300">Three.js</span>
-              <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs text-slate-300">Next.js 14</span>
-              <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs text-slate-300">TailwindCSS</span>
-              <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs text-slate-300">Verlet Physics</span>
+            <div className="flex flex-wrap gap-2 text-xs">
+              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Agentic AI</span>
+              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Next.js 14</span>
+              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Three.js 3D</span>
+              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Kotlin Compose</span>
+              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Swift 5 SwiftUI</span>
             </div>
           </div>
+
         </div>
 
-        <div className="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} VAIIYA. All rights reserved. Deployed on Vercel & GitHub.</p>
-          <div className="flex items-center gap-2">
-            <span>Crafted with</span>
-            <span className="font-semibold text-orange-400">Precision & Physics</span>
+        {/* Bottom Bar */}
+        <div className="border-t border-slate-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+          <p>© {new Date().getFullYear()} VAIIYA Studio. All rights reserved. Deployed on Vercel.</p>
+          <div className="flex items-center gap-2 font-medium">
+            <span>Designed for</span>
+            <span className="text-[#ff5c16]">Agentic Excellence</span>
           </div>
         </div>
       </div>
     </footer>
   )
 }
+

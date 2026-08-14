@@ -1,108 +1,175 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 
 export default function HomeSection() {
+  const [activeTab, setActiveTab] = useState<'agents' | 'web' | 'mobile'>('agents')
+
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-transparent py-12 pointer-events-none">
-      <div className="max-w-7xl mx-auto w-full relative z-20 pointer-events-none">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content Card */}
-          <div className="space-y-8 backdrop-blur-xl bg-slate-900/80 p-8 sm:p-12 rounded-[40px] border border-slate-700/80 shadow-2xl pointer-events-auto text-white">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider border border-orange-500/30">
-              <span className="w-2 h-2 rounded-full bg-orange-400 animate-ping" />
-              VAIIYA • WE. AS ONE.
+    <section id="home" className="relative pt-12 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-mesh-pattern">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left Column: Bold MetaMask Style Copy */}
+          <div className="lg:col-span-7 space-y-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-800 shadow-sm">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#ff5c16] animate-pulse" />
+              <span>THE AGENTIC DEVELOPMENT STUDIO</span>
+              <span className="text-slate-300">|</span>
+              <span className="text-[#3d065f] font-bold">VAIIYA v2.0</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif leading-[1.08] tracking-tight text-white">
-              Crafting <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-purple-400 to-cyan-400 italic">Tearable Digital</span>
-              <br />
-              Ecosystems.
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.08] font-serif">
+              Engineering the <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5c16] via-[#3d065f] to-[#00f0ff] italic">
+                Agentic Future.
+              </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-300 max-w-xl leading-relaxed font-light">
-              Welcome to VAIIYA. We design, engineer, and ship high-impact native mobile applications and Web3 experiences. <strong>Drag or right-click slash across the screen to rip through the Three.js mesh!</strong>
+            <p className="text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed font-normal">
+              VAIIYA crafts intelligent AI Agents, high-performance websites, and native Android & iOS mobile applications. Built for visionary teams and modern web ecosystems.
             </p>
 
             {/* Feature Pills */}
-            <div className="grid grid-cols-3 gap-3 pt-2">
-              <div className="p-3 bg-slate-800/80 border border-slate-700 rounded-2xl text-center">
-                <div className="text-2xl font-bold text-cyan-400 font-serif">100%</div>
-                <div className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mt-1">Native Apps</div>
+            <div className="grid grid-cols-3 gap-3 max-w-lg">
+              <div className="p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                <div className="text-2xl font-bold text-[#ff5c16] font-serif">AI Agents</div>
+                <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mt-1">Autonomous</div>
               </div>
-              <div className="p-3 bg-slate-800/80 border border-slate-700 rounded-2xl text-center">
-                <div className="text-2xl font-bold text-orange-400 font-serif">Verlet</div>
-                <div className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mt-1">Cloth Physics</div>
+              <div className="p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                <div className="text-2xl font-bold text-[#3d065f] font-serif">Next.js</div>
+                <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mt-1">Web 3D</div>
               </div>
-              <div className="p-3 bg-slate-800/80 border border-slate-700 rounded-2xl text-center">
-                <div className="text-2xl font-bold text-emerald-400 font-serif">60 FPS</div>
-                <div className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mt-1">Three.js</div>
+              <div className="p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                <div className="text-2xl font-bold text-emerald-600 font-serif">Kotlin/Swift</div>
+                <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mt-1">Native Mobile</div>
               </div>
             </div>
 
+            {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 pt-2">
               <a
+                href="#agentic"
+                className="btn-metamask btn-orange text-base"
+              >
+                🤖 Explore Agentic AI
+              </a>
+              <a
+                href="#webbuilding"
+                className="btn-metamask btn-purple text-base"
+              >
+                🌐 Web Studio
+              </a>
+              <a
                 href="#android"
-                className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold rounded-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white transition-all shadow-lg shadow-orange-500/25 active:scale-95"
+                className="btn-metamask btn-outline-dark text-base"
               >
-                Android Apps
-                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </a>
-              <a
-                href="#ios"
-                className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold rounded-full bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition-all active:scale-95"
-              >
-                iOS Apps
-              </a>
-              <a
-                href="#socials"
-                className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold rounded-full bg-slate-900 hover:bg-black text-cyan-400 border border-cyan-400/50 transition-all active:scale-95"
-              >
-                🛡️ Indestructible Socials
+                📱 Mobile Apps
               </a>
             </div>
           </div>
 
-          {/* Right Interactive Card */}
-          <div className="relative group hidden lg:block h-[560px] pointer-events-none">
-            <div className="relative h-full w-full flex items-center justify-center pointer-events-none">
-              <div className="relative z-20 w-[320px] bg-slate-900/90 backdrop-blur-2xl rounded-[2.5rem] border border-slate-700/90 p-8 shadow-2xl text-white pointer-events-auto">
-                <div className="flex items-center gap-4 mb-6">
-                  <Image src="/v-logo.jpg" alt="VAIIYA Logo" width={48} height={48} className="rounded-2xl shadow-md" />
+          {/* Right Column: Playful Interactive 3D Mockup Card */}
+          <div className="lg:col-span-5 relative">
+            {/* Glow backing */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-tr from-orange-400 to-purple-600 rounded-full blur-[80px] opacity-30 animate-pulse-glow" />
+
+            <div className="relative bg-slate-900 text-white rounded-[36px] p-7 shadow-2xl border border-slate-800 animate-float-slow">
+              
+              {/* Top Bar of Interactive Widget */}
+              <div className="flex items-center justify-between border-b border-slate-800 pb-5 mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#ff5c16] flex items-center justify-center font-bold text-lg text-white shadow-md">
+                    V
+                  </div>
                   <div>
-                    <div className="font-serif text-2xl text-white leading-none">VAIIYA</div>
-                    <div className="text-xs text-orange-400 font-medium tracking-widest mt-1">STUDIO</div>
+                    <div className="font-bold text-base font-serif">VAIIYA Engine</div>
+                    <div className="text-xs text-slate-400">Agent Status: <span className="text-emerald-400 font-semibold">Active & Orchestrating</span></div>
                   </div>
                 </div>
+                <span className="w-3 h-3 rounded-full bg-emerald-400 animate-ping" />
+              </div>
 
-                <div className="space-y-4 text-sm text-slate-300 font-light">
-                  <div className="p-3 bg-white/5 rounded-xl border border-white/10 flex justify-between items-center">
-                    <span>Android Engine</span>
-                    <span className="text-xs font-bold px-2 py-0.5 rounded bg-green-500/20 text-green-400">ACTIVE</span>
-                  </div>
-                  <div className="p-3 bg-white/5 rounded-xl border border-white/10 flex justify-between items-center">
-                    <span>iOS Swift Architecture</span>
-                    <span className="text-xs font-bold px-2 py-0.5 rounded bg-blue-500/20 text-blue-400">ACTIVE</span>
-                  </div>
-                  <div className="p-3 bg-white/5 rounded-xl border border-white/10 flex justify-between items-center">
-                    <span>Three.js Tearable Physics</span>
-                    <span className="text-xs font-bold px-2 py-0.5 rounded bg-purple-500/20 text-purple-400">PUSHMATRIX</span>
-                  </div>
-                </div>
+              {/* Tab Selector inside Card */}
+              <div className="grid grid-cols-3 gap-2 bg-slate-800/80 p-1.5 rounded-2xl mb-6 text-xs font-semibold">
+                <button
+                  onClick={() => setActiveTab('agents')}
+                  className={`py-2 rounded-xl transition-all ${
+                    activeTab === 'agents' ? 'bg-[#ff5c16] text-white shadow' : 'text-slate-400 hover:text-white'
+                  }`}
+                >
+                  🤖 Agent AI
+                </button>
+                <button
+                  onClick={() => setActiveTab('web')}
+                  className={`py-2 rounded-xl transition-all ${
+                    activeTab === 'web' ? 'bg-[#3d065f] text-white shadow' : 'text-slate-400 hover:text-white'
+                  }`}
+                >
+                  🌐 Web Studio
+                </button>
+                <button
+                  onClick={() => setActiveTab('mobile')}
+                  className={`py-2 rounded-xl transition-all ${
+                    activeTab === 'mobile' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
+                  }`}
+                >
+                  📱 Mobile
+                </button>
+              </div>
 
-                <div className="mt-8 pt-4 border-t border-slate-800 flex justify-between items-center text-xs text-slate-400">
-                  <span>Interactive 1-Page</span>
-                  <span className="text-orange-400 font-mono">v1.0.0</span>
+              {/* Dynamic Content Preview Box */}
+              <div className="bg-slate-950 rounded-2xl p-5 border border-slate-800 font-mono text-xs text-slate-300 space-y-3 min-h-[180px] flex flex-col justify-between">
+                {activeTab === 'agents' && (
+                  <>
+                    <div className="text-orange-400 font-bold">$ vaiiya agent --task &quot;build multi-agent app&quot;</div>
+                    <div className="text-slate-400">✓ Initializing DeepMind Agentic Workflow...</div>
+                    <div className="text-slate-400">✓ Generating Next.js + Kotlin codebase...</div>
+                    <div className="text-emerald-400 font-semibold">⚡ Agentic Engine: Deployed successfully</div>
+                  </>
+                )}
+
+                {activeTab === 'web' && (
+                  <>
+                    <div className="text-purple-400 font-bold">$ vaiiya web --framework nextjs-14</div>
+                    <div className="text-slate-400">✓ Three.js 3D WebGL Shader Enabled</div>
+                    <div className="text-slate-400">✓ 100 Lighthouse Performance Score</div>
+                    <div className="text-cyan-400 font-semibold">🚀 Live URL: vaiiya.vercel.app</div>
+                  </>
+                )}
+
+                {activeTab === 'mobile' && (
+                  <>
+                    <div className="text-emerald-400 font-bold">$ vaiiya mobile --target android-ios</div>
+                    <div className="text-slate-400">✓ Kotlin Jetpack Compose (Android)</div>
+                    <div className="text-slate-400">✓ Swift 5.10 SwiftUI (iOS)</div>
+                    <div className="text-amber-400 font-semibold">📱 App Store & Play Store Ready</div>
+                  </>
+                )}
+
+                <div className="pt-3 border-t border-slate-800 flex justify-between items-center text-[10px] text-slate-500 font-sans">
+                  <span>VAIIYA Agentic Platform</span>
+                  <span className="text-emerald-400 font-semibold">ONLINE</span>
                 </div>
+              </div>
+
+              {/* Bottom Card Footer */}
+              <div className="mt-6 flex items-center justify-between text-xs text-slate-400">
+                <span className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-cyan-400" />
+                  GitHub & Vercel Hosted
+                </span>
+                <a href="#agentic" className="text-[#ff5c16] hover:underline font-semibold">
+                  Learn more &rarr;
+                </a>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
   )
 }
+

@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og'
+import { logoDataUri } from '@/lib/logoDataUri'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
@@ -51,15 +52,10 @@ export default function OpenGraphImage() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              background: 'linear-gradient(135deg, #ff5c16 0%, #3d065f 100%)',
-              borderRadius: 16,
-              fontSize: 36,
-              fontWeight: 700,
-              fontFamily: 'Georgia, serif',
-              color: 'white',
             }}
           >
-            V
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={logoDataUri} width={64} height={64} alt="VAIIYA" />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div style={{ fontSize: 48, fontWeight: 700, fontFamily: 'Georgia, serif', color: '#3d065f' }}>

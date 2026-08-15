@@ -88,27 +88,106 @@ export default function TermsOfService() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">6. Limitation of Liability</h2>
-                        <p className="text-gray-500 italic leading-relaxed">
-                            &quot;VAIIYA shall not be liable for any indirect, incidental, or consequential damages arising from the use
-                            of our services, including but not limited to loss of digital assets or service interruptions.&quot;
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">6. Disclaimer of Warranties</h2>
+                        <p className="text-gray-600 leading-relaxed mb-4">
+                            Our services are provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis, without warranties of any kind,
+                            whether express, implied, or statutory. To the fullest extent permitted by applicable law, VAIIYA
+                            disclaims all warranties, including but not limited to implied warranties of merchantability, fitness
+                            for a particular purpose, title, and non-infringement.
+                        </p>
+                        <p className="text-gray-600 leading-relaxed">
+                            We do not warrant that our services will be uninterrupted, timely, secure, error-free, or free of
+                            viruses or other harmful components, or that any defects will be corrected. You use our services
+                            entirely at your own risk.
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">7. Termination</h2>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">7. Limitation of Liability</h2>
+                        <p className="text-gray-600 leading-relaxed mb-4">
+                            To the maximum extent permitted by applicable law, in no event shall VAIIYA, its founders, employees,
+                            contractors, or affiliates be liable for any indirect, incidental, special, consequential, exemplary,
+                            or punitive damages, including but not limited to loss of profits, revenue, data, digital assets,
+                            goodwill, or other intangible losses, arising out of or related to your use of, or inability to use,
+                            our services &mdash; even if we have been advised of the possibility of such damages.
+                        </p>
+                        <p className="text-gray-600 leading-relaxed">
+                            To the extent such liability is not disclaimed entirely under applicable law, VAIIYA&apos;s total
+                            aggregate liability arising out of or relating to these terms or our services shall not exceed the
+                            greater of (a) the amount you paid us, if any, for the service giving rise to the claim in the twelve
+                            (12) months preceding the event, or (b) one hundred euros (&euro;100).
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">8. Indemnification</h2>
+                        <p className="text-gray-600 leading-relaxed">
+                            You agree to defend, indemnify, and hold harmless VAIIYA and its founders, employees, contractors,
+                            and affiliates from and against any claims, liabilities, damages, losses, and expenses, including
+                            reasonable legal fees, arising out of or in any way connected with your access to or use of our
+                            services, your violation of these terms, or your violation of any rights of a third party.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">9. Third-Party Services & Links</h2>
+                        <p className="text-gray-600 leading-relaxed">
+                            Our services may contain links to or integrations with third-party websites, applications, or
+                            protocols that are not owned or controlled by VAIIYA. We have no control over, and assume no
+                            responsibility for, the content, privacy practices, or availability of any third-party services.
+                            Your interactions with such third parties are solely between you and them.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">10. Termination</h2>
                         <p className="text-gray-600 leading-relaxed">
                             We reserve the right to suspend or terminate your access to our services at our sole discretion, without
-                            notice, for behavior that violates these terms or threatens the security of our ecosystem.
+                            notice, for behavior that violates these terms or threatens the security of our ecosystem. All
+                            disclaimers, liability limitations, and indemnification obligations survive termination.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">11. Force Majeure & Severability</h2>
+                        <p className="text-gray-600 leading-relaxed mb-4">
+                            VAIIYA shall not be liable for any failure or delay in performance resulting from causes beyond our
+                            reasonable control, including but not limited to network outages, blockchain congestion, acts of God,
+                            or third-party service failures.
+                        </p>
+                        <p className="text-gray-600 leading-relaxed">
+                            If any provision of these terms is found unenforceable, that provision shall be limited or eliminated
+                            to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.
+                            These terms constitute the entire agreement between you and VAIIYA regarding our services.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">12. Changes to These Terms</h2>
+                        <p className="text-gray-600 leading-relaxed">
+                            We may revise these terms from time to time. The updated version will be indicated by a revised
+                            &quot;Last updated&quot; date. Continued use of our services after changes take effect constitutes
+                            acceptance of the revised terms.
                         </p>
                     </section>
 
                     <section className="bg-metamask-purple p-8 rounded-2xl">
-                        <h2 className="text-2xl font-serif text-white mb-6 border-l-4 border-metamask-orange pl-4">8. Governing Law</h2>
+                        <h2 className="text-2xl font-serif text-white mb-6 border-l-4 border-metamask-orange pl-4">13. Governing Law</h2>
                         <p className="text-purple-100 leading-relaxed">
-                            These terms are governed by and construed in accordance with the laws of the **Netherlands**. Any
-                            disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts in Amsterdam.
+                            These terms are governed by and construed in accordance with the laws of the Netherlands, without
+                            regard to its conflict of law provisions. Any disputes arising from these terms shall be subject to
+                            the exclusive jurisdiction of the courts in Amsterdam.
                         </p>
+                    </section>
+
+                    <section className="bg-metamask-gray-50 border border-metamask-gray-100 p-8 rounded-2xl">
+                        <h2 className="text-xl font-semibold text-metamask-purple mb-4">Contact</h2>
+                        <p className="text-gray-600 text-sm mb-4">
+                            For any questions regarding these terms, please reach out to:
+                        </p>
+                        <a href="mailto:legal@vaiiya.com" className="text-xl font-mono text-metamask-orange hover:text-metamask-purple transition-colors">
+                            legal@vaiiya.com
+                        </a>
                     </section>
                 </div>
             </main>

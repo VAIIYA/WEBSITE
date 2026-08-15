@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Footer from '@/components/Footer'
 import VideoSection from '@/components/VideoSection'
 
 export const metadata: Metadata = {
@@ -11,7 +10,7 @@ export default function ProgressPage() {
     return (
         <main className="min-h-screen bg-white">
 
-            <div className="pt-32 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div className="pt-12 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <div className="space-y-6">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-metamask-orange/10 text-metamask-orange text-sm font-medium">
                         Building in Public
@@ -50,8 +49,6 @@ export default function ProgressPage() {
                     </div>
                 </div>
             </section>
-
-            <Footer />
         </main>
     )
 }

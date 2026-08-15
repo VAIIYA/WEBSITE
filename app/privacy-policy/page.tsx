@@ -139,6 +139,30 @@ export default function PrivacyPolicy() {
                         </p>
                     </section>
 
+                    <section>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">9. Security & Liability Disclaimer</h2>
+                        <p className="text-gray-600 leading-relaxed mb-4">
+                            We implement reasonable technical and organizational measures to protect your data, but no method of
+                            transmission or storage is 100% secure. To the fullest extent permitted by applicable law, VAIIYA
+                            disclaims liability for unauthorized access, data breaches, or loss of data arising from circumstances
+                            beyond our reasonable control, including third-party service failures or blockchain network
+                            vulnerabilities.
+                        </p>
+                        <p className="text-gray-600 leading-relaxed">
+                            In no event shall VAIIYA be liable for any indirect, incidental, or consequential damages arising from
+                            the processing or loss of your personal data, beyond what is required by mandatory law.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">10. Changes to This Policy</h2>
+                        <p className="text-gray-600 leading-relaxed">
+                            We may update this policy from time to time to reflect changes in our practices or legal requirements.
+                            The updated version will be indicated by a revised &quot;Last updated&quot; date. We encourage you to
+                            review this page periodically.
+                        </p>
+                    </section>
+
                     <section className="bg-metamask-purple p-8 rounded-2xl relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-metamask-orange/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:bg-metamask-orange/20 transition-all"></div>
                         <h2 className="text-xl font-semibold text-white mb-4 relative z-10">Contact</h2>

@@ -27,7 +27,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Brand Logo */}
-          <Link href="#home" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-10 h-10 rounded-2xl overflow-hidden shadow-md group-hover:scale-105 transition-transform">
               <Image
                 src="/v-logo.jpg"
@@ -49,32 +49,32 @@ export default function Header() {
           {/* Navigation Links */}
           <div className="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/60 text-sm font-medium">
             <a
-              href="#home"
+              href="/"
               className="px-4 py-2 rounded-full text-slate-700 hover:text-slate-900 hover:bg-white transition-all"
             >
               Home
             </a>
             <a
-              href="#agentic"
+              href="/#agentic"
               className="px-4 py-2 rounded-full text-slate-700 hover:text-[#ff5c16] hover:bg-white transition-all flex items-center gap-1.5"
             >
               <span className="w-2 h-2 rounded-full bg-[#ff5c16] animate-pulse" />
               Agentic AI
             </a>
             <a
-              href="#webbuilding"
+              href="/#webbuilding"
               className="px-4 py-2 rounded-full text-slate-700 hover:text-purple-600 hover:bg-white transition-all"
             >
               Web Studio
             </a>
             <a
-              href="#android"
+              href="/#android"
               className="px-4 py-2 rounded-full text-slate-700 hover:text-emerald-600 hover:bg-white transition-all"
             >
               Android
             </a>
             <a
-              href="#ios"
+              href="/#ios"
               className="px-4 py-2 rounded-full text-slate-700 hover:text-blue-600 hover:bg-white transition-all"
             >
               iOS Apps
@@ -84,13 +84,13 @@ export default function Header() {
           {/* Action CTAs */}
           <div className="hidden sm:flex items-center gap-3">
             <a
-              href="#socials"
+              href="/#socials"
               className="btn-metamask btn-outline-dark !py-2.5 !px-5 text-xs uppercase tracking-wider"
             >
               🛡️ Socials
             </a>
             <a
-              href="#webbuilding"
+              href="/#webbuilding"
               className="btn-metamask btn-orange !py-2.5 !px-6 text-xs uppercase tracking-wider"
             >
               Start Build
@@ -122,42 +122,42 @@ export default function Header() {
       {isMenuOpen && (
         <div className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl">
           <a
-            href="#home"
+            href="/"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-slate-900"
           >
             Home
           </a>
           <a
-            href="#agentic"
+            href="/#agentic"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-[#ff5c16]"
           >
             🤖 Agentic Engineering
           </a>
           <a
-            href="#webbuilding"
+            href="/#webbuilding"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-purple-700"
           >
             🌐 Website Building Studio
           </a>
           <a
-            href="#android"
+            href="/#android"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-emerald-600"
           >
             🤖 Android Applications
           </a>
           <a
-            href="#ios"
+            href="/#ios"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-blue-600"
           >
             📱 iOS Swift Apps
           </a>
           <a
-            href="#socials"
+            href="/#socials"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-slate-700"
           >
@@ -165,7 +165,7 @@ export default function Header() {
           </a>
           <div className="pt-4 border-t border-slate-100 flex gap-3">
             <a
-              href="#webbuilding"
+              href="/#webbuilding"
               onClick={() => setIsMenuOpen(false)}
               className="w-full text-center btn-metamask btn-orange text-xs"
             >

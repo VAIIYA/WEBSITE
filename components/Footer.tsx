@@ -4,12 +4,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const sectionLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'Agentic AI', href: '#agentic' },
-  { name: 'Web Studio', href: '#webbuilding' },
-  { name: 'Android Apps', href: '#android' },
-  { name: 'iOS Apps', href: '#ios' },
-  { name: 'Socials', href: '#socials' },
+  { name: 'Home', href: '/' },
+  { name: 'Agentic AI', href: '/#agentic' },
+  { name: 'Web Studio', href: '/#webbuilding' },
+  { name: 'Android Apps', href: '/#android' },
+  { name: 'iOS Apps', href: '/#ios' },
+  { name: 'Socials', href: '/#socials' },
 ]
 
 export default function Footer() {
@@ -20,7 +20,7 @@ export default function Footer() {
           
           {/* Brand Column */}
           <div className="md:col-span-2 space-y-4">
-            <Link href="#home" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
               <div className="relative w-9 h-9 rounded-xl overflow-hidden shadow">
                 <Image
                   src="/v-logo.jpg"

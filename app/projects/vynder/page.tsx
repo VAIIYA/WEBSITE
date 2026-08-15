@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -12,7 +11,7 @@ export default function VynderPage() {
         <main className="min-h-screen bg-white selection:bg-metamask-orange selection:text-white">
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-metamask-gray-50/30">
+            <section className="relative pt-16 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-metamask-gray-50/30">
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="text-center">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-metamask-orange text-sm font-bold mb-8">
@@ -130,8 +129,6 @@ export default function VynderPage() {
                     </div>
                 </div>
             </section>
-
-            <Footer />
         </main>
 
     )

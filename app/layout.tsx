@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Poly } from 'next/font/google'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import './globals.css'
 
 const inter = Inter({
@@ -59,8 +61,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poly.variable}`}>
-      <body className="bg-white text-slate-900 m-0 p-0 antialiased">
-        {children}
+      <body className="bg-white text-slate-900 m-0 p-0 antialiased flex flex-col min-h-screen">
+        <Header />
+        <div className="flex-1">{children}</div>
+        <Footer />
       </body>
     </html>
   )

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -122,8 +121,6 @@ export default function BlobioPage() {
                     </div>
                 </div>
             </section>
-
-            <Footer />
         </main>
     )
 }

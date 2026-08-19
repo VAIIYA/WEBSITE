@@ -13,6 +13,8 @@ export interface PostMeta {
   coverImage?: string
   youtubeId?: string
   tags?: string[]
+  sourceName?: string
+  sourceUrl?: string
 }
 
 export interface Post extends PostMeta {
@@ -41,6 +43,8 @@ export function getAllPosts(): PostMeta[] {
       coverImage: data.coverImage,
       youtubeId: data.youtubeId,
       tags: data.tags || [],
+      sourceName: data.sourceName,
+      sourceUrl: data.sourceUrl,
     } as PostMeta
   })
 
@@ -67,6 +71,23 @@ export function getPostBySlug(slug: string): Post | null {
     coverImage: data.coverImage,
     youtubeId: data.youtubeId,
     tags: data.tags || [],
+    sourceName: data.sourceName,
+    sourceUrl: data.sourceUrl,
     contentHtml,
   }
+}
+
+/** URLs already covered by an existing post, for de-duping automated imports (e.g. the Reuters daily job). */
+export function getAllSourceUrls(): Set<string> {
+  const filenames = getMarkdownFilenames()
+  const urls = new Set<string>()
+
+  for (const filename of filenames) {
+    const fullPath = path.join(postsDirectory, filename)
+    const fileContents = fs.readFileSync(fullPath, 'utf8')
+    const { data } = matter(fileContents)
+    if (data.sourceUrl) urls.add(data.sourceUrl)
+  }
+
+  return urls
 }

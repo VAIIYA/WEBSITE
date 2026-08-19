@@ -1,20 +1,22 @@
 import type { Metadata } from 'next'
-import { Inter, Poly } from 'next/font/google'
+import { IBM_Plex_Mono, Barlow_Condensed } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import NewsTicker from '@/components/NewsTicker'
+import { getAllPosts } from '@/lib/posts'
 import './globals.css'
 
-const inter = Inter({
+const plexMono = IBM_Plex_Mono({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-mono',
   display: 'swap',
 })
 
-const poly = Poly({
-  weight: '400',
-  style: ['normal', 'italic'],
+const barlowCondensed = Barlow_Condensed({
+  weight: ['600', '700'],
   subsets: ['latin'],
-  variable: '--font-poly',
+  variable: '--font-heading',
   display: 'swap',
 })
 
@@ -59,9 +61,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const tickerPosts = getAllPosts().slice(0, 8)
+
   return (
-    <html lang="en" className={`${inter.variable} ${poly.variable}`}>
+    <html lang="en" className={`${plexMono.variable} ${barlowCondensed.variable}`}>
       <body className="bg-white text-slate-900 m-0 p-0 antialiased flex flex-col min-h-screen">
+        <NewsTicker posts={tickerPosts} />
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />

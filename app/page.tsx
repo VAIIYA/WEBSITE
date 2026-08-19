@@ -10,7 +10,7 @@ import IndestructibleSocialsSection from '@/components/IndestructibleSocialsSect
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen bg-white text-slate-900 selection:bg-[#ff5c16] selection:text-white">
+    <main className="w-full min-h-screen bg-white text-slate-900 selection:bg-[#E25A3C] selection:text-white">
       <HomeSection />
       <AgenticEngineeringSection />
       <WebBuildingSection />

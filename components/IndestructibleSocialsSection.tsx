@@ -12,7 +12,7 @@ export default function IndestructibleSocialsSection() {
       particleCount: 60,
       spread: 70,
       origin: { y: 0.8 },
-      colors: ['#ff5c16', '#3d065f', '#00f0ff', '#14F195'],
+      colors: ['#E25A3C', '#1F1F1F', '#00f0ff', '#14F195'],
     })
   }
 
@@ -26,7 +26,7 @@ export default function IndestructibleSocialsSection() {
   return (
     <section id="socials" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white relative overflow-hidden">
       {/* Glow Effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#ff5c16]/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#E25A3C]/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         
@@ -57,7 +57,7 @@ export default function IndestructibleSocialsSection() {
               className="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400/60 p-6 rounded-3xl transition-all duration-300 hover:-translate-y-1 shadow-lg flex flex-col justify-between group"
             >
               <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-white/10 text-cyan-400 group-hover:bg-[#ff5c16] group-hover:text-white flex items-center justify-center transition-colors">
+                <div className="w-12 h-12 rounded-2xl bg-white/10 text-cyan-400 group-hover:bg-[#E25A3C] group-hover:text-white flex items-center justify-center transition-colors">
                   {social.icon}
                 </div>
                 <span className="text-[10px] font-bold tracking-widest text-cyan-400 uppercase opacity-80">

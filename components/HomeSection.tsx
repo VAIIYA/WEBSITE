@@ -14,15 +14,15 @@ export default function HomeSection() {
           {/* Left Column: Bold MetaMask Style Copy */}
           <div className="lg:col-span-7 space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-800 shadow-sm">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#ff5c16] animate-pulse" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[#E25A3C] animate-pulse" />
               <span>THE AGENTIC DEVELOPMENT STUDIO</span>
               <span className="text-slate-300">|</span>
-              <span className="text-[#3d065f] font-bold">VAIIYA v2.0</span>
+              <span className="text-[#1F1F1F] font-bold">VAIIYA v2.0</span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.08] font-serif">
               Engineering the <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5c16] via-[#3d065f] to-[#00f0ff] italic">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E25A3C] via-[#1F1F1F] to-[#00f0ff] italic">
                 Agentic Future.
               </span>
             </h1>
@@ -34,11 +34,11 @@ export default function HomeSection() {
             {/* Feature Pills */}
             <div className="grid grid-cols-3 gap-3 max-w-lg">
               <div className="p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm text-center">
-                <div className="text-2xl font-bold text-[#ff5c16] font-serif">AI Agents</div>
+                <div className="text-2xl font-bold text-[#E25A3C] font-serif">AI Agents</div>
                 <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mt-1">Autonomous</div>
               </div>
               <div className="p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm text-center">
-                <div className="text-2xl font-bold text-[#3d065f] font-serif">Next.js</div>
+                <div className="text-2xl font-bold text-[#1F1F1F] font-serif">Next.js</div>
                 <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mt-1">Web 3D</div>
               </div>
               <div className="p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm text-center">
@@ -80,7 +80,7 @@ export default function HomeSection() {
               {/* Top Bar of Interactive Widget */}
               <div className="flex items-center justify-between border-b border-slate-800 pb-5 mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#ff5c16] flex items-center justify-center font-bold text-lg text-white shadow-md">
+                  <div className="w-10 h-10 rounded-xl bg-[#E25A3C] flex items-center justify-center font-bold text-lg text-white shadow-md">
                     V
                   </div>
                   <div>
@@ -96,7 +96,7 @@ export default function HomeSection() {
                 <button
                   onClick={() => setActiveTab('agents')}
                   className={`py-2 rounded-xl transition-all ${
-                    activeTab === 'agents' ? 'bg-[#ff5c16] text-white shadow' : 'text-slate-400 hover:text-white'
+                    activeTab === 'agents' ? 'bg-[#E25A3C] text-white shadow' : 'text-slate-400 hover:text-white'
                   }`}
                 >
                   🤖 Agent AI
@@ -104,7 +104,7 @@ export default function HomeSection() {
                 <button
                   onClick={() => setActiveTab('web')}
                   className={`py-2 rounded-xl transition-all ${
-                    activeTab === 'web' ? 'bg-[#3d065f] text-white shadow' : 'text-slate-400 hover:text-white'
+                    activeTab === 'web' ? 'bg-[#1F1F1F] text-white shadow' : 'text-slate-400 hover:text-white'
                   }`}
                 >
                   🌐 Web Studio
@@ -160,7 +160,7 @@ export default function HomeSection() {
                   <span className="w-2 h-2 rounded-full bg-cyan-400" />
                   GitHub & Vercel Hosted
                 </span>
-                <a href="#agentic" className="text-[#ff5c16] hover:underline font-semibold">
+                <a href="#agentic" className="text-[#E25A3C] hover:underline font-semibold">
                   Learn more &rarr;
                 </a>
               </div>

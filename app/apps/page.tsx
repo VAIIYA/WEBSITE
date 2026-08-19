@@ -9,7 +9,7 @@ export default function AppsPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 bg-metamask-gray-50 border-b border-metamask-gray-100 overflow-hidden">
+      <section className="relative pt-20 pb-16 bg-metamask-gray-50 border-b border-metamask-gray-100 overflow-hidden bg-dot-grid">
         <div className="absolute top-0 right-0 -transtale-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-metamask-purple/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 transtale-y-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-metamask-orange/5 rounded-full blur-3xl"></div>
 

@@ -47,7 +47,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-slate-300 hover:text-[#ff5c16] transition-colors font-medium"
+                    className="text-slate-300 hover:text-[#E25A3C] transition-colors font-medium"
                   >
                     {link.name}
                   </a>
@@ -77,7 +77,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} VAIIYA Studio. All rights reserved. Deployed on Vercel.</p>
           <div className="flex items-center gap-2 font-medium">
             <span>Designed for</span>
-            <span className="text-[#ff5c16]">Agentic Excellence</span>
+            <span className="text-[#E25A3C]">Agentic Excellence</span>
           </div>
         </div>
       </div>

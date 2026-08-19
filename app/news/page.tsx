@@ -21,7 +21,7 @@ export default function NewsPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-dot-grid">
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-metamask-orange/10 text-metamask-orange text-sm font-medium mb-8">
             📰 AI News & Build Notes
@@ -63,6 +63,9 @@ export default function NewsPage() {
                     {post.date && (
                       <p className="text-xs font-semibold uppercase tracking-wider text-metamask-orange mb-2">
                         {formatDate(post.date)}
+                        {post.sourceName && (
+                          <span className="text-gray-400 normal-case font-medium"> &middot; via {post.sourceName}</span>
+                        )}
                       </p>
                     )}
                     <h2 className="text-xl font-semibold text-slate-900 font-serif mb-2 group-hover:text-metamask-purple transition-colors">

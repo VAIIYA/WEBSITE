@@ -3,12 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --metamask-orange: #ff5c16;
-  --metamask-orange-hover: #e04b08;
-  --metamask-purple: #3d065f;
-  --metamask-black: #090a0f;
-  --metamask-gray-50: #f8fafc;
-  --metamask-gray-100: #f1f5f9;
+  --cream: #FEFBF6;
+  --ink: #1F1F1F;
+  --coral: #E25A3C;
+  --coral-hover: #cf4c30;
+  --card: #F6F3EF;
+  --card-border: #EDE8E1;
+
+  --metamask-orange: #E25A3C;
+  --metamask-orange-hover: #cf4c30;
+  --metamask-purple: #1F1F1F;
+  --metamask-black: #1F1F1F;
+  --metamask-gray-50: #F6F3EF;
+  --metamask-gray-100: #EDE8E1;
   --metamask-gray-200: #e2e8f0;
   --solana-purple: #9945FF;
   --solana-green: #14F195;
@@ -30,19 +37,25 @@ body {
 }
 
 body {
-  color: #0f172a;
-  background-color: #ffffff;
-  font-family: 'Inter', var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--ink);
+  background-color: var(--cream);
+  font-family: 'IBM Plex Mono', var(--font-mono), ui-monospace, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* Background Soft Subtle Gradient */
 .bg-mesh-pattern {
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(255, 92, 22, 0.08) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(61, 6, 95, 0.08) 0px, transparent 50%),
-    radial-gradient(at 50% 100%, rgba(0, 240, 255, 0.05) 0px, transparent 50%);
+  background-image:
+    radial-gradient(at 0% 0%, rgba(226, 90, 60, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(31, 31, 31, 0.05) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(226, 90, 60, 0.05) 0px, transparent 50%);
+}
+
+/* Dot-grid decorative background, à la agentics.org hero */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, rgba(31, 31, 31, 0.14) 1.5px, transparent 1.5px);
+  background-size: 36px 36px;
 }
 
 a {
@@ -56,7 +69,8 @@ div[id] {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poly', var(--font-poly), serif;
+  font-family: 'Barlow Condensed', var(--font-heading), sans-serif;
+  font-weight: 700;
 }
 
 @keyframes floatSlow {
@@ -96,15 +110,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-orange {
-  @apply bg-[#ff5c16] text-white hover:bg-[#e04b08] shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5;
+  @apply bg-[#E25A3C] text-white hover:bg-[#cf4c30] shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 hover:-translate-y-0.5;
 }
 
 .btn-purple {
-  @apply bg-[#3d065f] text-white hover:bg-[#2b0345] shadow-lg shadow-purple-900/25 hover:shadow-purple-900/40 hover:-translate-y-0.5;
+  @apply bg-[#1F1F1F] text-white hover:bg-[#000000] shadow-lg shadow-black/20 hover:shadow-black/30 hover:-translate-y-0.5;
 }
 
 .btn-outline-dark {
   @apply bg-white text-slate-900 border-2 border-slate-200 hover:border-slate-900 hover:bg-slate-900 hover:text-white shadow-sm hover:-translate-y-0.5;
+}
+
+@keyframes tickerScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  width: max-content;
+  animation: tickerScroll 30s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
 }
 
 .card-playful {

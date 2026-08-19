@@ -66,6 +66,20 @@ export default function NewsPostPage({ params }: { params: { slug: string } }) {
           {post.date && (
             <p className="text-sm text-gray-500 font-medium">{formatDate(post.date)}</p>
           )}
+          {post.sourceUrl && (
+            <p className="text-sm text-gray-500 mt-3 pt-3 border-t border-metamask-gray-100">
+              Based on reporting by{' '}
+              <a
+                href={post.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-metamask-orange hover:underline"
+              >
+                {post.sourceName || 'the original source'} &rarr;
+              </a>{' '}
+              &mdash; simplified &amp; explained by VAIIYA.
+            </p>
+          )}
         </header>
 
         {post.coverImage && (

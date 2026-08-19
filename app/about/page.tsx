@@ -11,7 +11,7 @@ export default function AboutPage() {
         <main className="min-h-screen">
 
             {/* Hero Section */}
-            <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-dot-grid">
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="text-center">
                         <h1 className="text-5xl sm:text-7xl font-serif mb-8 leading-tight">

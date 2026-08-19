@@ -40,7 +40,7 @@ export default function Header() {
               <span className="text-2xl font-bold tracking-tight text-slate-900 font-serif leading-none">
                 VAIIYA
               </span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-[#ff5c16] font-bold mt-0.5">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-[#E25A3C] font-bold mt-0.5">
                 WE. AS ONE.
               </span>
             </div>
@@ -56,9 +56,9 @@ export default function Header() {
             </a>
             <a
               href="/#agentic"
-              className="px-4 py-2 rounded-full text-slate-700 hover:text-[#ff5c16] hover:bg-white transition-all flex items-center gap-1.5"
+              className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all flex items-center gap-1.5"
             >
-              <span className="w-2 h-2 rounded-full bg-[#ff5c16] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#E25A3C] animate-pulse" />
               Agentic AI
             </a>
             <a
@@ -137,7 +137,7 @@ export default function Header() {
           <a
             href="/#agentic"
             onClick={() => setIsMenuOpen(false)}
-            className="block text-lg font-semibold text-[#ff5c16]"
+            className="block text-lg font-semibold text-[#E25A3C]"
           >
             🤖 Agentic Engineering
           </a>

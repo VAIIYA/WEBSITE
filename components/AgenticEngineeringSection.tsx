@@ -9,7 +9,7 @@ const agentCapabilities = [
     description: 'Self-correcting coding agents that research existing repositories, write type-safe code, and perform end-to-end verifications.',
     icon: '⚡',
     badge: 'Code Engine',
-    color: 'border-orange-200 bg-orange-50/50 text-[#ff5c16]',
+    color: 'border-orange-200 bg-orange-50/50 text-[#E25A3C]',
   },
   {
     id: 'multi-agent',
@@ -17,7 +17,7 @@ const agentCapabilities = [
     description: 'Hierarchical agent architecture where planner subagents coordinate worker subagents for concurrent task execution.',
     icon: '🧩',
     badge: 'Orchestrator',
-    color: 'border-purple-200 bg-purple-50/50 text-[#3d065f]',
+    color: 'border-purple-200 bg-purple-50/50 text-[#1F1F1F]',
   },
   {
     id: 'firebase-ai',
@@ -58,13 +58,13 @@ export default function AgenticEngineeringSection() {
         
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 border border-orange-200 text-[#ff5c16] text-xs font-bold uppercase tracking-widest">
-            <span className="w-2 h-2 rounded-full bg-[#ff5c16] animate-ping" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 border border-orange-200 text-[#E25A3C] text-xs font-bold uppercase tracking-widest">
+            <span className="w-2 h-2 rounded-full bg-[#E25A3C] animate-ping" />
             CORE PILLAR • AGENTIC ENGINEERING
           </div>
 
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 font-serif">
-            Autonomous <span className="text-[#ff5c16] italic">AI Agents</span> Building Production Systems
+            Autonomous <span className="text-[#E25A3C] italic">AI Agents</span> Building Production Systems
           </h2>
 
           <p className="text-slate-600 text-lg leading-relaxed font-normal">
@@ -82,7 +82,7 @@ export default function AgenticEngineeringSection() {
                 key={item.id}
                 onClick={() => setSelectedAgent(item.id)}
                 className={`cursor-pointer rounded-3xl p-6 transition-all duration-300 border bg-white shadow-sm hover:shadow-md hover:-translate-y-1 ${
-                  selectedAgent === item.id ? 'ring-2 ring-[#ff5c16] border-transparent shadow-lg' : 'border-slate-200/80'
+                  selectedAgent === item.id ? 'ring-2 ring-[#E25A3C] border-transparent shadow-lg' : 'border-slate-200/80'
                 }`}
               >
                 <div className="flex items-center justify-between mb-4">

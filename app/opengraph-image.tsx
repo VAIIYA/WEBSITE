@@ -58,7 +58,7 @@ export default function OpenGraphImage() {
             <img src={logoDataUri} width={64} height={64} alt="VAIIYA" />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ fontSize: 48, fontWeight: 700, fontFamily: 'Georgia, serif', color: '#3d065f' }}>
+            <div style={{ fontSize: 48, fontWeight: 700, fontFamily: 'Georgia, serif', color: '#1F1F1F' }}>
               VAIIYA
             </div>
             <div style={{ fontSize: 20, letterSpacing: 6, color: '#6b7280' }}>WE. AS ONE.</div>

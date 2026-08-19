@@ -7,12 +7,12 @@ export default function WebBuildingSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-[#3d065f] text-xs font-bold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-[#1F1F1F] text-xs font-bold uppercase tracking-widest">
             <span>🌐 CORE PILLAR • WEB BUILDING STUDIO</span>
           </div>
 
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 font-serif">
-            High-Impact <span className="text-[#3d065f] italic">Websites & PWAs</span> Built for Speed
+            High-Impact <span className="text-[#1F1F1F] italic">Websites & PWAs</span> Built for Speed
           </h2>
 
           <p className="text-slate-600 text-lg leading-relaxed font-normal">
@@ -21,11 +21,11 @@ export default function WebBuildingSection() {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
             <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-              <div className="font-bold text-[#ff5c16] text-xl font-serif">Three.js</div>
+              <div className="font-bold text-[#E25A3C] text-xl font-serif">Three.js</div>
               <div className="text-xs text-slate-500 font-medium mt-1">Interactive 3D Canvas</div>
             </div>
             <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
-              <div className="font-bold text-[#3d065f] text-xl font-serif">Vite / React</div>
+              <div className="font-bold text-[#1F1F1F] text-xl font-serif">Vite / React</div>
               <div className="text-xs text-slate-500 font-medium mt-1">Lightning Fast HMR</div>
             </div>
             <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80">
@@ -47,7 +47,7 @@ export default function WebBuildingSection() {
                 <span className="px-3.5 py-1 rounded-full bg-purple-950 text-purple-300 text-xs font-bold uppercase tracking-wider border border-purple-800">
                   FEATURED LIVE BUILD
                 </span>
-                <span className="text-xs text-[#ff5c16] font-mono font-semibold">VERCEL DEPLOYED</span>
+                <span className="text-xs text-[#E25A3C] font-mono font-semibold">VERCEL DEPLOYED</span>
               </div>
 
               <h3 className="text-3xl sm:text-4xl font-bold font-serif text-white mb-4">

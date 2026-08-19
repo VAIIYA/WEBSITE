@@ -65,10 +65,10 @@ export default function OpenGraphImage() {
           </div>
         </div>
         <div style={{ fontSize: 42, fontFamily: 'Georgia, serif', color: '#111827', textAlign: 'center', padding: '0 80px' }}>
-          Native Apps for Android &amp; iOS.
+          Websites, Apps &amp; Games.
         </div>
         <div style={{ fontSize: 26, color: '#4b5563', marginTop: 16 }}>
-          Agentic Engineering. Crafted with precision.
+          Crafted with precision.
         </div>
       </div>
     ),

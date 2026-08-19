@@ -4,7 +4,7 @@ import { getAllPosts } from '@/lib/posts'
 
 export const metadata: Metadata = {
   title: 'News',
-  description: 'AI news, agentic engineering updates, and build notes from VAIIYA.',
+  description: 'AI industry news and build notes from VAIIYA.',
 }
 
 function formatDate(dateStr: string) {
@@ -30,7 +30,7 @@ export default function NewsPage() {
             VAIIYA <span className="text-metamask-orange">News.</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Short updates on AI, agentic engineering, and what we&apos;re building.
+            AI industry news, explained simply, plus updates on what we&apos;re building.
           </p>
         </div>
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-metamask-orange/5 rounded-full blur-3xl opacity-50"></div>

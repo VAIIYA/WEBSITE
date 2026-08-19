@@ -102,7 +102,7 @@ export default function FynderPage() {
                                         </div>
                                         <h3 className="text-2xl font-serif">Smart Matching</h3>
                                     </div>
-                                    <p className="text-gray-500 text-lg leading-relaxed">Our agentic algorithms learn your preferences to surface the highest-vibe matches for you.</p>
+                                    <p className="text-gray-500 text-lg leading-relaxed">Our smart matching algorithm learns your preferences to surface the highest-vibe matches for you.</p>
                                 </div>
                             </div>
                         </div>

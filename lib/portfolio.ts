@@ -1,4 +1,5 @@
 export type AppPlatform = 'android' | 'ios' | 'web'
+export type AppCategory = 'app' | 'game' | 'web'
 
 export interface PortfolioApp {
   id: string
@@ -11,6 +12,8 @@ export interface PortfolioApp {
   /** Fallback gradient used when no image is provided */
   gradient: string
   platforms: AppPlatform[]
+  /** Which homepage pillar this belongs under: Apps, Games, or Website work */
+  category: AppCategory
   /** App Store (iOS) URL */
   appStoreUrl?: string
   /** Google Play (Android) URL */
@@ -29,6 +32,7 @@ export const portfolioApps: PortfolioApp[] = [
     description: 'Premium Android dating experience. Connection, simplified. Your next chapter starts with a swipe.',
     gradient: 'from-blue-500 to-cyan-400',
     platforms: ['android'],
+    category: 'app',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vaiiya.fynder',
     projectUrl: '/projects/fynder',
   },
@@ -38,6 +42,7 @@ export const portfolioApps: PortfolioApp[] = [
     description: 'Dating on the blockchain. The first Web3 PWA dating app built on Solana.',
     gradient: 'from-orange-500 to-red-500',
     platforms: ['android', 'ios'],
+    category: 'app',
     appStoreUrl: 'https://apps.apple.com/app/id0000000000',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vaiiya.vynder',
     projectUrl: '/projects/vynder',
@@ -49,6 +54,7 @@ export const portfolioApps: PortfolioApp[] = [
     description: 'Creative digital studio crafting immersive Web3 experiences on Solana.',
     gradient: 'from-purple-600 to-indigo-600',
     platforms: ['web'],
+    category: 'web',
     projectUrl: '/projects/nightstudio',
     externalUrl: 'https://nightstudio.vercel.app/',
   },
@@ -58,6 +64,7 @@ export const portfolioApps: PortfolioApp[] = [
     description: 'Engage in thrilling blob battles and conquer the arena.',
     gradient: 'from-emerald-500 to-green-500',
     platforms: ['android', 'ios'],
+    category: 'game',
     appStoreUrl: 'https://apps.apple.com/app/id0000000000',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vaiiya.blobio',
     projectUrl: '/projects/blobio',

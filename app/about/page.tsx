@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'VAIIYA is a creative studio specializing in native app development for Android and iOS, powered by Agentic Engineering.',
+  description: 'VAIIYA is a digital studio building high-performance websites, native Android & iOS apps, and mobile games.',
 }
 
 export default function AboutPage() {
@@ -16,10 +16,10 @@ export default function AboutPage() {
                     <div className="text-center">
                         <h1 className="text-5xl sm:text-7xl font-serif mb-8 leading-tight">
                             Crafting High-Vibe <br />
-                            <span className="text-metamask-orange">Native Applications.</span>
+                            <span className="text-metamask-orange">Websites, Apps &amp; Games.</span>
                         </h1>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            VAIIYA is a creative studio specializing in native app development for Android and iOS. We don&apos;t just write code; we curate experiences through Agentic Engineering.
+                            VAIIYA is a digital studio building high-performance websites, native Android &amp; iOS apps, and mobile games. We don&apos;t just write code; we craft experiences that feel great to use.
                         </p>
                     </div>
                 </div>
@@ -29,18 +29,18 @@ export default function AboutPage() {
                 <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-96 h-96 bg-metamask-purple/5 rounded-full blur-3xl opacity-50"></div>
             </section>
 
-            {/* What is Agentic Engineering? */}
+            {/* How We Build */}
             <section className="py-24 bg-metamask-gray-50/50 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-4xl font-serif mb-6">What is Agentic Engineering?</h2>
+                            <h2 className="text-4xl font-serif mb-6">How We Build</h2>
                             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                                 <p>
-                                    Agentic Engineering represents a paradigm shift in software development. Coined by Andrej Karpathy, it&apos;s the practice of using advanced AI to bridge the gap between human intent and machine execution.
+                                    Every project starts with the same question: what should this feel like to use? From there we design, build, and ship &mdash; websites, native apps, and mobile games &mdash; with the same obsessive attention to detail.
                                 </p>
                                 <p>
-                                    At VAIIYA, we&apos;ve embraced this fully. We act as creative directors, guiding powerful AI agents to manifest complex native applications at the speed of thought. This isn&apos;t just about efficiency; it&apos;s about maintaining a higher level of creative flow&mdash;the &apos;vibe&apos;&mdash;throughout the entire building process.
+                                    We use modern tooling, including AI-assisted workflows, to move fast without cutting corners. But the tools are just tools. What ships is judged on craft: does it feel fast, does it feel right, would we use it ourselves.
                                 </p>
                             </div>
                         </div>
@@ -59,17 +59,17 @@ export default function AboutPage() {
                                     </div>
                                     <div className="flex gap-4">
                                         <span className="text-metamask-orange">02</span>
-                                        <span>Set Neural Parameters</span>
+                                        <span>Design &amp; Architecture</span>
                                     </div>
                                     <div className="flex gap-4 pl-4 border-l border-metamask-gray-100">
-                                        <span>- Architecture: Modular</span>
+                                        <span>- Platform: Web, Android &amp; iOS</span>
                                     </div>
                                     <div className="flex gap-4 pl-4 border-l border-metamask-gray-100">
-                                        <span>- Platform: Android &amp; iOS</span>
+                                        <span>- Focus: Speed &amp; Polish</span>
                                     </div>
                                     <div className="flex gap-4">
                                         <span className="text-metamask-orange">03</span>
-                                        <span>Execute Vibe Check...</span>
+                                        <span>Build &amp; Ship...</span>
                                     </div>
                                     <div className="flex gap-4 text-metamask-orange animate-pulse">
                                         <span>&gt; Status: High Vibe Detected</span>
@@ -124,13 +124,13 @@ export default function AboutPage() {
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-4xl font-serif mb-8 text-white">The VAIIYA Vision</h2>
                     <p className="text-xl text-purple-100 leading-relaxed mb-12">
-                        &quot;We believe the future of software isn&apos;t just about functional utility, but about how it makes you feel. By combining AI-augmented development with strong product intuition, we create apps that feel like magic.&quot;
+                        &quot;We believe the future of software isn&apos;t just about functional utility, but about how it makes you feel. By combining meticulous engineering with strong product intuition, we create websites, apps, and games that feel like magic.&quot;
                     </p>
                     <div className="h-px w-24 bg-metamask-orange mx-auto mb-12"></div>
                     <div className="flex flex-wrap justify-center gap-8 italic text-purple-200">
-                        <span>#AgenticEngineering</span>
-                        <span>#Android</span>
-                        <span>#iOS</span>
+                        <span>#Websites</span>
+                        <span>#Apps</span>
+                        <span>#Games</span>
                     </div>
                 </div>
             </section>

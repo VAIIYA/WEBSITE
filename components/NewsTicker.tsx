@@ -9,7 +9,7 @@ export default function NewsTicker({ posts }: NewsTickerProps) {
   const items =
     posts.length > 0
       ? posts.map((post) => ({ label: post.title, href: `/news/${post.slug}` }))
-      : [{ label: 'Welcome to VAIIYA — engineering the agentic future.', href: '/news' }]
+      : [{ label: 'Welcome to VAIIYA — websites, apps & games, built right.', href: '/news' }]
 
   return (
     <div className="relative bg-ink text-cream overflow-hidden">

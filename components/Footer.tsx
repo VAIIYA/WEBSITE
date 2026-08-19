@@ -5,10 +5,9 @@ import Image from 'next/image'
 
 const sectionLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Agentic AI', href: '/#agentic' },
-  { name: 'Web Studio', href: '/#webbuilding' },
-  { name: 'Android Apps', href: '/#android' },
-  { name: 'iOS Apps', href: '/#ios' },
+  { name: 'Website Building', href: '/#webbuilding' },
+  { name: 'Apps', href: '/#apps' },
+  { name: 'Games', href: '/#games' },
   { name: 'Socials', href: '/#socials' },
   { name: 'News', href: '/news' },
 ]
@@ -33,7 +32,7 @@ export default function Footer() {
               <span className="text-2xl font-bold font-serif text-white tracking-tight">VAIIYA</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-md font-normal">
-              VAIIYA is an agentic engineering studio specializing in autonomous AI software development, Vite & React web applications, native Android Kotlin, and iOS SwiftUI apps. Hosted on GitHub & Vercel ([vaiiya.vercel.app](https://vaiiya.vercel.app)).
+              VAIIYA is a digital studio building high-performance websites, native Android &amp; iOS apps, and mobile games. Hosted on GitHub &amp; Vercel (vaiiya.vercel.app).
             </p>
           </div>
 
@@ -62,11 +61,11 @@ export default function Footer() {
               Core Technologies
             </h3>
             <div className="flex flex-wrap gap-2 text-xs">
-              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Agentic AI</span>
-              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Vite / React</span>
+              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Next.js / React</span>
               <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Three.js 3D</span>
               <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Kotlin Compose</span>
               <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Swift 5 SwiftUI</span>
+              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Mobile Games</span>
             </div>
           </div>
 
@@ -77,7 +76,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} VAIIYA Studio. All rights reserved. Deployed on Vercel.</p>
           <div className="flex items-center gap-2 font-medium">
             <span>Designed for</span>
-            <span className="text-[#E25A3C]">Agentic Excellence</span>
+            <span className="text-[#E25A3C]">Digital Excellence</span>
           </div>
         </div>
       </div>

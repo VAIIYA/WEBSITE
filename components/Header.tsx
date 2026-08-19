@@ -55,29 +55,22 @@ export default function Header() {
               Home
             </a>
             <a
-              href="/#agentic"
-              className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all flex items-center gap-1.5"
-            >
-              <span className="w-2 h-2 rounded-full bg-[#E25A3C] animate-pulse" />
-              Agentic AI
-            </a>
-            <a
               href="/#webbuilding"
-              className="px-4 py-2 rounded-full text-slate-700 hover:text-purple-600 hover:bg-white transition-all"
+              className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all"
             >
-              Web Studio
+              Website
             </a>
             <a
-              href="/#android"
-              className="px-4 py-2 rounded-full text-slate-700 hover:text-emerald-600 hover:bg-white transition-all"
-            >
-              Android
-            </a>
-            <a
-              href="/#ios"
+              href="/#apps"
               className="px-4 py-2 rounded-full text-slate-700 hover:text-blue-600 hover:bg-white transition-all"
             >
-              iOS Apps
+              Apps
+            </a>
+            <a
+              href="/#games"
+              className="px-4 py-2 rounded-full text-slate-700 hover:text-violet-600 hover:bg-white transition-all"
+            >
+              Games
             </a>
             <Link
               href="/news"
@@ -135,32 +128,25 @@ export default function Header() {
             Home
           </a>
           <a
-            href="/#agentic"
+            href="/#webbuilding"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-[#E25A3C]"
           >
-            🤖 Agentic Engineering
+            🌐 Website Building
           </a>
           <a
-            href="/#webbuilding"
-            onClick={() => setIsMenuOpen(false)}
-            className="block text-lg font-semibold text-purple-700"
-          >
-            🌐 Website Building Studio
-          </a>
-          <a
-            href="/#android"
-            onClick={() => setIsMenuOpen(false)}
-            className="block text-lg font-semibold text-emerald-600"
-          >
-            🤖 Android Applications
-          </a>
-          <a
-            href="/#ios"
+            href="/#apps"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-blue-600"
           >
-            📱 iOS Swift Apps
+            📱 Android &amp; iOS Apps
+          </a>
+          <a
+            href="/#games"
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-lg font-semibold text-violet-600"
+          >
+            🎮 Mobile Games
           </a>
           <a
             href="/#socials"

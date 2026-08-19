@@ -79,6 +79,12 @@ export default function Header() {
             >
               iOS Apps
             </a>
+            <Link
+              href="/news"
+              className="px-4 py-2 rounded-full text-slate-700 hover:text-metamask-purple hover:bg-white transition-all"
+            >
+              News
+            </Link>
           </div>
 
           {/* Action CTAs */}
@@ -163,6 +169,13 @@ export default function Header() {
           >
             🛡️ Indestructible Socials
           </a>
+          <Link
+            href="/news"
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-lg font-semibold text-slate-700"
+          >
+            📰 News
+          </Link>
           <div className="pt-4 border-t border-slate-100 flex gap-3">
             <a
               href="/#webbuilding"

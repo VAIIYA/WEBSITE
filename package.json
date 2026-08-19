@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.20",
     "@types/canvas-confetti": "^1.9.0",
     "@types/three": "^0.185.4",
     "canvas-confetti": "^1.9.4",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^1.30.0",
+    "marked": "^18.0.10",
     "next": "14.2.35",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",

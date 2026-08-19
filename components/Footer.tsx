@@ -10,6 +10,7 @@ const sectionLinks = [
   { name: 'Android Apps', href: '/#android' },
   { name: 'iOS Apps', href: '/#ios' },
   { name: 'Socials', href: '/#socials' },
+  { name: 'News', href: '/news' },
 ]
 
 export default function Footer() {

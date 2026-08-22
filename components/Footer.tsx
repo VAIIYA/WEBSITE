@@ -5,10 +5,11 @@ import Image from 'next/image'
 
 const sectionLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Website Building', href: '/#webbuilding' },
-  { name: 'Apps', href: '/#apps' },
-  { name: 'Games', href: '/#games' },
-  { name: 'Socials', href: '/#socials' },
+  { name: 'Website Building', href: '/websites' },
+  { name: 'Apps', href: '/apps' },
+  { name: 'Games', href: '/games' },
+  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Contact', href: '/contact' },
   { name: 'News', href: '/news' },
 ]
 

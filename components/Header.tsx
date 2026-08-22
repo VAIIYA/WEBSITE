@@ -54,24 +54,30 @@ export default function Header() {
             >
               Home
             </a>
-            <a
-              href="/#webbuilding"
+            <Link
+              href="/websites"
               className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all"
             >
               Website
-            </a>
-            <a
-              href="/#apps"
+            </Link>
+            <Link
+              href="/apps"
               className="px-4 py-2 rounded-full text-slate-700 hover:text-blue-600 hover:bg-white transition-all"
             >
               Apps
-            </a>
-            <a
-              href="/#games"
+            </Link>
+            <Link
+              href="/games"
               className="px-4 py-2 rounded-full text-slate-700 hover:text-violet-600 hover:bg-white transition-all"
             >
               Games
-            </a>
+            </Link>
+            <Link
+              href="/portfolio"
+              className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all"
+            >
+              Portfolio
+            </Link>
             <Link
               href="/news"
               className="px-4 py-2 rounded-full text-slate-700 hover:text-metamask-purple hover:bg-white transition-all"
@@ -82,18 +88,18 @@ export default function Header() {
 
           {/* Action CTAs */}
           <div className="hidden sm:flex items-center gap-3">
-            <a
-              href="/#socials"
+            <Link
+              href="/contact"
               className="btn-metamask btn-outline-dark !py-2.5 !px-5 text-xs uppercase tracking-wider"
             >
-              🛡️ Socials
-            </a>
-            <a
-              href="/#webbuilding"
+              🛡️ Contact
+            </Link>
+            <Link
+              href="/websites"
               className="btn-metamask btn-orange !py-2.5 !px-6 text-xs uppercase tracking-wider"
             >
               Start Build
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -127,34 +133,41 @@ export default function Header() {
           >
             Home
           </a>
-          <a
-            href="/#webbuilding"
+          <Link
+            href="/websites"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-[#E25A3C]"
           >
             🌐 Website Building
-          </a>
-          <a
-            href="/#apps"
+          </Link>
+          <Link
+            href="/apps"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-blue-600"
           >
             📱 Android &amp; iOS Apps
-          </a>
-          <a
-            href="/#games"
+          </Link>
+          <Link
+            href="/games"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-violet-600"
           >
             🎮 Mobile Games
-          </a>
-          <a
-            href="/#socials"
+          </Link>
+          <Link
+            href="/portfolio"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-slate-700"
           >
-            🛡️ Indestructible Socials
-          </a>
+            🗂️ Portfolio
+          </Link>
+          <Link
+            href="/contact"
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-lg font-semibold text-slate-700"
+          >
+            🛡️ Contact
+          </Link>
           <Link
             href="/news"
             onClick={() => setIsMenuOpen(false)}
@@ -163,13 +176,13 @@ export default function Header() {
             📰 News
           </Link>
           <div className="pt-4 border-t border-slate-100 flex gap-3">
-            <a
-              href="/#webbuilding"
+            <Link
+              href="/websites"
               onClick={() => setIsMenuOpen(false)}
               className="w-full text-center btn-metamask btn-orange text-xs"
             >
               Start Build Request
-            </a>
+            </Link>
           </div>
         </div>
       )}

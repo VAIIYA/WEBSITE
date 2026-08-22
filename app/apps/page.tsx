@@ -1,75 +1,116 @@
-import type { Metadata } from 'next';
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { portfolioApps } from '@/lib/portfolio'
 
 export const metadata: Metadata = {
   title: 'Apps',
-  description: 'Discover our suite of powerful applications designed for the modern Web3 era and beyond.',
-};
+  description: 'Native Android & iOS apps built with Kotlin Jetpack Compose and Swift SwiftUI — shipped to the Play Store and App Store.',
+}
+
+const stack = [
+  { label: 'Kotlin / Jetpack Compose', detail: 'Modern native Android UI' },
+  { label: 'Swift / SwiftUI', detail: 'Modern native iOS UI' },
+  { label: 'Google Play Store', detail: 'Published & maintained' },
+  { label: 'App Store Connect', detail: 'Published & maintained' },
+]
+
+const apps = portfolioApps.filter((app) => app.category === 'app')
 
 export default function AppsPage() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative pt-20 pb-16 bg-metamask-gray-50 border-b border-metamask-gray-100 overflow-hidden bg-dot-grid">
-        <div className="absolute top-0 right-0 -transtale-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-metamask-purple/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 transtale-y-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-metamask-orange/5 rounded-full blur-3xl"></div>
+    <main className="min-h-screen bg-cream text-ink">
+      {/* Hero */}
+      <section className="relative pt-20 pb-16 bg-card border-b border-card-border overflow-hidden bg-dot-grid">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-blue-200 text-blue-800 text-xs font-bold uppercase tracking-widest mb-6">
+            📱 CORE PILLAR &bull; NATIVE APPS
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold font-serif mb-6 leading-tight">
+            Native <span className="italic text-blue-600">Android &amp; iOS</span> Apps
+          </h1>
+          <p className="text-xl text-ink/70 leading-relaxed max-w-2xl">
+            Built with Kotlin &amp; Jetpack Compose for Android, Swift &amp; SwiftUI for iOS. Shipped to the Play Store and App Store, engineered for real-world performance — not just a demo build.
+          </p>
+        </div>
+      </section>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-serif text-metamask-purple mb-6">
-              Apps
-            </h1>
-            <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Discover our suite of powerful applications designed for the modern Web3 era and beyond.
-            </p>
+      {/* Stack */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {stack.map((s) => (
+            <div key={s.label} className="p-5 bg-card rounded-2xl border border-card-border">
+              <div className="font-bold text-blue-600 font-serif text-sm">{s.label}</div>
+              <div className="text-xs text-ink/60 font-medium mt-1">{s.detail}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* What we do */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card border-y border-card-border">
+        <div className="max-w-4xl mx-auto text-center space-y-4">
+          <h2 className="text-3xl sm:text-4xl font-bold font-serif">What Goes Into a VAIIYA App</h2>
+          <p className="text-ink/70 leading-relaxed">
+            Every app starts with a native-first architecture — no cross-platform compromises. We design the interface, build the data layer,
+            wire up push notifications and analytics, and take care of App Store &amp; Play Store submission, review and ongoing releases.
+          </p>
+        </div>
+      </section>
+
+      {/* Apps Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold font-serif text-center mb-12">Apps We&apos;ve Shipped</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {apps.map((app) => (
+              <div
+                key={app.id}
+                className="bg-white border border-card-border rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+              >
+                <div className={`h-48 bg-gradient-to-br ${app.gradient} p-6 flex flex-col justify-between relative`}>
+                  <div className="flex justify-between items-start">
+                    <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider">
+                      {app.platforms.map((p) => p.toUpperCase()).join(' · ')}
+                    </span>
+                    <div className="w-10 h-10 rounded-2xl bg-white/20 backdrop-blur border border-white/30 flex items-center justify-center text-white font-bold text-lg">
+                      {app.name.charAt(0)}
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white font-serif drop-shadow-md">{app.name}</h3>
+                </div>
+                <div className="p-6 flex flex-col flex-grow justify-between space-y-6">
+                  <p className="text-ink/70 text-sm leading-relaxed">{app.description}</p>
+                  <div className="space-y-2 pt-4 border-t border-card-border">
+                    {app.playStoreUrl && (
+                      <a href={app.playStoreUrl} target="_blank" rel="noopener noreferrer" className="w-full btn-metamask bg-blue-600 text-white hover:bg-blue-700 text-xs font-bold">
+                        Get on Google Play Store &rarr;
+                      </a>
+                    )}
+                    {app.appStoreUrl && (
+                      <a href={app.appStoreUrl} target="_blank" rel="noopener noreferrer" className="w-full btn-metamask bg-slate-900 text-white hover:bg-black text-xs font-bold">
+                        Download on Apple App Store &rarr;
+                      </a>
+                    )}
+                    {app.externalUrl && (
+                      <a href={app.externalUrl} target="_blank" rel="noopener noreferrer" className="w-full btn-metamask btn-outline-dark text-xs font-bold">
+                        Live Demo Web Version
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Apps Section */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* WYNDER WATCH App Card */}
-          <div className="group relative bg-white rounded-3xl border border-metamask-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-            <div className="relative aspect-video overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-indigo-600/10 group-hover:scale-105 transition-transform duration-500"></div>
-              <div className="absolute inset-0 flex items-center justify-center opacity-40 group-hover:opacity-60 transition-opacity">
-                <span className="text-8xl">⌚</span>
-              </div>
-            </div>
-            <div className="p-8 flex-grow flex flex-col">
-              <h3 className="text-2xl font-serif text-metamask-purple mb-3">
-                WYNDER WATCH
-              </h3>
-              <p className="text-gray-600 mb-6 flex-grow">
-                Stay connected to the vibe on your wrist. The premium Web3 watch experience on Solana.
-              </p>
-              <div className="mt-auto">
-                <a
-                  href="https://wynder.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-metamask-purple text-white font-medium hover:bg-metamask-purple-dark transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-metamask-purple/20"
-                >
-                  Launch App
-                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Placeholder for future apps */}
-          <div className="relative rounded-3xl border border-dashed border-gray-200 bg-gray-50 flex flex-col items-center justify-center p-8 text-center opacity-60">
-            <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m0-6H6" />
-              </svg>
-            </div>
-            <p className="text-gray-400 font-medium font-serif italic text-lg opacity-60">High-Vibe Applications are Under Construction</p>
-          </div>
-        </div>
+      {/* CTA */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold font-serif mb-4">Have an app idea?</h2>
+        <Link href="/contact" className="btn-metamask btn-orange text-base">
+          Start a Build &rarr;
+        </Link>
       </section>
     </main>
-  );
+  )
 }

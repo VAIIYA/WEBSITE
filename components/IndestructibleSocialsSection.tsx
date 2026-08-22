@@ -29,21 +29,6 @@ export default function IndestructibleSocialsSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#E25A3C]/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-cyan-400 text-xs font-bold uppercase tracking-widest">
-            🛡️ OFFICIAL CHANNELS • 100% VERIFIED
-          </div>
-
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white font-serif">
-            Connect With <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-orange-400 to-purple-400 italic">VAIIYA</span>
-          </h2>
-
-          <p className="text-slate-300 text-lg leading-relaxed font-normal">
-            Stay up to date with our latest AI agent developments, mobile application releases, and web architecture tutorials across all official channels.
-          </p>
-        </div>
 
         {/* Social Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">

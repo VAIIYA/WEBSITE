@@ -94,12 +94,6 @@ export default function Header() {
             >
               🛡️ Contact
             </Link>
-            <Link
-              href="/websites"
-              className="btn-metamask btn-orange !py-2.5 !px-6 text-xs uppercase tracking-wider"
-            >
-              Start Build
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -177,11 +171,11 @@ export default function Header() {
           </Link>
           <div className="pt-4 border-t border-slate-100 flex gap-3">
             <Link
-              href="/websites"
+              href="/contact"
               onClick={() => setIsMenuOpen(false)}
               className="w-full text-center btn-metamask btn-orange text-xs"
             >
-              Start Build Request
+              🛡️ Contact
             </Link>
           </div>
         </div>

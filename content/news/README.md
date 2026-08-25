@@ -34,12 +34,27 @@ Host images anywhere that gives you a direct URL (Imgur, a CDN, X/Twitter media 
 
 Only YouTube is supported via the `youtubeId` frontmatter field. It renders as an embedded player near the top of the post automatically.
 
-## Automated AI news digest (daily, 20:00 local time on this Mac)
+## Automated AI, Gaming & Robotics News Digest (Daily, 20:00 local time on this Mac)
 
-A scheduled job (`scripts/ai-news-digest.sh`, run by a macOS LaunchAgent — `~/Library/LaunchAgents/com.vaiiya.ai-news-digest.plist`) checks TechCrunch's AI RSS feed every evening for articles not yet covered. It deduplicates by checking `sourceUrl` across existing posts in this folder, so the same story is never drafted twice. For each new article it writes an ELI5-style rewrite (not a verbatim copy) as a markdown file here, always with `sourceName` and `sourceUrl` set so the post links back and credits the original clearly.
+A scheduled job (`scripts/news-digest.sh`, run by a macOS LaunchAgent — `~/Library/LaunchAgents/com.vaiiya.ai-news-digest.plist`) checks Google News RSS feeds daily for new stories across three topics:
+1. **Robotics**: `https://news.google.com/topics/CAAqJAgKIh5DQkFTRUFvS0wyMHZNREp3TUhRMVpoSUNaVzRvQUFQAQ`
+2. **AI**: `https://news.google.com/topics/CAAqIAgKIhpDQkFTRFFvSEwyMHZNRzFyZWhJQ1pXNG9BQVAB`
+3. **Gaming**: `https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNREZ0ZHpFU0FtVnVLQUFQAQ`
 
-We originally tried Reuters, but reuters.com actively blocks automated requests (DataDome bot protection, HTTP 401 on every URL including RSS) — there was no way to fetch it without circumventing that protection, which isn't something to work around. TechCrunch's AI category feed (`techcrunch.com/category/artificial-intelligence/feed/`) is open and unblocked, so that's the source in use. Swap the feed URL in the script if you'd like a different / additional source later.
+### How the automation works:
+1. **Ingestion & URL Decoding**: `scripts/fetch_news.py` queries the Google News RSS endpoints and resolves Google's encoded redirect links into canonical publisher URLs using `googlenewsdecoder`.
+2. **Deduplication**: It inspects existing `sourceUrl`s in `content/news/*.md` to ensure stories already covered are skipped.
+3. **Synthesis & Rewriting**: Claude Code fetches the original article and generates an ELI5-style rewrite explaining technical concepts and jargon simply with structured markdown headings (`## The quick version`, `## What happened`, `## Why it matters`, `## What's next`).
+4. **Manual Review / Git Push**: Posts are saved as untracked files in `content/news/`. Review the diff in GitHub Desktop (or run git commands) to commit and deploy.
 
-**Nothing is committed or pushed automatically.** The job only has `Write`/`Read`/`Glob`/`Grep`/`WebFetch` access — no `Bash`, so it's structurally unable to run git commands. New posts just appear as untracked files in this folder; open GitHub Desktop, review the diff, and commit/push whichever ones you're happy with (delete the rest).
+### Running manually:
+You can trigger a digest run anytime:
+```bash
+npm run news:digest
+```
+Or check candidate articles without writing files:
+```bash
+npm run news:fetch
+```
 
-Logs for each run land in `~/Library/Logs/vaiiya-ai-news-digest/run-YYYY-MM-DD.log`. The job only runs while this Mac is on; if it's asleep or off at 20:00, that day's run is simply skipped (launchd does not queue missed runs by default here).
+Logs land in `~/Library/Logs/vaiiya-news-digest/run-YYYY-MM-DD.log`.

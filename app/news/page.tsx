@@ -4,7 +4,7 @@ import { getAllPosts } from '@/lib/posts'
 
 export const metadata: Metadata = {
   title: 'News',
-  description: 'AI industry news and build notes from VAIIYA.',
+  description: 'Daily breakthroughs in AI, gaming innovations, and robotics — explained simply by VAIIYA.',
 }
 
 function formatDate(dateStr: string) {
@@ -24,13 +24,13 @@ export default function NewsPage() {
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-dot-grid">
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-metamask-orange/10 text-metamask-orange text-sm font-medium mb-8">
-            📰 AI News & Build Notes
+            ⚡ AI, Gaming &amp; Robotics News
           </div>
           <h1 className="text-5xl sm:text-7xl font-serif mb-6 leading-tight">
             VAIIYA <span className="text-metamask-orange">News.</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            AI industry news, explained simply, plus updates on what we&apos;re building.
+            Daily breakthroughs in AI, gaming innovations, and robotics — explained simply.
           </p>
         </div>
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-metamask-orange/5 rounded-full blur-3xl opacity-50"></div>

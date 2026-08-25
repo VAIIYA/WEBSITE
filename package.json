@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "news:fetch": "python3 scripts/fetch_news.py",
+    "news:digest": "bash scripts/news-digest.sh"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.20",

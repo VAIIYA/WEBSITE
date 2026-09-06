@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
                 <header className="mb-16">
                     <h1 className="text-5xl md:text-6xl font-serif mb-6 leading-tight text-metamask-purple">Privacy Policy</h1>
                     <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-gray-500 text-sm font-medium">
-                        <p>Last updated: <span className="text-metamask-purple">March 2026</span></p>
+                        <p>Last updated: <span className="text-metamask-purple">September 2026</span></p>
                         <span className="hidden sm:inline text-gray-200">|</span>
                         <p>Status: <span className="text-metamask-orange">Published</span></p>
                     </div>
@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
                         <p className="text-gray-600 leading-relaxed">
                             At VAIIYA, we take your digital sovereignty seriously. As a studio building Web3 and mobile applications,
                             we are committed to transparency in how we collect and process your data. This policy applies to all
-                            products under the VAIIYA umbrella, including FYNDER, VYNDER, and BLOBIO.
+                            products under the VAIIYA umbrella, including FYNDER, VYNDER, BLOBIO, and FlapMoji.
                         </p>
                     </section>
 
@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0">
                             {[
                                 { title: 'Identity Data', desc: 'Name and email address when provided via support or account creation.' },
-                                { title: 'Technical Data', desc: 'Device identifiers, IP addresses, and operating system versions.' },
+                                { title: 'Technical Data', desc: 'Device and advertising identifiers, IP addresses, and operating system versions.' },
                                 { title: 'Usage Data', desc: 'How you interact with our apps, including feature usage and session duration.' },
                                 { title: 'Location Data', desc: 'Approximate location for localized services and app compliance.' },
                                 { title: 'Blockchain Data', desc: 'Public wallet addresses used for transactions on the Solana network.' }
@@ -69,9 +69,10 @@ export default function PrivacyPolicy() {
                     <section>
                         <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">4. Third-Party Services</h2>
                         <p className="text-gray-600 mb-6">We utilize trusted third-party services that may collect information used to identify you:</p>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                             {[
                                 { name: 'Google Play', utility: 'Distribution & Analytics' },
+                                { name: 'Google AdMob', utility: 'Advertising' },
                                 { name: 'Firebase', utility: 'Authentication & CRM' },
                                 { name: 'Solana', utility: 'Public Ledger Transactions' }
                             ].map((svc) => (
@@ -84,7 +85,33 @@ export default function PrivacyPolicy() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">5. Data Storage & Retention</h2>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">5. Advertising</h2>
+                        <p className="text-gray-600 leading-relaxed mb-4">
+                            Some of our apps, including <strong>FlapMoji</strong>, are free and supported by
+                            advertising served through <strong>Google AdMob</strong>. To serve and measure
+                            ads, the Google Mobile Ads SDK collects and shares your device&apos;s
+                            <strong> advertising identifier</strong> along with standard technical
+                            information (such as IP address and device type) with Google. Google may use
+                            this data as an independent controller as described in the{" "}
+                            <a href="https://policies.google.com/privacy" className="text-metamask-orange hover:text-metamask-purple transition-colors">Google Privacy Policy</a>{" "}
+                            and{" "}
+                            <a href="https://policies.google.com/technologies/partner-sites" className="text-metamask-orange hover:text-metamask-purple transition-colors">How Google uses information from sites or apps that use our services</a>.
+                        </p>
+                        <p className="text-gray-600 leading-relaxed mb-4">
+                            Where required (for example in the EEA, the UK, and Switzerland), the app shows a
+                            Google-certified consent form before any ads are requested, and serves
+                            non-personalised ads where consent for personalised ads is not given. You can
+                            reset or limit your advertising identifier at any time in your device settings
+                            (Android: <span className="font-mono text-sm">Settings &rarr; Privacy &rarr; Ads</span>).
+                        </p>
+                        <p className="text-gray-600 leading-relaxed">
+                            FlapMoji has no account system. All game progress and settings are stored only on
+                            your device and are never transmitted to us.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">6. Data Storage & Retention</h2>
                         <p className="text-gray-600 leading-relaxed">
                             We store your data only for as long as necessary to provide our services. While we implement
                             industry-standard security measures, please note that information recorded on the Solana
@@ -93,7 +120,7 @@ export default function PrivacyPolicy() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">6. Your Rights (GDPR & CCPA)</h2>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">7. Your Rights (GDPR & CCPA)</h2>
                         <p className="text-gray-600 leading-relaxed">
                             Depending on your location, you have the right to access, rectify, or delete your personal data.
                             European residents have additional rights under the General Data Protection Regulation (GDPR),
@@ -102,7 +129,7 @@ export default function PrivacyPolicy() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">7. Data Deletion</h2>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">8. Data Deletion</h2>
                         <p className="text-gray-600 leading-relaxed mb-4">
                             You may request the deletion of your account and associated personal data at any time. VAIIYA
                             offers multiple ways to delete your data, in line with Google Play requirements:
@@ -131,7 +158,7 @@ export default function PrivacyPolicy() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">8. Children&apos;s Privacy</h2>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">9. Children&apos;s Privacy</h2>
                         <p className="text-gray-600 leading-relaxed">
                             In accordance with the Children&apos;s Online Privacy Protection Act (COPPA), VAIIYA does not
                             knowingly collect any personal information from children under the age of 13. If you believe
@@ -140,7 +167,7 @@ export default function PrivacyPolicy() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">9. Security & Liability Disclaimer</h2>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">10. Security & Liability Disclaimer</h2>
                         <p className="text-gray-600 leading-relaxed mb-4">
                             We implement reasonable technical and organizational measures to protect your data, but no method of
                             transmission or storage is 100% secure. To the fullest extent permitted by applicable law, VAIIYA
@@ -155,7 +182,7 @@ export default function PrivacyPolicy() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">10. Changes to This Policy</h2>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">11. Changes to This Policy</h2>
                         <p className="text-gray-600 leading-relaxed">
                             We may update this policy from time to time to reflect changes in our practices or legal requirements.
                             The updated version will be indicated by a revised &quot;Last updated&quot; date. We encourage you to

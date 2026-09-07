@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
                 <header className="mb-16">
                     <h1 className="text-5xl md:text-6xl font-serif mb-6 leading-tight text-metamask-purple">Privacy Policy</h1>
                     <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-gray-500 text-sm font-medium">
-                        <p>Last updated: <span className="text-metamask-purple">March 2026</span></p>
+                        <p>Last updated: <span className="text-metamask-purple">September 2026</span></p>
                         <span className="hidden sm:inline text-gray-200">|</span>
                         <p>Status: <span className="text-metamask-orange">Published</span></p>
                     </div>
@@ -72,6 +72,8 @@ export default function PrivacyPolicy() {
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                             {[
                                 { name: 'Google Play', utility: 'Distribution & Analytics' },
+                                { name: 'Apple App Store', utility: 'Distribution' },
+                                { name: 'Google AdMob', utility: 'Advertising (see §10)' },
                                 { name: 'Firebase', utility: 'Authentication & CRM' },
                                 { name: 'Solana', utility: 'Public Ledger Transactions' }
                             ].map((svc) => (
@@ -155,7 +157,39 @@ export default function PrivacyPolicy() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">10. Changes to This Policy</h2>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">10. Advertising</h2>
+                        <p className="text-gray-600 leading-relaxed mb-4">
+                            Some of our mobile games are free and supported by ads served through{" "}
+                            <strong>Google AdMob</strong>. To serve and measure those ads, the Google Mobile Ads SDK
+                            accesses your device&apos;s advertising identifier &mdash; the{" "}
+                            <strong>Identifier for Advertisers (IDFA)</strong> on iOS, or the{" "}
+                            <strong>Google Advertising ID (GAID)</strong> on Android &mdash; along with standard
+                            technical information such as your IP address, device model, and coarse location derived
+                            from your IP. This identifier is shared with Google and its advertising partners for
+                            advertising and analytics, and is processed as described in the{" "}
+                            <a href="https://policies.google.com/technologies/partner-sites" className="text-metamask-orange hover:text-metamask-purple transition-colors">
+                                &quot;How Google uses information from sites or apps that use our services&quot;
+                            </a>{" "}
+                            notice. We do not receive or store your advertising identifier ourselves, and we run no
+                            ad servers of our own.
+                        </p>
+                        <p className="text-gray-600 leading-relaxed mb-4">
+                            <strong>Your choices.</strong> On first launch, where required by law (for example in the
+                            EEA, UK, and Switzerland, and in applicable US states), the app shows a Google-certified
+                            consent or opt-out message before any personalised ads are requested; if you decline,
+                            only non-personalised ads are served. On iOS you will also see Apple&apos;s{" "}
+                            <em>App Tracking Transparency</em> prompt, and you can change your answer at any time in{" "}
+                            <em>Settings &rsaquo; Privacy &amp; Security &rsaquo; Tracking</em>. You can reset or
+                            limit your advertising identifier in <em>Settings &rsaquo; Privacy &amp; Security &rsaquo;
+                            Apple Advertising</em> (iOS) or <em>Settings &rsaquo; Privacy &rsaquo; Ads</em> (Android).
+                        </p>
+                        <p className="text-gray-600 leading-relaxed">
+                            Our games are not directed to children under 13 and are not designed for children.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-serif text-metamask-purple mb-6 border-l-4 border-metamask-orange pl-4">11. Changes to This Policy</h2>
                         <p className="text-gray-600 leading-relaxed">
                             We may update this policy from time to time to reflect changes in our practices or legal requirements.
                             The updated version will be indicated by a revised &quot;Last updated&quot; date. We encourage you to

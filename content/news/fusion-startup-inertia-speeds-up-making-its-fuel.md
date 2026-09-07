@@ -1,28 +1,28 @@
 ---
-title: "A Fusion Energy Startup Figured Out How to Make Its Fuel Way Faster"
+title: "Een Fusie-Energiestartup Vond Een Manier Om Zijn Brandstof Veel Sneller Te Maken"
 date: "2026-08-21"
-excerpt: "Inertia Enterprises cut the time it takes to manufacture fusion fuel pellets from days down to just two or three hours — a small-sounding change that could be a big deal for making fusion power actually affordable."
+excerpt: "Inertia Enterprises heeft de tijd die nodig is om fusiebrandstofkorrels te produceren teruggebracht van dagen naar slechts twee tot drie uur — een verandering die klein klinkt, maar een groot verschil kan maken om fusie-energie daadwerkelijk betaalbaar te maken."
 tags: ["Fusion Energy", "Deep Tech", "Energy"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/20/inertia-enterprises-finds-a-way-to-make-its-fusion-fuel-fast/"
 ---
 
-## Quick background: what is fusion, and why does it need "fuel pellets"?
+## Korte achtergrond: wat is fusie, en waarom is er "brandstofkorrels" voor nodig?
 
-Fusion is the reaction that powers the sun — when you smash light atoms together hard enough, they release enormous amounts of energy. Scientists have already proven this can work on Earth in small doses, but turning it into a practical, everyday power source has been an enormous engineering challenge, partly because of the humble little fuel pellet at the center of it all.
+Fusie is de reactie die de zon aandrijft — wanneer je lichte atomen hard genoeg tegen elkaar aan smijt, komen er enorme hoeveelheden energie vrij. Wetenschappers hebben al bewezen dat dit op kleine schaal op aarde kan werken, maar het omzetten daarvan in een praktische, alledaagse energiebron is een enorme technische uitdaging gebleken, deels vanwege het bescheiden kleine brandstofkorreltje in het hart van het proces.
 
-Each pellet is a tiny sphere: a shell made of diamond, holding frozen layers of two special forms of hydrogen, wrapped in a gold capsule. When a powerful laser hits it, the gold capsule converts that laser light into X-rays, which squeeze the pellet down and trigger the fusion reaction inside.
+Elke korrel is een piepklein bolletje: een schil van diamant, met daarin bevroren lagen van twee speciale vormen van waterstof, verpakt in een gouden capsule. Wanneer een krachtige laser het raakt, zet de gouden capsule dat laserlicht om in röntgenstraling, die de korrel samenperst en de fusiereactie erin op gang brengt.
 
-## Why speed matters here
+## Waarom snelheid hier belangrijk is
 
-Until now, growing the crystals needed inside these pellets could take the better part of a week using existing lab equipment. A startup called Inertia Enterprises figured out how to grow those same crystals in about 30 minutes, and can now finish an entire pellet in two to three hours instead of multiple days.
+Tot nu toe kon het laten groeien van de kristallen die nodig zijn in deze korrels bijna een week duren met bestaande labapparatuur. Een startup genaamd Inertia Enterprises heeft uitgevonden hoe diezelfde kristallen in ongeveer 30 minuten te laten groeien, en kan nu een volledige korrel in twee tot drie uur afmaken in plaats van meerdere dagen.
 
-That matters enormously for one simple reason: a real, working fusion power plant wouldn't need one pellet a day — it would need about 10 pellets every single second. At that scale, shaving days off each pellet's production time is the difference between a lab curiosity and something that could plausibly run as a power plant.
+Dat is enorm belangrijk om één simpele reden: een echte, werkende fusiecentrale zou geen korrel per dag nodig hebben — die zou ongeveer 10 korrels per seconde nodig hebben. Op die schaal is het besparen van dagen op de productietijd van elke korrel het verschil tussen een labcurriositeit en iets dat plausibel als energiecentrale zou kunnen draaien.
 
-## How they pulled it off
+## Hoe ze het voor elkaar kregen
 
-The company hired manufacturing engineers from outside the energy world — including people with backgrounds at Apple — specifically to take a process built for making a handful of research prototypes a year and turn it into something that can be mass-produced. Their upcoming laser system is also designed to be four times more powerful than the one used in the original government lab research, which conveniently means it can tolerate small imperfections in each pellet, making them faster and cheaper to produce.
+Het bedrijf huurde productie-ingenieurs in van buiten de energiewereld — waaronder mensen met een achtergrond bij Apple — specifiek om een proces dat was gebouwd voor het maken van een handvol onderzoeksprototypes per jaar om te vormen tot iets dat massaal geproduceerd kan worden. Hun aankomende lasersysteem is ook ontworpen om vier keer krachtiger te zijn dan het systeem dat werd gebruikt in het oorspronkelijke overheidsonderzoek, wat handig genoeg betekent dat het kleine onvolkomenheden in elke korrel kan verdragen, waardoor ze sneller en goedkoper te produceren zijn.
 
-## Why this also matters for one scarce material
+## Waarom dit ook belangrijk is voor één schaars materiaal
 
-Faster pellet production also means the company doesn't need to stockpile as much tritium — one of the two hydrogen types used inside each pellet. Tritium is extremely expensive and genuinely scarce (there's only about 25 kilograms of it in the entire world), so needing less of it sitting around in inventory at any given time is a real cost and safety advantage.
+Snellere korrelproductie betekent ook dat het bedrijf minder tritium hoeft op te slaan — een van de twee soorten waterstof die in elke korrel worden gebruikt. Tritium is extreem duur en werkelijk schaars (er is wereldwijd maar ongeveer 25 kilogram van), dus minder ervan op voorraad hoeven te houden is een reëel voordeel op het gebied van kosten en veiligheid.

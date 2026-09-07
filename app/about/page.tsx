@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'About',
-  description: 'VAIIYA is a digital studio building high-performance websites, native Android & iOS apps, and mobile games.',
+  title: 'Over Ons',
+  description: 'VAIIYA is een digitale studio die krachtige websites, native Android & iOS apps en mobiele games bouwt.',
 }
 
 export default function AboutPage() {
@@ -15,11 +15,11 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="text-center">
                         <h1 className="text-5xl sm:text-7xl font-serif mb-8 leading-tight">
-                            Crafting High-Vibe <br />
+                            Bouwers Van High-Vibe <br />
                             <span className="text-metamask-orange">Websites, Apps &amp; Games.</span>
                         </h1>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            VAIIYA is a digital studio building high-performance websites, native Android &amp; iOS apps, and mobile games. We don&apos;t just write code; we craft experiences that feel great to use.
+                            VAIIYA is een digitale studio die krachtige websites, native Android &amp; iOS apps en mobiele games bouwt. We schrijven niet alleen code; we creëren ervaringen die heerlijk aanvoelen om te gebruiken.
                         </p>
                     </div>
                 </div>
@@ -34,13 +34,13 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-4xl font-serif mb-6">How We Build</h2>
+                            <h2 className="text-4xl font-serif mb-6">Hoe We Bouwen</h2>
                             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                                 <p>
-                                    Every project starts with the same question: what should this feel like to use? From there we design, build, and ship &mdash; websites, native apps, and mobile games &mdash; with the same obsessive attention to detail.
+                                    Elk project begint met dezelfde vraag: hoe moet dit aanvoelen in gebruik? Van daaruit ontwerpen, bouwen en lanceren we &mdash; websites, native apps en mobiele games &mdash; met dezelfde obsessieve aandacht voor detail.
                                 </p>
                                 <p>
-                                    We use modern tooling, including AI-assisted workflows, to move fast without cutting corners. But the tools are just tools. What ships is judged on craft: does it feel fast, does it feel right, would we use it ourselves.
+                                    We gebruiken moderne tooling, waaronder AI-ondersteunde workflows, om snel te werken zonder kwaliteit in te leveren. Maar de tools zijn slechts middelen. Wat we opleveren wordt beoordeeld op vakmanschap: voelt het snel, voelt het goed, zouden we het zelf gebruiken.
                                 </p>
                             </div>
                         </div>
@@ -55,24 +55,24 @@ export default function AboutPage() {
                                 <div className="space-y-4 font-mono text-sm uppercase tracking-wider text-metamask-purple/60">
                                     <div className="flex gap-4">
                                         <span className="text-metamask-orange">01</span>
-                                        <span>Initialize Vision</span>
+                                        <span>Visie Initialiseren</span>
                                     </div>
                                     <div className="flex gap-4">
                                         <span className="text-metamask-orange">02</span>
-                                        <span>Design &amp; Architecture</span>
+                                        <span>Ontwerp &amp; Architectuur</span>
                                     </div>
                                     <div className="flex gap-4 pl-4 border-l border-metamask-gray-100">
                                         <span>- Platform: Web, Android &amp; iOS</span>
                                     </div>
                                     <div className="flex gap-4 pl-4 border-l border-metamask-gray-100">
-                                        <span>- Focus: Speed &amp; Polish</span>
+                                        <span>- Focus: Snelheid &amp; Afwerking</span>
                                     </div>
                                     <div className="flex gap-4">
                                         <span className="text-metamask-orange">03</span>
-                                        <span>Build &amp; Ship...</span>
+                                        <span>Bouwen &amp; Lanceren...</span>
                                     </div>
                                     <div className="flex gap-4 text-metamask-orange animate-pulse">
-                                        <span>&gt; Status: High Vibe Detected</span>
+                                        <span>&gt; Status: High Vibe Gedetecteerd</span>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ export default function AboutPage() {
             {/* The Native Advantage */}
             <section className="py-24 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto text-center">
-                    <h2 className="text-4xl font-serif mb-16">Why Native?</h2>
+                    <h2 className="text-4xl font-serif mb-16">Waarom Native?</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="card-vibe p-10">
                             <div className="w-14 h-14 bg-metamask-orange/10 rounded-2xl flex items-center justify-center mb-6 mx-auto">
@@ -92,8 +92,8 @@ export default function AboutPage() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-medium mb-4">Unmatched Performance</h3>
-                            <p className="text-gray-600">Native apps deliver buttery-smooth interactions and full access to device capabilities for real-world impact.</p>
+                            <h3 className="text-xl font-medium mb-4">Ongeëvenaarde Prestaties</h3>
+                            <p className="text-gray-600">Native apps zorgen voor boterzachte interacties en volledige toegang tot apparaatfuncties voor impact in de praktijk.</p>
                         </div>
 
                         <div className="card-vibe p-10">
@@ -102,8 +102,8 @@ export default function AboutPage() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-medium mb-4">Long-Term Value</h3>
-                            <p className="text-gray-600">One codebase vision, maintained with care. Scalable architecture that grows with your product.</p>
+                            <h3 className="text-xl font-medium mb-4">Waarde Op Lange Termijn</h3>
+                            <p className="text-gray-600">Eén heldere codebase-visie, met zorg onderhouden. Schaalbare architectuur die meegroeit met je product.</p>
                         </div>
 
                         <div className="card-vibe p-10">
@@ -112,8 +112,8 @@ export default function AboutPage() {
                                     <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.3 2.3-8.636-8.632z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-medium mb-4">Ecosystem Reach</h3>
-                            <p className="text-gray-600">Google Play and the App Store connect your app to billions of users worldwide.</p>
+                            <h3 className="text-xl font-medium mb-4">Ecosysteembereik</h3>
+                            <p className="text-gray-600">Google Play en de App Store verbinden je app met miljarden gebruikers wereldwijd.</p>
                         </div>
                     </div>
                 </div>
@@ -122,9 +122,9 @@ export default function AboutPage() {
             {/* Our Process */}
             <section className="py-24 bg-metamask-purple text-white px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl font-serif mb-8 text-white">The VAIIYA Vision</h2>
+                    <h2 className="text-4xl font-serif mb-8 text-white">De VAIIYA Visie</h2>
                     <p className="text-xl text-purple-100 leading-relaxed mb-12">
-                        &quot;We believe the future of software isn&apos;t just about functional utility, but about how it makes you feel. By combining meticulous engineering with strong product intuition, we create websites, apps, and games that feel like magic.&quot;
+                        &quot;Wij geloven dat de toekomst van software niet alleen draait om functioneel nut, maar om hoe het je laat voelen. Door nauwgezette engineering te combineren met sterke productintuïtie, creëren we websites, apps en games die als magie aanvoelen.&quot;
                     </p>
                     <div className="h-px w-24 bg-metamask-orange mx-auto mb-12"></div>
                     <div className="flex flex-wrap justify-center gap-8 italic text-purple-200">
@@ -139,16 +139,16 @@ export default function AboutPage() {
             <section className="py-24 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="bg-metamask-gray-50 rounded-[40px] p-8 md:p-16 text-center border border-metamask-gray-100">
-                        <h2 className="text-4xl font-serif mb-6">Ready to join the vibe?</h2>
+                        <h2 className="text-4xl font-serif mb-6">Klaar om mee te doen?</h2>
                         <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-                            Explore our portfolio or reach out to see how we can bring your app idea to life.
+                            Bekijk ons portfolio of neem contact op om te zien hoe we jouw app-idee tot leven kunnen brengen.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/portfolio" className="btn-primary">
-                                View Portfolio
+                                Bekijk Portfolio
                             </Link>
-                            <a href="https://x.com/VAIIYA_MEDIA" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                                Follow @VAIIYA_MEDIA
+                            <a href="https://x.com/V4IIYA" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                                Volg @V4IIYA
                             </a>
                         </div>
                     </div>

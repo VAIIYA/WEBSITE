@@ -1,24 +1,24 @@
 ---
-title: "Meta's New App Lets Anyone 'Vibe-Code' a Little Game Just by Describing It"
+title: "Meta's nieuwe app laat iedereen een klein spelletje 'vibe-coden' door het simpelweg te beschrijven"
 date: "2026-08-21"
-excerpt: "Meta's Pocket app, now available to everyone in the US, lets people type a prompt and get a small playable game in return — then share, remix, or scroll through games other people made."
+excerpt: "Meta's Pocket-app, nu beschikbaar voor iedereen in de VS, laat mensen een prompt typen en krijgt daarvoor een klein speelbaar spelletje terug — waarna ze door spelletjes van anderen kunnen scrollen, ze delen of remixen."
 tags: ["Meta", "AI Tools", "Gaming"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/20/meta-brings-pocket-an-app-that-lets-you-vibe-code-and-share-games-to-us-users/"
 ---
 
-## What "vibe-coding" means here
+## Wat "vibe-coden" hier betekent
 
-You've probably heard of typing a prompt into an AI chatbot and getting back an essay or an image. "Vibe-coding" is the same basic idea applied to software: you describe roughly what you want, and the AI writes the actual code behind the scenes so you don't have to know any programming yourself. Meta's new app, Pocket, applies this specifically to small, playable games.
+Je hebt waarschijnlijk wel eens gehoord van het typen van een prompt in een AI-chatbot en daarvoor een essay of afbeelding terugkrijgen. "Vibe-coden" is hetzelfde basisidee toegepast op software: je beschrijft ruwweg wat je wilt, en de AI schrijft de daadwerkelijke code achter de schermen, zodat jij zelf geen programmeerkennis nodig hebt. Meta's nieuwe app, Pocket, past dit specifiek toe op kleine, speelbare spelletjes.
 
-## How Pocket works
+## Hoe Pocket werkt
 
-Inside Pocket, you can create tiny interactive games (Meta calls them "gizmos") just by describing what you want. These little games can react to touch, respond when you tilt your phone, include sound effects, and even pull in your own photos or your phone's camera in real time. Once you've made one, it shows up on a scrollable feed — similar to scrolling through short videos — where other users can play it, save it, or "remix" it into their own new version.
+Binnen Pocket kun je kleine interactieve spelletjes maken (Meta noemt ze "gizmo's") door simpelweg te beschrijven wat je wilt. Deze kleine spelletjes kunnen reageren op aanraking, reageren wanneer je je telefoon kantelt, geluidseffecten bevatten, en zelfs je eigen foto's of de camera van je telefoon in realtime gebruiken. Zodra je er een hebt gemaakt, verschijnt het in een scrollbare feed — vergelijkbaar met door korte video's scrollen — waar andere gebruikers het kunnen spelen, opslaan of "remixen" tot hun eigen nieuwe versie.
 
-## Where this came from
+## Waar dit vandaan komt
 
-Pocket grew out of Meta's earlier acquisition of a team called Gizmo, and it quietly launched first in Brazil last month before rolling out to everyone in the United States this week. Meta is shutting down the original standalone Gizmo app now that Pocket has taken over.
+Pocket is voortgekomen uit Meta's eerdere overname van een team genaamd Gizmo, en lanceerde vorige maand stilletjes eerst in Brazilië voordat het deze week werd uitgerold naar iedereen in de Verenigde Staten. Meta sluit de originele losstaande Gizmo-app nu af, nu Pocket het heeft overgenomen.
 
-## Why Meta is pushing this
+## Waarom Meta hierop inzet
 
-Meta's CEO has been publicly emphasizing how much faster the company can now ship new apps, crediting AI-assisted development for letting small teams launch entire products — Pocket joins a recent wave of similarly quick releases, including a photo-sharing app, a Reddit-style discussion app, and a marketplace app. The bet is that if regular people can make their own small games as easily as they write a text message, a lot more casual, personal content will get created and shared.
+Meta's CEO heeft publiekelijk benadrukt hoeveel sneller het bedrijf nu nieuwe apps kan uitbrengen, en schrijft dat toe aan AI-ondersteunde ontwikkeling, waardoor kleine teams complete producten kunnen lanceren — Pocket sluit aan bij een recente golf van vergelijkbaar snelle releases, waaronder een foto-deel-app, een discussie-app in de stijl van Reddit, en een marktplaats-app. De gok is dat als gewone mensen net zo makkelijk hun eigen kleine spelletjes kunnen maken als ze een tekstbericht schrijven, er veel meer casual, persoonlijke content zal worden gemaakt en gedeeld.

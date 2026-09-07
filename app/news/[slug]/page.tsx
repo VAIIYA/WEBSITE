@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getAllSlugs, getPostBySlug } from '@/lib/posts'
+import { getAllSlugs, getCoverImage, getPostBySlug, slugifyTag } from '@/lib/posts'
+import ArticleListenButton from '@/components/ArticleListenButton'
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }))
@@ -19,6 +20,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       description: post.excerpt,
       type: 'article',
       publishedTime: post.date,
+      // Social crawlers fetch this as a URL, so a data-URI placeholder
+      // wouldn't render there — only use a real coverImage if present.
       images: post.coverImage ? [post.coverImage] : undefined,
     },
   }
@@ -26,7 +29,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 
 function formatDate(dateStr: string) {
   if (!dateStr) return ''
-  return new Date(dateStr).toLocaleDateString('en-US', {
+  return new Date(dateStr).toLocaleDateString('nl-NL', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -44,19 +47,20 @@ export default function NewsPostPage({ params }: { params: { slug: string } }) {
           href="/news"
           className="inline-flex items-center gap-2 text-sm font-semibold text-metamask-purple hover:text-metamask-orange transition-colors mb-10"
         >
-          &larr; Back to News
+          &larr; Terug naar Nieuws
         </Link>
 
         <header className="mb-10">
           {post.tags && post.tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-4">
               {post.tags.map((tag) => (
-                <span
+                <Link
                   key={tag}
-                  className="px-2.5 py-1 rounded-full bg-metamask-gray-50 border border-metamask-gray-100 text-[10px] font-semibold uppercase tracking-wider text-metamask-purple"
+                  href={`/news/tag/${slugifyTag(tag)}`}
+                  className="px-2.5 py-1 rounded-full bg-metamask-gray-50 border border-metamask-gray-100 text-[10px] font-semibold uppercase tracking-wider text-metamask-purple hover:bg-metamask-purple hover:text-white transition-colors"
                 >
                   {tag}
-                </span>
+                </Link>
               ))}
             </div>
           )}
@@ -68,28 +72,26 @@ export default function NewsPostPage({ params }: { params: { slug: string } }) {
           )}
           {post.sourceUrl && (
             <p className="text-sm text-gray-500 mt-3 pt-3 border-t border-metamask-gray-100">
-              Based on reporting by{' '}
+              Gebaseerd op berichtgeving van{' '}
               <a
                 href={post.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-metamask-orange hover:underline"
               >
-                {post.sourceName || 'the original source'} &rarr;
+                {post.sourceName || 'de oorspronkelijke bron'} &rarr;
               </a>{' '}
-              &mdash; simplified &amp; explained by VAIIYA.
+              &mdash; vereenvoudigd &amp; uitgelegd door VAIIYA.
             </p>
           )}
         </header>
 
-        {post.coverImage && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={post.coverImage}
-            alt={post.title}
-            className="w-full rounded-3xl mb-10 object-cover"
-          />
-        )}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={getCoverImage(post)}
+          alt={post.title}
+          className="w-full rounded-3xl mb-10 object-cover"
+        />
 
         {post.youtubeId && (
           <div className="aspect-video w-full mb-10 rounded-3xl overflow-hidden shadow-lg">
@@ -103,7 +105,10 @@ export default function NewsPostPage({ params }: { params: { slug: string } }) {
           </div>
         )}
 
+        <ArticleListenButton title={post.title} contentSelector="#article-body" locale="nl" />
+
         <div
+          id="article-body"
           className="prose prose-slate max-w-none prose-headings:font-serif prose-headings:text-metamask-purple prose-a:text-metamask-orange prose-img:rounded-2xl"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />

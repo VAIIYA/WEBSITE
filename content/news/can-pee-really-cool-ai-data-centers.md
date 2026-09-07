@@ -1,30 +1,30 @@
 ---
-title: "Can We Really Cool AI Data Centers With Pee? The Joke Ad With a Real Point"
+title: "Kunnen we AI-datacenters echt koelen met plas? De grappige advertentie met een serieus punt"
 date: "2026-08-21"
-excerpt: "A silly ad campaign joked about using human urine to cool AI data centers — but it turns out there's a real, less gross version of that idea already happening: recycled wastewater."
+excerpt: "Een gekke reclamecampagne grapte over het gebruik van menselijke urine om AI-datacenters te koelen — maar het blijkt dat er een echte, minder vieze versie van dat idee al bestaat: gerecycled afvalwater."
 tags: ["AI Infrastructure", "Data Centers", "Sustainability"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/20/ok-can-we-actually-cool-data-centers-with-our-pee/"
 ---
 
-## The joke that started it
+## De grap die het begon
 
-A drink brand teamed up with a former NFL player for a funny ad suggesting people should donate their pee to help cool down AI data centers, since those centers are known to use huge amounts of water. It was meant as an over-the-top joke, complete with people singing about it — but it went viral because it touches a real, growing worry: AI is thirsty, and people are noticing.
+Een drankmerk werkte samen met een voormalige NFL-speler voor een grappige advertentie die suggereerde dat mensen hun plas moesten doneren om AI-datacenters te helpen koelen, aangezien bekend is dat die centers enorme hoeveelheden water gebruiken. Het was bedoeld als overdreven grap, compleet met mensen die erover zongen — maar het ging viraal omdat het een echte, groeiende zorg raakt: AI heeft dorst, en mensen merken het op.
 
-## Why raw urine wouldn't actually work
+## Waarom pure urine eigenlijk niet zou werken
 
-If you tried pouring actual urine into a cooling system, you'd have a mess on your hands. Urine contains salt, urea, and other stuff that would clog up machinery and leave behind gross mineral buildup very quickly. So no, data centers are not directly using raw pee.
+Als je daadwerkelijk urine in een koelsysteem zou gieten, zou je een puinhoop aan je handen hebben. Urine bevat zout, ureum en andere stoffen die machines zeer snel zouden verstoppen en vieze mineraalafzettingen zouden achterlaten. Dus nee, datacenters gebruiken niet rechtstreeks ongezuiverde plas.
 
-## But recycled wastewater? That's real
+## Maar gerecycled afvalwater? Dat is wél echt
 
-Here's the twist: treated wastewater — the kind that starts as sewage, including urine, but then goes through serious cleaning — is genuinely used to cool data centers today. Modern treatment plants use filters, a process called reverse osmosis, and ultraviolet light to turn dirty water into something clean enough for industrial cooling. Companies in this field say they've been doing this for entire industries, not just tech, for decades.
+Hier komt de plot twist: gezuiverd afvalwater — het soort dat begint als rioolwater, inclusief urine, maar vervolgens een grondige zuivering ondergaat — wordt tegenwoordig daadwerkelijk gebruikt om datacenters te koelen. Moderne zuiveringsinstallaties gebruiken filters, een proces genaamd omgekeerde osmose, en ultraviolet licht om vies water om te zetten in iets dat schoon genoeg is voor industriële koeling. Bedrijven in deze sector zeggen dat ze dit al decennialang doen voor hele industrieën, niet alleen voor de techsector.
 
-One real example: in a part of Virginia packed with over 250 data centers, roughly 43% of all the water used for cooling in 2025 was recycled wastewater rather than fresh drinking water. That's a meaningful dent, even though more than half still came from regular drinking-water supplies.
+Eén concreet voorbeeld: in een deel van Virginia met meer dan 250 datacenters was in 2025 ongeveer 43% van al het koelwater gerecycled afvalwater in plaats van vers drinkwater. Dat is een aanzienlijke besparing, ook al kwam meer dan de helft nog steeds uit gewone drinkwatervoorzieningen.
 
-## The catch
+## Het addertje
 
-Not every data center can just switch to recycled water — you need to be physically close to a treatment plant big enough to handle the volume, and many are being built in rural areas that don't have that kind of infrastructure nearby. Because of this, some tech companies have started directly paying to build or upgrade local wastewater treatment plants themselves, since it benefits both the surrounding community and their own data centers.
+Niet elk datacenter kan zomaar overschakelen op gerecycled water — je moet fysiek dicht bij een zuiveringsinstallatie zitten die groot genoeg is om het volume aan te kunnen, en veel datacenters worden gebouwd in landelijke gebieden die dat soort infrastructuur niet in de buurt hebben. Daarom zijn sommige techbedrijven zelf direct gaan betalen voor de bouw of upgrade van lokale afvalwaterzuiveringsinstallaties, omdat dit zowel de omliggende gemeenschap als hun eigen datacenters ten goede komt.
 
-## The bigger backdrop
+## De bredere context
 
-This whole conversation is landing at a moment when a large majority of Americans say they don't want a data center built near them, largely over concerns about water and electricity use. The joke ad worked precisely because it poked at something people are already anxious about.
+Dit hele gesprek speelt zich af op een moment waarop een grote meerderheid van de Amerikanen zegt geen datacenter in hun buurt te willen, grotendeels vanwege zorgen over water- en elektriciteitsgebruik. De grappige advertentie werkte precies omdat hij iets raakte waar mensen zich al zorgen over maken.

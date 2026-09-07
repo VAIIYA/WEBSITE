@@ -4,14 +4,14 @@ import { portfolioApps } from '@/lib/portfolio'
 
 export const metadata: Metadata = {
   title: 'Apps',
-  description: 'Native Android & iOS apps built with Kotlin Jetpack Compose and Swift SwiftUI — shipped to the Play Store and App Store.',
+  description: 'Native Android & iOS apps gebouwd met Kotlin Jetpack Compose en Swift SwiftUI — uitgebracht in de Play Store en App Store.',
 }
 
 const stack = [
-  { label: 'Kotlin / Jetpack Compose', detail: 'Modern native Android UI' },
-  { label: 'Swift / SwiftUI', detail: 'Modern native iOS UI' },
-  { label: 'Google Play Store', detail: 'Published & maintained' },
-  { label: 'App Store Connect', detail: 'Published & maintained' },
+  { label: 'Kotlin / Jetpack Compose', detail: 'Moderne native Android UI' },
+  { label: 'Swift / SwiftUI', detail: 'Moderne native iOS UI' },
+  { label: 'Google Play Store', detail: 'Gepubliceerd & onderhouden' },
+  { label: 'App Store Connect', detail: 'Gepubliceerd & onderhouden' },
 ]
 
 const apps = portfolioApps.filter((app) => app.category === 'app')
@@ -23,13 +23,13 @@ export default function AppsPage() {
       <section className="relative pt-20 pb-16 bg-card border-b border-card-border overflow-hidden bg-dot-grid">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-blue-200 text-blue-800 text-xs font-bold uppercase tracking-widest mb-6">
-            📱 CORE PILLAR &bull; NATIVE APPS
+            📱 KERNPIJLER &bull; NATIVE APPS
           </div>
           <h1 className="text-5xl md:text-6xl font-bold font-serif mb-6 leading-tight">
             Native <span className="italic text-blue-600">Android &amp; iOS</span> Apps
           </h1>
           <p className="text-xl text-ink/70 leading-relaxed max-w-2xl">
-            Built with Kotlin &amp; Jetpack Compose for Android, Swift &amp; SwiftUI for iOS. Shipped to the Play Store and App Store, engineered for real-world performance — not just a demo build.
+            Gebouwd met Kotlin &amp; Jetpack Compose voor Android, Swift &amp; SwiftUI voor iOS. Uitgebracht in de Play Store en App Store, ontwikkeld voor prestaties in de praktijk — geen demo-build.
           </p>
         </div>
       </section>
@@ -49,10 +49,10 @@ export default function AppsPage() {
       {/* What we do */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card border-y border-card-border">
         <div className="max-w-4xl mx-auto text-center space-y-4">
-          <h2 className="text-3xl sm:text-4xl font-bold font-serif">What Goes Into a VAIIYA App</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold font-serif">Wat Zit Er In Een VAIIYA App</h2>
           <p className="text-ink/70 leading-relaxed">
-            Every app starts with a native-first architecture — no cross-platform compromises. We design the interface, build the data layer,
-            wire up push notifications and analytics, and take care of App Store &amp; Play Store submission, review and ongoing releases.
+            Elke app begint met een native-first architectuur — geen cross-platform compromissen. We ontwerpen de interface, bouwen de datalaag,
+            koppelen pushmeldingen en analytics, en verzorgen de indiening, review en doorlopende releases voor de App Store &amp; Play Store.
           </p>
         </div>
       </section>
@@ -60,7 +60,12 @@ export default function AppsPage() {
       {/* Apps Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold font-serif text-center mb-12">Apps We&apos;ve Shipped</h2>
+          <h2 className="text-3xl font-bold font-serif text-center mb-12">Apps Die We Hebben Uitgebracht</h2>
+          {apps.length === 0 && (
+            <p className="text-center text-ink/60">
+              Onze eerdere apps zijn niet meer actief. Nieuwe app-projecten volgen hier zodra ze live gaan.
+            </p>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {apps.map((app) => (
               <div
@@ -83,17 +88,17 @@ export default function AppsPage() {
                   <div className="space-y-2 pt-4 border-t border-card-border">
                     {app.playStoreUrl && (
                       <a href={app.playStoreUrl} target="_blank" rel="noopener noreferrer" className="w-full btn-metamask bg-blue-600 text-white hover:bg-blue-700 text-xs font-bold">
-                        Get on Google Play Store &rarr;
+                        Verkrijgbaar op Google Play &rarr;
                       </a>
                     )}
                     {app.appStoreUrl && (
                       <a href={app.appStoreUrl} target="_blank" rel="noopener noreferrer" className="w-full btn-metamask bg-slate-900 text-white hover:bg-black text-xs font-bold">
-                        Download on Apple App Store &rarr;
+                        Download in de Apple App Store &rarr;
                       </a>
                     )}
                     {app.externalUrl && (
                       <a href={app.externalUrl} target="_blank" rel="noopener noreferrer" className="w-full btn-metamask btn-outline-dark text-xs font-bold">
-                        Live Demo Web Version
+                        Live Demo Webversie
                       </a>
                     )}
                   </div>
@@ -106,9 +111,9 @@ export default function AppsPage() {
 
       {/* CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold font-serif mb-4">Have an app idea?</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold font-serif mb-4">Heb je een idee voor een app?</h2>
         <Link href="/contact" className="btn-metamask btn-orange text-base">
-          Start a Build &rarr;
+          Start Een Project &rarr;
         </Link>
       </section>
     </main>

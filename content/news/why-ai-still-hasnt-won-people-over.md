@@ -1,26 +1,26 @@
 ---
-title: "AI Was Supposed to Win Everyone Over by Now. It Hasn't."
+title: "AI zou iedereen inmiddels moeten hebben overtuigd. Dat is niet gelukt."
 date: "2026-08-21"
-excerpt: "Years into the AI boom, public opinion is getting more negative, not less — surveys show rising distrust, and even industry leaders are admitting AI hasn't delivered the benefits it promised regular people."
+excerpt: "Jaren na het begin van de AI-hausse wordt de publieke opinie negatiever in plaats van positiever — enquêtes tonen groeiend wantrouwen, en zelfs kopstukken uit de sector geven toe dat AI de beloofde voordelen voor gewone mensen nog niet heeft waargemaakt."
 tags: ["AI", "Public Opinion", "Trust"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/19/ai-was-supposed-to-win-people-over-by-now-it-hasnt/"
 ---
 
-## The trend nobody in the industry wanted
+## De trend die niemand in de sector wilde zien
 
-You'd expect that after years of AI tools getting more capable and more widespread, people would warm up to them. According to recent surveys, the opposite is happening. Research from Pew found that 52% of Americans now say they're more concerned than excited about AI's growing role in daily life — up sharply from 37% just a few years earlier.
+Je zou verwachten dat mensen, na jaren waarin AI-tools steeds krachtiger en wijdverspreider werden, er warmer voor zouden gaan lopen. Volgens recente enquêtes gebeurt juist het tegenovergestelde. Onderzoek van Pew wees uit dat 52% van de Amerikanen nu zegt zich meer zorgen te maken dan enthousiast te zijn over de groeiende rol van AI in het dagelijks leven — een scherpe stijging ten opzichte van 37% een paar jaar eerder.
 
-Other surveys tell a similar story: younger adults in particular say they don't trust the leaders of major AI companies to act responsibly, and a strong majority of Americans believe AI is being developed and rolled out faster than it should be.
+Andere enquêtes vertellen een vergelijkbaar verhaal: vooral jongere volwassenen zeggen de leiders van grote AI-bedrijven niet te vertrouwen om verantwoordelijk te handelen, en een ruime meerderheid van de Amerikanen vindt dat AI sneller wordt ontwikkeld en uitgerold dan verstandig is.
 
-## Why people are souring on it
+## Waarom mensen er negatiever tegenover komen te staan
 
-A few threads keep coming up. First, AI features keep showing up uninvited inside products people already use — email, TVs, search engines — often without being asked for. Second, there's real anxiety in schools, where AI has made it much easier for students to cheat on assignments from high school through college. Third, there are ongoing fights over AI companies training their models on the work of artists, musicians, and writers without paying or asking them. And underneath all of that is a simple gap between promise and experience: for a lot of regular people, AI feels more like a threat to their job than something that's actually improved their day-to-day life yet.
+Een paar terugkerende thema's vallen op. Ten eerste duiken AI-functies steeds vaker ongevraagd op in producten die mensen al gebruiken — e-mail, tv's, zoekmachines — vaak zonder dat ernaar is gevraagd. Ten tweede is er echte onrust op scholen, waar AI het voor leerlingen en studenten veel makkelijker heeft gemaakt om te frauderen bij opdrachten, van de middelbare school tot de universiteit. Ten derde zijn er aanhoudende conflicten over AI-bedrijven die hun modellen trainen op het werk van kunstenaars, muzikanten en schrijvers zonder hen te betalen of om toestemming te vragen. En onder dit alles ligt een simpele kloof tussen belofte en ervaring: voor veel gewone mensen voelt AI meer als een bedreiging voor hun baan dan als iets dat hun dagelijks leven daadwerkelijk al heeft verbeterd.
 
-## People are pushing back in small, visible ways
+## Mensen verzetten zich op kleine, zichtbare manieren
 
-This unease is starting to show up in everyday habits, too — sales of old-school "dumbphones," tape decks, and classic iPods have picked up, and hobbies with zero AI involvement, like quilting, knitting, and mahjong, are having a moment. More broadly, there's a noticeable pull back toward in-person activities over digital ones.
+Dit ongemak begint ook door te sijpelen in alledaagse gewoontes — de verkoop van ouderwetse "domme telefoons", cassettedecks en klassieke iPods is gestegen, en hobby's zonder enige bemoeienis van AI, zoals quilten, breien en mahjong, maken een opleving door. In bredere zin is er een merkbare verschuiving terug naar activiteiten in het echte leven, weg van digitale bezigheden.
 
-## Even AI leaders are admitting it
+## Zelfs AI-kopstukken geven het toe
 
-Perhaps the most telling sign is that people running these companies are saying the quiet part out loud. One prominent tech CEO said the industry needs to build "products that just regular people can use" rather than showy demos. And Anthropic's own CEO described the moment as a "crisis of trust," openly admitting that the industry "hasn't yet delivered on our big promises to benefit the world." When the people selling AI are the ones calling out the trust gap, it's a pretty strong signal that the gap is real.
+Misschien wel het meest veelzeggende signaal is dat de mensen die deze bedrijven leiden het hardop durven te zeggen. Een prominente tech-CEO zei dat de sector "producten moet bouwen die gewone mensen ook echt kunnen gebruiken" in plaats van indrukwekkende demo's. En de CEO van Anthropic zelf omschreef het moment als een "vertrouwenscrisis", en gaf openlijk toe dat de sector "zijn grote beloften om de wereld ten goede te veranderen nog niet heeft waargemaakt". Wanneer de mensen die AI verkopen zelf de vertrouwenskloof benoemen, is dat een vrij sterk signaal dat die kloof echt bestaat.

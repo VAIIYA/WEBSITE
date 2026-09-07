@@ -1,26 +1,26 @@
 ---
-title: "Ramp Built Its Own Tool for Switching Between Different AI Models"
+title: "Ramp bouwde een eigen tool om te wisselen tussen verschillende AI-modellen"
 date: "2026-08-21"
-excerpt: "Expense-management company Ramp launched Router, a service that lets businesses tap into many different AI models through one connection and automatically send each task to whichever model fits best."
+excerpt: "Uitgaven-beheerbedrijf Ramp lanceerde Router, een dienst waarmee bedrijven via één verbinding toegang krijgen tot allerlei AI-modellen en elke taak automatisch naar het model sturen dat het best past."
 tags: ["AI Infrastructure", "Ramp", "Enterprise AI"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/"
 ---
 
-## The problem Router solves
+## Het probleem dat Router oplost
 
-There are now dozens of AI models out there — from OpenAI, Anthropic, DeepSeek, xAI, and others — and each one is better or cheaper at different kinds of tasks. Companies that want the best of all worlds usually have to manually wire up connections to each model separately and constantly decide which one to use for which job. That's a lot of tedious plumbing work for a developer.
+Er zijn inmiddels tientallen AI-modellen beschikbaar — van OpenAI, Anthropic, DeepSeek, xAI en anderen — en elk model is beter of goedkoper voor andere soorten taken. Bedrijven die het beste van alle werelden willen, moeten normaal gesproken handmatig verbindingen opzetten met elk model apart en voortdurend beslissen welk model voor welke taak wordt ingezet. Dat is een hoop vervelend loodgieterswerk voor een ontwikkelaar.
 
-## What Ramp built
+## Wat Ramp heeft gebouwd
 
-Ramp, a company best known for corporate credit cards and expense tracking, just launched a product literally called Router. It acts as a single doorway to a whole lineup of AI models, and it can be set up to automatically send each request to whichever model makes sense — for example, always using an expensive, high-quality model for hard problems while routing simpler, cheaper tasks elsewhere. Businesses can also just let Router pick a model for them based on rules they set, like preferred speed or cost.
+Ramp, vooral bekend van zakelijke creditcards en uitgavenregistratie, heeft nu een product gelanceerd dat letterlijk Router heet. Het functioneert als één toegangspoort tot een hele reeks AI-modellen, en kan zo worden ingesteld dat elk verzoek automatisch naar het meest logische model gaat — bijvoorbeeld altijd een duur, hoogwaardig model gebruiken voor moeilijke problemen, terwijl eenvoudigere, goedkopere taken elders worden afgehandeld. Bedrijven kunnen Router ook gewoon zelf een model laten kiezen op basis van regels die zij instellen, zoals gewenste snelheid of kosten.
 
-It also comes with a dashboard showing exactly how much is being spent, how fast each model responds, and how often the system had to fall back to a backup model.
+Daarnaast is er een dashboard dat precies laat zien hoeveel er wordt uitgegeven, hoe snel elk model reageert, en hoe vaak het systeem moest terugvallen op een reservemodel.
 
-## The catch worth knowing
+## Het addertje onder het gras
 
-Router is free to use through the end of 2026 (though you still pay the AI companies themselves for the actual computing costs), and it comes with a modest credit to get started. By default, Ramp keeps a copy of what you send through Router — questions, answers, and any tool actions taken — for up to a year, though it says it strips out anything that could identify individual people before using that data to improve its own products.
+Router is gratis te gebruiken tot eind 2026 (al betaal je nog steeds de AI-bedrijven zelf voor de daadwerkelijke rekenkosten), en er zit een bescheiden startkrediet bij. Standaard bewaart Ramp een kopie van alles wat via Router wordt verstuurd — vragen, antwoorden en eventuele tool-acties — tot maximaal een jaar, al zegt het bedrijf dat het alles verwijdert wat individuen zou kunnen identificeren voordat die data wordt gebruikt om zijn eigen producten te verbeteren.
 
-## Why Ramp is doing this
+## Waarom Ramp dit doet
 
-Ramp already sits at the center of a lot of companies' spending, including their AI bills, so building its own routing layer keeps it plugged into an area of business spending that's growing fast. It's a similar move to what payments company Stripe and workplace-software company Rippling have also been doing lately — every company that touches business spending wants a piece of the booming AI usage market.
+Ramp zit al midden in de uitgavenstroom van veel bedrijven, inclusief hun AI-rekeningen, dus door een eigen routeringslaag te bouwen blijft het aangesloten op een deel van de zakelijke uitgaven dat snel groeit. Het is een vergelijkbare zet als die van betaalbedrijf Stripe en werkplek-softwarebedrijf Rippling, die de laatste tijd soortgelijke stappen zetten — elk bedrijf dat met zakelijke uitgaven te maken heeft, wil een graantje meepikken van de bloeiende markt voor AI-gebruik.

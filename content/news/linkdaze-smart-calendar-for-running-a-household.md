@@ -1,26 +1,26 @@
 ---
-title: "This Smart Screen Wants to Be Your Family's Command Center, Not Just a Calendar"
+title: "Dit slimme scherm wil het commandocentrum van je gezin zijn, niet alleen een kalender"
 date: "2026-08-21"
-excerpt: "Linkdaze makes a wall-mounted tablet that pulls everyone's calendars into one place, plans meals from a photo of a recipe, and skips the pricey monthly subscription its main rival charges."
+excerpt: "Linkdaze maakt een aan de muur bevestigde tablet die ieders kalenders op één plek samenbrengt, maaltijden plant op basis van een foto van een recept, en het dure maandelijkse abonnement van zijn grootste concurrent overslaat."
 tags: ["Consumer Tech", "AI Tools", "Family Tech"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/20/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule/"
 ---
 
-## The problem it's solving
+## Het probleem dat het oplost
 
-If you live with other people — a family, roommates, whoever — chances are everyone uses a different calendar app: one person is on Google, another on Apple's iCloud, someone else on Outlook. Getting everyone's schedule into one shared view usually means annoying everyone into switching apps, which never really works.
+Als je met anderen samenwoont — een gezin, huisgenoten, wie dan ook — is de kans groot dat iedereen een andere kalender-app gebruikt: de een zit op Google, de ander op Apple's iCloud, weer iemand anders op Outlook. Ieders schema in één gedeeld overzicht krijgen betekent meestal dat je iedereen moet overhalen om over te stappen naar een andere app, wat eigenlijk nooit werkt.
 
-## What Linkdaze actually is
+## Wat Linkdaze eigenlijk is
 
-Linkdaze is a touchscreen tablet, in either a smaller 10-inch or larger 15-inch size, meant to be mounted somewhere central in the home — like a kitchen wall. Instead of forcing everyone onto one calendar app, it quietly pulls in and merges schedules from Google, Apple, Outlook, Yahoo, and a family-organizing app called Cozi, then color-codes each family member so you can see who's doing what at a glance.
+Linkdaze is een touchscreen-tablet, in een kleinere versie van 10 inch of een grotere van 15 inch, bedoeld om ergens centraal in huis te worden gemonteerd — zoals een keukenmuur. In plaats van iedereen naar één kalender-app te dwingen, haalt het rustig schema's op van Google, Apple, Outlook, Yahoo en een gezinsorganisatie-app genaamd Cozi, voegt ze samen, en geeft elk gezinslid een eigen kleurcode, zodat je in één oogopslag ziet wie wat doet.
 
-Beyond just showing dates, it also handles chores, reward tracking for kids, shopping lists, and doubles as a digital photo frame when it's not being used for scheduling.
+Naast het tonen van data regelt het ook klusjes, een beloningssysteem bijhouden voor kinderen, boodschappenlijstjes, en dient het als digitale fotolijst wanneer het niet voor planning wordt gebruikt.
 
-## The clever meal-planning trick
+## De slimme truc voor maaltijdplanning
 
-One standout feature: you can literally take a photo of a paper recipe, or a school lunch menu handed out on paper, and the device's AI will turn that photo into a proper digital meal plan and automatically build a matching shopping list. That saves the tedious step of manually retyping ingredients into an app.
+Een opvallende functie: je kunt letterlijk een foto maken van een papieren recept, of van een schoollunchmenu dat op papier is uitgedeeld, en de AI van het apparaat zet die foto om in een echt digitaal maaltijdplan en bouwt automatisch een bijpassende boodschappenlijst. Dat bespaart de vervelende stap van handmatig ingrediënten overtypen in een app.
 
-## Why the pricing matters
+## Waarom de prijsstelling ertoe doet
 
-The most interesting business decision here is that Linkdaze doesn't require a subscription to use its core features — you just pay once for the device. Its main competitor, a similar smart-display called Skylight, charges a monthly fee on top of the hardware cost to unlock extra features. In a market where everything seems to want a subscription these days, skipping that fee is Linkdaze's biggest selling point.
+De interessantste zakelijke beslissing hier is dat Linkdaze geen abonnement vereist om de kernfuncties te gebruiken — je betaalt gewoon eenmalig voor het apparaat. Zijn grootste concurrent, een vergelijkbaar slim scherm genaamd Skylight, rekent een maandelijkse vergoeding bovenop de hardwarekosten om extra functies te ontgrendelen. In een markt waarin tegenwoordig alles een abonnement lijkt te willen, is het overslaan van die vergoeding Linkdaze's grootste verkoopargument.

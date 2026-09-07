@@ -1,24 +1,24 @@
 ---
-title: "A Startup Just Raised $250 Million to Put Computers in Space"
+title: "Een startup haalde zojuist 250 miljoen dollar op om computers de ruimte in te sturen"
 date: "2026-08-21"
-excerpt: "Starcloud wants to build data centers that orbit the Earth instead of sitting in warehouses, and it just landed a huge new round of funding to make it happen — even though rocket launches are getting harder to book."
+excerpt: "Starcloud wil datacenters bouwen die om de aarde draaien in plaats van in loodsen te staan, en heeft net een enorme nieuwe financieringsronde binnengehaald om dat te realiseren — ook al wordt het steeds lastiger om raketlanceringen te boeken."
 tags: ["Space", "Data Centers", "AI Infrastructure"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/"
 ---
 
-## The basic idea
+## Het basisidee
 
-Normally, when you use an AI chatbot or ask a computer to crunch huge amounts of data, that work happens inside a giant building called a data center, packed with computer chips and cooling systems. A company called Starcloud has a wild pitch: what if you put those chips on satellites and let them float in space instead?
+Normaal gesproken vindt het werk achter een AI-chatbot of het verwerken van enorme hoeveelheden data plaats in een gigantisch gebouw, een datacenter, volgepakt met computerchips en koelsystemen. Een bedrijf genaamd Starcloud heeft een gewaagd idee: wat als je die chips op satellieten zet en ze in de ruimte laat zweven?
 
-In space, there's constant sunlight for power and a nearly endless supply of cold vacuum to help keep chips from overheating — two things data centers on Earth struggle with. Starcloud just raised an extra $250 million on top of money it had already raised earlier in the year, and investors now value the company at $2.3 billion.
+In de ruimte is er constant zonlicht voor energie en een vrijwel onuitputtelijke voorraad koud vacuüm om chips te helpen niet oververhit te raken — twee dingen waar datacenters op aarde mee worstelen. Starcloud haalde zojuist nog eens 250 miljoen dollar op, bovenop het geld dat het eerder dit jaar al had opgehaald, en investeerders waarderen het bedrijf nu op 2,3 miljard dollar.
 
-## Who's paying for this
+## Wie hiervoor betaalt
 
-Some well-known names chipped in, including the chipmaker Nvidia (whose processors are the same kind used in most AI systems on Earth) along with several venture capital firms. The money is meant to help Starcloud build a bigger factory and finish its next, much larger satellite — nicknamed Starcloud-3 — which the company hopes to launch aboard SpaceX's giant Starship rocket.
+Enkele bekende namen deden mee, waaronder chipmaker Nvidia (wiens processoren hetzelfde type zijn als dat in de meeste AI-systemen op aarde wordt gebruikt), samen met verschillende durfkapitaalfondsen. Het geld moet Starcloud helpen een grotere fabriek te bouwen en zijn volgende, veel grotere satelliet af te ronden — met de bijnaam Starcloud-3 — die het bedrijf hoopt te lanceren aan boord van SpaceX's gigantische Starship-raket.
 
-## Why rockets are suddenly the bottleneck
+## Waarom raketten opeens de bottleneck zijn
 
-Here's the twist: it's not actually building the satellites that worries Starcloud's CEO the most right now — it's getting a ride to space at all. SpaceX is winding down its workhorse Falcon 9 rocket by 2028 to focus on the newer, bigger Starship, and other rocket companies (like Blue Origin and Rocket Lab) don't yet have enough proven, available launches to fill the gap. So even a company with billions of dollars can find itself stuck waiting in line for a rocket seat.
+Hier zit de twist: het is niet zozeer het bouwen van de satellieten waar de CEO van Starcloud momenteel het meest wakker van ligt — het is een lift naar de ruimte krijgen. SpaceX bouwt zijn werkpaard, de Falcon 9-raket, tegen 2028 af om zich te richten op de nieuwere, grotere Starship, en andere raketbedrijven (zoals Blue Origin en Rocket Lab) hebben nog niet genoeg bewezen, beschikbare lanceringen om dat gat te vullen. Zelfs een bedrijf met miljarden dollars kan zichzelf dus in de wachtrij voor een raketplekje terugvinden.
 
-Starcloud is already flying some early hardware: it says it's the only company currently running a high-powered Nvidia data-center chip in orbit, and it's working with Nvidia on a future chip built specifically to survive the harsh conditions of space — extreme temperature swings, radiation, and the violent shaking of a rocket launch.
+Starcloud heeft al vroege apparatuur in de lucht: het bedrijf zegt als enige momenteel een krachtige Nvidia-datacenterchip in een baan om de aarde te laten draaien, en werkt met Nvidia aan een toekomstige chip die speciaal is gebouwd om de barre omstandigheden van de ruimte te doorstaan — extreme temperatuurschommelingen, straling en de heftige trillingen van een raketlancering.

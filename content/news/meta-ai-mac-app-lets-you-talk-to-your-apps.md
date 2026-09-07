@@ -1,22 +1,22 @@
 ---
-title: "Meta's New Mac App Lets You Talk to Your Computer Instead of Typing"
+title: "Meta's nieuwe Mac-app laat je met je computer praten in plaats van typen"
 date: "2026-08-21"
-excerpt: "Meta released a Mac app that adds voice dictation across every app on your computer and can look at your screen to help answer questions — while also pitching new AI tools for small business owners."
+excerpt: "Meta bracht een Mac-app uit die spraakdictee toevoegt in elke app op je computer en naar je scherm kan kijken om vragen te helpen beantwoorden — terwijl het ook nieuwe AI-tools pitcht voor eigenaren van kleine bedrijven."
 tags: ["Meta", "AI Tools", "Productivity"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/20/meta-ais-new-mac-app-wants-you-to-talk-to-your-apps/"
 ---
 
-## What the app does
+## Wat de app doet
 
-Meta has released a Mac application built around its Meta AI assistant, and its headline feature is system-wide voice dictation — meaning you can talk out loud in basically any app on your computer, and your words get typed for you, instead of being limited to one specific program. This puts it in the same category as existing dictation tools like Whisper Flow and Superwhisper.
+Meta heeft een Mac-applicatie uitgebracht die is opgebouwd rond zijn Meta AI-assistent, en de belangrijkste functie ervan is systeembrede spraakdictee — wat betekent dat je hardop kunt praten in vrijwel elke app op je computer, en je woorden voor je worden getypt, in plaats van beperkt te zijn tot één specifiek programma. Daarmee komt het in dezelfde categorie als bestaande dicteertools zoals Whisper Flow en Superwhisper.
 
-Beyond just transcribing speech, the app can also look at whatever's currently on your screen and answer questions about it, using one of Meta's own AI models built for understanding images and screen content.
+Naast het simpelweg transcriberen van spraak kan de app ook kijken naar wat er momenteel op je scherm staat en vragen daarover beantwoorden, met behulp van een van Meta's eigen AI-modellen die zijn gebouwd voor het begrijpen van afbeeldingen en scherminhoud.
 
-## The business-focused side of the release
+## De zakelijke kant van de release
 
-Alongside the Mac app, Meta also rolled out new features aimed at small business owners. If you connect your Instagram, Facebook, and ad accounts, plus your Google Workspace apps like Gmail and Google Docs, Meta AI can answer questions about how your marketing campaigns are performing and who's actually engaging with your content. It can even look at publicly available information about competitors to help you compare notes. From there, it can help draft documents, presentations, and spreadsheets on your behalf.
+Naast de Mac-app rolde Meta ook nieuwe functies uit gericht op eigenaren van kleine bedrijven. Als je je Instagram-, Facebook- en advertentieaccounts koppelt, plus je Google Workspace-apps zoals Gmail en Google Docs, kan Meta AI vragen beantwoorden over hoe je marketingcampagnes presteren en wie er daadwerkelijk betrokken is bij je content. Het kan zelfs openbaar beschikbare informatie over concurrenten bekijken om je te helpen vergelijken. Van daaruit kan het helpen bij het opstellen van documenten, presentaties en spreadsheets namens jou.
 
-## Why Meta is doing this
+## Waarom Meta dit doet
 
-Meta's leadership has been talking up the idea of selling AI "agents" — assistants that can take over routine, repetitive business tasks — as a major growth opportunity for the company. This Mac app and its business tools are part of a broader push in that direction, following earlier moves to bring similar AI agents into WhatsApp and Instagram for business use.
+Meta's leiding heeft het idee gepromoot om AI-"agents" te verkopen — assistenten die routinematige, repetitieve zakelijke taken kunnen overnemen — als een belangrijke groeikans voor het bedrijf. Deze Mac-app en de bijbehorende zakelijke tools maken deel uit van een bredere push in die richting, na eerdere stappen om vergelijkbare AI-agents naar WhatsApp en Instagram te brengen voor zakelijk gebruik.

@@ -1,20 +1,20 @@
 ---
-title: "Did SpaceX Try to Buy an AI Coding Startup? Its CEO Says No"
+title: "Probeerde SpaceX een AI-Codeerstartup te Kopen? De CEO Zegt van Niet"
 date: "2026-08-21"
-excerpt: "A report claimed SpaceX tried to acquire AI coding startup Cognition as part of a bigger AI push, but Cognition's CEO quickly shot down the story, saying the company isn't for sale."
+excerpt: "Volgens een bericht probeerde SpaceX AI-codeerstartup Cognition over te nemen als onderdeel van een grotere AI-strategie, maar de CEO van Cognition ontkende het verhaal meteen en zei dat het bedrijf niet te koop is."
 tags: ["SpaceX", "AI Coding Tools", "Startups"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/19/cognition-ceo-denies-report-that-spacex-tried-to-acquire-the-startup/"
 ---
 
-## The report and the denial
+## Het bericht en de ontkenning
 
-A Bloomberg report claimed that SpaceX had tried to buy Cognition, a startup known for its AI coding assistant called Devin, as part of a bigger effort by SpaceX to compete with major AI players like OpenAI, Anthropic, and Google. Cognition's CEO quickly pushed back publicly, stating plainly that the company is "not for sale" and that no talks between the two companies had actually taken place.
+Een rapport van Bloomberg beweerde dat SpaceX had geprobeerd Cognition over te nemen, een startup die bekendstaat om zijn AI-codeerassistent genaamd Devin, als onderdeel van een grotere poging van SpaceX om te concurreren met grote AI-spelers zoals OpenAI, Anthropic en Google. De CEO van Cognition reageerde snel publiekelijk, en stelde ronduit dat het bedrijf "niet te koop" is en dat er in werkelijkheid geen gesprekken tussen de twee bedrijven hadden plaatsgevonden.
 
-## Why this rumor made sense to people at all
+## Waarom dit gerucht ergens op sloeg
 
-It's not a totally random guess — SpaceX has been aggressively expanding into AI lately. It already owns the AI company xAI (maker of the Grok chatbot) and recently completed a massive $60 billion acquisition of a different AI coding startup, Cursor, just last week. SpaceX has also floated bold ideas like building data centers in space, and it's now a publicly traded company worth close to $2.3 trillion at its peak. Given all that, snapping up another AI coding company wouldn't have been a huge surprise.
+Het is niet zomaar een willekeurige gok — SpaceX breidt de laatste tijd agressief uit naar AI. Het bedrijf bezit al het AI-bedrijf xAI (maker van de Grok-chatbot) en rondde vorige week nog een enorme overname van 60 miljard dollar af van een andere AI-codeerstartup, Cursor. SpaceX heeft ook gedurfde ideeën geopperd, zoals het bouwen van datacenters in de ruimte, en is nu een beursgenoteerd bedrijf dat op zijn hoogtepunt bijna 2,3 biljoen dollar waard was. Gezien dit alles zou het geen grote verrassing zijn geweest als het nog een AI-codeerbedrijf had opgeslokt.
 
-## Where things actually stand
+## Waar de zaken nu echt staan
 
-According to the same report, while a full acquisition isn't currently being discussed, the two companies might still explore some kind of partnership — for instance, Cognition using SpaceX's computing power for its own AI systems. Cognition itself is one of the largest AI coding startups that hasn't yet been bought by a bigger player; it raised $1 billion earlier this year at a $25 billion valuation and is reportedly already in talks for new funding at an even higher $40 billion valuation, with major clients like Mercedes-Benz, Citi, and Goldman Sachs already using its Devin coding agent.
+Volgens hetzelfde rapport wordt een volledige overname momenteel niet besproken, maar de twee bedrijven zouden nog steeds een soort samenwerking kunnen verkennen — bijvoorbeeld dat Cognition de rekenkracht van SpaceX gebruikt voor zijn eigen AI-systemen. Cognition zelf is een van de grootste AI-codeerstartups die nog niet is overgenomen door een grotere speler; het haalde eerder dit jaar 1 miljard dollar op bij een waardering van 25 miljard dollar en zou naar verluidt al in gesprek zijn over nieuwe financiering bij een nog hogere waardering van 40 miljard dollar, met grote klanten zoals Mercedes-Benz, Citi en Goldman Sachs die al gebruikmaken van de codeeragent Devin.

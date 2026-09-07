@@ -46,7 +46,7 @@ export default function IndestructibleSocialsSection() {
                   {social.icon}
                 </div>
                 <span className="text-[10px] font-bold tracking-widest text-cyan-400 uppercase opacity-80">
-                  OFFICIAL
+                  OFFICIEEL
                 </span>
               </div>
 
@@ -65,7 +65,7 @@ export default function IndestructibleSocialsSection() {
         {/* Direct Email Box */}
         <div className="max-w-xl mx-auto bg-slate-800/90 border border-slate-700/80 p-6 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
           <div className="text-center sm:text-left">
-            <div className="text-xs font-bold text-cyan-400 uppercase tracking-wider">Direct Email Contact</div>
+            <div className="text-xs font-bold text-cyan-400 uppercase tracking-wider">Direct E-mailcontact</div>
             <div className="text-base text-white font-mono mt-0.5 font-semibold">contact@vaiiya.com</div>
           </div>
 
@@ -73,7 +73,7 @@ export default function IndestructibleSocialsSection() {
             onClick={handleCopyEmail}
             className="w-full sm:w-auto btn-metamask btn-orange text-xs font-bold"
           >
-            {copiedEmail ? '✓ Copied to Clipboard!' : 'Copy Official Email'}
+            {copiedEmail ? '✓ Gekopieerd naar Klembord!' : 'Kopieer Officieel E-mailadres'}
           </button>
         </div>
 

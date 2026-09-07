@@ -1,24 +1,24 @@
 ---
-title: "OpenAI Is Winning Back Business Customers From Anthropic"
+title: "OpenAI wint zakelijke klanten terug van Anthropic"
 date: "2026-08-21"
-excerpt: "New spending data suggests companies are switching back to OpenAI after a stretch where rival Anthropic had pulled ahead — a reminder of how quickly loyalty shifts in the AI business market."
+excerpt: "Nieuwe uitgavendata suggereert dat bedrijven weer overstappen naar OpenAI na een periode waarin rivaal Anthropic de voorsprong had genomen — een herinnering aan hoe snel loyaliteit kan verschuiven in de zakelijke AI-markt."
 tags: ["OpenAI", "Anthropic", "Enterprise AI"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/"
 ---
 
-## Where this data comes from
+## Waar deze data vandaan komt
 
-A company called Ramp makes corporate credit cards and expense-tracking software used by tens of thousands of American businesses. Because Ramp can see what its business customers are actually paying for, it can track — in rough percentage terms — which AI companies are winning more of that spending over time. It's not a perfect measurement of the whole market, but it's a useful real-world signal.
+Een bedrijf genaamd Ramp maakt zakelijke creditcards en software voor onkostenbeheer, gebruikt door tienduizenden Amerikaanse bedrijven. Omdat Ramp kan zien waar zijn zakelijke klanten daadwerkelijk voor betalen, kan het in ruwe percentages bijhouden welke AI-bedrijven over tijd een groter deel van die uitgaven binnenhalen. Het is geen perfecte meting van de hele markt, maar wel een nuttig signaal uit de praktijk.
 
-## The seesaw between OpenAI and Anthropic
+## De wip tussen OpenAI en Anthropic
 
-Back in May, Anthropic (the company behind the Claude chatbot) had actually pulled ahead of OpenAI among these business customers, and by July its lead had grown even further. Now, that trend appears to be reversing — OpenAI is picking up market share again heading into the second half of the year.
+In mei had Anthropic (het bedrijf achter de chatbot Claude) OpenAI daadwerkelijk ingehaald bij deze zakelijke klanten, en in juli was die voorsprong nog verder gegroeid. Nu lijkt die trend om te slaan — OpenAI wint richting de tweede helft van het jaar weer marktaandeel terug.
 
-## Why the swing happened
+## Waarom de wisseling plaatsvond
 
-According to an economist at Ramp, OpenAI's newest model performed strongly with business users. Meanwhile, Anthropic's newest release apparently disappointed people — partly because of its price, and partly because of a new rule requiring Anthropic to hold onto certain customer data for a set period of time, which made some businesses uneasy about privacy.
+Volgens een econoom bij Ramp presteerde OpenAI's nieuwste model sterk bij zakelijke gebruikers. Ondertussen stelde Anthropic's nieuwste release blijkbaar teleur — deels vanwege de prijs, en deels vanwege een nieuwe regel die Anthropic verplicht bepaalde klantgegevens gedurende een vaste periode te bewaren, wat bij sommige bedrijven zorgen opriep over privacy.
 
-## The bigger takeaway
+## De grotere conclusie
 
-Even with the back-and-forth, both companies are actually growing overall — the share of Ramp's business customers paying for any AI service at all climbed from about half in March to well over half by July. In other words, this isn't really a story about AI losing steam; it's a story about how fast customer loyalty can flip between two competing giants when a single new product release or a single policy change lands the wrong way.
+Ondanks het heen-en-weer groeien beide bedrijven eigenlijk gewoon door — het aandeel van Ramp's zakelijke klanten dat voor enige AI-dienst betaalt, steeg van ongeveer de helft in maart tot ruim meer dan de helft in juli. Met andere woorden: dit is niet echt een verhaal over AI die terrein verliest; het is een verhaal over hoe snel klantloyaliteit kan omslaan tussen twee concurrerende giganten wanneer een enkele nieuwe productlancering of een enkele beleidswijziging verkeerd uitpakt.

@@ -1,28 +1,28 @@
 ---
-title: "More Than a Third of New Web Pages Since ChatGPT Launched Look AI-Written"
+title: "Meer dan een derde van nieuwe webpagina's sinds de lancering van ChatGPT lijkt door AI geschreven"
 date: "2026-08-21"
-excerpt: "A new Pew Research study found that about 35% of web pages published since ChatGPT came out in late 2022 show clear signs of being written or heavily edited by AI — and .com sites are far more likely to be AI-written than .edu or .gov sites."
+excerpt: "Een nieuw onderzoek van Pew Research toont aan dat ongeveer 35% van de webpagina's die zijn gepubliceerd sinds de lancering van ChatGPT eind 2022 duidelijke tekenen vertoont van door AI geschreven of zwaar bewerkte tekst — en .com-sites zijn veel vaker AI-geschreven dan .edu- of .gov-sites."
 tags: ["AI", "Research", "Internet"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/20/a-third-of-webpages-published-since-chatgpts-launch-show-signs-of-ai-authorship-study-finds/"
 ---
 
-## What the study looked at
+## Waar het onderzoek naar keek
 
-Researchers at Pew Research wanted to answer a simple-sounding question: how much of the internet is now written by AI instead of humans? To find out, they pulled almost half a million English-language web pages from a huge public archive of the internet called Common Crawl, covering roughly the last five years, and ran them through a detection tool built to spot AI-generated or AI-heavily-edited writing.
+Onderzoekers van Pew Research wilden een simpel klinkende vraag beantwoorden: hoeveel van het internet wordt tegenwoordig door AI geschreven in plaats van door mensen? Om daarachter te komen, haalden ze bijna een half miljoen Engelstalige webpagina's uit een enorm publiek archief van het internet genaamd Common Crawl, dat ongeveer de laatste vijf jaar bestrijkt, en lieten ze deze door een detectietool lopen die is gebouwd om AI-gegenereerde of zwaar door AI bewerkte tekst te herkennen.
 
-## What they found
+## Wat ze ontdekten
 
-When Pew looked at a broad sample of recent pages, only about 1 in 10 showed strong signs of AI authorship — but that number includes plenty of older pages written before AI writing tools even existed. Once they narrowed the sample to only pages published after ChatGPT's launch in November 2022, the number jumped dramatically: about 35%, or roughly one in three pages, showed real signs of being AI-written or AI-edited.
+Toen Pew keek naar een brede steekproef van recente pagina's, vertoonde slechts ongeveer 1 op de 10 sterke tekenen van AI-auteurschap — maar dat cijfer omvat ook veel oudere pagina's die geschreven zijn voordat AI-schrijftools zelfs maar bestonden. Zodra ze de steekproef beperkten tot alleen pagina's die zijn gepubliceerd na de lancering van ChatGPT in november 2022, schoot het cijfer dramatisch omhoog: ongeveer 35%, oftewel ruwweg één op de drie pagina's, vertoonde echte tekenen van door AI geschreven of bewerkte tekst.
 
-## Where it shows up most
+## Waar het het meest voorkomt
 
-Not all corners of the internet are equal here. Regular commercial websites (the ones ending in ".com") had AI-authorship rates around ten times higher than education (".edu") or government (".gov") sites, which stayed near just 1%. Nonprofit sites (".org") landed in between, at under 5%. That pattern makes some intuitive sense — commercial content is often produced quickly and at scale to attract search traffic, while university and government sites tend to be written more formally and reviewed by more people before publishing.
+Niet alle hoeken van het internet zijn hier gelijk. Gewone commerciële websites (de sites die eindigen op ".com") hadden AI-auteurschapspercentages die ongeveer tien keer hoger lagen dan onderwijs- (".edu") of overheidssites (".gov"), die bleven steken op nauwelijks 1%. Non-profitsites (".org") zaten daartussenin, onder de 5%. Dat patroon is best logisch — commerciële content wordt vaak snel en op grote schaal geproduceerd om zoekverkeer aan te trekken, terwijl universiteits- en overheidssites doorgaans formeler worden geschreven en door meer mensen worden nagekeken voordat ze worden gepubliceerd.
 
-## How they actually spotted "AI writing"
+## Hoe ze "AI-schrijfwerk" daadwerkelijk herkenden
 
-Beyond the detection software itself, the researchers noticed some telltale stylistic habits that show up more often in AI-generated text — things like heavier use of em dashes, more frequent Oxford commas, and repeated sentence patterns like "it's not X, it's Y."
+Naast de detectiesoftware zelf merkten de onderzoekers een aantal verraderlijke stilistische gewoontes op die vaker voorkomen in door AI gegenereerde tekst — zoals intensiever gebruik van gedachtestreepjes, vaker een komma voor "en" in opsommingen, en herhaalde zinspatronen als "het is niet X, het is Y."
 
-## Why this matters
+## Waarom dit ertoe doet
 
-This lands alongside other recent findings — including data from Cloudflare suggesting that automated bot traffic has now overtaken human traffic on the web overall. Together, these studies paint a picture of an internet where an increasing share of both the content and the visitors are no longer human at all.
+Dit sluit aan bij andere recente bevindingen — waaronder gegevens van Cloudflare die suggereren dat geautomatiseerd botverkeer inmiddels het menselijke verkeer op het web als geheel heeft overtroffen. Samen schetsen deze onderzoeken een beeld van een internet waarop een steeds groter deel van zowel de content als de bezoekers helemaal niet meer menselijk is.

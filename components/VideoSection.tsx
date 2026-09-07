@@ -65,7 +65,7 @@ export default function VideoSection({ src, title, description }: VideoSectionPr
                                     className="w-full h-full object-cover"
                                 >
                                     <source src={src} type="video/mp4" />
-                                    Your browser does not support the video tag.
+                                    Je browser ondersteunt de video-tag niet.
                                 </video>
                             ) : (
                                 <div className="absolute inset-0 flex items-center justify-center">

@@ -3,10 +3,59 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
+import { localeFromPathname, otherLocalePath, withLocale } from '@/lib/i18n'
+
+const COPY = {
+  nl: {
+    home: 'Home',
+    websites: 'Website',
+    apps: 'Apps',
+    games: 'Games',
+    portfolio: 'Portfolio',
+    team: 'Team',
+    news: 'Nieuws',
+    podcast: 'Podcast',
+    contact: 'Contact',
+    websitesMobile: '🌐 Websites Bouwen',
+    appsMobile: '📱 Android & iOS Apps',
+    gamesMobile: '🎮 Mobiele Games',
+    portfolioMobile: '🗂️ Portfolio',
+    teamMobile: '🤖 Team',
+    newsMobile: '📰 Nieuws',
+    podcastMobile: '🎙️ Podcast',
+    contactMobile: '🛡️ Contact',
+    toggleLabel: 'EN',
+  },
+  en: {
+    home: 'Home',
+    websites: 'Websites',
+    apps: 'Apps',
+    games: 'Games',
+    portfolio: 'Portfolio',
+    team: 'Team',
+    news: 'News',
+    podcast: 'Podcast',
+    contact: 'Contact',
+    websitesMobile: '🌐 Building Websites',
+    appsMobile: '📱 Android & iOS Apps',
+    gamesMobile: '🎮 Mobile Games',
+    portfolioMobile: '🗂️ Portfolio',
+    teamMobile: '🤖 Team',
+    newsMobile: '📰 News',
+    podcastMobile: '🎙️ Podcast',
+    contactMobile: '🛡️ Contact',
+    toggleLabel: 'NL',
+  },
+} as const
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname() || '/'
+  const locale = localeFromPathname(pathname)
+  const t = COPY[locale]
+  const switchHref = otherLocalePath(pathname)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +64,12 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const switchLanguage = () => {
+    try {
+      localStorage.setItem('vaiiya-locale', locale === 'nl' ? 'en' : 'nl')
+    } catch {}
+  }
 
   return (
     <header
@@ -27,7 +82,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href={withLocale('/', locale)} className="flex items-center gap-3 group">
             <div className="relative w-10 h-10 rounded-2xl overflow-hidden shadow-md group-hover:scale-105 transition-transform">
               <Image
                 src="/v-logo.jpg"
@@ -48,51 +103,77 @@ export default function Header() {
 
           {/* Navigation Links */}
           <div className="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/60 text-sm font-medium">
-            <a
-              href="/"
+            <Link
+              href={withLocale('/', locale)}
               className="px-4 py-2 rounded-full text-slate-700 hover:text-slate-900 hover:bg-white transition-all"
             >
-              Home
-            </a>
-            <Link
-              href="/websites"
-              className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all"
-            >
-              Website
+              {t.home}
             </Link>
             <Link
-              href="/apps"
+              href={withLocale('/websites', locale)}
+              className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all"
+            >
+              {t.websites}
+            </Link>
+            <Link
+              href={withLocale('/apps', locale)}
               className="px-4 py-2 rounded-full text-slate-700 hover:text-blue-600 hover:bg-white transition-all"
             >
-              Apps
+              {t.apps}
             </Link>
             <Link
-              href="/games"
+              href={withLocale('/games', locale)}
               className="px-4 py-2 rounded-full text-slate-700 hover:text-violet-600 hover:bg-white transition-all"
             >
-              Games
+              {t.games}
             </Link>
             <Link
-              href="/portfolio"
+              href={withLocale('/portfolio', locale)}
               className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all"
             >
-              Portfolio
+              {t.portfolio}
             </Link>
             <Link
-              href="/news"
+              href={withLocale('/team', locale)}
+              className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all"
+            >
+              {t.team}
+            </Link>
+            <Link
+              href={withLocale('/news', locale)}
               className="px-4 py-2 rounded-full text-slate-700 hover:text-metamask-purple hover:bg-white transition-all"
             >
-              News
+              {t.news}
+            </Link>
+            <Link
+              href={withLocale('/podcast', locale)}
+              className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all"
+            >
+              {t.podcast}
+            </Link>
+            <Link
+              href="/shop"
+              className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all"
+            >
+              Shop
             </Link>
           </div>
 
           {/* Action CTAs */}
           <div className="hidden sm:flex items-center gap-3">
             <Link
-              href="/contact"
+              href={switchHref}
+              onClick={switchLanguage}
+              className="px-3.5 py-2.5 rounded-full border border-slate-200 text-xs font-bold text-slate-500 hover:text-[#E25A3C] hover:border-[#E25A3C]/40 transition-all"
+              title={locale === 'nl' ? 'Switch to English' : 'Overschakelen naar Nederlands'}
+            >
+              {t.toggleLabel}
+            </Link>
+            <Link
+              href={withLocale('/contact', locale)}
               className="btn-metamask btn-outline-dark !py-2.5 !px-5 text-xs uppercase tracking-wider"
             >
-              🛡️ Contact
+              {t.contactMobile}
             </Link>
           </div>
 
@@ -120,62 +201,93 @@ export default function Header() {
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
         <div className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl">
-          <a
-            href="/"
+          <Link
+            href={withLocale('/', locale)}
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-slate-900"
           >
-            Home
-          </a>
+            {t.home}
+          </Link>
           <Link
-            href="/websites"
+            href={withLocale('/websites', locale)}
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-[#E25A3C]"
           >
-            🌐 Website Building
+            {t.websitesMobile}
           </Link>
           <Link
-            href="/apps"
+            href={withLocale('/apps', locale)}
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-blue-600"
           >
-            📱 Android &amp; iOS Apps
+            {t.appsMobile}
           </Link>
           <Link
-            href="/games"
+            href={withLocale('/games', locale)}
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-violet-600"
           >
-            🎮 Mobile Games
+            {t.gamesMobile}
           </Link>
           <Link
-            href="/portfolio"
+            href={withLocale('/portfolio', locale)}
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-slate-700"
           >
-            🗂️ Portfolio
+            {t.portfolioMobile}
           </Link>
           <Link
-            href="/contact"
+            href={withLocale('/contact', locale)}
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-slate-700"
           >
-            🛡️ Contact
+            {t.contactMobile}
           </Link>
           <Link
-            href="/news"
+            href={withLocale('/team', locale)}
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-slate-700"
           >
-            📰 News
+            {t.teamMobile}
+          </Link>
+          <Link
+            href={withLocale('/news', locale)}
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-lg font-semibold text-slate-700"
+          >
+            {t.newsMobile}
+          </Link>
+          <Link
+            href={withLocale('/podcast', locale)}
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-lg font-semibold text-[#E25A3C]"
+          >
+            {t.podcastMobile}
+          </Link>
+          <Link
+            href="/shop"
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-lg font-semibold text-slate-700"
+          >
+            🛍️ Shop
           </Link>
           <div className="pt-4 border-t border-slate-100 flex gap-3">
             <Link
-              href="/contact"
-              onClick={() => setIsMenuOpen(false)}
-              className="w-full text-center btn-metamask btn-orange text-xs"
+              href={switchHref}
+              onClick={() => {
+                switchLanguage()
+                setIsMenuOpen(false)
+              }}
+              className="px-4 py-2.5 rounded-full border border-slate-200 text-xs font-bold text-slate-500"
             >
-              🛡️ Contact
+              {locale === 'nl' ? '🇬🇧 English' : '🇳🇱 Nederlands'}
+            </Link>
+            <Link
+              href={withLocale('/contact', locale)}
+              onClick={() => setIsMenuOpen(false)}
+              className="flex-1 text-center btn-metamask btn-orange text-xs"
+            >
+              {t.contactMobile}
             </Link>
           </div>
         </div>
@@ -183,4 +295,3 @@ export default function Header() {
     </header>
   )
 }
-

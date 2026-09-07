@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'FYNDER',
-  description: 'FYNDER is the next generation of social connection on Android. Built for speed, privacy, and genuine high-vibe interactions.',
+  description: 'FYNDER is de volgende generatie van sociale verbinding op Android. Gebouwd voor snelheid, privacy en oprechte, high-vibe interacties.',
 }
 
 export default function FynderPage() {
@@ -15,14 +15,14 @@ export default function FynderPage() {
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="text-center">
                         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-blue-50 text-blue-600 text-sm font-bold border border-blue-100 uppercase tracking-widest">
-                            Find Your Vibe
+                            Vind Jouw Vibe
                         </div>
                         <h1 className="text-6xl sm:text-8xl font-serif mb-12 leading-tight text-metamask-purple">
-                            Find Your <br />
+                            Vind Jouw <br />
                             <span className="text-metamask-orange">Vibe.</span>
                         </h1>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-16">
-                            FYNDER is the next generation of social connection on Android. Built for speed, privacy, and genuine high-vibe interactions. No noise, just meaningful matches.
+                            FYNDER is de volgende generatie van sociale verbinding op Android. Gebouwd voor snelheid, privacy en oprechte, high-vibe interacties. Geen ruis, alleen betekenisvolle matches.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <button className="btn-primary flex items-center justify-center gap-3 px-8">
@@ -31,14 +31,14 @@ export default function FynderPage() {
                                     <path fillRule="evenodd" clipRule="evenodd" d="M3.56164 11.2329C3.56164 6.58284 7.33144 2.81304 11.9815 2.81304C16.6316 2.81304 20.4014 6.58284 20.4014 11.2329V15.7444L11.9815 15.7444L3.56164 15.7444V11.2329ZM11.9815 1.00003C6.33144 1.00003 1.7486 5.58287 1.7486 11.2329V17.5574H22.2144V11.2329C22.2144 5.58287 17.6316 1.00003 11.9815 1.00003Z" />
                                     <path d="M6.43982 15.3414C5.93792 15.3414 5.53162 15.7477 5.53162 16.2496V17.523C5.53162 18.0249 5.93792 18.4312 6.43982 18.4312C6.94172 18.4312 7.34802 18.0249 7.34802 17.523V16.2496C7.34802 15.7477 6.94172 15.3414 6.43982 15.3414Z" />
                                 </svg>
-                                <span>Download for Android</span>
+                                <span>Download voor Android</span>
                             </button>
                             <Link href="/" className="btn-secondary">
-                                Explore All Projects
+                                Bekijk Alle Projecten
                             </Link>
                         </div>
                         <p className="mt-6 text-sm text-gray-400 font-medium">
-                            Coming soon to Google Play
+                            Binnenkort beschikbaar op Google Play
                         </p>
                     </div>
                 </div>
@@ -54,15 +54,15 @@ export default function FynderPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
                         <div className="card-vibe border-none bg-blue-50/50 p-10">
                             <div className="text-4xl font-serif text-blue-600 mb-2">50,000+</div>
-                            <div className="text-gray-500 uppercase tracking-widest text-xs font-bold">Active Seekers</div>
+                            <div className="text-gray-500 uppercase tracking-widest text-xs font-bold">Actieve Zoekers</div>
                         </div>
                         <div className="card-vibe border-none bg-purple-50 p-10">
                             <div className="text-4xl font-serif text-metamask-purple mb-2">1.2M+</div>
-                            <div className="text-gray-500 uppercase tracking-widest text-xs font-bold">Matches Made</div>
+                            <div className="text-gray-500 uppercase tracking-widest text-xs font-bold">Gemaakte Matches</div>
                         </div>
                         <div className="card-vibe border-none bg-orange-50 p-10">
                             <div className="text-4xl font-serif text-metamask-orange mb-2">250k+</div>
-                            <div className="text-gray-500 uppercase tracking-widest text-xs font-bold">Daily Swipes</div>
+                            <div className="text-gray-500 uppercase tracking-widest text-xs font-bold">Dagelijkse Swipes</div>
                         </div>
                     </div>
                 </div>
@@ -73,16 +73,16 @@ export default function FynderPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                         <div className="max-w-xl">
-                            <h2 className="text-5xl font-serif mb-10 text-metamask-purple">Built for the Modern Era.</h2>
+                            <h2 className="text-5xl font-serif mb-10 text-metamask-purple">Gebouwd Voor Het Moderne Tijdperk.</h2>
                             <div className="space-y-12">
                                 <div className="group">
                                     <div className="flex items-center gap-4 mb-4">
                                         <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform">
                                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
                                         </div>
-                                        <h3 className="text-2xl font-serif">Native Performance</h3>
+                                        <h3 className="text-2xl font-serif">Native Prestaties</h3>
                                     </div>
-                                    <p className="text-gray-500 text-lg leading-relaxed">Butter-smooth Android experience. Optimized for performance so you can focus on finding the right connection.</p>
+                                    <p className="text-gray-500 text-lg leading-relaxed">Een boterzachte Android-ervaring. Geoptimaliseerd voor prestaties zodat jij je kunt richten op het vinden van de juiste connectie.</p>
                                 </div>
 
                                 <div className="group">
@@ -90,9 +90,9 @@ export default function FynderPage() {
                                         <div className="w-12 h-12 bg-metamask-orange/5 rounded-2xl flex items-center justify-center text-metamask-orange group-hover:scale-110 transition-transform">
                                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                                         </div>
-                                        <h3 className="text-2xl font-serif">Privacy First</h3>
+                                        <h3 className="text-2xl font-serif">Privacy Voorop</h3>
                                     </div>
-                                    <p className="text-gray-500 text-lg leading-relaxed">Secure, encrypted, and respectful. Your data stays yours while you explore new possibilities.</p>
+                                    <p className="text-gray-500 text-lg leading-relaxed">Veilig, versleuteld en respectvol. Jouw gegevens blijven van jou terwijl je nieuwe mogelijkheden verkent.</p>
                                 </div>
 
                                 <div className="group">
@@ -100,9 +100,9 @@ export default function FynderPage() {
                                         <div className="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center text-metamask-purple group-hover:scale-110 transition-transform">
                                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                                         </div>
-                                        <h3 className="text-2xl font-serif">Smart Matching</h3>
+                                        <h3 className="text-2xl font-serif">Slimme Matching</h3>
                                     </div>
-                                    <p className="text-gray-500 text-lg leading-relaxed">Our smart matching algorithm learns your preferences to surface the highest-vibe matches for you.</p>
+                                    <p className="text-gray-500 text-lg leading-relaxed">Ons slimme matchingalgoritme leert jouw voorkeuren kennen om de beste matches voor jou naar boven te halen.</p>
                                 </div>
                             </div>
                         </div>
@@ -136,9 +136,9 @@ export default function FynderPage() {
             {/* Philosophy Section */}
             <section className="py-24 bg-metamask-purple text-white relative overflow-hidden">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <h2 className="text-4xl font-serif mb-10">Dating, Reimagined for the Modern Era.</h2>
+                    <h2 className="text-4xl font-serif mb-10">Daten, Opnieuw Uitgevonden Voor Het Moderne Tijdperk.</h2>
                     <p className="text-2xl text-purple-100 leading-relaxed italic mb-12">
-                        FYNDER was built to solve the frustration of modern dating apps. We&apos;ve stripped away the predatory mechanics and focused on what matters: real people making real connections.
+                        FYNDER is gebouwd om de frustratie van moderne datingapps op te lossen. We hebben de manipulatieve mechanismen weggehaald en focussen op wat écht telt: echte mensen die echte connecties maken.
                     </p>
                     <div className="h-px w-24 bg-blue-400 mx-auto"></div>
                 </div>
@@ -147,16 +147,16 @@ export default function FynderPage() {
             {/* CTA section */}
             <section className="py-32 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto bg-gradient-to-br from-metamask-gray-50 to-white border border-blue-50 rounded-[60px] p-12 md:p-24 text-center shadow-lg">
-                    <h2 className="text-5xl font-serif mb-8 text-metamask-purple">Ready to find the one?</h2>
+                    <h2 className="text-5xl font-serif mb-8 text-metamask-purple">Klaar om diegene te vinden?</h2>
                     <p className="text-xl text-gray-500 mb-12 max-w-xl mx-auto leading-relaxed">
-                        Join thousands of others who are already discovering a better way to connect on Android.
+                        Sluit je aan bij duizenden anderen die al een betere manier ontdekken om te verbinden op Android.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <button className="btn-primary px-12 py-5 text-lg">
-                            Download for Android
+                            Download voor Android
                         </button>
                         <Link href="/" className="btn-secondary px-12 py-5 text-lg">
-                            Explore All Projects
+                            Bekijk Alle Projecten
                         </Link>
                     </div>
                 </div>

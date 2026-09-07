@@ -1,26 +1,26 @@
 ---
-title: "The Same AI Model Scored 30% on a Test — Then 100%, Just by Changing Its Setup"
+title: "Hetzelfde AI-model scoorde 30% op een test — daarna 100%, gewoon door de opzet te veranderen"
 date: "2026-08-22"
-excerpt: "New Nvidia research suggests that how you wrap and support an AI model — its tools, memory, and guardrails — can matter more than the model itself. The same AI went from a 30% score to a perfect 100% just by improving that surrounding setup."
+excerpt: "Nieuw onderzoek van Nvidia suggereert dat hoe je een AI-model omhult en ondersteunt — de tools, het geheugen en de waarborgen — belangrijker kan zijn dan het model zelf. Dezelfde AI ging van een score van 30% naar een perfecte 100% door alleen die omringende opzet te verbeteren."
 tags: ["Nvidia", "AI Agents", "AI Research"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/"
 ---
 
-## What's a "harness," anyway?
+## Wat is eigenlijk een "harness"?
 
-When people talk about an "AI agent" — an AI system that can go off and complete multi-step tasks somewhat on its own — the underlying language model is only one piece of the puzzle. Around that model sits a whole support structure: the tools it's allowed to use, how it remembers what it already did, how it manages the context of a long task, and the rules that govern its behavior along the way. That surrounding structure is what people in the industry call the "harness." Think of the model as the engine, and the harness as everything else that makes a car — the steering, the brakes, the dashboard — actually usable.
+Als mensen het hebben over een "AI-agent" — een AI-systeem dat min of meer zelfstandig aan de slag kan gaan met meerstaps-taken — dan is het onderliggende taalmodel maar één stukje van de puzzel. Rondom dat model zit een hele ondersteunende structuur: de tools die het mag gebruiken, hoe het onthoudt wat het al heeft gedaan, hoe het de context van een lange taak beheert, en de regels die zijn gedrag onderweg sturen. Die omringende structuur wordt in de industrie de "harness" genoemd. Zie het model als de motor, en de harness als alles wat een auto verder bruikbaar maakt — het stuur, de remmen, het dashboard.
 
-## The surprising result
+## Het verrassende resultaat
 
-Nvidia ran an experiment using Anthropic's Claude Opus 5 on a tough benchmark called ARC-AGI-3, which tests an AI's reasoning ability through interactive 2D puzzle games — the kind of test that requires sustained, multi-step thinking rather than a single quick answer. Using the model with a standard, plain setup, it scored just 30%. Using the exact same model, but wrapped in a custom-built harness designed by Nvidia's researchers, it scored a perfect 100%. Nothing changed about the underlying AI model itself — only the scaffolding around it.
+Nvidia voerde een experiment uit met Anthropic's Claude Opus 5 op een lastige benchmark genaamd ARC-AGI-3, die het redeneervermogen van een AI test via interactieve 2D-puzzelspellen — het soort test dat aanhoudend, meerstaps denken vereist in plaats van één snel antwoord. Met het model in een standaard, kale opzet scoorde het slechts 30%. Met exact hetzelfde model, maar dan verpakt in een op maat gebouwde harness ontworpen door Nvidia's onderzoekers, scoorde het een perfecte 100%. Er veranderde niets aan het onderliggende AI-model zelf — alleen aan de omkadering eromheen.
 
-## The key trick: giving the AI a supervisor
+## De sleuteltruc: de AI een supervisor geven
 
-The biggest single improvement came from adding what Nvidia calls a "supervisor" — essentially a second AI whose only job is to watch the first AI work and nudge it back on track when it starts to wander. According to Adel El Hallak, Nvidia's VP of product, this supervisor "almost acts like a CEO," stepping in when the main AI agent looks like it's heading down a dead-end path or drifting away from the actual goal.
+De grootste enkele verbetering kwam van het toevoegen van wat Nvidia een "supervisor" noemt — in essentie een tweede AI wiens enige taak het is om de eerste AI aan het werk te zien en die bij te sturen wanneer die begint af te dwalen. Volgens Adel El Hallak, Nvidia's VP of product, gedraagt deze supervisor zich "bijna als een CEO", die ingrijpt wanneer de hoofd-AI-agent een doodlopend pad lijkt in te slaan of afdwaalt van het eigenlijke doel.
 
-## Why this matters beyond one benchmark
+## Waarom dit meer betekent dan alleen deze ene benchmark
 
-This finding lines up with what other companies have separately noticed. Databricks, for instance, found that the exact same AI model can end up costing wildly different amounts to run depending purely on how well-designed its harness is — a poorly built harness can roughly double the cost of getting a task done, even though the model itself never changed.
+Deze bevinding sluit aan bij wat andere bedrijven onafhankelijk hebben opgemerkt. Databricks ontdekte bijvoorbeeld dat exact hetzelfde AI-model wild uiteenlopende kosten met zich mee kan brengen om te draaien, puur afhankelijk van hoe goed doordacht de harness is — een slecht ontworpen harness kan de kosten om een taak te voltooien ongeveer verdubbelen, ook al verandert het model zelf nooit.
 
-The bigger takeaway is that picking "the best" AI model is only part of building something that actually works well. How that model is wrapped — its tools, its memory system, its operating rules, and now apparently a built-in supervisor watching over it — can matter just as much, or more, than which model you picked in the first place.
+De grotere les is dat het kiezen van "het beste" AI-model maar een deel is van het bouwen van iets dat daadwerkelijk goed werkt. Hoe dat model wordt omkaderd — de tools, het geheugensysteem, de operationele regels, en nu blijkbaar ook een ingebouwde supervisor die toezicht houdt — kan net zo belangrijk zijn, of belangrijker, dan welk model je in eerste instantie koos.

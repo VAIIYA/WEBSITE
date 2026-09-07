@@ -1,24 +1,24 @@
 ---
-title: "ChatGPT Can Now Read and Send Your iPhone Texts — Here's What That Means"
+title: "ChatGPT Kan Nu Je iPhone-Berichten Lezen en Versturen — Dit Betekent Het"
 date: "2026-08-21"
-excerpt: "OpenAI released a plugin that connects ChatGPT to Apple's Messages app, letting it read, sort, draft, and even send texts on your behalf — which is handy, but also raises real privacy questions."
+excerpt: "OpenAI heeft een plugin uitgebracht die ChatGPT koppelt aan Apple's Berichten-app, waardoor het namens jou berichten kan lezen, sorteren, opstellen en zelfs versturen — handig, maar het roept ook echte privacyvragen op."
 tags: ["OpenAI", "ChatGPT", "Privacy", "Apple"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/"
 ---
 
-## What the new plugin does
+## Wat de nieuwe plugin doet
 
-OpenAI has released a new add-on ("plugin") that connects ChatGPT directly to the Messages app on your iPhone or Mac. Once it's turned on, you can ask ChatGPT to look through your texts, sort them, draft replies, or even send messages for you — instead of you doing all the typing yourself.
+OpenAI heeft een nieuwe add-on (een "plugin") uitgebracht die ChatGPT rechtstreeks koppelt aan de Berichten-app op je iPhone of Mac. Zodra deze is ingeschakeld, kun je ChatGPT vragen om je sms'jes door te nemen, te sorteren, antwoorden op te stellen of zelfs berichten voor je te versturen — in plaats van dat je alles zelf moet typen.
 
-For example, you could ask it to look at yesterday's conversations and suggest a good follow-up reply to send to a friend, or to dig back through old messages to find a piece of information someone sent you weeks ago. It's available for both regular personal ChatGPT use and the work-focused version of the product, so it works for individuals and for companies alike.
+Je zou het bijvoorbeeld kunnen vragen om gisteren se gesprekken te bekijken en een goed vervolgbericht voor te stellen aan een vriend, of om oude berichten door te zoeken naar informatie die iemand je weken geleden stuurde. De functie is beschikbaar voor zowel het gewone persoonlijke gebruik van ChatGPT als de zakelijke versie van het product, dus het werkt zowel voor individuen als voor bedrijven.
 
-## The privacy trade-off
+## De privacy-afweging
 
-To make this work, the plugin needs something called "Full Disk Access" on your device — a broad permission that lets it read files it wouldn't normally be allowed to touch. OpenAI says the plugin doesn't build a giant permanent copy of all your texts, that it works locally on your own device rather than uploading everything, and that ChatGPT only looks at messages when you specifically ask it to.
+Om dit te laten werken, heeft de plugin iets nodig dat "Volledige Schijftoegang" heet op je apparaat — een brede toestemming waarmee het bestanden kan lezen die het normaal gesproken niet zou mogen aanraken. OpenAI zegt dat de plugin geen enorme permanente kopie van al je berichten opbouwt, dat het lokaal op je eigen apparaat werkt in plaats van alles te uploaden, en dat ChatGPT alleen naar berichten kijkt wanneer je daar specifiek om vraagt.
 
-That said, it's still not entirely clear exactly what information ends up being remembered or stored by ChatGPT after it processes a request like this. That grey area is exactly why privacy-minded users are being cautious about turning the feature on.
+Toch is het nog steeds niet helemaal duidelijk welke informatie uiteindelijk wordt onthouden of opgeslagen door ChatGPT nadat het zo'n verzoek heeft verwerkt. Dat grijze gebied is precies de reden waarom privacybewuste gebruikers voorzichtig zijn met het inschakelen van deze functie.
 
-## The one setting to be careful with
+## De instelling waar je voorzichtig mee moet zijn
 
-The plugin lets you allow ChatGPT to send texts automatically without asking you to double-check each one first. OpenAI itself is warning people against turning that setting on, because it removes your last chance to catch a mistake before a message goes out under your name. In other words: convenient, but worth thinking twice about before switching on "auto-send."
+De plugin laat je toe om ChatGPT automatisch berichten te laten versturen zonder je eerst te vragen om elk bericht dubbel te checken. OpenAI zelf waarschuwt mensen om die instelling niet in te schakelen, omdat het je laatste kans wegneemt om een fout te ontdekken voordat een bericht onder jouw naam wordt verstuurd. Met andere woorden: handig, maar het is de moeite waard om twee keer na te denken voordat je "automatisch versturen" aanzet.

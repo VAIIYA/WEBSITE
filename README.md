@@ -51,8 +51,8 @@ Built with:
 
 ## 🔗 Links
 
-- **X (Twitter)**: [@VAIIYA_MEDIA](https://x.com/VAIIYA_MEDIA)
-- **YouTube**: [@VAIIYA-MEDIA](https://www.youtube.com/@VAIIYA-MEDIA)
+- **X (Twitter)**: [@V4IIYA](https://x.com/V4IIYA)
+- **YouTube**: [@V4IIYA](https://www.youtube.com/@V4IIYA)
 - **TikTok**: [@vaiiya.media](https://www.tiktok.com/@vaiiya.media)
 - **GitHub**: [@vaiiya](https://github.com/vaiiya)
 

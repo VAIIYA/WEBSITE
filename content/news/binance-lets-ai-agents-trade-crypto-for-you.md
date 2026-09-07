@@ -1,26 +1,26 @@
 ---
-title: "Binance Now Lets AI Agents Trade Crypto for You — But You're in Charge of the Guardrails"
+title: "Binance laat AI-agenten nu crypto voor je verhandelen — maar jij bent verantwoordelijk voor de vangrails"
 date: "2026-08-21"
-excerpt: "The world's largest crypto exchange launched Agent OS, letting AI tools like ChatGPT and Claude Code analyze markets and place trades automatically, while leaving most of the safety controls up to the user."
+excerpt: "'s Werelds grootste cryptobeurs lanceerde Agent OS, waarmee AI-tools zoals ChatGPT en Claude Code markten kunnen analyseren en automatisch trades kunnen plaatsen, terwijl het merendeel van de veiligheidscontroles bij de gebruiker blijft liggen."
 tags: ["Crypto", "AI Agents", "Binance"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/20/binance-now-lets-ai-agents-trade-but-keeping-them-in-check-is-largely-up-to-users/"
 ---
 
-## What just launched
+## Wat er zojuist is gelanceerd
 
-Binance, the biggest cryptocurrency exchange in the world with over 300 million registered users, has launched a new platform called Agent OS. The idea is simple to describe and a bit unnerving in practice: it lets AI tools — including OpenAI's ChatGPT and Codex, Anthropic's Claude Code, and the coding tool Cursor — look at crypto markets and place trades automatically on a person's behalf, without a human clicking "buy" or "sell" each time.
+Binance, de grootste cryptocurrency-beurs ter wereld met meer dan 300 miljoen geregistreerde gebruikers, heeft een nieuw platform gelanceerd genaamd Agent OS. Het idee is eenvoudig te omschrijven en in de praktijk een tikje verontrustend: het laat AI-tools — waaronder OpenAI's ChatGPT en Codex, Anthropic's Claude Code, en de codeertool Cursor — cryptomarkten bekijken en automatisch trades plaatsen namens iemand, zonder dat een mens elke keer op "kopen" of "verkopen" hoeft te klikken.
 
-## How Binance tries to keep this safe
+## Hoe Binance dit probeert veilig te houden
 
-Instead of just handing an AI agent full control of your main account, Binance requires you to set up a separate "subaccount" specifically for agent trading. Money you move into that subaccount is walled off from the rest of your funds, and withdrawals out of it are switched off by default — so even if an AI agent made every mistake possible, it couldn't directly drain your main wallet. You also get to decide whether the agent needs your approval before every single trade, or whether it can act on its own within limits you set.
+In plaats van een AI-agent gewoon volledige controle over je hoofdaccount te geven, verplicht Binance je om een apart "subaccount" op te zetten speciaal voor het handelen via agenten. Geld dat je naar dat subaccount overzet, is afgeschermd van de rest van je tegoeden, en opnames eruit staan standaard uitgeschakeld — dus zelfs als een AI-agent elke mogelijke fout zou maken, zou hij je hoofdportemonnee niet rechtstreeks kunnen leegtrekken. Je bepaalt ook zelf of de agent jouw goedkeuring nodig heeft voor elke afzonderlijke trade, of dat hij zelfstandig mag handelen binnen de grenzen die jij instelt.
 
-There aren't separate trading limits beyond whatever amount you choose to put into that subaccount in the first place — so your own decision about how much to fund it is effectively your safety net. Separately, for actual money transfers and payments (as opposed to trades), Binance does enforce its own daily caps, like a $50,000 limit on regular transfers.
+Er zijn geen aparte handelslimieten buiten het bedrag dat je zelf ervoor kiest om in dat subaccount te storten — je eigen beslissing over hoeveel je erin stopt, is dus in feite je vangnet. Voor daadwerkelijke geldoverboekingen en betalingen (in tegenstelling tot trades) hanteert Binance apart wel zijn eigen dagelijkse limieten, zoals een limiet van 50.000 dollar voor gewone overboekingen.
 
-## The part Binance can't fully see
+## Het deel dat Binance niet volledig kan zien
 
-Here's the catch: Binance can watch what trades an AI agent actually makes, but it can't see the reasoning behind those trades, because that thinking happens outside Binance's systems — on your own computer or inside whatever AI app you're using. That means if an agent gets tricked by bad information, or manipulated somehow, Binance would see the resulting trade but wouldn't necessarily know why it happened.
+Hier zit het addertje: Binance kan zien welke trades een AI-agent daadwerkelijk uitvoert, maar niet de redenering erachter, omdat dat denkproces buiten de systemen van Binance plaatsvindt — op je eigen computer of binnen welke AI-app je ook gebruikt. Dat betekent dat als een agent wordt misleid door foute informatie, of op de een of andere manier wordt gemanipuleerd, Binance de resulterende trade zou zien maar niet noodzakelijk zou weten waarom die plaatsvond.
 
-## Not the only exchange doing this
+## Niet de enige beurs die dit doet
 
-Binance isn't alone here — rival exchanges Kraken, Coinbase, and OKX have all rolled out their own versions of AI-agent trading over the past several months, each using a similar approach: give the AI real trading power, but keep the safety limits in the user's hands rather than fully automating trust away.
+Binance staat hier niet alleen in — concurrerende beurzen Kraken, Coinbase en OKX hebben de afgelopen maanden allemaal hun eigen versies van AI-agent-trading uitgerold, elk met een vergelijkbare aanpak: geef de AI echte handelsmacht, maar houd de veiligheidsgrenzen in handen van de gebruiker in plaats van vertrouwen volledig te automatiseren.

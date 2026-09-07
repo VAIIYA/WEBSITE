@@ -155,8 +155,8 @@ export function createLayerTexture(
 
     // Social Links Grid
     const socials = [
-      { name: 'X (Twitter)', handle: '@VAIIYA_MEDIA', url: 'x.com/VAIIYA_MEDIA' },
-      { name: 'YouTube', handle: '@VAIIYA-MEDIA', url: 'youtube.com/@VAIIYA-MEDIA' },
+      { name: 'X (Twitter)', handle: '@V4IIYA', url: 'x.com/V4IIYA' },
+      { name: 'YouTube', handle: '@V4IIYA', url: 'youtube.com/@V4IIYA' },
       { name: 'TikTok', handle: '@vaiiya.media', url: 'tiktok.com/@vaiiya.media' },
       { name: 'GitHub', handle: 'github.com/vaiiya', url: 'github.com/vaiiya' },
     ]

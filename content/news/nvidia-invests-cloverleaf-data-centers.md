@@ -1,24 +1,24 @@
 ---
-title: "Nvidia Is Now Investing Directly in the Companies That Build AI Data Centers"
+title: "Nvidia investeert nu rechtstreeks in de bedrijven die AI-datacenters bouwen"
 date: "2026-08-22"
-excerpt: "Nvidia has taken a stake in Cloverleaf Infrastructure, a company that helps get power and land lined up for new data centers — the latest sign that Nvidia is funding the buildings that will eventually buy its own chips."
+excerpt: "Nvidia heeft een belang genomen in Cloverleaf Infrastructure, een bedrijf dat helpt om stroom en grond te regelen voor nieuwe datacenters — het nieuwste teken dat Nvidia meebetaalt aan de gebouwen die uiteindelijk zijn eigen chips zullen kopen."
 tags: ["Nvidia", "AI Infrastructure", "Data Centers"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/"
 ---
 
-## What Cloverleaf actually does
+## Wat Cloverleaf precies doet
 
-Building a new AI data center isn't just about buying computer chips and stacking them in a warehouse. Long before any chips go in, someone has to line up a massive, reliable source of electricity, find and secure the right piece of land, and handle all the unglamorous groundwork that makes a data center possible in the first place. Cloverleaf Infrastructure, a company founded in 2024, specializes in exactly that: acting as the go-between that connects power utilities with the companies that need to build these facilities.
+Het bouwen van een nieuw AI-datacenter gaat niet alleen om het kopen van computerchips en die op elkaar stapelen in een loods. Lang voordat er ook maar één chip wordt geplaatst, moet iemand een enorme, betrouwbare stroombron regelen, het juiste stuk grond vinden en veiligstellen, en al het onopvallende voorbereidende werk verzetten dat een datacenter überhaupt mogelijk maakt. Cloverleaf Infrastructure, een bedrijf opgericht in 2024, is daarin gespecialiseerd: het fungeert als tussenpersoon die energiebedrijven verbindt met de bedrijven die deze faciliteiten willen bouwen.
 
-## The deal
+## De deal
 
-Nvidia — the company that makes the specialized chips most AI systems run on — has now taken a stake in Cloverleaf. The exact dollar amount hasn't been officially confirmed, but outside reporting from the Wall Street Journal puts it in the range of several hundred million dollars, and Reuters describes Nvidia as holding a minority ownership stake. Cloverleaf had previously raised $300 million on its own before this deal.
+Nvidia — het bedrijf dat de gespecialiseerde chips maakt waarop de meeste AI-systemen draaien — heeft nu een belang genomen in Cloverleaf. Het exacte bedrag is niet officieel bevestigd, maar berichtgeving van de Wall Street Journal schat het op enkele honderden miljoenen dollars, en Reuters omschrijft het belang van Nvidia als een minderheidsbelang. Cloverleaf had voorafgaand aan deze deal zelf al 300 miljoen dollar opgehaald.
 
-## Why Nvidia is doing this
+## Waarom Nvidia dit doet
 
-Nvidia makes enormous profits selling AI chips, and normally you'd expect a chip company to just sit back and sell to whoever wants to build a data center. Instead, Nvidia is increasingly putting its own money into the infrastructure side of the business — the power hookups and site development that have to happen before a single chip gets installed. The company has described this strategy as wanting to "keep the AI flywheel spinning": the faster new data centers get built, the faster demand for Nvidia's own chips keeps growing, so funding the buildings indirectly funds Nvidia's own future sales.
+Nvidia maakt enorme winsten met de verkoop van AI-chips, en normaal gesproken zou je verwachten dat een chipbedrijf gewoon achteroverleunt en verkoopt aan wie er maar een datacenter wil bouwen. In plaats daarvan steekt Nvidia steeds meer eigen geld in de infrastructuurkant van de zaak — de stroomaansluitingen en terreinontwikkeling die moeten gebeuren voordat er ook maar één chip wordt geïnstalleerd. Het bedrijf omschrijft deze strategie als een manier om "het AI-vliegwiel draaiende te houden": hoe sneller nieuwe datacenters worden gebouwd, hoe sneller de vraag naar Nvidia's eigen chips blijft groeien, waardoor het financieren van de gebouwen indirect Nvidia's eigen toekomstige verkoop financiert.
 
-## Not a one-off move
+## Geen eenmalige zet
 
-This isn't Nvidia's only recent bet in this space. Just days earlier, Nvidia announced a separate $1.5 billion investment in SB Energy, a data center project in Ohio linked to OpenAI. Taken together, these deals show Nvidia moving further "upstream" — investing in the raw ingredients of power and land that data centers need — rather than just waiting on the sidelines for customers to build data centers on their own and then come buy chips.
+Dit is niet Nvidia's enige recente gok op dit vlak. Slechts enkele dagen eerder kondigde Nvidia een aparte investering van 1,5 miljard dollar aan in SB Energy, een datacenterproject in Ohio dat gelinkt is aan OpenAI. Samen laten deze deals zien dat Nvidia verder "stroomopwaarts" beweegt — investeren in de grondstoffen stroom en land die datacenters nodig hebben — in plaats van vanaf de zijlijn te wachten tot klanten zelf datacenters bouwen en daarna chips komen kopen.

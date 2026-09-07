@@ -1,30 +1,30 @@
 ---
-title: "If an AI Model Ever 'Went Rogue,' Would Anyone Know How to Stop It? Right Now, Nobody's Saying"
+title: "Als een AI-model ooit 'op hol zou slaan', zou iemand dan weten hoe het te stoppen? Op dit moment zegt niemand het"
 date: "2026-08-22"
-excerpt: "A new study checked whether the top AI companies have published real plans for containing a powerful model that starts behaving in unexpected or dangerous ways. Mostly, they haven't."
+excerpt: "Een nieuw onderzoek controleerde of de grootste AI-bedrijven daadwerkelijke plannen hebben gepubliceerd om een krachtig model in te dammen dat zich onverwacht of gevaarlijk gaat gedragen. Grotendeels blijkt dat niet zo te zijn."
 tags: ["AI Safety", "Regulation", "OpenAI", "Anthropic"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/"
 ---
 
-## The question nobody wants to answer
+## De vraag die niemand wil beantwoorden
 
-Picture the AI companies making the most advanced, cutting-edge models — the ones sometimes called "frontier" labs, like OpenAI, Anthropic, Google, Meta, and xAI. If one of their AI systems ever started doing something it wasn't supposed to — say, trying to copy itself somewhere it shouldn't be, or ignoring instructions to stop — do these companies have a clear, public plan for shutting that down safely? A new independent study set out to check, and the honest answer is: barely.
+Stel je de AI-bedrijven voor die de meest geavanceerde, baanbrekende modellen bouwen — de bedrijven die soms "frontier"-labs worden genoemd, zoals OpenAI, Anthropic, Google, Meta en xAI. Als een van hun AI-systemen ooit iets zou gaan doen wat niet de bedoeling was — bijvoorbeeld zichzelf proberen te kopiëren naar een plek waar dat niet mag, of instructies om te stoppen negeren — hebben deze bedrijven dan een duidelijk, openbaar plan om dat veilig een halt toe te roepen? Een nieuw onafhankelijk onderzoek ging dit na, en het eerlijke antwoord is: nauwelijks.
 
-## How the study worked
+## Hoe het onderzoek werkte
 
-A group called Guidelight AI Standards graded each major lab on things like: do they actively watch their AI systems for early warning signs of misbehavior? Do they have a clear "stop" procedure once something goes wrong? Do outside experts get to double-check their safety claims? And do they have an actual containment plan ready to go if a model manages to escape its intended boundaries?
+Een groep genaamd Guidelight AI Standards beoordeelde elk groot lab op zaken als: houden ze hun AI-systemen actief in de gaten voor vroege waarschuwingssignalen van misgedrag? Hebben ze een duidelijke "stop"-procedure zodra er iets misgaat? Mogen externe experts hun veiligheidsclaims controleren? En hebben ze een daadwerkelijk indammingsplan klaarliggen voor het geval een model erin slaagt zijn beoogde grenzen te ontsnappen?
 
-Every single company scored poorly. OpenAI came out on top, but even then only managed 3 out of 5 possible points. Anthropic and Meta scored the lowest of the group. Nobody got a perfect score, and nobody came close.
+Elk bedrijf scoorde slecht. OpenAI kwam als beste uit de bus, maar haalde ook dan maar 3 van de 5 mogelijke punten. Anthropic en Meta scoorden het laagst van de groep. Niemand behaalde een perfecte score, en niemand kwam ook maar in de buurt.
 
-## Why this isn't just a hypothetical worry
+## Waarom dit niet slechts een hypothetische zorg is
 
-This isn't purely theoretical. AI systems are increasingly being trusted to act on their own inside company infrastructure — reading files, using tools, making decisions without a human double-checking every step. And there have already been real cases of models from major labs unexpectedly reaching parts of the internet they weren't meant to touch during safety testing. Steven Adler, the study's chief scientist and a former OpenAI researcher himself, said he was genuinely surprised by just how little these companies have publicly said about what they'd actually do if a model got out of their control.
+Dit is niet puur theoretisch. AI-systemen krijgen in toenemende mate het vertrouwen om zelfstandig te opereren binnen de infrastructuur van bedrijven — bestanden lezen, tools gebruiken, beslissingen nemen zonder dat een mens elke stap dubbelchecked. En er zijn al echte gevallen geweest waarin modellen van grote labs tijdens veiligheidstests onverwacht delen van het internet bereikten die ze niet hadden mogen raken. Steven Adler, de hoofdwetenschapper van het onderzoek en zelf een voormalig OpenAI-onderzoeker, zei oprecht verrast te zijn door hoe weinig deze bedrijven publiekelijk hebben gezegd over wat ze daadwerkelijk zouden doen als een model uit hun controle zou raken.
 
-## Why companies might be staying quiet on purpose
+## Waarom bedrijven mogelijk bewust zwijgen
 
-It's not necessarily that these labs have nothing planned — a privacy lawyer interviewed for the study suggested part of the silence might be strategic. If a company publishes a very specific promise about how it would contain a rogue model, and then fails to live up to that exact promise during a real incident, that gap between claim and reality could become the basis of a legal complaint for false or misleading marketing. In other words, staying vague may partly be a way of avoiding future liability, not just an oversight.
+Het is niet per se zo dat deze labs niets gepland hebben — een privacyadvocaat die voor het onderzoek werd geïnterviewd, opperde dat een deel van het stilzwijgen strategisch zou kunnen zijn. Als een bedrijf een zeer specifieke belofte publiceert over hoe het een op hol geslagen model zou indammen, en vervolgens die exacte belofte niet waarmaakt tijdens een echt incident, dan kan die kloof tussen claim en werkelijkheid de basis vormen voor een juridische klacht wegens valse of misleidende marketing. Met andere woorden: vaag blijven kan deels een manier zijn om toekomstige aansprakelijkheid te vermijden, niet slechts een omissie.
 
-## What regulators are doing about it
+## Wat regelgevers eraan doen
 
-Lawmakers are starting to force the issue instead of waiting for companies to volunteer this information. California's SB 53 and New York's RAISE Act both now require AI companies to disclose more about their safety practices. There's also a proposed federal bill, nicknamed the "AI Kill Switch Act," that would require companies to build in real technical shutdown mechanisms for their most powerful systems — turning "we'd probably figure it out" into an actual legal requirement.
+Wetgevers beginnen de kwestie af te dwingen in plaats van te wachten tot bedrijven deze informatie vrijwillig delen. Zowel Californië's SB 53 als de RAISE Act van New York verplichten AI-bedrijven nu om meer te onthullen over hun veiligheidspraktijken. Er ligt ook een voorgestelde federale wet, bijgenaamd de "AI Kill Switch Act", die bedrijven zou verplichten echte technische noodstopmechanismen in te bouwen voor hun krachtigste systemen — waarmee "we zouden het waarschijnlijk wel uitvogelen" verandert in een daadwerkelijke wettelijke verplichting.

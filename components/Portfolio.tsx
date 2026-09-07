@@ -26,10 +26,10 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-serif mb-6">
-            Our <span className="text-[#E25A3C]">Work</span>
+            Ons <span className="text-[#E25A3C]">Werk</span>
           </h2>
           <p className="text-xl text-ink/70 max-w-3xl mx-auto">
-            A showcase of everything we&apos;ve designed, built, and shipped across websites, apps and games. Each project reflects our commitment to innovation and clean code.
+            Een overzicht van alles wat we hebben ontworpen, gebouwd en opgeleverd op het gebied van websites, apps en games. Elk project weerspiegelt onze toewijding aan innovatie en schone code.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export default function Portfolio() {
 
                   {app.comingSoon && (
                     <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-widest text-ink">
-                      Coming Soon
+                      Binnenkort
                     </div>
                   )}
 
@@ -109,7 +109,7 @@ export default function Portfolio() {
                         href={app.projectUrl}
                         className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl border border-card-border text-ink text-sm font-semibold hover:bg-card transition-all hover:scale-[1.02] active:scale-95"
                       >
-                        View Project
+                        Bekijk Project
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>

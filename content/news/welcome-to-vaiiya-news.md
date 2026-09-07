@@ -1,17 +1,17 @@
 ---
-title: "Welcome to VAIIYA News"
+title: "Welkom bij VAIIYA Nieuws"
 date: "2026-08-19"
-excerpt: "We're launching a new space to track what matters in AI, agentic engineering, and the tools we use to build."
+excerpt: "We lanceren een nieuwe plek om bij te houden wat ertoe doet op het gebied van AI, agentic engineering en de tools waarmee we bouwen."
 coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80"
 tags: ["Announcement"]
 ---
 
-This is where we'll be posting short, frequent updates on AI news, agentic engineering, and anything else worth flagging as we build VAIIYA.
+Hier plaatsen we korte, frequente updates over AI-nieuws, agentic engineering en al het andere dat het waard is om te benoemen terwijl we aan VAIIYA bouwen.
 
-## What to expect
+## Wat je kunt verwachten
 
-- **AI news** — model releases, tooling updates, things that change how we build.
-- **Build notes** — what we shipped and why.
-- **Occasional video** — embedded straight from YouTube, no extra hosting needed.
+- **AI-nieuws** — modelreleases, tooling-updates, dingen die veranderen hoe we bouwen.
+- **Ontwikkelnotities** — wat we hebben opgeleverd en waarom.
+- **Af en toe video** — rechtstreeks ingebed vanaf YouTube, geen extra hosting nodig.
 
-Images in these posts are hosted externally (no storage cost on our end), and video is just a YouTube link away. See the example post below for how that looks in practice.
+Afbeeldingen in deze berichten worden extern gehost (geen opslagkosten aan onze kant), en video is slechts een YouTube-link verwijderd. Zie het voorbeeldbericht hieronder voor hoe dat er in de praktijk uitziet.

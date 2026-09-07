@@ -310,7 +310,7 @@ export default function Tearable3DEngine() {
           // Click on Social Links on Layer 3 (Indestructible)
           if (layer.layerIndex === 3) {
             if (hitPt.y < -2.2) {
-              window.open('https://x.com/VAIIYA_MEDIA', '_blank')
+              window.open('https://x.com/V4IIYA', '_blank')
               return
             }
           }

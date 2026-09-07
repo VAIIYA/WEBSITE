@@ -1,34 +1,34 @@
 ---
-title: "Example Post: Text, Image & Embedded Video"
+title: "Voorbeeldbericht: Tekst, Afbeelding & Ingesloten Video"
 date: "2026-08-18"
-excerpt: "A template post showing every supported block — cover image, markdown body, and a YouTube embed — so future posts are easy to copy."
+excerpt: "Een sjabloonbericht dat elk ondersteund blok toont — coverafbeelding, markdown-tekst en een YouTube-embed — zodat toekomstige berichten eenvoudig te kopiëren zijn."
 coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80"
 youtubeId: "dQw4w9WgXcQ"
 tags: ["Template", "AI"]
 ---
 
-This post exists as a **copy-paste template**. Duplicate this file, change the frontmatter at the top, and write your post below it in plain markdown.
+Dit bericht bestaat als een **kopieer-en-plak-sjabloon**. Dupliceer dit bestand, wijzig de frontmatter bovenaan, en schrijf je bericht eronder in gewone markdown.
 
-## Formatting basics
+## Basisopmaak
 
-You can use standard markdown:
+Je kunt standaard markdown gebruiken:
 
-- Bullet points like this one
-- **Bold** and *italic* text
+- Opsommingstekens zoals deze
+- **Vet** en *cursief* tekst
 - [Links](https://vaiiya.vercel.app)
 
-> Blockquotes work too, for pulling a quote out of an article you're covering.
+> Blokcitaten werken ook, voor het uitlichten van een citaat uit een artikel dat je behandelt.
 
-### Adding an inline image
+### Een inline afbeelding toevoegen
 
-Since images are hosted elsewhere (e.g. Imgur, Unsplash, a CDN), just drop the URL straight into markdown:
+Aangezien afbeeldingen elders worden gehost (bijv. Imgur, Unsplash, een CDN), plaats je de URL gewoon rechtstreeks in de markdown:
 
 ```
-![Alt text](https://example.com/image.jpg)
+![Alt-tekst](https://example.com/image.jpg)
 ```
 
-### The YouTube embed above
+### De YouTube-embed hierboven
 
-Setting `youtubeId` in the frontmatter (the part of the URL after `v=`) automatically embeds the video near the top of the post — no `<iframe>` code needed.
+Door `youtubeId` in te stellen in de frontmatter (het deel van de URL na `v=`) wordt de video automatisch bovenaan het bericht ingesloten — geen `<iframe>`-code nodig.
 
-That's it. Delete this file's content and write your first real post the same way.
+Dat is alles. Verwijder de inhoud van dit bestand en schrijf je eerste echte bericht op dezelfde manier.

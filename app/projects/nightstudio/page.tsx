@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'NIGHTSTUDIO',
-  description: 'NIGHTSTUDIO is an elite social layer for creators who value ownership. Gate your content, build your community, and receive direct Solana payouts.',
+  description: 'NIGHTSTUDIO is een elite sociale laag voor creators die eigenaarschap waarderen. Sluit je content af, bouw je community en ontvang directe Solana-uitbetalingen.',
 }
 
 export default function NightStudioPage() {
@@ -14,21 +14,21 @@ export default function NightStudioPage() {
             <section className="relative pt-24 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-[#f9f5ff] to-white">
                 <div className="max-w-7xl mx-auto relative z-10 text-center">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-purple-100 shadow-sm text-purple-600 text-xs font-bold tracking-widest uppercase mb-12">
-                        Premium Creator Infrastructure
+                        Premium Creator-Infrastructuur
                     </div>
                     <h1 className="text-6xl sm:text-8xl font-serif mb-12 text-metamask-purple leading-tight">
-                        Elevate Your <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-green-500">Digital Presence.</span>
+                        Verhef Je <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-green-500">Digitale Aanwezigheid.</span>
                     </h1>
                     <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed mb-16">
-                        NIGHTSTUDIO is a elite social layer for creators who value ownership. Gate your content, build your community, and receive direct Solana payouts without the middleman.
+                        NIGHTSTUDIO is een elite sociale laag voor creators die eigenaarschap waarderen. Sluit je content af, bouw je community en ontvang directe Solana-uitbetalingen zonder tussenpersoon.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6">
                         <a href="https://nightstudio.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-primary px-10">
-                            Explore the Studio
+                            Ontdek De Studio
                         </a>
-                        <a href="https://x.com/VAIIYA_MEDIA" target="_blank" rel="noopener noreferrer" className="btn-secondary px-10">
-                            Partner with Us
+                        <a href="https://x.com/V4IIYA" target="_blank" rel="noopener noreferrer" className="btn-secondary px-10">
+                            Word Partner
                         </a>
                     </div>
                 </div>
@@ -43,16 +43,16 @@ export default function NightStudioPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                         <div>
-                            <h2 className="text-5xl font-serif mb-10 text-metamask-purple">Built for the Sovereign Creator.</h2>
+                            <h2 className="text-5xl font-serif mb-10 text-metamask-purple">Gebouwd Voor De Onafhankelijke Creator.</h2>
                             <div className="space-y-12">
                                 <div className="group">
                                     <div className="flex items-center gap-4 mb-4">
                                         <div className="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 group-hover:scale-110 transition-transform">
                                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                                         </div>
-                                        <h3 className="text-2xl font-serif">Gated Excellence</h3>
+                                        <h3 className="text-2xl font-serif">Afgeschermde Excellentie</h3>
                                     </div>
-                                    <p className="text-gray-500 text-lg">Sophisticated content-gating tools allow you to monetize your influence on your own terms.</p>
+                                    <p className="text-gray-500 text-lg">Geavanceerde content-afschermingstools stellen je in staat om je invloed op jouw eigen voorwaarden te gelde te maken.</p>
                                 </div>
 
                                 <div className="group">
@@ -60,9 +60,9 @@ export default function NightStudioPage() {
                                         <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-600 group-hover:scale-110 transition-transform">
                                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                                         </div>
-                                        <h3 className="text-2xl font-serif">Direct Revenue</h3>
+                                        <h3 className="text-2xl font-serif">Directe Inkomsten</h3>
                                     </div>
-                                    <p className="text-gray-500 text-lg">Payments are processed instantly on Solana, ensuring 400ms finality from fan to creator.</p>
+                                    <p className="text-gray-500 text-lg">Betalingen worden direct verwerkt op Solana, met 400ms finaliteit van fan naar creator.</p>
                                 </div>
 
                                 <div className="group">
@@ -70,9 +70,9 @@ export default function NightStudioPage() {
                                         <div className="w-12 h-12 bg-metamask-orange/5 rounded-2xl flex items-center justify-center text-metamask-orange group-hover:scale-110 transition-transform">
                                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                                         </div>
-                                        <h3 className="text-2xl font-serif">Deep Connection</h3>
+                                        <h3 className="text-2xl font-serif">Diepe Connectie</h3>
                                     </div>
-                                    <p className="text-gray-500 text-lg">Build meaningful relationships through a platform that prioritizes human interaction over algorithms.</p>
+                                    <p className="text-gray-500 text-lg">Bouw betekenisvolle relaties op via een platform dat menselijke interactie boven algoritmes stelt.</p>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +84,7 @@ export default function NightStudioPage() {
                                     <div className="text-center">
                                         <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-green-400 rounded-3xl mx-auto mb-6 shadow-xl shadow-purple-200"></div>
                                         <div className="text-3xl font-serif text-metamask-purple mb-2">High Vibe</div>
-                                        <p className="text-gray-400 font-medium">Studio Access: GRANTED</p>
+                                        <p className="text-gray-400 font-medium">Studio-Toegang: VERLEEND</p>
                                     </div>
                                 </div>
                             </div>
@@ -96,9 +96,9 @@ export default function NightStudioPage() {
             {/* Philosophy Section */}
             <section className="py-24 bg-metamask-purple text-white relative overflow-hidden">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <h2 className="text-4xl font-serif mb-10">The Vibe of Excellence.</h2>
+                    <h2 className="text-4xl font-serif mb-10">De Vibe Van Excellentie.</h2>
                     <p className="text-2xl text-purple-100 leading-relaxed italic mb-12">
-                        &quot;At NIGHTSTUDIO, we believe that premium software shouldn&apos;t just function—it should inspire. By merging elite design with Solana&apos;s power, we&apos;re setting a new standard for Web3 tools.&quot;
+                        &quot;Bij NIGHTSTUDIO geloven we dat premium software niet alleen moet functioneren — het moet inspireren. Door elite design te combineren met de kracht van Solana zetten we een nieuwe standaard voor Web3-tools.&quot;
                     </p>
                     <div className="h-px w-24 bg-green-400 mx-auto"></div>
                 </div>
@@ -107,16 +107,16 @@ export default function NightStudioPage() {
             {/* CTA section */}
             <section className="py-32 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto bg-gradient-to-br from-metamask-gray-50 to-white border border-purple-50 rounded-[60px] p-12 md:p-24 text-center shadow-lg">
-                    <h2 className="text-5xl font-serif mb-8 text-metamask-purple">Your Studio Awaits.</h2>
+                    <h2 className="text-5xl font-serif mb-8 text-metamask-purple">Jouw Studio Wacht.</h2>
                     <p className="text-xl text-gray-500 mb-12 max-w-xl mx-auto">
-                        Step into a more refined social ecosystem. Whether you&apos;re a creator or a connoisseur, there&apos;s a place for you in the night.
+                        Stap binnen in een verfijnder sociaal ecosysteem. Of je nu een creator bent of een kenner, er is een plek voor jou in de nacht.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <a href="https://nightstudio.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-primary px-12 py-5 text-lg">
-                            Enter NIGHTSTUDIO
+                            Ga Naar NIGHTSTUDIO
                         </a>
                         <Link href="/projects/vynder" className="btn-secondary px-12 py-5 text-lg">
-                            View Vynder
+                            Bekijk Vynder
                         </Link>
                     </div>
                 </div>

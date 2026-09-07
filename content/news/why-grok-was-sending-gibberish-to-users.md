@@ -1,24 +1,24 @@
 ---
-title: "Why Was Elon Musk's Grok Chatbot Suddenly Talking Nonsense?"
+title: "Waarom Praatte Elon Musks Grok Chatbot Plotseling Onzin?"
 date: "2026-08-21"
-excerpt: "Some users of Grok, the AI chatbot made by Elon Musk's company xAI, started getting scrambled, nonsensical replies this week — the company called it a rare glitch and said refreshing the chat usually fixed it."
+excerpt: "Sommige gebruikers van Grok, de AI-chatbot van Elon Musks bedrijf xAI, kregen deze week verwarde, onzinnige antwoorden — het bedrijf noemde het een zeldzame storing en zei dat het verversen van de chat meestal hielp."
 tags: ["xAI", "Grok", "AI Bugs"]
 sourceName: "TechCrunch"
 sourceUrl: "https://techcrunch.com/2026/08/20/grok-keeps-sending-gibberish-responses-to-users/"
 ---
 
-## What users saw
+## Wat gebruikers zagen
 
-Starting midweek, a number of people using Grok — the AI chatbot built by Elon Musk's company xAI — began getting replies that made no sense at all. One user asked for a PDF and got back a jumble of unrelated words strung together like a broken sentence generator. Another user said they got a wall of links pointing to research papers instead of an actual answer to their question.
+Vanaf halverwege de week begonnen een aantal mensen die Grok gebruikten — de AI-chatbot gebouwd door Elon Musks bedrijf xAI — antwoorden te krijgen die nergens op sloegen. Eén gebruiker vroeg om een PDF en kreeg een warboel van losse woorden terug, aan elkaar geregen als een kapotte zinnengenerator. Een andere gebruiker zei een muur aan links naar onderzoekspapers te hebben gekregen in plaats van een daadwerkelijk antwoord op hun vraag.
 
-## How big of a problem this was
+## Hoe groot dit probleem was
 
-It seems to have mostly hit people using the free "Grok Lite" tier through the Grok.com website specifically — not the version of Grok that runs inside X (formerly Twitter), which kept working fine. Reporters trying to recreate the bug themselves couldn't reliably trigger it, which suggests it was only affecting a limited slice of users rather than everyone. Still, it was enough to flood online forums with complaints.
+Het lijkt vooral mensen te hebben getroffen die de gratis "Grok Lite"-laag gebruikten via de website Grok.com specifiek — niet de versie van Grok die binnen X (voorheen Twitter) draait, die gewoon bleef werken. Journalisten die de bug zelf probeerden te reproduceren, konden hem niet betrouwbaar oproepen, wat erop wijst dat het slechts een beperkt deel van de gebruikers trof in plaats van iedereen. Toch was het genoeg om online forums te overspoelen met klachten.
 
-## What xAI said
+## Wat xAI zei
 
-Grok's official account described it as "a rare temporary generation glitch" and suggested that starting a brand-new chat, or asking the bot to regenerate its last answer, usually cleared it up. Some affected users confirmed that worked; others said they still ran into the same garbled responses even after refreshing multiple times.
+Het officiële account van Grok omschreef het als "een zeldzame tijdelijke generatiestoring" en suggereerde dat het starten van een gloednieuwe chat, of het opnieuw laten genereren van het laatste antwoord door de bot, het probleem meestal oploste. Sommige getroffen gebruikers bevestigden dat dit werkte; anderen zeiden dat ze zelfs na meerdere keren verversen nog steeds dezelfde verwarde antwoorden kregen.
 
-## Why this is getting extra attention
+## Waarom dit extra aandacht krijgt
 
-This kind of hiccup happens to AI chatbots occasionally and usually isn't a huge deal on its own. But it's landing at a moment when xAI has reportedly lost a large chunk of its founding team and dozens of researchers and engineers over recent months — so any visible stumble understandably draws more scrutiny than it otherwise might.
+Dit soort hapering overkomt AI-chatbots af en toe en is op zichzelf meestal geen groot probleem. Maar het gebeurt op een moment waarop xAI de afgelopen maanden naar verluidt een groot deel van zijn oprichtende team en tientallen onderzoekers en engineers is kwijtgeraakt — dus elke zichtbare misstap trekt begrijpelijkerwijs meer aandacht dan anders het geval zou zijn.

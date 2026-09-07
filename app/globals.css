@@ -121,20 +121,6 @@ h1, h2, h3, h4, h5, h6 {
   @apply bg-white text-slate-900 border-2 border-slate-200 hover:border-slate-900 hover:bg-slate-900 hover:text-white shadow-sm hover:-translate-y-0.5;
 }
 
-@keyframes tickerScroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-.ticker-track {
-  width: max-content;
-  animation: tickerScroll 30s linear infinite;
-}
-
-.ticker-track:hover {
-  animation-play-state: paused;
-}
-
 .card-playful {
   @apply bg-white border border-slate-200/80 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300 hover:-translate-y-1;
 }

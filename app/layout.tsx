@@ -2,8 +2,6 @@ import type { Metadata } from 'next'
 import { IBM_Plex_Mono, Barlow_Condensed } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import NewsTicker from '@/components/NewsTicker'
-import { getAllPosts } from '@/lib/posts'
 import './globals.css'
 
 const plexMono = IBM_Plex_Mono({
@@ -61,12 +59,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const tickerPosts = getAllPosts().slice(0, 8)
-
   return (
     <html lang="en" className={`${plexMono.variable} ${barlowCondensed.variable}`}>
       <body className="bg-white text-slate-900 m-0 p-0 antialiased flex flex-col min-h-screen">
-        <NewsTicker posts={tickerPosts} />
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />

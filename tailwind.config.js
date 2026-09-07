@@ -39,7 +39,8 @@ module.exports = {
       },
       fontFamily: {
         serif: ['var(--font-heading)', '"Barlow Condensed"', 'sans-serif'],
-        sans: ['var(--font-mono)', '"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+        mono: ['var(--font-mono)', '"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       borderRadius: {
         '3xl': '32px',

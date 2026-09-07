@@ -5,13 +5,13 @@ import Image from 'next/image'
 
 const sectionLinks = [
   { name: 'Home', href: '/' },
+  { name: 'News', href: '/news' },
+  { name: 'Podcast', href: '/podcast' },
   { name: 'Website Building', href: '/websites' },
   { name: 'Apps', href: '/apps' },
   { name: 'Games', href: '/games' },
   { name: 'Portfolio', href: '/portfolio' },
   { name: 'Contact', href: '/contact' },
-  { name: 'News', href: '/news' },
-  { name: 'Podcast', href: '/podcast' },
 ]
 
 export default function Footer() {
@@ -46,12 +46,12 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               {sectionLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-slate-300 hover:text-[#E25A3C] transition-colors font-medium"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

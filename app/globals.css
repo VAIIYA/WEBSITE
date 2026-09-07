@@ -32,14 +32,19 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
   color: var(--ink);
   background-color: var(--cream);
-  font-family: 'IBM Plex Mono', var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
-import { IBM_Plex_Mono, Barlow_Condensed } from 'next/font/google'
+import { IBM_Plex_Mono, Barlow_Condensed, Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import './globals.css'
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
 const plexMono = IBM_Plex_Mono({
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '600'],
   subsets: ['latin'],
   variable: '--font-mono',
   display: 'swap',
@@ -26,8 +32,8 @@ export const metadata: Metadata = {
     default: 'VAIIYA - We. As One.',
     template: '%s | VAIIYA',
   },
-  description: 'Clean Tearable UI Experience inspired by pushmatrix tearable. Native Android, iOS, and Web3 ecosystem.',
-  keywords: ['Android', 'iOS', 'Three.js', 'Tearable UI', 'VAIIYA'],
+  description: 'VAIIYA is a digital studio building high-performance websites, native Android & iOS apps, and mobile games for teams who want it done right.',
+  keywords: ['digital studio', 'web development', 'Next.js', 'Android apps', 'iOS apps', 'Kotlin', 'Swift', 'mobile games', 'VAIIYA'],
   authors: [{ name: 'VAIIYA', url: siteUrl }],
   creator: 'VAIIYA',
   openGraph: {
@@ -36,12 +42,12 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'VAIIYA',
     title: 'VAIIYA - We. As One.',
-    description: 'Clean Tearable UI Experience inspired by pushmatrix tearable.',
+    description: 'A digital studio building high-performance websites, native Android & iOS apps, and mobile games.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'VAIIYA - We. As One.',
-    description: 'Clean Tearable UI Experience inspired by pushmatrix tearable.',
+    description: 'A digital studio building high-performance websites, native Android & iOS apps, and mobile games.',
     site: '@VAIIYA_MEDIA',
     creator: '@VAIIYA_MEDIA',
   },
@@ -60,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${plexMono.variable} ${barlowCondensed.variable}`}>
+    <html lang="en" className={`${inter.variable} ${plexMono.variable} ${barlowCondensed.variable}`}>
       <body className="bg-white text-slate-900 m-0 p-0 antialiased flex flex-col min-h-screen">
         <Header />
         <div className="flex-1">{children}</div>

@@ -4,6 +4,16 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+const navLinks = [
+  { href: '/', name: 'Home', mobile: 'Home', hover: 'hover:text-slate-900' },
+  { href: '/news', name: 'News', mobile: '📰 News', hover: 'hover:text-metamask-purple' },
+  { href: '/podcast', name: 'Podcast', mobile: '🎙️ Podcast', hover: 'hover:text-violet-600' },
+  { href: '/websites', name: 'Website', mobile: '🌐 Website Building', hover: 'hover:text-[#E25A3C]' },
+  { href: '/apps', name: 'Apps', mobile: '📱 Android & iOS Apps', hover: 'hover:text-blue-600' },
+  { href: '/games', name: 'Games', mobile: '🎮 Mobile Games', hover: 'hover:text-violet-600' },
+  { href: '/portfolio', name: 'Portfolio', mobile: '🗂️ Portfolio', hover: 'hover:text-[#E25A3C]' },
+]
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -48,48 +58,15 @@ export default function Header() {
 
           {/* Navigation Links */}
           <div className="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/60 text-sm font-medium">
-            <a
-              href="/"
-              className="px-4 py-2 rounded-full text-slate-700 hover:text-slate-900 hover:bg-white transition-all"
-            >
-              Home
-            </a>
-            <Link
-              href="/websites"
-              className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all"
-            >
-              Website
-            </Link>
-            <Link
-              href="/apps"
-              className="px-4 py-2 rounded-full text-slate-700 hover:text-blue-600 hover:bg-white transition-all"
-            >
-              Apps
-            </Link>
-            <Link
-              href="/games"
-              className="px-4 py-2 rounded-full text-slate-700 hover:text-violet-600 hover:bg-white transition-all"
-            >
-              Games
-            </Link>
-            <Link
-              href="/portfolio"
-              className="px-4 py-2 rounded-full text-slate-700 hover:text-[#E25A3C] hover:bg-white transition-all"
-            >
-              Portfolio
-            </Link>
-            <Link
-              href="/news"
-              className="px-4 py-2 rounded-full text-slate-700 hover:text-metamask-purple hover:bg-white transition-all"
-            >
-              News
-            </Link>
-            <Link
-              href="/podcast"
-              className="px-4 py-2 rounded-full text-slate-700 hover:text-violet-600 hover:bg-white transition-all"
-            >
-              Podcast
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-4 py-2 rounded-full text-slate-700 hover:bg-white transition-all ${link.hover}`}
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
 
           {/* Action CTAs */}
@@ -126,61 +103,22 @@ export default function Header() {
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
         <div className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl">
-          <a
-            href="/"
-            onClick={() => setIsMenuOpen(false)}
-            className="block text-lg font-semibold text-slate-900"
-          >
-            Home
-          </a>
-          <Link
-            href="/websites"
-            onClick={() => setIsMenuOpen(false)}
-            className="block text-lg font-semibold text-[#E25A3C]"
-          >
-            🌐 Website Building
-          </Link>
-          <Link
-            href="/apps"
-            onClick={() => setIsMenuOpen(false)}
-            className="block text-lg font-semibold text-blue-600"
-          >
-            📱 Android &amp; iOS Apps
-          </Link>
-          <Link
-            href="/games"
-            onClick={() => setIsMenuOpen(false)}
-            className="block text-lg font-semibold text-violet-600"
-          >
-            🎮 Mobile Games
-          </Link>
-          <Link
-            href="/portfolio"
-            onClick={() => setIsMenuOpen(false)}
-            className="block text-lg font-semibold text-slate-700"
-          >
-            🗂️ Portfolio
-          </Link>
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsMenuOpen(false)}
+              className="block text-lg font-semibold text-slate-700"
+            >
+              {link.mobile}
+            </Link>
+          ))}
           <Link
             href="/contact"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-semibold text-slate-700"
           >
             🛡️ Contact
-          </Link>
-          <Link
-            href="/news"
-            onClick={() => setIsMenuOpen(false)}
-            className="block text-lg font-semibold text-slate-700"
-          >
-            📰 News
-          </Link>
-          <Link
-            href="/podcast"
-            onClick={() => setIsMenuOpen(false)}
-            className="block text-lg font-semibold text-violet-600"
-          >
-            🎙️ Podcast
           </Link>
           <div className="pt-4 border-t border-slate-100 flex gap-3">
             <Link

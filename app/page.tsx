@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import PodcastVideo from '@/components/PodcastVideo'
+import { getAllPosts } from '@/lib/posts'
 
 const pillars = [
   {
     href: '/websites',
     emoji: '🌐',
     title: 'Websites',
-    description: 'High-impact websites & PWAs built with Next.js, Three.js and Vercel.',
+    description: 'High-impact websites & PWAs built with Next.js and deployed on Vercel.',
     accent: 'text-[#E25A3C]',
   },
   {
@@ -39,6 +40,8 @@ const stats = [
 ]
 
 export default function Home() {
+  const latestPosts = getAllPosts().slice(0, 3)
+
   return (
     <main className="w-full min-h-screen bg-cream text-ink selection:bg-[#E25A3C] selection:text-white">
       {/* Hero */}
@@ -80,6 +83,72 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Podcast */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-card-border bg-card">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-10 space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-violet-200 text-violet-800 text-[10px] font-bold uppercase tracking-widest">
+              🎙️ The VAIIYA Podcast
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-serif">The Future of AI &amp; Robotics</h2>
+            <p className="text-ink/70 text-base leading-relaxed">
+              Groundbreaking technologies and the people shaping them — explained simply. New episodes on YouTube and
+              every podcast app.
+            </p>
+          </div>
+
+          <PodcastVideo />
+
+          <div className="mt-8 text-center">
+            <Link href="/podcast" className="btn-metamask btn-outline-dark text-base">
+              All episodes &amp; players &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest news */}
+      {latestPosts.length > 0 && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-card-border">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-wrap items-end justify-between gap-4 mb-10">
+              <div className="space-y-3">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-serif">Latest News</h2>
+                <p className="text-ink/70 text-base leading-relaxed max-w-xl">
+                  Daily breakthroughs in AI, gaming and robotics — explained simply.
+                </p>
+              </div>
+              <Link href="/news" className="text-sm font-semibold text-[#E25A3C] hover:underline">
+                All news &rarr;
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {latestPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/news/${post.slug}`}
+                  className="group bg-white border border-card-border rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+                >
+                  {post.date && (
+                    <time className="text-[11px] font-semibold text-ink/50 uppercase tracking-wider">
+                      {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                    </time>
+                  )}
+                  <h3 className="mt-2 text-lg font-bold font-serif leading-snug text-ink group-hover:text-[#E25A3C] transition-colors">
+                    {post.title}
+                  </h3>
+                  {post.excerpt && (
+                    <p className="mt-3 text-ink/60 text-sm leading-relaxed line-clamp-3 flex-grow">{post.excerpt}</p>
+                  )}
+                  <span className="mt-5 text-sm font-semibold text-[#E25A3C] group-hover:underline">Read more &rarr;</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Pillars — agentics.org-style teaser grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-card-border">
         <div className="max-w-6xl mx-auto">
@@ -107,30 +176,6 @@ export default function Home() {
                 </span>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Podcast */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-card-border bg-card">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-10 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-violet-200 text-violet-800 text-[10px] font-bold uppercase tracking-widest">
-              🎙️ The VAIIYA Podcast
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-serif">The Future of AI &amp; Robotics</h2>
-            <p className="text-ink/70 text-base leading-relaxed">
-              Groundbreaking technologies and the people shaping them — explained simply. New episodes on YouTube and
-              every podcast app.
-            </p>
-          </div>
-
-          <PodcastVideo />
-
-          <div className="mt-8 text-center">
-            <Link href="/podcast" className="btn-metamask btn-outline-dark text-base">
-              All episodes &amp; players &rarr;
-            </Link>
           </div>
         </div>
       </section>

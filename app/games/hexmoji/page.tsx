@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -42,7 +41,12 @@ export default function HexmojiPage() {
 
           <div className="mt-6 rounded-3xl overflow-hidden border border-card-border shadow-sm">
             <div className="relative aspect-[2/1]">
-              <Image src="/games/hexmoji/feature.svg" alt="HEXMOJI" fill priority className="object-cover" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/games/hexmoji/feature.svg"
+                alt="HEXMOJI"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
             </div>
           </div>
 

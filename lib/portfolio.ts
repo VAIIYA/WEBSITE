@@ -7,8 +7,10 @@ export interface PortfolioApp {
   name: string
   /** Short description shown on cards */
   description: string
-  /** Path to the app icon / screenshot under /public */
+  /** Path to the app icon / screenshot under /public (square-ish, used on the portfolio grid) */
   image?: string
+  /** Wide 2:1 feature banner under /public (used on the /games cards and detail pages) */
+  featureImage?: string
   /** Fallback gradient used when no image is provided */
   gradient: string
   platforms: AppPlatform[]
@@ -26,6 +28,34 @@ export interface PortfolioApp {
 }
 
 export const portfolioApps: PortfolioApp[] = [
+  {
+    id: 'flapmoji',
+    name: 'FLAPMOJI',
+    description:
+      'One tap, one emoji, endless pipes. Classic runs or Arcade chaos with power-ups, coins and 100+ emoji skins — native for Android and iOS.',
+    image: '/games/flapmoji/icon.png',
+    featureImage: '/games/flapmoji/feature.png',
+    gradient: 'from-sky-400 to-emerald-400',
+    platforms: ['android', 'ios'],
+    category: 'game',
+    projectUrl: '/games/flapmoji',
+    comingSoon: true,
+    // Fill these in once the app is live:
+    // playStoreUrl: 'https://play.google.com/store/apps/details?id=com.flapmoji.game',
+    // appStoreUrl: 'https://apps.apple.com/app/id6809547852',
+  },
+  {
+    id: 'hexmoji',
+    name: 'HEXMOJI',
+    description:
+      'Kawaii hexxagon. Claim the board one emoji hop at a time against a sharp CPU, unlock a cabinet of characters and pastel themes. Native Android, iOS to follow.',
+    featureImage: '/games/hexmoji/feature.svg',
+    gradient: 'from-fuchsia-400 to-violet-500',
+    platforms: ['android', 'ios'],
+    category: 'game',
+    projectUrl: '/games/hexmoji',
+    comingSoon: true,
+  },
   {
     id: 'fynder',
     name: 'FYNDER',

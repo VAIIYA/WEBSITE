@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6A8E0"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="hexA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="hexB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A5F3FC"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="500" fill="url(#sky)"/>
+  <circle cx="835" cy="120" r="180" fill="#ffffff" opacity="0.12"/>
+  <circle cx="120" cy="430" r="220" fill="#ffffff" opacity="0.08"/>
+
+  <!-- hex cluster -->
+  <g transform="translate(690 250)">
+    <polygon points="0,-70 61,-35 61,35 0,70 -61,35 -61,-35" fill="url(#hexA)" stroke="#00000022" stroke-width="3"/>
+    <polygon points="122,-70 183,-35 183,35 122,70 61,35 61,-35" fill="url(#hexB)" stroke="#00000022" stroke-width="3"/>
+    <polygon points="61,-175 122,-140 122,-70 61,-35 0,-70 0,-140" fill="url(#hexB)" stroke="#00000022" stroke-width="3"/>
+    <circle cx="0" cy="0" r="24" fill="#1F1F1F"/>
+    <circle cx="-9" cy="-4" r="6" fill="#fff"/><circle cx="9" cy="-4" r="6" fill="#fff"/>
+    <circle cx="122" cy="0" r="24" fill="#1F1F1F"/>
+    <circle cx="113" cy="-4" r="6" fill="#fff"/><circle cx="131" cy="-4" r="6" fill="#fff"/>
+  </g>
+
+  <text x="70" y="230" font-size="128" font-weight="700" fill="#ffffff" letter-spacing="2">HEXMOJI</text>
+  <text x="74" y="290" font-size="30" fill="#ffffff" opacity="0.9" font-family="'Courier New', monospace" letter-spacing="1">Kawaii hexxagon. Claim the board.</text>
+  <g transform="translate(74 330)" font-family="'Courier New', monospace" font-size="20" fill="#1F1F1F">
+    <rect x="0" y="0" width="150" height="42" rx="21" fill="#ffffffcc"/>
+    <text x="20" y="27">😀 vs 🤖</text>
+    <rect x="166" y="0" width="180" height="42" rx="21" fill="#ffffffcc"/>
+    <text x="186" y="27">pastel themes</text>
+  </g>
+</svg>

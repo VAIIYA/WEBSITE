@@ -10,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about',
     '/apps',
     '/games',
+    '/games/flapmoji',
+    '/games/hexmoji',
     '/progress',
     '/news',
     '/privacy-policy',

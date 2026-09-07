@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { portfolioApps } from '@/lib/portfolio'
 
@@ -47,7 +46,12 @@ export default function FlapmojiPage() {
 
           <div className="mt-6 rounded-3xl overflow-hidden border border-card-border shadow-sm">
             <div className="relative aspect-[2/1]">
-              <Image src="/games/flapmoji/feature.png" alt="FLAPMOJI" fill priority className="object-cover" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/games/flapmoji/feature.png"
+                alt="FLAPMOJI"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
             </div>
           </div>
 
@@ -165,12 +169,11 @@ export default function FlapmojiPage() {
             {SHOTS.map((shot) => (
               <div key={shot.src} className="rounded-2xl overflow-hidden border border-card-border bg-white">
                 <div className="relative aspect-[9/16]">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={shot.src}
                     alt={shot.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 45vw, 22vw"
+                    className="absolute inset-0 h-full w-full object-cover"
                   />
                 </div>
               </div>

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import type { PortfolioApp } from '@/lib/portfolio'
 
@@ -10,7 +9,8 @@ export default function GameCard({ game }: { game: PortfolioApp }) {
       {/* Feature banner */}
       <div className="relative aspect-[2/1] overflow-hidden">
         {game.featureImage ? (
-          <Image src={game.featureImage} alt={game.name} fill className="object-cover" />
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={game.featureImage} alt={game.name} className="absolute inset-0 h-full w-full object-cover" />
         ) : (
           <div className={`absolute inset-0 bg-gradient-to-br ${game.gradient}`} />
         )}

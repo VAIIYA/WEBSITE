@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import PodcastVideo from '@/components/PodcastVideo'
 
 const pillars = [
   {
@@ -106,6 +107,30 @@ export default function Home() {
                 </span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Podcast */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-card-border bg-card">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-10 space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-violet-200 text-violet-800 text-[10px] font-bold uppercase tracking-widest">
+              🎙️ The VAIIYA Podcast
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-serif">The Future of AI &amp; Robotics</h2>
+            <p className="text-ink/70 text-base leading-relaxed">
+              Groundbreaking technologies and the people shaping them — explained simply. New episodes on YouTube and
+              every podcast app.
+            </p>
+          </div>
+
+          <PodcastVideo />
+
+          <div className="mt-8 text-center">
+            <Link href="/podcast" className="btn-metamask btn-outline-dark text-base">
+              All episodes &amp; players &rarr;
+            </Link>
           </div>
         </div>
       </section>

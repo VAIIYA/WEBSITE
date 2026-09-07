@@ -84,6 +84,12 @@ export default function Header() {
             >
               News
             </Link>
+            <Link
+              href="/podcast"
+              className="px-4 py-2 rounded-full text-slate-700 hover:text-violet-600 hover:bg-white transition-all"
+            >
+              Podcast
+            </Link>
           </div>
 
           {/* Action CTAs */}
@@ -168,6 +174,13 @@ export default function Header() {
             className="block text-lg font-semibold text-slate-700"
           >
             📰 News
+          </Link>
+          <Link
+            href="/podcast"
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-lg font-semibold text-violet-600"
+          >
+            🎙️ Podcast
           </Link>
           <div className="pt-4 border-t border-slate-100 flex gap-3">
             <Link

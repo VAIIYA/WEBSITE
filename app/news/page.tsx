@@ -7,22 +7,13 @@ export const metadata: Metadata = {
   description: 'Daily breakthroughs in AI, gaming innovations, and robotics — explained simply by VAIIYA.',
 }
 
-function formatDate(dateStr: string) {
-  if (!dateStr) return ''
-  return new Date(dateStr).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
-}
-
 export default function NewsPage() {
   const posts = getAllPosts()
 
   return (
     <main className="min-h-screen bg-white">
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-dot-grid">
-        <div className="max-w-7xl mx-auto relative z-10 text-center">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-dot-grid">
+        <div className="max-w-3xl mx-auto relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-metamask-orange/10 text-metamask-orange text-sm font-medium mb-8">
             ⚡ AI, Gaming &amp; Robotics News
           </div>
@@ -38,58 +29,22 @@ export default function NewsPage() {
       </section>
 
       <section className="px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           {posts.length === 0 ? (
             <p className="text-center text-gray-500">No posts yet — check back soon.</p>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <ul className="divide-y divide-metamask-gray-100 border-y border-metamask-gray-100">
               {posts.map((post) => (
-                <Link
-                  key={post.slug}
-                  href={`/news/${post.slug}`}
-                  className="group block rounded-3xl border border-metamask-gray-100 bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all"
-                >
-                  {post.coverImage && (
-                    <div className="aspect-[16/9] w-full overflow-hidden bg-metamask-gray-50">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={post.coverImage}
-                        alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                  )}
-                  <div className="p-6">
-                    {post.date && (
-                      <p className="text-xs font-semibold uppercase tracking-wider text-metamask-orange mb-2">
-                        {formatDate(post.date)}
-                        {post.sourceName && (
-                          <span className="text-gray-400 normal-case font-medium"> &middot; via {post.sourceName}</span>
-                        )}
-                      </p>
-                    )}
-                    <h2 className="text-xl font-semibold text-slate-900 font-serif mb-2 group-hover:text-metamask-purple transition-colors">
-                      {post.title}
-                    </h2>
-                    {post.excerpt && (
-                      <p className="text-sm text-gray-600 leading-relaxed">{post.excerpt}</p>
-                    )}
-                    {post.tags && post.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {post.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="px-2.5 py-1 rounded-full bg-metamask-gray-50 border border-metamask-gray-100 text-[10px] font-semibold uppercase tracking-wider text-metamask-purple"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </Link>
+                <li key={post.slug}>
+                  <Link
+                    href={`/news/${post.slug}`}
+                    className="group block py-4 hover:bg-metamask-gray-50 -mx-3 px-3 rounded-lg transition-colors text-base sm:text-lg text-slate-900 font-serif leading-snug hover:text-metamask-purple"
+                  >
+                    {post.title}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
         </div>
       </section>

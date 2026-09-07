@@ -11,6 +11,7 @@ const sectionLinks = [
   { name: 'Portfolio', href: '/portfolio' },
   { name: 'Contact', href: '/contact' },
   { name: 'News', href: '/news' },
+  { name: 'Podcast', href: '/podcast' },
 ]
 
 export default function Footer() {

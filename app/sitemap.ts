@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/games/hexmoji',
     '/progress',
     '/news',
+    '/podcast',
     '/privacy-policy',
     '/terms',
     '/cookies',

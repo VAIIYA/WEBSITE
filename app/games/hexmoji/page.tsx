@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'HEXMOJI',
+  title: 'HEXMOJI — Android Closed Beta Live',
   description:
-    'HEXMOJI — a kawaii hexxagon board game with emoji pieces. Claim the board against a sharp CPU, unlock characters and pastel themes. Native Android, iOS to follow. Coming soon.',
+    'HEXMOJI — a kawaii hexxagon board game with emoji pieces. Android Closed Beta is live now! Join our Google Group tester community to get instant access on Google Play.',
 }
 
 const RULES = [
@@ -31,7 +31,7 @@ const EXTRAS = [
 
 export default function HexmojiPage() {
   return (
-    <main className="min-h-screen bg-cream text-ink">
+    <main className="min-h-screen bg-cream text-ink selection:bg-violet-600 selection:text-white">
       {/* Hero */}
       <section className="relative pt-16 pb-12 bg-card border-b border-card-border overflow-hidden bg-dot-grid">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -52,10 +52,14 @@ export default function HexmojiPage() {
 
           <div className="mt-6 flex flex-wrap items-center gap-2">
             <span className="px-3 py-1 rounded-full bg-white border border-violet-200 text-violet-800 text-[10px] font-bold uppercase tracking-widest">
-              Android &middot; iOS
+              Android Native
             </span>
-            <span className="px-3 py-1 rounded-full bg-white border border-card-border text-ink text-[10px] font-bold uppercase tracking-widest">
-              Coming soon
+            <span className="px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-[10px] font-bold uppercase tracking-widest flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              Closed Beta Live
+            </span>
+            <span className="px-3 py-1 rounded-full bg-white border border-card-border text-ink/60 text-[10px] font-bold uppercase tracking-widest">
+              iOS Planned
             </span>
           </div>
 
@@ -63,12 +67,75 @@ export default function HexmojiPage() {
           <p className="mt-3 text-xl text-violet-700 font-serif">Kawaii hexxagon. Claim the board.</p>
           <p className="mt-4 text-lg text-ink/70 leading-relaxed max-w-2xl">
             A cute take on the classic hexxagon / Ataxx board game. Hop your emoji across a honeycomb grid, flip everything
-            it touches, and out-claim a surprisingly sharp CPU. Native for Android now, with an iOS build to follow.
+            it touches, and out-claim a surprisingly sharp CPU. Android Closed Beta is live now!
           </p>
 
-          <p className="mt-8 text-sm text-ink/60 font-medium max-w-sm">
-            Still in the workshop — heading to the Google Play Store and Apple App Store soon.
-          </p>
+          {/* Closed Beta Opt-in Banner */}
+          <div className="mt-8 p-6 sm:p-8 bg-gradient-to-br from-violet-900 via-slate-900 to-black text-white rounded-3xl shadow-xl space-y-4">
+            <div className="space-y-1">
+              <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">
+                🚀 Play Right Now &bull; Early Access
+              </span>
+              <h2 className="text-2xl font-bold font-serif text-white">How to Get Instant Beta Access:</h2>
+            </div>
+
+            <ol className="space-y-2 text-sm text-slate-300 list-decimal list-inside">
+              <li>
+                <strong className="text-white">Join Google Group:</strong> Join{' '}
+                <a
+                  href="https://groups.google.com/g/vaiiya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 font-semibold"
+                >
+                  groups.google.com/g/vaiiya
+                </a>{' '}
+                with the same Google account as your Google Play Store.
+              </li>
+              <li>
+                <strong className="text-white">Opt-in on Google Play:</strong> Click{' '}
+                <a
+                  href="https://play.google.com/apps/testing/com.hexmoji"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-violet-300 underline underline-offset-2 hover:text-violet-200 font-semibold"
+                >
+                  play.google.com/apps/testing/com.hexmoji
+                </a>{' '}
+                and tap &quot;Become a Tester&quot;.
+              </li>
+              <li>
+                <strong className="text-white">Download &amp; Play:</strong> Install the closed beta directly from Google Play.
+              </li>
+            </ol>
+
+            <div className="pt-2 flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://groups.google.com/g/vaiiya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold text-center"
+              >
+                1. Join Google Group
+              </a>
+              <a
+                href="https://play.google.com/apps/testing/com.hexmoji"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-metamask bg-violet-600 text-white hover:bg-violet-700 text-xs font-bold text-center"
+              >
+                2. Opt-in on Google Play
+              </a>
+              <a
+                href="https://groups.google.com/g/vaiiya/c/FoPlDsHz-CY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-metamask bg-slate-800 text-slate-200 hover:bg-slate-700 text-xs font-bold text-center border border-slate-700"
+              >
+                💬 Closed Beta Forum Post
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

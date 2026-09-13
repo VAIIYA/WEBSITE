@@ -55,11 +55,15 @@ export default function Portfolio() {
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
 
-                  {app.comingSoon && (
+                  {app.status === 'closed-beta' ? (
+                    <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-emerald-500 text-white text-[10px] font-bold uppercase tracking-widest shadow-sm">
+                      Closed Beta Live
+                    </div>
+                  ) : app.comingSoon ? (
                     <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-widest text-ink">
                       Coming Soon
                     </div>
-                  )}
+                  ) : null}
 
                   <div className="absolute bottom-4 left-4 flex gap-2">
                     {app.platforms.map((platform) => (
@@ -78,6 +82,41 @@ export default function Portfolio() {
                   </p>
 
                   <div className="flex flex-col gap-3 mt-auto">
+                    {app.status === 'closed-beta' ? (
+                      <div className="flex flex-col gap-2">
+                        {app.betaGroupUrl && (
+                          <a
+                            href={app.betaGroupUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-2xl bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700 transition-all shadow-md"
+                          >
+                            1. Join Tester Group &rarr;
+                          </a>
+                        )}
+                        {app.playTestingUrl && (
+                          <a
+                            href={app.playTestingUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-2xl bg-violet-600 text-white text-xs font-bold hover:bg-violet-700 transition-all shadow-md"
+                          >
+                            2. Opt-in on Google Play &rarr;
+                          </a>
+                        )}
+                      </div>
+                    ) : (
+                      app.playTestingUrl && (
+                        <a
+                          href={app.playTestingUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700 transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-emerald-600/20"
+                        >
+                          🚀 Early Access (Play Store)
+                        </a>
+                      )
+                    )}
                     {app.playStoreUrl && (
                       <a
                         href={app.playStoreUrl}

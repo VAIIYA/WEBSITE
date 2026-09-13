@@ -1,5 +1,6 @@
 export type AppPlatform = 'android' | 'ios' | 'web'
 export type AppCategory = 'app' | 'game' | 'web'
+export type AppStatus = 'live' | 'closed-beta' | 'in-development'
 
 export interface PortfolioApp {
   id: string
@@ -16,6 +17,12 @@ export interface PortfolioApp {
   platforms: AppPlatform[]
   /** Which homepage pillar this belongs under: Apps, Games, or Website work */
   category: AppCategory
+  /** Release lifecycle status */
+  status?: AppStatus
+  /** Google Group URL for closed tester community */
+  betaGroupUrl?: string
+  /** Google Play testing opt-in URL */
+  playTestingUrl?: string
   /** App Store (iOS) URL */
   appStoreUrl?: string
   /** Google Play (Android) URL */
@@ -32,29 +39,33 @@ export const portfolioApps: PortfolioApp[] = [
     id: 'flapmoji',
     name: 'FLAPMOJI',
     description:
-      'One tap, one emoji, endless pipes. Classic runs or Arcade chaos with power-ups, coins and 100+ emoji skins — native for Android and iOS.',
+      'One tap, one emoji, endless pipes. Classic runs or Arcade chaos with power-ups, coins and 100+ emoji skins — native for Android, iOS planned.',
     image: '/games/flapmoji/icon.png',
     featureImage: '/games/flapmoji/feature.png',
     gradient: 'from-sky-400 to-emerald-400',
-    platforms: ['android', 'ios'],
+    platforms: ['android'],
     category: 'game',
+    status: 'in-development',
+    betaGroupUrl: 'https://groups.google.com/g/vaiiya',
     projectUrl: '/games/flapmoji',
     comingSoon: true,
     // Fill these in once the app is live:
     // playStoreUrl: 'https://play.google.com/store/apps/details?id=com.flapmoji.game',
-    // appStoreUrl: 'https://apps.apple.com/app/id6809547852',
   },
   {
     id: 'hexmoji',
     name: 'HEXMOJI',
     description:
-      'Kawaii hexxagon. Claim the board one emoji hop at a time against a sharp CPU, unlock a cabinet of characters and pastel themes. Native Android, iOS to follow.',
+      'Kawaii hexxagon. Claim the board one emoji hop at a time against a sharp CPU, unlock a cabinet of characters and pastel themes. Android Closed Beta is live now!',
     featureImage: '/games/hexmoji/feature.svg',
     gradient: 'from-fuchsia-400 to-violet-500',
-    platforms: ['android', 'ios'],
+    platforms: ['android'],
     category: 'game',
+    status: 'closed-beta',
+    betaGroupUrl: 'https://groups.google.com/g/vaiiya',
+    playTestingUrl: 'https://play.google.com/apps/testing/com.hexmoji',
     projectUrl: '/games/hexmoji',
-    comingSoon: true,
+    comingSoon: false,
   },
   {
     id: 'fynder',
@@ -63,6 +74,7 @@ export const portfolioApps: PortfolioApp[] = [
     gradient: 'from-blue-500 to-cyan-400',
     platforms: ['android'],
     category: 'app',
+    status: 'live',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vaiiya.fynder',
     projectUrl: '/projects/fynder',
   },
@@ -71,9 +83,9 @@ export const portfolioApps: PortfolioApp[] = [
     name: 'VYNDER',
     description: 'Dating on the blockchain. The first Web3 PWA dating app built on Solana.',
     gradient: 'from-orange-500 to-red-500',
-    platforms: ['android', 'ios'],
+    platforms: ['android'],
     category: 'app',
-    appStoreUrl: 'https://apps.apple.com/app/id0000000000',
+    status: 'live',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vaiiya.vynder',
     projectUrl: '/projects/vynder',
     externalUrl: 'https://vynder.vercel.app/',
@@ -156,9 +168,9 @@ export const portfolioApps: PortfolioApp[] = [
     name: 'BLOBIO',
     description: 'Engage in thrilling blob battles and conquer the arena.',
     gradient: 'from-emerald-500 to-green-500',
-    platforms: ['android', 'ios'],
+    platforms: ['android'],
     category: 'game',
-    appStoreUrl: 'https://apps.apple.com/app/id0000000000',
+    status: 'live',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vaiiya.blobio',
     projectUrl: '/projects/blobio',
     externalUrl: 'https://blobio.vercel.app/',

@@ -57,13 +57,14 @@ export default function FlapmojiPage() {
 
           <div className="mt-6 flex flex-wrap items-center gap-2">
             <span className="px-3 py-1 rounded-full bg-white border border-violet-200 text-violet-800 text-[10px] font-bold uppercase tracking-widest">
-              Android &middot; iOS
+              Android Native
             </span>
-            {game.comingSoon && (
-              <span className="px-3 py-1 rounded-full bg-white border border-card-border text-ink text-[10px] font-bold uppercase tracking-widest">
-                Coming soon
-              </span>
-            )}
+            <span className="px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-800 text-[10px] font-bold uppercase tracking-widest">
+              Closed Beta Next
+            </span>
+            <span className="px-3 py-1 rounded-full bg-white border border-card-border text-ink/60 text-[10px] font-bold uppercase tracking-widest">
+              iOS Planned
+            </span>
           </div>
 
           <h1 className="mt-4 text-5xl md:text-6xl font-bold font-serif leading-tight">FLAPMOJI</h1>
@@ -73,32 +74,33 @@ export default function FlapmojiPage() {
             Classic, or dive into the Arcade chaos with power-ups, coins and a mushroom that is absolutely a trap.
           </p>
 
-          <div className="mt-8 space-y-2 max-w-sm">
+          <div className="mt-8 space-y-3 max-w-sm">
             {game.playStoreUrl && (
               <a
                 href={game.playStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full btn-metamask bg-violet-600 text-white hover:bg-violet-700 text-xs font-bold"
+                className="w-full btn-metamask bg-violet-600 text-white hover:bg-violet-700 text-xs font-bold text-center block"
               >
                 Get it on Google Play &rarr;
               </a>
             )}
-            {game.appStoreUrl && (
+            <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-2xl space-y-2">
+              <p className="text-xs font-semibold text-emerald-900">
+                🚀 Heading to Google Play Closed Beta
+              </p>
+              <p className="text-xs text-emerald-800 leading-relaxed">
+                Join our Google Group tester community to get first access as soon as the closed beta build drops!
+              </p>
               <a
-                href={game.appStoreUrl}
+                href="https://groups.google.com/g/vaiiya"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full btn-metamask bg-slate-900 text-white hover:bg-black text-xs font-bold"
+                className="w-full btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold text-center block"
               >
-                Download on the App Store &rarr;
+                Join Tester Google Group &rarr;
               </a>
-            )}
-            {!hasStoreLink && (
-              <p className="text-sm text-ink/60 font-medium">
-                Coming soon to the Google Play Store and the Apple App Store.
-              </p>
-            )}
+            </div>
           </div>
         </div>
       </section>

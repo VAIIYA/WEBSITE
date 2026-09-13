@@ -32,6 +32,8 @@ export interface PortfolioApp {
   /** External live project URL */
   externalUrl?: string
   comingSoon?: boolean
+  /** Whether to hide this item from the /portfolio page showcase */
+  hideFromPortfolio?: boolean
 }
 
 export const portfolioApps: PortfolioApp[] = [
@@ -46,7 +48,7 @@ export const portfolioApps: PortfolioApp[] = [
     platforms: ['android'],
     category: 'game',
     status: 'in-development',
-    betaGroupUrl: 'https://groups.google.com/g/vaiiya',
+    betaGroupUrl: 'https://groups.google.com/g/vaiiya/c/2zJvHbgUggc',
     projectUrl: '/games/flapmoji',
     comingSoon: true,
     // Fill these in once the app is live:
@@ -75,6 +77,7 @@ export const portfolioApps: PortfolioApp[] = [
     platforms: ['android'],
     category: 'app',
     status: 'live',
+    hideFromPortfolio: true,
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vaiiya.fynder',
     projectUrl: '/projects/fynder',
   },
@@ -86,6 +89,7 @@ export const portfolioApps: PortfolioApp[] = [
     platforms: ['android'],
     category: 'app',
     status: 'live',
+    hideFromPortfolio: true,
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vaiiya.vynder',
     projectUrl: '/projects/vynder',
     externalUrl: 'https://vynder.vercel.app/',
@@ -97,6 +101,7 @@ export const portfolioApps: PortfolioApp[] = [
     gradient: 'from-purple-600 to-indigo-600',
     platforms: ['web'],
     category: 'web',
+    hideFromPortfolio: true,
     projectUrl: '/projects/nightstudio',
     externalUrl: 'https://nightstudio.vercel.app/',
   },
@@ -107,6 +112,7 @@ export const portfolioApps: PortfolioApp[] = [
     gradient: 'from-slate-700 to-slate-900',
     platforms: ['web'],
     category: 'web',
+    hideFromPortfolio: true,
     externalUrl: 'https://model82.vercel.app/',
   },
   {
@@ -116,6 +122,7 @@ export const portfolioApps: PortfolioApp[] = [
     gradient: 'from-orange-500 to-red-500',
     platforms: ['web'],
     category: 'web',
+    hideFromPortfolio: true,
     externalUrl: 'https://vynder.vercel.app/',
   },
   {
@@ -125,6 +132,7 @@ export const portfolioApps: PortfolioApp[] = [
     gradient: 'from-fuchsia-600 to-purple-800',
     platforms: ['web'],
     category: 'web',
+    hideFromPortfolio: true,
     externalUrl: 'https://velvetmusic.vercel.app/',
   },
   {
@@ -134,6 +142,7 @@ export const portfolioApps: PortfolioApp[] = [
     gradient: 'from-rose-300 to-rose-500',
     platforms: ['web'],
     category: 'web',
+    hideFromPortfolio: true,
     externalUrl: 'https://bruidsmodechange.vercel.app/',
   },
   {
@@ -143,6 +152,7 @@ export const portfolioApps: PortfolioApp[] = [
     gradient: 'from-blue-600 to-indigo-600',
     platforms: ['web'],
     category: 'web',
+    hideFromPortfolio: true,
     externalUrl: 'https://wynder.vercel.app/',
   },
   {
@@ -152,6 +162,7 @@ export const portfolioApps: PortfolioApp[] = [
     gradient: 'from-cyan-500 to-blue-700',
     platforms: ['web'],
     category: 'web',
+    hideFromPortfolio: true,
     externalUrl: 'https://hashcube.vercel.app/',
   },
   {
@@ -161,6 +172,7 @@ export const portfolioApps: PortfolioApp[] = [
     gradient: 'from-amber-500 to-orange-600',
     platforms: ['web'],
     category: 'web',
+    hideFromPortfolio: true,
     externalUrl: 'https://ospuze.vercel.app/',
   },
   {
@@ -171,6 +183,7 @@ export const portfolioApps: PortfolioApp[] = [
     platforms: ['android'],
     category: 'game',
     status: 'live',
+    hideFromPortfolio: true,
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vaiiya.blobio',
     projectUrl: '/projects/blobio',
     externalUrl: 'https://blobio.vercel.app/',

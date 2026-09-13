@@ -21,6 +21,8 @@ function PlatformBadge({ platform }: { platform: string }) {
 }
 
 export default function Portfolio() {
+  const displayedApps = portfolioApps.filter((app) => !app.hideFromPortfolio);
+
   return (
     <section id="portfolio" className="py-24 px-4 sm:px-6 lg:px-8 bg-card">
       <div className="max-w-7xl mx-auto">
@@ -29,12 +31,12 @@ export default function Portfolio() {
             Our <span className="text-[#E25A3C]">Work</span>
           </h2>
           <p className="text-xl text-ink/70 max-w-3xl mx-auto">
-            A showcase of everything we&apos;ve designed, built, and shipped across websites, apps and games. Each project reflects our commitment to innovation and clean code.
+            A showcase of everything we&apos;ve designed, built, and shipped across mobile games and digital experiences. Each project reflects our commitment to innovation and clean code.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {portfolioApps.map((app) => {
+        <div className={`grid ${displayedApps.length <= 2 ? 'grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'} gap-8`}>
+          {displayedApps.map((app) => {
             return (
               <div key={app.id} className="group bg-white border border-card-border rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
                 {/* App Visual */}

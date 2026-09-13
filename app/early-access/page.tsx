@@ -281,12 +281,22 @@ export default function EarlyAccessPage() {
                   One tap, one emoji, endless pipes. Classic runs or arcade chaos with physics power-ups, coin collecting, and 100+ unlockable skins. Members of our Google Group will automatically receive first access when the closed beta opens.
                 </p>
               </div>
-              <Link
-                href="/games/flapmoji"
-                className="btn-metamask btn-outline-dark text-xs font-bold whitespace-nowrap"
-              >
-                Preview FLAPMOJI &rarr;
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-3 items-stretch">
+                <a
+                  href="https://groups.google.com/g/vaiiya/c/2zJvHbgUggc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold text-center whitespace-nowrap"
+                >
+                  💬 Join FLAPMOJI Thread &rarr;
+                </a>
+                <Link
+                  href="/games/flapmoji"
+                  className="btn-metamask btn-outline-dark text-xs font-bold text-center whitespace-nowrap"
+                >
+                  Preview FLAPMOJI &rarr;
+                </Link>
+              </div>
             </div>
           </div>
         </div>

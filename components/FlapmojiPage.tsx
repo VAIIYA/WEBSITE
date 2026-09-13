@@ -93,12 +93,12 @@ export default function FlapmojiPage() {
                 Join our Google Group tester community to get first access as soon as the closed beta build drops!
               </p>
               <a
-                href="https://groups.google.com/g/vaiiya"
+                href="https://groups.google.com/g/vaiiya/c/2zJvHbgUggc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold text-center block"
               >
-                Join Tester Google Group &rarr;
+                Join FLAPMOJI Beta Thread &rarr;
               </a>
             </div>
           </div>

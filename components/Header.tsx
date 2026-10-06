@@ -13,7 +13,6 @@ const navLinks = [
     hover: 'hover:text-emerald-700',
     highlight: true,
   },
-  { href: '/news', name: 'News', mobile: '📰 News', hover: 'hover:text-metamask-purple' },
   { href: '/podcast', name: 'Podcast', mobile: '🎙️ Podcast', hover: 'hover:text-violet-600' },
   { href: '/websites', name: 'Website', mobile: '🌐 Website Building', hover: 'hover:text-[#E25A3C]' },
   { href: '/apps', name: 'Apps', mobile: '📱 Android Apps', hover: 'hover:text-blue-600' },
@@ -54,7 +53,7 @@ export default function Header() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold tracking-tight text-slate-900 font-serif leading-none">
+              <span className="text-2xl font-bold tracking-tight text-slate-900 font-pixel leading-none">
                 VAIIYA
               </span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-[#E25A3C] font-bold mt-0.5">

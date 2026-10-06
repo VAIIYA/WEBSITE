@@ -269,26 +269,26 @@ export default function EarlyAccessPage() {
             </div>
           </div>
 
-          {/* Upcoming in Pipeline */}
+          {/* FLAPMOJI — now live */}
           <div className="mt-12 bg-white border border-card-border rounded-3xl p-8 sm:p-10 shadow-sm">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div className="space-y-2">
-                <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-[10px] font-bold uppercase tracking-widest">
-                  Next in Pipeline
+                <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase tracking-widest">
+                  Live on Google Play
                 </span>
-                <h3 className="text-2xl font-bold font-serif">FLAPMOJI &bull; Closed Beta Coming Next</h3>
+                <h3 className="text-2xl font-bold font-serif">FLAPMOJI &bull; Now Live</h3>
                 <p className="text-ink/70 text-sm max-w-2xl leading-relaxed">
-                  One tap, one emoji, endless pipes. Classic runs or arcade chaos with physics power-ups, coin collecting, and 100+ unlockable skins. Members of our Google Group will automatically receive first access when the closed beta opens.
+                  One tap, one emoji, endless pipes. Classic runs or arcade chaos with power-ups, coin collecting, and 100+ unlockable skins. Download it now, or join our Google Group to test upcoming features first.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 items-stretch">
                 <a
-                  href="https://groups.google.com/g/vaiiya/c/2zJvHbgUggc"
+                  href="https://play.google.com/store/apps/details?id=com.flapmoji.game"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold text-center whitespace-nowrap"
                 >
-                  💬 Join FLAPMOJI Thread &rarr;
+                  Get FLAPMOJI on Google Play &rarr;
                 </a>
                 <Link
                   href="/games/flapmoji"

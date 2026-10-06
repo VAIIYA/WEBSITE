@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { IBM_Plex_Mono, Barlow_Condensed, Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import './globals.css'
@@ -21,6 +22,31 @@ const barlowCondensed = Barlow_Condensed({
   weight: ['600', '700'],
   subsets: ['latin'],
   variable: '--font-heading',
+  display: 'swap',
+})
+
+// Monogram pixel font (CC0 by Vinícius Menézio — https://datagoblin.itch.io/monogram).
+// TTFs vendored from assets/monogram/ttf into public/fonts/monogram.
+// Used sparingly as a retro accent (logo, eyebrow badges) via the `font-pixel` utility.
+const monogram = localFont({
+  src: [
+    {
+      path: '../public/fonts/monogram/monogram.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/monogram/monogram-extended.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/monogram/monogram-extended-italic.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-pixel',
   display: 'swap',
 })
 
@@ -66,7 +92,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${plexMono.variable} ${barlowCondensed.variable}`}>
+    <html lang="en" className={`${inter.variable} ${plexMono.variable} ${barlowCondensed.variable} ${monogram.variable}`}>
       <body className="bg-white text-slate-900 m-0 p-0 antialiased flex flex-col min-h-screen">
         <Header />
         <div className="flex-1">{children}</div>

@@ -8,6 +8,9 @@ const nextConfig = {
       { source: '/en/:path*', destination: '/:path*', permanent: true },
       { source: '/earlyaccess', destination: '/early-access', permanent: true },
       { source: '/early_access', destination: '/early-access', permanent: true },
+      // News section removed — send old links home.
+      { source: '/news', destination: '/', permanent: true },
+      { source: '/news/:path*', destination: '/', permanent: true },
     ]
   },
 }

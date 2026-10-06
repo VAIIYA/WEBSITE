@@ -78,6 +78,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+/* Monogram pixel accent — keep glyphs crisp, never anti-aliased into mush */
+.font-pixel {
+  font-family: var(--font-pixel), 'Monogram', monospace;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-smooth: never;
+}
+
 @keyframes floatSlow {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-12px) rotate(1.5deg); }

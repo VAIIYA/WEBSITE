@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import PodcastVideo from '@/components/PodcastVideo'
-import { getAllPosts } from '@/lib/posts'
 
 const pillars = [
   {
@@ -40,8 +39,6 @@ const stats = [
 ]
 
 export default function Home() {
-  const latestPosts = getAllPosts().slice(0, 3)
-
   return (
     <main className="w-full min-h-screen bg-cream text-ink selection:bg-[#E25A3C] selection:text-white">
       {/* Hero */}
@@ -178,44 +175,44 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Spotlight: HEXMOJI Closed Beta Live Card */}
+          {/* Spotlight: HEXMOJI Live Card */}
           <div className="bg-gradient-to-br from-violet-900 via-slate-900 to-ink text-white rounded-3xl p-8 sm:p-10 shadow-xl border border-violet-800/40 relative overflow-hidden">
             <div className="absolute -right-16 -bottom-16 w-64 h-64 bg-violet-500/20 rounded-full blur-3xl pointer-events-none" />
             <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
               <div className="space-y-4 max-w-2xl">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/30 border border-violet-400/40 text-violet-200 text-xs font-bold uppercase tracking-widest">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>Active Closed Beta &bull; Android</span>
+                  <span>Live on Google Play &bull; Android</span>
                 </div>
                 <h3 className="text-3xl sm:text-4xl font-bold font-serif tracking-tight text-white">
-                  HEXMOJI Closed Beta is Live! 🚀
+                  HEXMOJI is Live! 🚀
                 </h3>
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                  Kawaii hexxagon tactical board game. Flip cells, unlock 100+ emoji characters, and challenge the AI. Ready to play? Join our Google Group to unlock your Google Play tester seat right now.
+                  Kawaii hexxagon tactical board game. Flip cells, unlock emoji characters, and challenge the AI — download it now on Google Play, or join our Google Group to test upcoming features first.
                 </p>
                 <div className="flex items-center gap-4 text-xs text-slate-400">
                   <span>✓ Android 8.0+</span>
-                  <span>✓ Instant Access</span>
                   <span>✓ Free to Play</span>
+                  <span>✓ Offline Mode</span>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row lg:flex-col gap-3 w-full sm:w-auto shrink-0">
                 <a
-                  href="https://groups.google.com/g/vaiiya"
+                  href="https://play.google.com/store/apps/details?id=com.hexmoji"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-metamask bg-violet-500 text-white hover:bg-violet-400 text-center font-bold text-sm shadow-lg shadow-violet-500/20"
                 >
-                  1. Join Google Group
+                  Get HEXMOJI on Google Play
                 </a>
                 <a
-                  href="https://play.google.com/apps/testing/com.hexmoji"
+                  href="https://groups.google.com/g/vaiiya"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-metamask bg-white text-slate-950 hover:bg-slate-100 text-center font-bold text-sm shadow-lg"
                 >
-                  2. Opt-in on Google Play
+                  Join Tester Community
                 </a>
                 <div className="flex flex-col items-center gap-1.5 pt-1">
                   <Link
@@ -262,48 +259,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Latest news */}
-      {latestPosts.length > 0 && (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-card-border">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-wrap items-end justify-between gap-4 mb-10">
-              <div className="space-y-3">
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-serif">Latest News</h2>
-                <p className="text-ink/70 text-base leading-relaxed max-w-xl">
-                  Daily breakthroughs in AI, gaming and robotics — explained simply.
-                </p>
-              </div>
-              <Link href="/news" className="text-sm font-semibold text-[#E25A3C] hover:underline">
-                All news &rarr;
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {latestPosts.map((post) => (
-                <Link
-                  key={post.slug}
-                  href={`/news/${post.slug}`}
-                  className="group bg-white border border-card-border rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
-                >
-                  {post.date && (
-                    <time className="text-[11px] font-semibold text-ink/50 uppercase tracking-wider">
-                      {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-                    </time>
-                  )}
-                  <h3 className="mt-2 text-lg font-bold font-serif leading-snug text-ink group-hover:text-[#E25A3C] transition-colors">
-                    {post.title}
-                  </h3>
-                  {post.excerpt && (
-                    <p className="mt-3 text-ink/60 text-sm leading-relaxed line-clamp-3 flex-grow">{post.excerpt}</p>
-                  )}
-                  <span className="mt-5 text-sm font-semibold text-[#E25A3C] group-hover:underline">Read more &rarr;</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Pillars — agentics.org-style teaser grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-card-border">

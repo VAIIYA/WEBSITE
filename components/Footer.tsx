@@ -8,7 +8,6 @@ const navLinks = [
   { name: 'Android Apps', href: '/apps' },
   { name: 'Mobile Games', href: '/games' },
   { name: 'Web Platforms', href: '/websites' },
-  { name: 'News', href: '/news' },
   { name: 'Podcast', href: '/podcast' },
   { name: 'Portfolio', href: '/portfolio' },
   { name: 'Contact', href: '/contact' },
@@ -31,7 +30,7 @@ export default function Footer() {
                   className="object-cover"
                 />
               </div>
-              <span className="text-2xl font-bold font-serif text-white tracking-tight">VAIIYA</span>
+              <span className="text-2xl font-bold font-pixel text-white tracking-tight">VAIIYA</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed font-normal">
               VAIIYA is an Android-first digital studio engineering high-performance mobile apps, games, and web applications.
@@ -153,6 +152,15 @@ export default function Footer() {
           <div className="flex items-center gap-2 font-medium">
             <span>Android-First Development &bull;</span>
             <span className="text-[#E25A3C]">Digital Excellence</span>
+            <span>&bull;</span>
+            <a
+              href="https://datagoblin.itch.io/monogram"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-slate-300"
+            >
+              Pixel font: Monogram (CC0)
+            </a>
           </div>
         </div>
       </div>

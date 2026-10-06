@@ -17,8 +17,8 @@ const stack = [
 
 export default function GamesPage() {
   const games = portfolioApps.filter((app) => app.category === 'game')
-  const liveGames = games.filter((g) => g.status === 'live' || Boolean(g.playStoreUrl))
-  const betaGames = games.filter((g) => g.status === 'closed-beta' || g.status === 'in-development' || g.comingSoon)
+  const liveGames = games.filter((g) => g.status === 'live' && !g.comingSoon)
+  const betaGames = games.filter((g) => g.status !== 'live')
 
   return (
     <main className="min-h-screen bg-cream text-ink selection:bg-violet-600 selection:text-white">

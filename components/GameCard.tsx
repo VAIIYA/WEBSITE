@@ -3,7 +3,8 @@ import type { PortfolioApp } from '@/lib/portfolio'
 
 export default function GameCard({ game }: { game: PortfolioApp }) {
   const isClosedBeta = game.status === 'closed-beta'
-  const isLive = game.status === 'live' || Boolean(game.playStoreUrl)
+  const rollingOut = Boolean(game.comingSoon) && Boolean(game.playStoreUrl)
+  const isLive = (game.status === 'live' || Boolean(game.playStoreUrl)) && !rollingOut
 
   return (
     <div className="bg-white border border-card-border rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col sm:col-span-2 sm:max-w-md sm:mx-auto w-full">
@@ -23,6 +24,10 @@ export default function GameCard({ game }: { game: PortfolioApp }) {
           <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-emerald-500 text-white text-[10px] font-bold uppercase tracking-widest shadow-sm flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
             Closed Beta Live
+          </span>
+        ) : rollingOut ? (
+          <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-[10px] font-bold uppercase tracking-widest shadow-sm">
+            Rolling out
           </span>
         ) : isLive ? (
           <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-widest text-ink">
@@ -77,7 +82,7 @@ export default function GameCard({ game }: { game: PortfolioApp }) {
                   rel="noopener noreferrer"
                   className="w-full btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold text-center block"
                 >
-                  Get it on Google Play &rarr;
+                  {rollingOut ? 'View on Google Play (rolling out) →' : 'Get it on Google Play →'}
                 </a>
               )}
               {game.appStoreUrl && (
@@ -116,6 +121,16 @@ export default function GameCard({ game }: { game: PortfolioApp }) {
                     </a>
                   )}
                 </div>
+              )}
+              {rollingOut && game.betaGroupUrl && (
+                <a
+                  href={game.betaGroupUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-center text-xs font-bold text-emerald-700 hover:text-emerald-900"
+                >
+                  Join Google Group for early access &rarr;
+                </a>
               )}
             </>
           )}

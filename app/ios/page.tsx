@@ -170,7 +170,7 @@ export default function IosPage() {
           <div className="mt-14 p-8 bg-card border border-card-border rounded-3xl text-center space-y-4">
             <h3 className="text-2xl font-bold font-serif text-ink">Want to test right now on Android?</h3>
             <p className="text-ink/70 text-base max-w-xl mx-auto leading-relaxed">
-              If you have an Android device or tablet, you don&apos;t have to wait. You can play HEXMOJI closed beta right now through our Google Group tester community.
+              If you have an Android device or tablet, you don&apos;t have to wait. You can play HEXMOJI right now on Google Play through our tester community.
             </p>
             <div className="flex justify-center gap-3">
               <Link

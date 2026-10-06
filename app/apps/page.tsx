@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { portfolioApps } from '@/lib/portfolio'
 
 export const metadata: Metadata = {
-  title: 'Android Native Apps',
-  description: 'Native Android apps built with Kotlin and Jetpack Compose — shipped to the Google Play Store.',
+  title: 'Android Apps & Games on Google Play',
+  description: 'Every VAIIYA title live on the Google Play Store — FLAPMOJI, TAPEDECK, EMOJI BLOCKS, MATCHMOJI and HEXMOJI. Native Android apps & games from our verified developer profile.',
 }
 
 const stack = [
@@ -15,8 +15,8 @@ const stack = [
 ]
 
 export default function AppsPage() {
-  const apps = portfolioApps.filter((app) => app.category === 'app')
-  const liveApps = apps.filter((app) => app.status === 'live' || Boolean(app.playStoreUrl))
+  // Every VAIIYA title with a Google Play listing — utility apps and games alike.
+  const liveApps = portfolioApps.filter((app) => Boolean(app.playStoreUrl))
 
   return (
     <main className="min-h-screen bg-cream text-ink selection:bg-blue-600 selection:text-white">
@@ -38,10 +38,15 @@ export default function AppsPage() {
               href="https://play.google.com/store/apps/dev?id=7804895561285369781"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-metamask bg-blue-600 text-white hover:bg-blue-700 text-base font-bold shadow-lg"
+              className="btn-metamask bg-blue-600 text-white hover:bg-blue-700 text-lg font-bold shadow-xl shadow-blue-600/25 scale-105"
             >
-              Google Play Developer Store &rarr;
+              🏪 Our Play Store Profile — All Apps &amp; Games &rarr;
             </a>
+          </div>
+          <p className="mt-4 text-sm text-ink/60 font-medium">
+            One verified developer page for everything we ship: {liveApps.length} titles live &amp; rolling out.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link
               href="/android"
               className="btn-metamask btn-outline-dark text-base font-bold"
@@ -53,6 +58,12 @@ export default function AppsPage() {
               className="btn-metamask bg-card hover:bg-white text-base font-bold"
             >
               🍎 iOS Roadmap
+            </Link>
+            <Link
+              href="/games"
+              className="btn-metamask bg-card hover:bg-white text-base font-bold"
+            >
+              🎮 All Games
             </Link>
           </div>
         </div>
@@ -73,7 +84,7 @@ export default function AppsPage() {
       {/* Live Apps Catalog */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card border-y border-card-border">
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-8">
             <div>
               <span className="text-xs font-bold text-emerald-600 uppercase tracking-widest">
                 Production Releases
@@ -92,19 +103,56 @@ export default function AppsPage() {
             </a>
           </div>
 
+          {/* Prominent Play Store profile banner */}
+          <a
+            href="https://play.google.com/store/apps/dev?id=7804895561285369781"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 rounded-3xl border-2 border-blue-600/20 bg-gradient-to-br from-blue-600 via-blue-700 to-slate-900 p-8 text-white shadow-xl shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:shadow-2xl"
+          >
+            <div className="flex items-center gap-5">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white text-3xl shadow-lg">
+                🏪
+              </div>
+              <div>
+                <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-blue-200">
+                  Verified Developer &bull; VAIIYA
+                </div>
+                <div className="mt-1 text-2xl font-bold font-serif leading-tight">
+                  Get everything on our Play Store profile
+                </div>
+                <div className="mt-1 text-sm text-blue-100/90">
+                  {liveApps.length} titles in one place — follow us for new releases &amp; updates.
+                </div>
+              </div>
+            </div>
+            <span className="shrink-0 rounded-full bg-white px-6 py-3 text-sm font-bold text-blue-700 shadow-lg transition-colors group-hover:bg-blue-50">
+              Open Play Profile &rarr;
+            </span>
+          </a>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {liveApps.map((app) => (
+            {liveApps.map((app) => {
+              const rollingOut = Boolean(app.comingSoon) || app.status === 'in-development'
+              return (
               <div
                 key={app.id}
                 className="bg-white border border-card-border rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
               >
                 <div className={`h-48 bg-gradient-to-br ${app.gradient} p-6 flex flex-col justify-between relative`}>
-                  <div className="flex justify-between items-start">
+                  <div className="flex justify-between items-start gap-2">
                     <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider">
-                      {app.platforms.map((p) => p.toUpperCase()).join(' · ')}
+                      {app.platforms.map((p) => p.toUpperCase()).join(' · ')} &bull; {app.category.toUpperCase()}
                     </span>
-                    <div className="w-10 h-10 rounded-2xl bg-white/20 backdrop-blur border border-white/30 flex items-center justify-center text-white font-bold text-lg">
-                      {app.name.charAt(0)}
+                    <div className="flex items-center gap-2">
+                      {rollingOut && (
+                        <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-widest text-ink">
+                          Rolling out
+                        </span>
+                      )}
+                      <div className="w-10 h-10 rounded-2xl bg-white/20 backdrop-blur border border-white/30 flex items-center justify-center text-white font-bold text-lg">
+                        {app.name.charAt(0)}
+                      </div>
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-white font-serif drop-shadow-md">{app.name}</h3>
@@ -112,6 +160,11 @@ export default function AppsPage() {
                 <div className="p-6 flex flex-col flex-grow justify-between space-y-6">
                   <p className="text-ink/70 text-sm leading-relaxed">{app.description}</p>
                   <div className="space-y-2 pt-4 border-t border-card-border">
+                    {rollingOut && (
+                      <p className="text-[11px] font-semibold text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2">
+                        Rolling out on Google Play — the listing may not be public in every region yet. Try the link again soon or join our tester group for early access.
+                      </p>
+                    )}
                     {app.playStoreUrl && (
                       <a
                         href={app.playStoreUrl}
@@ -121,6 +174,24 @@ export default function AppsPage() {
                       >
                         Get on Google Play Store &rarr;
                       </a>
+                    )}
+                    {app.betaGroupUrl && (
+                      <a
+                        href={app.betaGroupUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full btn-metamask btn-outline-dark text-xs font-bold text-center block"
+                      >
+                        Join Tester Group
+                      </a>
+                    )}
+                    {app.projectUrl && (
+                      <Link
+                        href={app.projectUrl}
+                        className="block text-center text-xs font-bold text-blue-700 hover:text-blue-900 pt-1"
+                      >
+                        More about {app.name} &rarr;
+                      </Link>
                     )}
                     {app.externalUrl && (
                       <a
@@ -135,7 +206,8 @@ export default function AppsPage() {
                   </div>
                 </div>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>

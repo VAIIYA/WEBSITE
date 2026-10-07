@@ -74,8 +74,8 @@ div[id] {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Barlow Condensed', var(--font-heading), sans-serif;
-  font-weight: 700;
+  font-family: 'Grand Hotel', var(--font-heading), cursive;
+  font-weight: 400;
 }
 
 /* Monogram pixel accent — keep glyphs crisp, never anti-aliased into mush */

@@ -38,7 +38,7 @@ module.exports = {
         'gradient-solana-reverse': 'linear-gradient(135deg, #14F195 0%, #9945FF 100%)',
       },
       fontFamily: {
-        serif: ['var(--font-heading)', '"Barlow Condensed"', 'sans-serif'],
+        serif: ['var(--font-heading)', '"Grand Hotel"', 'cursive'],
         sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
         mono: ['var(--font-mono)', '"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
         pixel: ['var(--font-pixel)', '"Monogram"', 'monospace'],

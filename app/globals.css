@@ -44,7 +44,7 @@ body {
 body {
   color: var(--ink);
   background-color: var(--cream);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Space Grotesk', var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -74,16 +74,13 @@ div[id] {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Grand Hotel', var(--font-heading), cursive;
-  font-weight: 400;
+  font-family: 'Space Grotesk', var(--font-heading), sans-serif;
+  font-weight: 700;
 }
 
-/* Monogram pixel accent — keep glyphs crisp, never anti-aliased into mush */
+/* font-pixel now aliases Space Grotesk to keep a single typeface site-wide */
 .font-pixel {
-  font-family: var(--font-pixel), 'Monogram', monospace;
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: unset;
-  font-smooth: never;
+  font-family: 'Space Grotesk', var(--font-pixel), sans-serif;
 }
 
 @keyframes floatSlow {

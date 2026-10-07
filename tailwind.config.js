@@ -38,10 +38,10 @@ module.exports = {
         'gradient-solana-reverse': 'linear-gradient(135deg, #14F195 0%, #9945FF 100%)',
       },
       fontFamily: {
-        serif: ['var(--font-heading)', '"Grand Hotel"', 'cursive'],
-        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
-        mono: ['var(--font-mono)', '"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
-        pixel: ['var(--font-pixel)', '"Monogram"', 'monospace'],
+        serif: ['var(--font-heading)', '"Space Grotesk"', 'sans-serif'],
+        sans: ['var(--font-sans)', '"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', '"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        pixel: ['var(--font-pixel)', '"Space Grotesk"', 'sans-serif'],
       },
       borderRadius: {
         '3xl': '32px',

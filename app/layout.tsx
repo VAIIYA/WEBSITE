@@ -1,32 +1,9 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import './globals.css'
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
-})
-
-const spaceGroteskHeading = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-heading',
-  display: 'swap',
-})
-
-const spaceGroteskMono = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-mono',
-  display: 'swap',
-})
-
-const spaceGroteskPixel = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-pixel',
-  display: 'swap',
-})
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vaiiya.vercel.app'
 
@@ -70,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${spaceGroteskHeading.variable} ${spaceGroteskMono.variable} ${spaceGroteskPixel.variable}`}>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="bg-white text-slate-900 m-0 p-0 antialiased flex flex-col min-h-screen">
         <Header />
         <div className="flex-1">{children}</div>

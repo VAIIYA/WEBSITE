@@ -40,7 +40,7 @@ Built with:
 - **Next.js 14** - React framework (App Router)
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Styling
-- **Poly & Inter** - Self-hosted via `next/font`
+- **Geist** - Self-hosted via the `geist` package (`GeistSans` + `GeistMono`)
 
 ## 📦 Products
 

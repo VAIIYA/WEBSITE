@@ -1,6 +1,7 @@
 export type AppPlatform = 'android' | 'ios' | 'web'
 export type AppCategory = 'app' | 'game' | 'web'
 export type AppStatus = 'live' | 'closed-beta' | 'in-development'
+export type GameEngine = 'unity' | 'native' | 'web'
 
 export interface PortfolioApp {
   id: string
@@ -15,6 +16,8 @@ export interface PortfolioApp {
   /** Fallback gradient used when no image is provided */
   gradient: string
   platforms: AppPlatform[]
+  /** Engine or core framework used */
+  engine?: GameEngine
   /** Which homepage pillar this belongs under: Apps, Games, or Website work */
   category: AppCategory
   /** Release lifecycle status */
@@ -45,7 +48,8 @@ export const portfolioApps: PortfolioApp[] = [
     image: '/games/flapmoji/icon.png',
     featureImage: '/games/flapmoji/feature.png',
     gradient: 'from-sky-400 to-emerald-400',
-    platforms: ['android'],
+    platforms: ['android', 'ios'],
+    engine: 'unity',
     category: 'game',
     status: 'live',
     betaGroupUrl: 'https://groups.google.com/g/vaiiya/c/2zJvHbgUggc',
@@ -60,7 +64,8 @@ export const portfolioApps: PortfolioApp[] = [
       'Kawaii hexxagon strategy board game. Copy to clone or jump two spaces to capture rival emoji pieces. Play vs CPU across 4 difficulties or pass-and-play 2-player, climb 4 board sizes, earn XP, unlock emoji pieces and 5 pastel themes. Offline, portrait, ad-free during matches — live on Google Play.',
     featureImage: '/games/hexmoji/feature.svg',
     gradient: 'from-fuchsia-400 to-violet-500',
-    platforms: ['android'],
+    platforms: ['android', 'ios'],
+    engine: 'unity',
     category: 'game',
     status: 'live',
     betaGroupUrl: 'https://groups.google.com/g/vaiiya',
@@ -75,7 +80,8 @@ export const portfolioApps: PortfolioApp[] = [
     description:
       'Retro voice recorder with a Dieter Rams-inspired tape-deck design. Dual spinning spools, tactile transport controls, live on-device dictation and transcription, and a clean searchable memo library. No bloat — just tap Record. Live on Google Play.',
     gradient: 'from-amber-400 to-orange-600',
-    platforms: ['android'],
+    platforms: ['android', 'ios'],
+    engine: 'native',
     category: 'app',
     status: 'live',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.aistudio.voicememos.tapeqc',
@@ -86,7 +92,8 @@ export const portfolioApps: PortfolioApp[] = [
     description:
       'The cutest block puzzle game. Stack adorable emoji blocks, clear lines, earn XP, rank up and unlock new emoji themes. Endless, relaxing and offline-friendly — easy to learn, hard to master. Live on Google Play.',
     gradient: 'from-pink-400 to-rose-500',
-    platforms: ['android'],
+    platforms: ['android', 'ios'],
+    engine: 'unity',
     category: 'game',
     status: 'live',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.aistudio.emojiblocks.xqkztv',
@@ -97,7 +104,8 @@ export const portfolioApps: PortfolioApp[] = [
     description:
       'Cheerful emoji match-3 puzzler from VAIIYA. Swap, match and blast your way through vibrant emoji boards. Rolling out to Google Play now — join the tester community for early access.',
     gradient: 'from-emerald-400 to-teal-600',
-    platforms: ['android'],
+    platforms: ['android', 'ios'],
+    engine: 'unity',
     category: 'game',
     status: 'in-development',
     betaGroupUrl: 'https://groups.google.com/g/vaiiya',

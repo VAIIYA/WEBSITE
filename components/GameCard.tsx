@@ -16,9 +16,16 @@ export default function GameCard({ game }: { game: PortfolioApp }) {
         ) : (
           <div className={`absolute inset-0 bg-gradient-to-br ${game.gradient}`} />
         )}
-        <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider">
-          {game.platforms.map((p) => p.toUpperCase()).join(' · ')} GAME
-        </span>
+          <div className="absolute top-4 left-4 flex flex-wrap gap-1.5">
+            <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider">
+              {game.platforms.map((p) => p.toUpperCase()).join(' · ')}
+            </span>
+            {game.engine === 'unity' && (
+              <span className="px-2.5 py-1 rounded-full bg-violet-950/80 backdrop-blur-md border border-violet-400/40 text-violet-200 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
+                🕹️ Unity
+              </span>
+            )}
+          </div>
 
         {isClosedBeta ? (
           <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-emerald-500 text-white text-[10px] font-bold uppercase tracking-widest shadow-sm flex items-center gap-1.5">

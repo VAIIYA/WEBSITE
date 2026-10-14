@@ -4,18 +4,27 @@ import { portfolioApps } from '@/lib/portfolio';
 
 function PlatformBadge({ platform }: { platform: string }) {
   const styles: Record<string, string> = {
-    android: 'bg-green-50 text-green-700 border-green-100',
-    ios: 'bg-white text-ink/70 border-card-border',
-    web: 'bg-blue-50 text-blue-700 border-blue-100',
+    android: 'bg-emerald-50 text-emerald-700 border-emerald-200/80',
+    ios: 'bg-blue-50 text-blue-700 border-blue-200/80',
+    web: 'bg-amber-50 text-amber-700 border-amber-200/80',
   };
   const labels: Record<string, string> = {
-    android: 'Android',
-    ios: 'iOS',
-    web: 'Web',
+    android: '🤖 Android',
+    ios: '🍎 iOS',
+    web: '🌐 Web',
   };
   return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest border ${styles[platform] || ''}`}>
+    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border shadow-xs ${styles[platform] || 'bg-white text-ink/70 border-card-border'}`}>
       {labels[platform] || platform}
+    </span>
+  );
+}
+
+function EngineBadge({ engine }: { engine?: string }) {
+  if (!engine || engine !== 'unity') return null;
+  return (
+    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-900/90 backdrop-blur-sm text-slate-100 border border-slate-700 shadow-xs">
+      🕹️ Unity
     </span>
   );
 }
@@ -67,10 +76,11 @@ export default function Portfolio() {
                     </div>
                   ) : null}
 
-                  <div className="absolute bottom-4 left-4 flex gap-2">
+                  <div className="absolute bottom-4 left-4 flex flex-wrap gap-1.5 z-10">
                     {app.platforms.map((platform) => (
                       <PlatformBadge key={platform} platform={platform} />
                     ))}
+                    <EngineBadge engine={app.engine} />
                   </div>
                 </div>
 

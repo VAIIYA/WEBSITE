@@ -13,11 +13,12 @@ const navLinks = [
     hover: 'hover:text-emerald-700',
     highlight: true,
   },
-  { href: '/podcast', name: 'Podcast', mobile: '🎙️ Podcast', hover: 'hover:text-violet-600' },
-  { href: '/websites', name: 'Website', mobile: '🌐 Website Building', hover: 'hover:text-[#E25A3C]' },
-  { href: '/apps', name: 'Apps', mobile: '📱 Android Apps', hover: 'hover:text-blue-600' },
-  { href: '/games', name: 'Games', mobile: '🎮 Mobile Games', hover: 'hover:text-violet-600' },
-  { href: '/portfolio', name: 'Portfolio', mobile: '🗂️ Portfolio', hover: 'hover:text-[#E25A3C]' },
+  { href: '/apps', name: 'Apps', mobile: '📱 Android & iOS Apps', hover: 'hover:text-emerald-600' },
+  { href: '/games', name: 'Games', mobile: '🎮 Unity & Mobile Games', hover: 'hover:text-violet-600' },
+  { href: '/ios', name: 'iOS', mobile: '🍎 iOS Engineering', hover: 'hover:text-blue-600' },
+  { href: '/websites', name: 'Web', mobile: '🌐 Web Platforms', hover: 'hover:text-[#E25A3C]' },
+  { href: '/podcast', name: 'Podcast', mobile: '🎙️ Podcast', hover: 'hover:text-amber-600' },
+  { href: '/portfolio', name: 'Portfolio', mobile: '🗂️ Portfolio', hover: 'hover:text-slate-900' },
 ]
 
 export default function Header() {
@@ -36,15 +37,15 @@ export default function Header() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-md shadow-md py-3 border-b border-slate-100'
-          : 'bg-white/70 backdrop-blur-sm py-5 border-b border-transparent'
+          ? 'bg-[#F4EFE6]/95 backdrop-blur-md shadow-sm py-3 border-b border-[#D8CEBA]'
+          : 'bg-[#F4EFE6]/80 backdrop-blur-xs py-4 border-b border-[#D8CEBA]/40'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 rounded-2xl overflow-hidden shadow-md group-hover:scale-105 transition-transform">
+          <Link href="/" className="flex items-center gap-3.5 group">
+            <div className="relative w-10 h-10 rounded-xl overflow-hidden border border-[#D8CEBA] shadow-xs group-hover:border-[#D9532F] transition-colors">
               <Image
                 src="/v-logo.jpg"
                 alt="VAIIYA Logo"
@@ -53,32 +54,37 @@ export default function Header() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold tracking-tight text-slate-900 font-pixel leading-none">
-                VAIIYA
-              </span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-[#E25A3C] font-bold mt-0.5">
-                WE. AS ONE.
+              <div className="flex items-center gap-2">
+                <span className="text-xl font-black tracking-wider text-[#1A1815] font-mono leading-none">
+                  VAIIYA
+                </span>
+                <span className="text-[9px] font-mono font-bold px-1.5 py-0.2 bg-[#EAE3D2] border border-[#D8CEBA] text-[#1A1815]/70 rounded">
+                  SYS:AI
+                </span>
+              </div>
+              <span className="text-[9px] uppercase tracking-[0.22em] text-[#D9532F] font-mono font-bold mt-1">
+                DELOS // ARC DIVISION
               </span>
             </div>
           </Link>
 
           {/* Navigation Links */}
-          <div className="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/60 text-sm font-medium">
+          <div className="hidden lg:flex items-center gap-1 bg-[#EAE3D2]/90 p-1.5 rounded-xl border border-[#D8CEBA] text-xs font-mono font-semibold">
             {navLinks.map((link) =>
               link.highlight ? (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 font-semibold transition-all shadow-sm"
+                  className="relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[#1A1815] bg-[#E59B27]/20 hover:bg-[#E59B27]/30 border border-[#E59B27]/60 font-bold transition-all shadow-xs"
                 >
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#E59B27] animate-pulse" />
                   <span>{link.name}</span>
                 </Link>
               ) : (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 rounded-full text-slate-700 hover:bg-white transition-all ${link.hover}`}
+                  className={`px-3 py-1.5 rounded-lg text-[#1A1815]/80 hover:text-[#1A1815] hover:bg-white/80 transition-all ${link.hover}`}
                 >
                   {link.name}
                 </Link>
@@ -90,9 +96,9 @@ export default function Header() {
           <div className="hidden sm:flex items-center gap-3">
             <Link
               href="/contact"
-              className="btn-metamask btn-outline-dark !py-2.5 !px-5 text-xs uppercase tracking-wider"
+              className="btn-metamask btn-orange !py-2.5 !px-5 text-[11px]"
             >
-              🛡️ Contact
+              [ TRANSMIT // CONTACT ]
             </Link>
           </div>
 

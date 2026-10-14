@@ -4,15 +4,15 @@ import { portfolioApps } from '@/lib/portfolio'
 import GameCard from '@/components/GameCard'
 
 export const metadata: Metadata = {
-  title: 'Android Mobile Games',
-  description: 'Native Android mobile games engineered for smooth 60fps+ gameplay from core loop to Google Play Store launch.',
+  title: 'Unity & Mobile Games — Android & iOS',
+  description: 'Fast, playful mobile games powered by Unity and native performance — live on Google Play, with iOS builds in active development.',
 }
 
 const stack = [
-  { label: 'Android-First Gaming', detail: 'Tuned for touch & hardware performance' },
-  { label: 'Smooth 60fps+ Gameplay', detail: 'Fluid physics loops and responsive inputs' },
-  { label: 'Google Play Store', detail: 'Verified developer & published titles' },
-  { label: 'Closed Beta Program', detail: 'Google Group early testing community' },
+  { label: 'Unity & Custom Loops', detail: 'Cross-platform physics & 60fps+ frame rates' },
+  { label: 'Android-First Launch', detail: 'Tuned for touch responsiveness & Google Play' },
+  { label: 'iOS Roadmap', detail: 'SwiftUI & GameKit App Store releases underway' },
+  { label: 'Closed Beta Community', detail: 'Google Group early testing & balance feedback' },
 ]
 
 export default function GamesPage() {
@@ -25,14 +25,18 @@ export default function GamesPage() {
       {/* Hero */}
       <section className="relative pt-20 pb-16 bg-card border-b border-card-border overflow-hidden bg-dot-grid">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-100 border border-violet-200 text-violet-800 text-xs font-bold uppercase tracking-widest mb-6">
-            🎮 ANDROID-FIRST MOBILE GAMES
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-violet-100 border border-violet-200 text-violet-800 text-xs font-bold uppercase tracking-widest mb-6">
+            <span>🕹️ POWERED BY UNITY</span>
+            <span>&bull;</span>
+            <span>🤖 ANDROID-FIRST</span>
+            <span>&bull;</span>
+            <span>🍎 iOS IN DEVELOPMENT</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold font-serif mb-6 leading-tight">
-            Native <span className="italic text-violet-600">Mobile</span> Games
+            Unity &amp; <span className="italic text-violet-600">Mobile</span> Games
           </h1>
-          <p className="text-xl text-ink/70 leading-relaxed max-w-2xl mx-auto mb-8">
-            Fast, fun, and built to last — mobile games engineered natively with an Android-first approach, from core gameplay loop to Google Play launch.
+          <p className="text-xl text-ink/70 leading-relaxed max-w-3xl mx-auto mb-8">
+            Fast, fun, and built to last. We craft arcade and puzzle titles using Unity and native game architectures — currently live on Google Play with Apple iOS ports in active production.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -50,6 +54,12 @@ export default function GamesPage() {
             >
               Google Play Developer Page &rarr;
             </a>
+            <Link
+              href="/ios"
+              className="btn-metamask bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 text-base font-semibold"
+            >
+              🍎 iOS Game Roadmap
+            </Link>
           </div>
         </div>
       </section>
@@ -58,7 +68,7 @@ export default function GamesPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4">
           {stack.map((s) => (
-            <div key={s.label} className="p-5 bg-card rounded-2xl border border-card-border">
+            <div key={s.label} className="p-5 bg-white border border-card-border rounded-2xl shadow-sm hover:shadow-md transition-shadow">
               <div className="font-bold text-violet-600 font-serif text-sm">{s.label}</div>
               <div className="text-xs text-ink/60 font-medium mt-1">{s.detail}</div>
             </div>

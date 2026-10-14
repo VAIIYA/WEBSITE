@@ -15,14 +15,14 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-white border-t border-slate-800">
+    <footer className="bg-[#1A1815] text-[#F4EFE6] border-t-2 border-[#D9532F]/60 crt-overlay">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           
           {/* Brand Column */}
           <div className="md:col-span-1 space-y-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-9 h-9 rounded-xl overflow-hidden shadow">
+              <div className="relative w-9 h-9 rounded-xl overflow-hidden border border-[#3D3831] shadow">
                 <Image
                   src="/v-logo.jpg"
                   alt="VAIIYA Logo"
@@ -30,28 +30,31 @@ export default function Footer() {
                   className="object-cover"
                 />
               </div>
-              <span className="text-2xl font-bold font-pixel text-white tracking-tight">VAIIYA</span>
+              <div className="flex flex-col">
+                <span className="text-xl font-black font-mono text-[#F4EFE6] tracking-wider">VAIIYA</span>
+                <span className="text-[9px] font-mono text-[#D9532F] uppercase tracking-widest">DELOS // ARC DIVISION</span>
+              </div>
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed font-normal">
-              VAIIYA is an Android-first digital studio engineering high-performance mobile apps, games, and web applications.
+            <p className="text-[#D8CEBA]/70 text-xs leading-relaxed font-sans">
+              Autonomous digital studio synthesizing high-precision 60+ FPS games with Unity, native Android software, and Apple iOS platforms. Engineered alongside Claude Code &amp; Antigravity.
             </p>
-            <div className="pt-2 flex flex-col gap-2">
+            <div className="pt-2 flex flex-col gap-2 font-mono">
               <a
                 href="https://play.google.com/store/apps/dev?id=7804895561285369781"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs text-emerald-400 hover:text-emerald-300 font-semibold"
+                className="inline-flex items-center gap-2 text-xs text-[#E59B27] hover:text-white font-semibold"
               >
-                <span>Google Play Developer Profile</span>
+                <span>[ GOOGLE PLAY // VERIFIED DEV ]</span>
                 <span>&rarr;</span>
               </a>
               <a
                 href="https://groups.google.com/g/vaiiya"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs text-violet-400 hover:text-violet-300 font-semibold"
+                className="inline-flex items-center gap-2 text-xs text-[#D9532F] hover:text-white font-semibold"
               >
-                <span>Google Group Tester Community</span>
+                <span>[ SQUAD TESTER PROTOCOL ]</span>
                 <span>&rarr;</span>
               </a>
             </div>
@@ -136,11 +139,12 @@ export default function Footer() {
               Core Technologies
             </h3>
             <div className="flex flex-wrap gap-2 text-xs">
+              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Unity 3D / 2D</span>
               <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Kotlin &amp; Compose</span>
-              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Android Native</span>
-              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Next.js / React</span>
               <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Swift &amp; SwiftUI</span>
-              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Mobile Games</span>
+              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Android &amp; iOS</span>
+              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Next.js / React</span>
+              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">60+ FPS Games</span>
             </div>
           </div>
 

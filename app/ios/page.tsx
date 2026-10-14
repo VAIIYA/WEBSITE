@@ -105,23 +105,33 @@ export default function IosPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white border border-card-border rounded-3xl p-6 shadow-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white border border-card-border rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-2xl mb-2">⚡</div>
               <h3 className="text-xl font-bold font-serif mb-2 text-ink">Swift &amp; Concurrency</h3>
               <p className="text-ink/70 text-sm leading-relaxed">
                 Modern Swift utilizing async/await, Actors, and Sendable protocols for memory safety and zero data races.
               </p>
             </div>
-            <div className="bg-white border border-card-border rounded-3xl p-6 shadow-sm">
+            <div className="bg-white border border-card-border rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-2xl mb-2">🎨</div>
               <h3 className="text-xl font-bold font-serif mb-2 text-ink">SwiftUI &amp; Metal</h3>
               <p className="text-ink/70 text-sm leading-relaxed">
                 Fluid declarative interfaces integrated with Metal shaders for high frame-rate particle systems and buttery 120Hz scrolling.
               </p>
             </div>
-            <div className="bg-white border border-card-border rounded-3xl p-6 shadow-sm">
+            <div className="bg-white border border-card-border rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-2xl mb-2">🕹️</div>
+              <h3 className="text-xl font-bold font-serif mb-2 text-ink">Unity &amp; GameKit</h3>
+              <p className="text-ink/70 text-sm leading-relaxed">
+                Cross-platform Unity builds deployed with iOS native bridges, Game Center achievements, and low-latency touch controls.
+              </p>
+            </div>
+            <div className="bg-white border border-card-border rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-2xl mb-2">🍏</div>
               <h3 className="text-xl font-bold font-serif mb-2 text-ink">Apple Ecosystem</h3>
               <p className="text-ink/70 text-sm leading-relaxed">
-                Deep integrations with Game Center, StoreKit 2 in-app purchases, Dynamic Island, and native Widgets.
+                Deep integrations with StoreKit 2 in-app purchases, haptics, Dynamic Island, and native home screen Widgets.
               </p>
             </div>
           </div>

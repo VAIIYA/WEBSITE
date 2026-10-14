@@ -3,23 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --cream: #FEFBF6;
-  --ink: #1F1F1F;
-  --coral: #E25A3C;
-  --coral-hover: #cf4c30;
-  --card: #F6F3EF;
-  --card-border: #EDE8E1;
+  --cream: #F4EFE6;
+  --ink: #1A1815;
+  --coral: #D9532F;
+  --coral-hover: #BF4120;
+  --card: #EAE3D2;
+  --card-border: #D8CEBA;
+  --amber-retro: #E59B27;
+  --olive-retro: #5A6855;
+  --cyan-retro: #38A3A5;
 
-  --metamask-orange: #E25A3C;
-  --metamask-orange-hover: #cf4c30;
-  --metamask-purple: #1F1F1F;
-  --metamask-black: #1F1F1F;
-  --metamask-gray-50: #F6F3EF;
-  --metamask-gray-100: #EDE8E1;
-  --metamask-gray-200: #e2e8f0;
-  --solana-purple: #9945FF;
-  --solana-green: #14F195;
-  --agentic-cyan: #00f0ff;
+  --metamask-orange: #D9532F;
+  --metamask-orange-hover: #BF4120;
+  --metamask-purple: #1A1815;
+  --metamask-black: #1A1815;
+  --metamask-gray-50: #EAE3D2;
+  --metamask-gray-100: #D8CEBA;
+  --metamask-gray-200: #C5BAA3;
 }
 
 * {
@@ -49,18 +49,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Background Soft Subtle Gradient */
-.bg-mesh-pattern {
-  background-image:
-    radial-gradient(at 0% 0%, rgba(226, 90, 60, 0.08) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(31, 31, 31, 0.05) 0px, transparent 50%),
-    radial-gradient(at 50% 100%, rgba(226, 90, 60, 0.05) 0px, transparent 50%);
+/* Westworld / Arc Raiders Blueprint Grid */
+.bg-dot-grid {
+  background-image: 
+    linear-gradient(to right, rgba(26, 24, 21, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26, 24, 21, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-/* Dot-grid decorative background, à la agentics.org hero */
-.bg-dot-grid {
-  background-image: radial-gradient(circle, rgba(31, 31, 31, 0.14) 1.5px, transparent 1.5px);
-  background-size: 36px 36px;
+/* Subtle CRT Scanline effect on dark elements */
+.crt-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 14, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
 }
 
 a {
@@ -116,22 +124,81 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-metamask {
-  @apply inline-flex items-center justify-center font-semibold rounded-full px-8 py-3.5 transition-all duration-300 active:scale-95 text-sm;
+  @apply inline-flex items-center justify-center font-mono font-bold tracking-wider rounded-xl px-7 py-3 transition-all duration-200 active:scale-95 text-xs uppercase;
 }
 
 .btn-orange {
-  @apply bg-[#E25A3C] text-white hover:bg-[#cf4c30] shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 hover:-translate-y-0.5;
+  @apply bg-[#D9532F] text-white hover:bg-[#BF4120] shadow-md hover:-translate-y-0.5 border border-[#BF4120];
 }
 
 .btn-purple {
-  @apply bg-[#1F1F1F] text-white hover:bg-[#000000] shadow-lg shadow-black/20 hover:shadow-black/30 hover:-translate-y-0.5;
+  @apply bg-[#1A1815] text-[#F4EFE6] hover:bg-black shadow-md hover:-translate-y-0.5 border border-black;
 }
 
 .btn-outline-dark {
-  @apply bg-white text-slate-900 border-2 border-slate-200 hover:border-slate-900 hover:bg-slate-900 hover:text-white shadow-sm hover:-translate-y-0.5;
+  @apply bg-white text-[#1A1815] border-2 border-[#D8CEBA] hover:border-[#1A1815] hover:bg-[#1A1815] hover:text-[#F4EFE6] shadow-sm hover:-translate-y-0.5;
 }
 
 .card-playful {
-  @apply bg-white border border-slate-200/80 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300 hover:-translate-y-1;
+  @apply bg-white border border-[#D8CEBA] rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5;
+}
+
+/* Westworld / Arc Raiders Tactical Corner Framing */
+.tactical-box {
+  position: relative;
+  background: #F9F6F0;
+  border: 1px solid #D8CEBA;
+}
+
+.tactical-box::before,
+.tactical-box::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+}
+
+.tactical-box::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #D9532F;
+  border-left: 2px solid #D9532F;
+}
+
+.tactical-box::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid #D9532F;
+  border-right: 2px solid #D9532F;
+}
+
+/* Telemetry Badge */
+.telemetry-tag {
+  @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 font-mono text-[10px] uppercase font-bold tracking-widest border;
+}
+
+.glow-card {
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(217, 83, 47, 0.6), rgba(229, 155, 39, 0.5), rgba(90, 104, 85, 0.5));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.glow-card:hover::before {
+  opacity: 1;
 }
 

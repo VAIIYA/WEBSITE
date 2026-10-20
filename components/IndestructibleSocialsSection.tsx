@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { socialLinks } from '@/lib/socialLinks'
 
-const EMAIL = 'contact@vaiiya.com'
+const EMAIL = 'vaiiya@googlegroups.com'
 
 export default function IndestructibleSocialsSection() {
   const [copiedEmail, setCopiedEmail] = useState(false)

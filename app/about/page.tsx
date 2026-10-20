@@ -1,159 +1,95 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'VAIIYA is a digital studio building high-performance websites, native Android & iOS apps, and mobile games.',
+  description: 'VAIIYA is a digital studio building high-performance native Android & iOS apps and mobile games.',
 }
 
+const principles = [
+  {
+    title: 'Performance',
+    text: 'Native apps deliver smooth interactions and full access to device capabilities, so the product feels as good as it looks.',
+  },
+  {
+    title: 'Long-term value',
+    text: 'One clear vision, maintained with care. Scalable architecture that grows with your product instead of fighting it.',
+  },
+  {
+    title: 'Reach',
+    text: 'Google Play and the App Store connect your app to billions of people around the world.',
+  },
+]
+
 export default function AboutPage() {
-    return (
-        <main className="min-h-screen">
+  return (
+    <main className="bg-ivory text-ink">
+      <PageHero
+        eyebrow="About VAIIYA"
+        title="A studio for apps and games."
+        description="We don’t just write code. We craft experiences that feel great to use."
+      >
+        <Link href="/portfolio" className="btn btn-dark">View portfolio</Link>
+      </PageHero>
 
-            {/* Hero Section */}
-            <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-dot-grid">
-                <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="text-center">
-                        <h1 className="text-5xl sm:text-7xl font-serif mb-8 leading-tight">
-                            Crafting High-Vibe <br />
-                            <span className="text-metamask-orange">Websites, Apps &amp; Games.</span>
-                        </h1>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            VAIIYA is a digital studio building high-performance websites, native Android &amp; iOS apps, and mobile games. We don&apos;t just write code; we craft experiences that feel great to use.
-                        </p>
-                    </div>
-                </div>
+      <section className="border-y border-[#E8E6DC]">
+        <div className="mx-auto grid max-w-site grid-cols-1 gap-8 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-28">
+          <p className="eyebrow lg:col-span-3">How we build</p>
+          <div className="space-y-8 lg:col-span-9">
+            <p className="font-serif text-3xl leading-[1.2] sm:text-[40px]">
+              Every project starts with one question: what should this feel like to use?
+            </p>
+            <div className="grid grid-cols-1 gap-8 text-[17px] leading-relaxed text-[#3D3D3A] md:grid-cols-2">
+              <p>
+                From there we design, build and ship — native apps and mobile games — with the same
+                attention to detail.
+              </p>
+              <p>
+                We use modern tooling, including AI-assisted workflows, to move fast without cutting corners. But the
+                tools are just tools. What ships is judged on craft: does it feel fast, does it feel right, would we
+                use it ourselves.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                {/* Background Decorative Element */}
-                <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-metamask-orange/5 rounded-full blur-3xl opacity-50"></div>
-                <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-96 h-96 bg-metamask-purple/5 rounded-full blur-3xl opacity-50"></div>
-            </section>
+      <section className="mx-auto max-w-site px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+        <h2 className="mb-12 font-serif text-4xl leading-tight sm:text-5xl">Why native?</h2>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          {principles.map((p, i) => (
+            <div key={p.title} className="rounded-2xl bg-[#F0EEE6] p-7">
+              <span className="font-mono text-xs text-[#87867F]">0{i + 1}</span>
+              <h3 className="mb-3 mt-8 font-serif text-2xl">{p.title}</h3>
+              <p className="text-[15px] leading-relaxed text-[#3D3D3A]">{p.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-            {/* How We Build */}
-            <section className="py-24 bg-metamask-gray-50/50 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <h2 className="text-4xl font-serif mb-6">How We Build</h2>
-                            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-                                <p>
-                                    Every project starts with the same question: what should this feel like to use? From there we design, build, and ship &mdash; websites, native apps, and mobile games &mdash; with the same obsessive attention to detail.
-                                </p>
-                                <p>
-                                    We use modern tooling, including AI-assisted workflows, to move fast without cutting corners. But the tools are just tools. What ships is judged on craft: does it feel fast, does it feel right, would we use it ourselves.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="aspect-square bg-gradient-to-br from-metamask-purple to-metamask-orange rounded-3xl opacity-10 blur-2xl absolute inset-0 transform rotate-3"></div>
-                            <div className="relative bg-white border border-metamask-gray-100 p-8 rounded-3xl shadow-xl">
-                                <div className="flex items-center gap-4 mb-8">
-                                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                                    <div className="w-3 h-3 rounded-full bg-amber-400"></div>
-                                    <div className="w-3 h-3 rounded-full bg-emerald-400"></div>
-                                </div>
-                                <div className="space-y-4 font-mono text-sm uppercase tracking-wider text-metamask-purple/60">
-                                    <div className="flex gap-4">
-                                        <span className="text-metamask-orange">01</span>
-                                        <span>Initialize Vision</span>
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <span className="text-metamask-orange">02</span>
-                                        <span>Design &amp; Architecture</span>
-                                    </div>
-                                    <div className="flex gap-4 pl-4 border-l border-metamask-gray-100">
-                                        <span>- Platform: Web, Android &amp; iOS</span>
-                                    </div>
-                                    <div className="flex gap-4 pl-4 border-l border-metamask-gray-100">
-                                        <span>- Focus: Speed &amp; Polish</span>
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <span className="text-metamask-orange">03</span>
-                                        <span>Build &amp; Ship...</span>
-                                    </div>
-                                    <div className="flex gap-4 text-metamask-orange animate-pulse">
-                                        <span>&gt; Status: High Vibe Detected</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <section className="bg-ink text-ivory">
+        <div className="mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 lg:py-32">
+          <p className="eyebrow !text-[#B0AEA5]">Our vision</p>
+          <p className="mt-6 font-serif text-3xl leading-[1.25] sm:text-4xl">
+            We believe the future of software isn’t just about utility, but about how it makes you feel. Meticulous
+            engineering and strong product intuition make apps and games that feel like magic.
+          </p>
+        </div>
+      </section>
 
-            {/* The Native Advantage */}
-            <section className="py-24 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto text-center">
-                    <h2 className="text-4xl font-serif mb-16">Why Native?</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="card-vibe p-10">
-                            <div className="w-14 h-14 bg-metamask-orange/10 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                                <svg className="w-8 h-8 text-metamask-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-medium mb-4">Unmatched Performance</h3>
-                            <p className="text-gray-600">Native apps deliver buttery-smooth interactions and full access to device capabilities for real-world impact.</p>
-                        </div>
-
-                        <div className="card-vibe p-10">
-                            <div className="w-14 h-14 bg-metamask-purple/10 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                                <svg className="w-8 h-8 text-metamask-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-medium mb-4">Long-Term Value</h3>
-                            <p className="text-gray-600">One codebase vision, maintained with care. Scalable architecture that grows with your product.</p>
-                        </div>
-
-                        <div className="card-vibe p-10">
-                            <div className="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                                <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.3 2.3-8.636-8.632z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-medium mb-4">Ecosystem Reach</h3>
-                            <p className="text-gray-600">Google Play and the App Store connect your app to billions of users worldwide.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Our Process */}
-            <section className="py-24 bg-metamask-purple text-white px-4 sm:px-6 lg:px-8">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl font-serif mb-8 text-white">The VAIIYA Vision</h2>
-                    <p className="text-xl text-purple-100 leading-relaxed mb-12">
-                        &quot;We believe the future of software isn&apos;t just about functional utility, but about how it makes you feel. By combining meticulous engineering with strong product intuition, we create websites, apps, and games that feel like magic.&quot;
-                    </p>
-                    <div className="h-px w-24 bg-metamask-orange mx-auto mb-12"></div>
-                    <div className="flex flex-wrap justify-center gap-8 italic text-purple-200">
-                        <span>#Websites</span>
-                        <span>#Apps</span>
-                        <span>#Games</span>
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="py-24 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div className="bg-metamask-gray-50 rounded-[40px] p-8 md:p-16 text-center border border-metamask-gray-100">
-                        <h2 className="text-4xl font-serif mb-6">Ready to join the vibe?</h2>
-                        <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-                            Explore our portfolio or reach out to see how we can bring your app idea to life.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link href="/portfolio" className="btn-primary">
-                                View Portfolio
-                            </Link>
-                            <a href="https://x.com/VAIIYA_MEDIA" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                                Follow @VAIIYA_MEDIA
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    )
+      <section className="mx-auto max-w-site px-4 py-24 text-center sm:px-6 lg:px-10 lg:py-32">
+        <h2 className="mx-auto max-w-2xl font-serif text-4xl leading-tight sm:text-5xl">Want to build something together?</h2>
+        <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[#3D3D3A]">
+          Explore our portfolio or get in touch to see how we can bring your idea to life.
+        </p>
+        <div className="mt-10 flex flex-wrap justify-center gap-3">
+          <Link href="/contact" className="btn btn-dark">Contact us</Link>
+          <a href="https://x.com/VAIIYA_MEDIA" target="_blank" rel="noopener noreferrer" className="btn btn-light">
+            Follow @VAIIYA_MEDIA
+          </a>
+        </div>
+      </section>
+    </main>
+  )
 }

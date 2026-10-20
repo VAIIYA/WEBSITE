@@ -65,7 +65,7 @@ export default function OpenGraphImage() {
           </div>
         </div>
         <div style={{ fontSize: 42, fontFamily: 'Georgia, serif', color: '#111827', textAlign: 'center', padding: '0 80px' }}>
-          Websites, Apps &amp; Games.
+          Apps &amp; Games.
         </div>
         <div style={{ fontSize: 26, color: '#4b5563', marginTop: 16 }}>
           Crafted with precision.

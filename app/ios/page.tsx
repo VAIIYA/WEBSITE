@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import PageHero from '@/components/PageHero'
+import FeatureList from '@/components/FeatureList'
 
 export const metadata: Metadata = {
   title: 'iOS Engineering & Product Roadmap',
@@ -20,177 +22,107 @@ const IOS_ROADMAP = [
     eta: 'Following Android Beta Cycle',
     desc: 'One-tap arcade physics runner built natively with SpriteKit/Swift for zero input latency on ProMotion 120Hz displays.',
   },
-  {
-    title: 'VYNDER (iOS)',
-    status: 'Design Prototype',
-    eta: 'Future Roadmap',
-    desc: 'Web3-integrated mobile dating experience with native biometric authentication and Apple Wallet integration.',
-  },
+]
+
+const IOS_STACK = [
+  { label: 'Swift & Concurrency', detail: 'Modern Swift with async/await, Actors and Sendable for memory safety and zero data races.' },
+  { label: 'SwiftUI & Metal', detail: 'Fluid declarative interfaces with Metal shaders for high frame-rate effects and 120Hz scrolling.' },
+  { label: 'Unity & GameKit', detail: 'Unity builds with iOS native bridges, Game Center achievements and low-latency touch controls.' },
+  { label: 'Apple ecosystem', detail: 'StoreKit 2 in-app purchases, haptics, Dynamic Island and native home screen widgets.' },
 ]
 
 export default function IosPage() {
   return (
-    <main className="min-h-screen bg-cream text-ink selection:bg-blue-600 selection:text-white">
-      {/* Hero Section */}
-      <section className="relative pt-20 pb-16 bg-card border-b border-card-border overflow-hidden bg-dot-grid">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 border border-blue-300 text-blue-800 text-xs font-bold uppercase tracking-widest mb-6">
-            🍎 SWIFT &bull; SWIFTUI &bull; APPLE PLATFORMS
-          </div>
+    <main className="bg-ivory text-ink">
+      <PageHero
+        eyebrow="iOS"
+        title="iOS engineering and roadmap."
+        description="Apple engineering with Swift and SwiftUI — and a transparent look at what’s coming to the App Store."
+      >
+        <Link href="/android" className="btn btn-dark">Active Android releases &rarr;</Link>
+        <Link href="/contact" className="btn btn-light">Join the iOS waitlist</Link>
+      </PageHero>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-serif mb-6 leading-tight">
-            iOS Engineering &amp; <span className="italic text-blue-600">Roadmap</span>
-          </h1>
-
-          <p className="text-xl sm:text-2xl text-ink/70 leading-relaxed max-w-3xl mx-auto mb-10 font-serif">
-            Full-stack Apple engineering with Swift and SwiftUI. Here is our transparent philosophy and upcoming App Store roadmap.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/android"
-              className="btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-base font-bold shadow-lg"
-            >
-              🤖 Explore Our Active Android Releases &rarr;
-            </Link>
-            <Link
-              href="/contact"
-              className="btn-metamask btn-outline-dark text-base font-bold"
-            >
-              Join iOS Notification Waitlist
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Transparency Note */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white border-2 border-blue-100 rounded-3xl p-8 sm:p-10 shadow-sm space-y-4">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">💡</span>
-              <h2 className="text-2xl font-bold font-serif text-ink">Why We Are Android-First Today</h2>
-            </div>
-            <p className="text-ink/70 text-base sm:text-lg leading-relaxed">
-              At VAIIYA, we believe in releasing polished, thoroughly tested software rather than rushed cross-platform ports. Android allows us to run agile closed beta cycles through our{' '}
-              <a
-                href="https://groups.google.com/g/vaiiya"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-emerald-700 underline underline-offset-2 hover:text-emerald-900"
-              >
-                Google Group community
-              </a>
-              , deploy daily patches without review friction, and perfect gameplay feel directly with real players.
+      <section className="border-y border-[#E8E6DC]">
+        <div className="mx-auto grid max-w-site grid-cols-1 gap-8 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-28">
+          <p className="eyebrow lg:col-span-3">Why Android-first</p>
+          <div className="space-y-6 lg:col-span-9">
+            <p className="font-serif text-3xl leading-[1.2] sm:text-[40px]">
+              We release polished, thoroughly tested software — not rushed cross-platform ports.
             </p>
-            <p className="text-ink/70 text-base sm:text-lg leading-relaxed">
-              Once our Android games and apps hit peak stability and feature maturity, we bring them to iOS with dedicated native Swift &amp; SwiftUI builds — engineered without third-party bridging layers.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* iOS Technical Capabilities */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card border-y border-card-border">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-            <span className="text-xs font-bold text-blue-600 uppercase tracking-widest">
-              Native Apple Craftsmanship
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-serif tracking-tight">
-              Our iOS Tech Stack
-            </h2>
-            <p className="text-ink/70 text-base leading-relaxed">
-              When we build for iOS, we write native code that feels immediately at home in the Apple ecosystem.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white border border-card-border rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-2xl mb-2">⚡</div>
-              <h3 className="text-xl font-bold font-serif mb-2 text-ink">Swift &amp; Concurrency</h3>
-              <p className="text-ink/70 text-sm leading-relaxed">
-                Modern Swift utilizing async/await, Actors, and Sendable protocols for memory safety and zero data races.
-              </p>
-            </div>
-            <div className="bg-white border border-card-border rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-2xl mb-2">🎨</div>
-              <h3 className="text-xl font-bold font-serif mb-2 text-ink">SwiftUI &amp; Metal</h3>
-              <p className="text-ink/70 text-sm leading-relaxed">
-                Fluid declarative interfaces integrated with Metal shaders for high frame-rate particle systems and buttery 120Hz scrolling.
-              </p>
-            </div>
-            <div className="bg-white border border-card-border rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-2xl mb-2">🕹️</div>
-              <h3 className="text-xl font-bold font-serif mb-2 text-ink">Unity &amp; GameKit</h3>
-              <p className="text-ink/70 text-sm leading-relaxed">
-                Cross-platform Unity builds deployed with iOS native bridges, Game Center achievements, and low-latency touch controls.
-              </p>
-            </div>
-            <div className="bg-white border border-card-border rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-2xl mb-2">🍏</div>
-              <h3 className="text-xl font-bold font-serif mb-2 text-ink">Apple Ecosystem</h3>
-              <p className="text-ink/70 text-sm leading-relaxed">
-                Deep integrations with StoreKit 2 in-app purchases, haptics, Dynamic Island, and native home screen Widgets.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* iOS Roadmap */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-            <h2 className="text-3xl sm:text-4xl font-bold font-serif tracking-tight">
-              Upcoming iOS Releases
-            </h2>
-            <p className="text-ink/70 text-base leading-relaxed">
-              Track our planned App Store ports as they move through design and production phases.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {IOS_ROADMAP.map((item) => (
-              <div
-                key={item.title}
-                className="bg-white border border-card-border rounded-3xl p-7 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
-              >
-                <div className="space-y-2 max-w-xl">
-                  <div className="flex items-center gap-3">
-                    <h3 className="text-2xl font-bold font-serif text-ink">{item.title}</h3>
-                    <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">
-                      {item.status}
-                    </span>
-                  </div>
-                  <p className="text-ink/70 text-sm leading-relaxed">{item.desc}</p>
-                  <div className="text-xs font-mono text-ink/50 pt-1">Target: {item.eta}</div>
-                </div>
-
-                <Link
-                  href="/contact"
-                  className="btn-metamask btn-outline-dark text-xs font-bold whitespace-nowrap"
+            <div className="grid grid-cols-1 gap-8 text-[17px] leading-relaxed text-[#3D3D3A] md:grid-cols-2">
+              <p>
+                Android lets us run agile closed beta cycles through our{' '}
+                <a
+                  href="https://groups.google.com/g/vaiiya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-[#D1CFC5] underline-offset-4 hover:decoration-ink"
                 >
-                  Request iOS Alert &rarr;
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-14 p-8 bg-card border border-card-border rounded-3xl text-center space-y-4">
-            <h3 className="text-2xl font-bold font-serif text-ink">Want to test right now on Android?</h3>
-            <p className="text-ink/70 text-base max-w-xl mx-auto leading-relaxed">
-              If you have an Android device or tablet, you don&apos;t have to wait. You can play HEXMOJI right now on Google Play through our tester community.
-            </p>
-            <div className="flex justify-center gap-3">
-              <Link
-                href="/early-access"
-                className="btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-sm font-bold shadow-md"
-              >
-                Join Early Access on Android
-              </Link>
+                  Google Group community
+                </a>
+                , ship daily patches without review friction, and perfect gameplay feel with real players.
+              </p>
+              <p>
+                Once our Android games and apps reach stability and feature maturity, we bring them to iOS as native
+                Swift &amp; SwiftUI builds — engineered without third-party bridging layers.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-site px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+        <div className="mb-10 grid grid-cols-1 gap-6 lg:grid-cols-12">
+          <h2 className="font-serif text-4xl leading-tight sm:text-5xl lg:col-span-7">Our iOS tech stack</h2>
+          <p className="text-lg leading-relaxed text-[#3D3D3A] lg:col-span-5">
+            When we build for iOS, we write native code that feels at home in the Apple ecosystem.
+          </p>
+        </div>
+        <FeatureList items={IOS_STACK} />
+      </section>
+
+      <section className="bg-[#F0EEE6]">
+        <div className="mx-auto max-w-site px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+          <div className="mb-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
+            <h2 className="font-serif text-4xl leading-tight sm:text-5xl lg:col-span-7">Upcoming iOS releases</h2>
+            <p className="text-lg leading-relaxed text-[#3D3D3A] lg:col-span-5">
+              Planned App Store ports as they move through design and production.
+            </p>
+          </div>
+
+          <ul className="border-t border-[#D1CFC5]">
+            {IOS_ROADMAP.map((item) => (
+              <li
+                key={item.title}
+                className="grid grid-cols-1 gap-4 border-b border-[#D1CFC5] py-8 md:grid-cols-12 md:items-center"
+              >
+                <div className="md:col-span-4">
+                  <h3 className="font-serif text-2xl">{item.title}</h3>
+                  <span className="mt-2 inline-block rounded border border-[#D1CFC5] px-1.5 py-0.5 text-xs text-[#5E5D59]">
+                    {item.status}
+                  </span>
+                </div>
+                <div className="space-y-1 md:col-span-6">
+                  <p className="text-[15px] leading-relaxed text-[#3D3D3A]">{item.desc}</p>
+                  <p className="text-sm text-[#87867F]">Target: {item.eta}</p>
+                </div>
+                <div className="md:col-span-2 md:text-right">
+                  <Link href="/contact" className="link-arrow">Request alert &rarr;</Link>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-site px-4 py-24 text-center sm:px-6 lg:px-10 lg:py-32">
+        <h2 className="mx-auto max-w-2xl font-serif text-4xl leading-tight sm:text-5xl">Want to test right now on Android?</h2>
+        <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[#3D3D3A]">
+          With an Android device you don&apos;t have to wait. Play HEXMOJI today on Google Play through our tester community.
+        </p>
+        <div className="mt-10">
+          <Link href="/early-access" className="btn btn-dark">Join early access on Android</Link>
         </div>
       </section>
     </main>

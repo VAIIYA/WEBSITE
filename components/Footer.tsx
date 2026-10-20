@@ -1,174 +1,103 @@
-'use client'
-
 import Link from 'next/link'
-import Image from 'next/image'
+import Wordmark from '@/components/Wordmark'
+import { socialLinks } from '@/lib/socialLinks'
 
-const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'Android Apps', href: '/apps' },
-  { name: 'Mobile Games', href: '/games' },
-  { name: 'Web Platforms', href: '/websites' },
-  { name: 'Podcast', href: '/podcast' },
-  { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Contact', href: '/contact' },
+const columns = [
+  {
+    title: 'Studio',
+    links: [
+      { name: 'About', href: '/about' },
+      { name: 'Portfolio', href: '/portfolio' },
+      { name: 'Podcast', href: '/podcast' },
+      { name: 'Contact', href: '/contact' },
+    ],
+  },
+  {
+    title: 'Work',
+    links: [
+      { name: 'Apps', href: '/apps' },
+      { name: 'Games', href: '/games' },
+      { name: 'Android', href: '/android' },
+      { name: 'iOS', href: '/ios' },
+    ],
+  },
+  {
+    title: 'Play',
+    links: [
+      { name: 'Early Access', href: '/early-access' },
+      { name: 'Hexmoji', href: '/games/hexmoji' },
+      { name: 'Flapmoji', href: '/games/flapmoji' },
+      { name: 'Tester Google Group', href: 'https://groups.google.com/g/vaiiya', external: true },
+      { name: 'Google Play', href: 'https://play.google.com/store/apps/dev?id=7804895561285369781', external: true },
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      { name: 'Privacy Policy', href: '/privacy-policy' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Cookies', href: '/cookies' },
+    ],
+  },
 ]
+
+const linkClass = 'text-sm text-[#B0AEA5] transition-colors hover:text-ivory'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A1815] text-[#F4EFE6] border-t-2 border-[#D9532F]/60 crt-overlay">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-          
-          {/* Brand Column */}
-          <div className="md:col-span-1 space-y-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-9 h-9 rounded-xl overflow-hidden border border-[#3D3831] shadow">
-                <Image
-                  src="/v-logo.jpg"
-                  alt="VAIIYA Logo"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-black font-mono text-[#F4EFE6] tracking-wider">VAIIYA</span>
-                <span className="text-[9px] font-mono text-[#D9532F] uppercase tracking-widest">DELOS // ARC DIVISION</span>
-              </div>
+    <footer className="bg-ink text-ivory">
+      <div className="mx-auto max-w-site px-4 pb-10 pt-16 sm:px-6 lg:px-10 lg:pt-20">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-6">
+          <div className="col-span-2 space-y-6">
+            <Link href="/" aria-label="VAIIYA home" className="inline-block text-ivory">
+              <Wordmark className="text-[26px]" />
             </Link>
-            <p className="text-[#D8CEBA]/70 text-xs leading-relaxed font-sans">
-              Autonomous digital studio synthesizing high-precision 60+ FPS games with Unity, native Android software, and Apple iOS platforms. Engineered alongside Claude Code &amp; Antigravity.
+            <p className="max-w-xs text-sm leading-relaxed text-[#B0AEA5]">
+              An independent studio building apps and games for Android and iOS.
             </p>
-            <div className="pt-2 flex flex-col gap-2 font-mono">
-              <a
-                href="https://play.google.com/store/apps/dev?id=7804895561285369781"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs text-[#E59B27] hover:text-white font-semibold"
-              >
-                <span>[ GOOGLE PLAY // VERIFIED DEV ]</span>
-                <span>&rarr;</span>
-              </a>
-              <a
-                href="https://groups.google.com/g/vaiiya"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs text-[#D9532F] hover:text-white font-semibold"
-              >
-                <span>[ SQUAD TESTER PROTOCOL ]</span>
-                <span>&rarr;</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
-              Navigation
-            </h3>
-            <ul className="space-y-2 text-sm">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-slate-300 hover:text-[#E25A3C] transition-colors font-medium"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
+            <div className="flex items-center gap-4 text-[#B0AEA5]">
+              {socialLinks.map((s) => (
+                <a
+                  key={s.name}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.name}
+                  className="transition-colors hover:text-ivory [&_svg]:h-4 [&_svg]:w-4"
+                >
+                  {s.icon}
+                </a>
               ))}
-            </ul>
-          </div>
-
-          {/* Platforms & Testing */}
-          <div>
-            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
-              Platforms &amp; Testing
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/early-access" className="text-emerald-400 hover:text-emerald-300 font-medium">
-                  🚀 Early Access Program
-                </Link>
-              </li>
-              <li>
-                <Link href="/android" className="text-slate-300 hover:text-[#E25A3C] font-medium">
-                  🤖 Android Native Studio
-                </Link>
-              </li>
-              <li>
-                <Link href="/ios" className="text-slate-300 hover:text-[#E25A3C] font-medium">
-                  🍎 iOS Capabilities &amp; Roadmap
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="https://groups.google.com/g/vaiiya"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-[#E25A3C] font-medium"
-                >
-                  👥 Tester Google Group
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://play.google.com/apps/testing/com.hexmoji"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-[#E25A3C] font-medium"
-                >
-                  🎮 HEXMOJI Closed Beta
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://play.google.com/store/apps/dev?id=7804895561285369781"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-[#E25A3C] font-medium"
-                >
-                  🏪 Google Play Store
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Core Stack */}
-          <div>
-            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
-              Core Technologies
-            </h3>
-            <div className="flex flex-wrap gap-2 text-xs">
-              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Unity 3D / 2D</span>
-              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Kotlin &amp; Compose</span>
-              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Swift &amp; SwiftUI</span>
-              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Android &amp; iOS</span>
-              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">Next.js / React</span>
-              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 font-mono">60+ FPS Games</span>
             </div>
           </div>
 
+          {columns.map((col) => (
+            <div key={col.title}>
+              <h3 className="mb-4 font-sans text-sm font-medium text-ivory">{col.title}</h3>
+              <ul className="space-y-2.5">
+                {col.links.map((link) => (
+                  <li key={link.name}>
+                    {'external' in link && link.external ? (
+                      <a href={link.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link href={link.href} className={linkClass}>
+                        {link.name}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-slate-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} VAIIYA Studio. All rights reserved. Deployed on Vercel.</p>
-          <div className="flex items-center gap-2 font-medium">
-            <span>Android-First Development &bull;</span>
-            <span className="text-[#E25A3C]">Digital Excellence</span>
-            <span>&bull;</span>
-            <a
-              href="https://datagoblin.itch.io/monogram"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-slate-300"
-            >
-              Pixel font: Monogram (CC0)
-            </a>
-          </div>
+        <div className="mt-16 flex flex-col gap-3 border-t border-[#3D3D3A] pt-6 text-xs text-[#87867F] sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; {new Date().getFullYear()} VAIIYA. We. As One.</p>
+          <p>Built with Next.js &middot; Hosted on Vercel</p>
         </div>
       </div>
     </footer>
   )
 }
-

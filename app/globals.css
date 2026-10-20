@@ -3,23 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --cream: #F4EFE6;
-  --ink: #1A1815;
-  --coral: #D9532F;
-  --coral-hover: #BF4120;
-  --card: #EAE3D2;
-  --card-border: #D8CEBA;
-  --amber-retro: #E59B27;
-  --olive-retro: #5A6855;
-  --cyan-retro: #38A3A5;
+  --ivory: #FAF9F5;
+  --ink: #141413;
+  --ink-soft: #3D3D3A;
+  --muted: #5E5D59;
+  --clay: #D97757;
+  --clay-hover: #C2603F;
+  --card: #F0EEE6;
+  --card-border: #E8E6DC;
+  --line: #D1CFC5;
 
-  --metamask-orange: #D9532F;
-  --metamask-orange-hover: #BF4120;
-  --metamask-purple: #1A1815;
-  --metamask-black: #1A1815;
-  --metamask-gray-50: #EAE3D2;
-  --metamask-gray-100: #D8CEBA;
-  --metamask-gray-200: #C5BAA3;
+  /* legacy names used by older components */
+  --cream: var(--ivory);
+  --coral: var(--clay);
+  --coral-hover: var(--clay-hover);
+  --metamask-orange: var(--clay);
+  --metamask-orange-hover: var(--clay-hover);
+  --metamask-purple: var(--ink);
+  --metamask-black: var(--ink);
+  --metamask-gray-50: var(--card);
+  --metamask-gray-100: var(--card-border);
+  --metamask-gray-200: var(--line);
 }
 
 * {
@@ -43,32 +47,16 @@ body {
 
 body {
   color: var(--ink);
-  background-color: var(--cream);
-  font-family: Geist, var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  background-color: var(--ivory);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Westworld / Arc Raiders Blueprint Grid */
-.bg-dot-grid {
-  background-image: 
-    linear-gradient(to right, rgba(26, 24, 21, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(26, 24, 21, 0.05) 1px, transparent 1px);
-  background-size: 28px 28px;
-}
-
-/* Subtle CRT Scanline effect on dark elements */
-.crt-overlay {
-  background: linear-gradient(
-    rgba(18, 16, 14, 0) 50%, 
-    rgba(0, 0, 0, 0.25) 50%
-  ), linear-gradient(
-    90deg,
-    rgba(255, 0, 0, 0.03),
-    rgba(0, 255, 0, 0.01),
-    rgba(0, 0, 255, 0.03)
-  );
-  background-size: 100% 3px, 6px 100%;
+::selection {
+  background: var(--clay);
+  color: var(--ivory);
 }
 
 a {
@@ -78,127 +66,171 @@ a {
 
 section[id],
 div[id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 96px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Geist, var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  font-weight: 700;
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
 }
 
-/* font-pixel now aliases Geist to keep a single typeface site-wide */
+/* Serif headlines stay light, even where older markup asks for bold/black */
+:is(h1, h2, h3, h4).font-serif,
+:is(h1, h2).font-bold,
+:is(h1, h2).font-black {
+  font-weight: 500;
+}
+
+/* Small headings that use the sans stack keep a crisp UI weight */
+:is(h3, h4, h5, h6):is(.font-sans, .font-mono) {
+  font-family: var(--font-sans), ui-sans-serif, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Gradient text from the old theme becomes solid clay */
+.bg-clip-text.text-transparent {
+  background: none;
+  -webkit-text-fill-color: var(--clay);
+  color: var(--clay);
+}
+
+/* ---------- Retired retro effects (kept as no-ops for old markup) ---------- */
+.bg-dot-grid {
+  background-image: none;
+}
+
+.crt-overlay {
+  background-image: none;
+}
+
 .font-pixel {
-  font-family: Geist, var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, sans-serif;
 }
 
+/* ---------- Motion ---------- */
 @keyframes floatSlow {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(1.5deg); }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes pulseGlow {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.05); }
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-float-slow {
-  animation: floatSlow 6s ease-in-out infinite;
+  animation: floatSlow 7s ease-in-out infinite;
 }
 
 .animate-pulse-glow {
   animation: pulseGlow 4s ease-in-out infinite;
 }
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+@media (prefers-reduced-motion: no-preference) {
+  .rise-in {
+    animation: riseIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .rise-in-2 { animation-delay: 0.08s; }
+  .rise-in-3 { animation-delay: 0.16s; }
 }
 
-.glass-card-dark {
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(51, 65, 85, 0.8);
+/* ---------- Components ---------- */
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-[13px] font-medium text-[#5E5D59];
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 text-sm font-medium text-ink underline decoration-[#D1CFC5] underline-offset-4 transition-colors hover:decoration-ink;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors duration-200;
+  }
+
+  .btn-dark {
+    @apply bg-ink text-ivory hover:bg-[#3D3D3A];
+  }
+
+  .btn-light {
+    @apply bg-transparent text-ink border border-[#D1CFC5] hover:bg-[#F0EEE6] hover:border-[#B0AEA5];
+  }
+
+  .btn-clay {
+    @apply bg-coral text-ivory hover:bg-[#C2603F];
+  }
 }
 
 .btn-metamask {
-  @apply inline-flex items-center justify-center font-mono font-bold tracking-wider rounded-xl px-7 py-3 transition-all duration-200 active:scale-95 text-xs uppercase;
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition-colors duration-200 font-sans normal-case tracking-normal;
 }
 
 .btn-orange {
-  @apply bg-[#D9532F] text-white hover:bg-[#BF4120] shadow-md hover:-translate-y-0.5 border border-[#BF4120];
+  @apply bg-ink text-ivory hover:bg-[#3D3D3A] border border-transparent;
 }
 
 .btn-purple {
-  @apply bg-[#1A1815] text-[#F4EFE6] hover:bg-black shadow-md hover:-translate-y-0.5 border border-black;
+  @apply bg-ink text-ivory hover:bg-[#3D3D3A] border border-transparent;
 }
 
 .btn-outline-dark {
-  @apply bg-white text-[#1A1815] border-2 border-[#D8CEBA] hover:border-[#1A1815] hover:bg-[#1A1815] hover:text-[#F4EFE6] shadow-sm hover:-translate-y-0.5;
+  @apply bg-transparent text-ink border border-[#D1CFC5] hover:bg-[#F0EEE6] hover:border-[#B0AEA5];
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-lg bg-ink text-ivory hover:bg-[#3D3D3A] font-medium transition-colors;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-lg border border-[#D1CFC5] text-ink hover:bg-[#F0EEE6] font-medium transition-colors;
 }
 
 .card-playful {
-  @apply bg-white border border-[#D8CEBA] rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5;
+  @apply bg-[#F0EEE6] border border-transparent rounded-2xl p-8 transition-colors duration-300 hover:border-[#D1CFC5];
 }
 
-/* Westworld / Arc Raiders Tactical Corner Framing */
+.glass-card {
+  background: rgba(250, 249, 245, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #E8E6DC;
+}
+
+.glass-card-dark {
+  background: rgba(20, 20, 19, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #3D3D3A;
+}
+
 .tactical-box {
   position: relative;
-  background: #F9F6F0;
-  border: 1px solid #D8CEBA;
+  background: #F0EEE6;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
 }
 
-.tactical-box::before,
-.tactical-box::after {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  pointer-events: none;
+.tactical-box:hover {
+  border-color: #D1CFC5;
 }
 
-.tactical-box::before {
-  top: -1px;
-  left: -1px;
-  border-top: 2px solid #D9532F;
-  border-left: 2px solid #D9532F;
-}
-
-.tactical-box::after {
-  bottom: -1px;
-  right: -1px;
-  border-bottom: 2px solid #D9532F;
-  border-right: 2px solid #D9532F;
-}
-
-/* Telemetry Badge */
 .telemetry-tag {
-  @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 font-mono text-[10px] uppercase font-bold tracking-widest border;
+  @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-md border;
 }
 
 .glow-card {
   position: relative;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: border-color 0.25s ease, background-color 0.25s ease;
 }
-
-.glow-card::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  padding: 1.5px;
-  background: linear-gradient(135deg, rgba(217, 83, 47, 0.6), rgba(229, 155, 39, 0.5), rgba(90, 104, 85, 0.5));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.glow-card:hover::before {
-  opacity: 1;
-}
-

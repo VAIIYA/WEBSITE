@@ -44,10 +44,8 @@ Built with:
 
 ## 📦 Products
 
-- [FYNDER](https://vaiiya.vercel.app/projects/fynder) - Premium Android dating experience
-- [VYNDER](https://vaiiya.vercel.app/projects/vynder) - Dating on the blockchain
-- [NIGHTSTUDIO](https://vaiiya.vercel.app/projects/nightstudio) - Creator infrastructure
-- [BLOBIO](https://vaiiya.vercel.app/projects/blobio) - Blob battle arena
+- [HEXMOJI](https://vaiiya.vercel.app/games/hexmoji) - Kawaii hexxagon board game
+- [FLAPMOJI](https://vaiiya.vercel.app/games/flapmoji) - One-tap arcade runner
 
 ## 🔗 Links
 

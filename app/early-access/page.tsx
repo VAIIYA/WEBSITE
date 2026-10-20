@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Early Access & Closed Beta Community',
@@ -34,345 +35,188 @@ const FAQS = [
   },
 ]
 
+const STEPS = [
+  {
+    title: 'Join the Google Group',
+    body: (
+      <>
+        Head to{' '}
+        <a href="https://groups.google.com/g/vaiiya" target="_blank" rel="noopener noreferrer" className="underline decoration-[#D1CFC5] underline-offset-4 hover:decoration-ink">
+          groups.google.com/g/vaiiya
+        </a>{' '}
+        and click <strong className="font-medium text-ink">“Join group”</strong> with the exact same Google account that’s on your Android device.
+      </>
+    ),
+    cta: { label: 'Join the group', href: 'https://groups.google.com/g/vaiiya' },
+  },
+  {
+    title: 'Opt in on Google Play',
+    body: (
+      <>
+        Open the test invitation at{' '}
+        <a href="https://play.google.com/apps/testing/com.hexmoji" target="_blank" rel="noopener noreferrer" className="underline decoration-[#D1CFC5] underline-offset-4 hover:decoration-ink">
+          play.google.com/apps/testing/com.hexmoji
+        </a>{' '}
+        and click <strong className="font-medium text-ink">“Become a tester”</strong>.
+      </>
+    ),
+    cta: { label: 'Accept the invite', href: 'https://play.google.com/apps/testing/com.hexmoji' },
+  },
+  {
+    title: 'Download & play',
+    body: (
+      <>
+        Tap <strong className="font-medium text-ink">“Download it on Google Play”</strong> to open the closed beta listing. Install, jump in, and receive new test builds automatically.
+      </>
+    ),
+  },
+]
+
+const hexmojiFacts = [
+  { title: '100+ pieces', text: 'Unlock emoji characters' },
+  { title: 'Adaptive AI', text: '3 distinct difficulty levels' },
+  { title: 'Kawaii themes', text: 'Pastel board cosmetics' },
+]
+
 export default function EarlyAccessPage() {
   return (
-    <main className="min-h-screen bg-cream text-ink selection:bg-emerald-600 selection:text-white">
-      {/* Hero Section */}
-      <section className="relative pt-20 pb-16 bg-card border-b border-card-border overflow-hidden bg-dot-grid">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-bold uppercase tracking-widest mb-6">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>COMMUNITY TESTER PROGRAM &bull; ANDROID CLOSED BETA</span>
-          </div>
+    <main className="bg-ivory text-ink">
+      <PageHero
+        eyebrow="Community tester program"
+        title="Play it before the world does."
+        description="Test our newest Android games and apps, report bugs, balance mechanics and join the creator circle."
+      >
+        <a href="https://groups.google.com/g/vaiiya" target="_blank" rel="noopener noreferrer" className="btn btn-dark">
+          1. Join the group &rarr;
+        </a>
+        <a href="https://play.google.com/apps/testing/com.hexmoji" target="_blank" rel="noopener noreferrer" className="btn btn-light">
+          2. Opt in on Google Play &rarr;
+        </a>
+      </PageHero>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-serif mb-6 leading-tight">
-            VAIIYA <span className="italic text-emerald-600">Early Access</span>
-          </h1>
-
-          <p className="text-xl sm:text-2xl text-ink/70 leading-relaxed max-w-3xl mx-auto mb-10 font-serif">
-            Play our newest Android games and apps before the world sees them. Test builds, report bugs, balance mechanics, and join the creator circle.
+      <section className="mx-auto max-w-site px-4 pb-20 sm:px-6 lg:px-10 lg:pb-28">
+        <div className="mb-10 grid grid-cols-1 gap-6 lg:grid-cols-12">
+          <h2 className="font-serif text-4xl leading-tight sm:text-5xl lg:col-span-7">How it works</h2>
+          <p className="text-lg leading-relaxed text-[#3D3D3A] lg:col-span-5">
+            Google Play closed testing is restricted to group members. Follow these three steps to get access.
           </p>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://groups.google.com/g/vaiiya"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-base font-bold shadow-lg shadow-emerald-600/20"
-            >
-              👥 1. Join Tester Google Group &rarr;
-            </a>
-            <a
-              href="https://play.google.com/apps/testing/com.hexmoji"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-metamask bg-slate-900 text-white hover:bg-black text-base font-bold shadow-lg"
-            >
-              🚀 2. Opt-in on Google Play &rarr;
-            </a>
-          </div>
         </div>
+        <ol className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          {STEPS.map((step, i) => (
+            <li key={step.title} className="flex flex-col rounded-2xl bg-[#F0EEE6] p-7">
+              <span className="font-mono text-xs text-[#87867F]">0{i + 1}</span>
+              <h3 className="mb-3 mt-8 font-serif text-2xl">{step.title}</h3>
+              <p className="flex-1 text-[15px] leading-relaxed text-[#3D3D3A]">{step.body}</p>
+              {step.cta && (
+                <a href={step.cta.href} target="_blank" rel="noopener noreferrer" className="link-arrow mt-6">
+                  {step.cta.label} &rarr;
+                </a>
+              )}
+            </li>
+          ))}
+        </ol>
       </section>
 
-      {/* 3-Step Tester Walkthrough */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <h2 className="text-3xl sm:text-4xl font-bold font-serif tracking-tight">How It Works</h2>
-            <p className="text-ink/70 text-base leading-relaxed">
-              Google Play closed testing is restricted to group members. Follow this quick 3-step sequence to get instant access:
+      <section className="bg-[#F0EEE6]">
+        <div className="mx-auto max-w-site px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+          <div className="mb-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
+            <div className="lg:col-span-7">
+              <p className="eyebrow mb-4">Available now for testing</p>
+              <h2 className="font-serif text-4xl leading-tight sm:text-5xl">Active closed betas</h2>
+            </div>
+            <p className="text-lg leading-relaxed text-[#3D3D3A] lg:col-span-5 lg:self-end">
+              These games are running closed beta cycles with our Google Group community.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Step 1 */}
-            <div className="bg-white border-2 border-emerald-100 rounded-3xl p-8 shadow-sm flex flex-col justify-between relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-50 rounded-bl-full -z-0" />
-              <div className="relative z-10 space-y-4">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white font-bold font-serif flex items-center justify-center text-xl shadow-md">
-                  1
+          <article className="grid grid-cols-1 overflow-hidden rounded-2xl bg-ivory lg:grid-cols-12">
+            <div className="relative aspect-[16/10] min-h-[260px] lg:col-span-5 lg:aspect-auto">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/games/hexmoji/feature.svg" alt="HEXMOJI closed beta" className="absolute inset-0 h-full w-full object-cover" />
+            </div>
+            <div className="flex flex-col justify-between gap-8 p-7 sm:p-10 lg:col-span-7">
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-2 text-xs text-[#5E5D59]">
+                  <span className="rounded border border-[#D1CFC5] px-1.5 py-0.5">Android closed beta</span>
+                  <span className="rounded border border-[#D1CFC5] px-1.5 py-0.5">Testing active</span>
                 </div>
-                <h3 className="text-2xl font-bold font-serif">Join Google Group</h3>
-                <p className="text-ink/70 text-sm leading-relaxed">
-                  Head over to our official Google Group:{' '}
-                  <a
-                    href="https://groups.google.com/g/vaiiya"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-semibold text-emerald-700 underline underline-offset-2 hover:text-emerald-900"
-                  >
-                    groups.google.com/g/vaiiya
-                  </a>
-                  . Click <strong>&quot;Join group&quot;</strong> using the exact same Google account associated with your Android phone or tablet.
+                <h3 className="font-serif text-4xl">Hexmoji</h3>
+                <p className="text-[17px] leading-relaxed text-[#3D3D3A]">
+                  A cute, tactical take on the classic hexxagon / Ataxx puzzle game. Move adjacent to clone your piece, jump two cells to flip enemy tokens, and conquer the honeycomb board against an adaptive AI.
                 </p>
+                <dl className="grid grid-cols-1 divide-y divide-[#E8E6DC] border-y border-[#E8E6DC] text-sm sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+                  {hexmojiFacts.map((f) => (
+                    <div key={f.title} className="py-3 sm:px-4 sm:first:pl-0">
+                      <dt className="font-medium">{f.title}</dt>
+                      <dd className="text-[#5E5D59]">{f.text}</dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
-
-              <div className="pt-6 mt-6 border-t border-card-border relative z-10">
-                <a
-                  href="https://groups.google.com/g/vaiiya"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full btn-metamask bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-center block"
-                >
-                  Join Google Group Now &rarr;
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <a href="https://groups.google.com/g/vaiiya" target="_blank" rel="noopener noreferrer" className="btn btn-dark flex-1">
+                  1. Join group first
+                </a>
+                <a href="https://play.google.com/apps/testing/com.hexmoji" target="_blank" rel="noopener noreferrer" className="btn btn-light flex-1">
+                  2. Opt in on Google Play
+                </a>
+                <a href="https://groups.google.com/g/vaiiya/c/FoPlDsHz-CY" target="_blank" rel="noopener noreferrer" className="btn btn-light">
+                  Beta post
                 </a>
               </div>
             </div>
+          </article>
 
-            {/* Step 2 */}
-            <div className="bg-white border-2 border-blue-100 rounded-3xl p-8 shadow-sm flex flex-col justify-between relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-0" />
-              <div className="relative z-10 space-y-4">
-                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-bold font-serif flex items-center justify-center text-xl shadow-md">
-                  2
-                </div>
-                <h3 className="text-2xl font-bold font-serif">Opt-in on Google Play</h3>
-                <p className="text-ink/70 text-sm leading-relaxed">
-                  Click the test invitation link on Google Play:{' '}
-                  <a
-                    href="https://play.google.com/apps/testing/com.hexmoji"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-semibold text-blue-700 underline underline-offset-2 hover:text-blue-900"
-                  >
-                    play.google.com/apps/testing/com.hexmoji
-                  </a>
-                  . Click <strong>&quot;BECOME A TESTER&quot;</strong>. Google Play confirms your membership instantly.
-                </p>
-              </div>
-
-              <div className="pt-6 mt-6 border-t border-card-border relative z-10">
-                <a
-                  href="https://play.google.com/apps/testing/com.hexmoji"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full btn-metamask bg-blue-50 text-blue-800 hover:bg-blue-100 border border-blue-200 text-xs font-bold text-center block"
-                >
-                  Accept Tester Invite &rarr;
-                </a>
-              </div>
+          <div className="mt-4 flex flex-col justify-between gap-6 rounded-2xl bg-ivory p-7 sm:p-10 md:flex-row md:items-center">
+            <div className="max-w-2xl space-y-2">
+              <p className="text-xs text-[#5E5D59]">Live on Google Play</p>
+              <h3 className="font-serif text-3xl">Flapmoji is out now</h3>
+              <p className="leading-relaxed text-[#3D3D3A]">
+                One tap, one emoji, endless pipes. Classic runs or arcade chaos with power-ups, coins and 100+ unlockable skins. Download it now, or join our group to test upcoming features first.
+              </p>
             </div>
-
-            {/* Step 3 */}
-            <div className="bg-white border-2 border-violet-100 rounded-3xl p-8 shadow-sm flex flex-col justify-between relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-violet-50 rounded-bl-full -z-0" />
-              <div className="relative z-10 space-y-4">
-                <div className="w-12 h-12 rounded-2xl bg-violet-600 text-white font-bold font-serif flex items-center justify-center text-xl shadow-md">
-                  3
-                </div>
-                <h3 className="text-2xl font-bold font-serif">Download &amp; Play</h3>
-                <p className="text-ink/70 text-sm leading-relaxed">
-                  Tap <strong>&quot;Download it on Google Play&quot;</strong> to view the closed beta listing. Tap Install, jump in, and experience the game with seamless automatic updates as new test builds land.
-                </p>
-              </div>
-
-              <div className="pt-6 mt-6 border-t border-card-border relative z-10">
-                <div className="text-xs font-semibold text-violet-700 text-center py-2 bg-violet-50 rounded-xl">
-                  ✓ Official Google Play Store Build
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Active Closed Betas Showcase */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card border-y border-card-border">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-            <span className="text-xs font-bold text-violet-600 uppercase tracking-widest">
-              Available Now for Testing
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-serif tracking-tight">
-              Active Closed Beta Programs
-            </h2>
-            <p className="text-ink/70 text-base leading-relaxed">
-              These games are currently running closed beta test cycles with our Google Group community.
-            </p>
-          </div>
-
-          {/* HEXMOJI Spotlight Card */}
-          <div className="bg-white border border-card-border rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-              <div className="lg:col-span-5 relative aspect-[16/10] lg:aspect-auto min-h-[280px]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/games/hexmoji/feature.svg"
-                  alt="HEXMOJI Closed Beta"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider">
-                  Android Closed Beta Live
-                </div>
-              </div>
-
-              <div className="lg:col-span-7 p-8 sm:p-10 flex flex-col justify-between space-y-6">
-                <div className="space-y-4">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="px-3 py-1 rounded-full bg-violet-100 text-violet-800 text-xs font-bold uppercase tracking-wider">
-                      🎮 Kawaii Hexxagon
-                    </span>
-                    <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider">
-                      🟢 Testing Active
-                    </span>
-                  </div>
-
-                  <h3 className="text-3xl sm:text-4xl font-bold font-serif">HEXMOJI</h3>
-
-                  <p className="text-ink/70 text-base leading-relaxed">
-                    A cute, tactical re-imagination of the classic hexxagon / Ataxx puzzle game. Move adjacent to clone your piece, jump two cells to flip enemy tokens, and conquer the honeycomb board against an adaptive AI engine.
-                  </p>
-
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs font-medium text-ink/70">
-                    <div className="p-3 bg-cream rounded-xl">
-                      <span className="font-bold text-ink block">100+ Pieces</span>
-                      Unlock emoji characters
-                    </div>
-                    <div className="p-3 bg-cream rounded-xl">
-                      <span className="font-bold text-ink block">Adaptive AI</span>
-                      3 distinct difficulty levels
-                    </div>
-                    <div className="p-3 bg-cream rounded-xl">
-                      <span className="font-bold text-ink block">Kawaii Themes</span>
-                      Pastel board cosmetics
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-card-border flex flex-col sm:flex-row gap-3 items-stretch">
-                  <a
-                    href="https://groups.google.com/g/vaiiya"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold text-center flex-1"
-                  >
-                    1. Join Group First
-                  </a>
-                  <a
-                    href="https://play.google.com/apps/testing/com.hexmoji"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-metamask bg-violet-600 text-white hover:bg-violet-700 text-xs font-bold text-center flex-1"
-                  >
-                    2. Opt-in on Google Play
-                  </a>
-                  <a
-                    href="https://groups.google.com/g/vaiiya/c/FoPlDsHz-CY"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-metamask btn-outline-dark text-xs font-bold text-center"
-                  >
-                    💬 View Beta Post
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* FLAPMOJI — now live */}
-          <div className="mt-12 bg-white border border-card-border rounded-3xl p-8 sm:p-10 shadow-sm">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-              <div className="space-y-2">
-                <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase tracking-widest">
-                  Live on Google Play
-                </span>
-                <h3 className="text-2xl font-bold font-serif">FLAPMOJI &bull; Now Live</h3>
-                <p className="text-ink/70 text-sm max-w-2xl leading-relaxed">
-                  One tap, one emoji, endless pipes. Classic runs or arcade chaos with power-ups, coin collecting, and 100+ unlockable skins. Download it now, or join our Google Group to test upcoming features first.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3 items-stretch">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.flapmoji.game"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold text-center whitespace-nowrap"
-                >
-                  Get FLAPMOJI on Google Play &rarr;
-                </a>
-                <Link
-                  href="/games/flapmoji"
-                  className="btn-metamask btn-outline-dark text-xs font-bold text-center whitespace-nowrap"
-                >
-                  Preview FLAPMOJI &rarr;
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Troubleshooting & FAQ Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-            <h2 className="text-3xl sm:text-4xl font-bold font-serif tracking-tight">
-              Tester FAQ &amp; Troubleshooting
-            </h2>
-            <p className="text-ink/70 text-base leading-relaxed">
-              Got stuck during opt-in? Here are the most common questions and how to resolve them quickly.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {FAQS.map((faq, idx) => (
-              <div
-                key={idx}
-                className="bg-white border border-card-border rounded-2xl p-6 shadow-sm hover:border-emerald-300 transition-colors"
-              >
-                <h3 className="text-lg font-bold font-serif text-ink mb-2 flex items-start gap-3">
-                  <span className="text-emerald-600 font-bold">Q:</span>
-                  <span>{faq.q}</span>
-                </h3>
-                <p className="text-ink/70 text-sm leading-relaxed pl-7">
-                  {faq.a}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Need assistance card */}
-          <div className="mt-12 p-8 bg-emerald-50 border border-emerald-200 rounded-3xl text-center space-y-4">
-            <h3 className="text-xl font-bold font-serif text-emerald-950">Still Having Trouble?</h3>
-            <p className="text-emerald-800 text-sm max-w-xl mx-auto leading-relaxed">
-              If your account is not being recognized by Google Play after joining the group, create a topic on our Google Group or reach out directly.
-            </p>
-            <div className="flex justify-center gap-3">
-              <a
-                href="https://groups.google.com/g/vaiiya"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold"
-              >
-                Post on Google Group
+            <div className="flex flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
+              <a href="https://play.google.com/store/apps/details?id=com.flapmoji.game" target="_blank" rel="noopener noreferrer" className="btn btn-dark whitespace-nowrap">
+                Get Flapmoji &rarr;
               </a>
-              <Link
-                href="/contact"
-                className="btn-metamask btn-outline-dark text-xs font-bold"
-              >
-                Contact Studio Support
-              </Link>
+              <Link href="/games/flapmoji" className="btn btn-light whitespace-nowrap">Preview</Link>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Android Studio & Developer Profile Link */}
-          <div className="mt-12 text-center pt-8 border-t border-card-border">
-            <p className="text-xs text-ink/60 mb-2">
-              Interested in how we build native Android apps and games?
+      <section className="mx-auto max-w-site px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+          <div className="space-y-5 lg:col-span-4">
+            <h2 className="font-serif text-4xl leading-tight sm:text-5xl">Tester FAQ</h2>
+            <p className="text-lg leading-relaxed text-[#3D3D3A]">
+              Stuck during opt-in? These are the most common questions.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-xs font-bold">
-              <Link href="/android" className="text-emerald-700 hover:text-emerald-900">
-                🤖 Explore Android Native Architecture &rarr;
-              </Link>
-              <span className="text-ink/30">&bull;</span>
-              <a
-                href="https://play.google.com/store/apps/dev?id=7804895561285369781"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-violet-700 hover:text-violet-900"
-              >
-                🏪 Verified Google Play Developer Profile &rarr;
-              </a>
+          </div>
+          <div className="lg:col-span-8">
+            <div className="border-t border-[#D1CFC5]">
+              {FAQS.map((faq) => (
+                <details key={faq.q} className="group border-b border-[#D1CFC5] py-5">
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 font-serif text-xl leading-snug [&::-webkit-details-marker]:hidden">
+                    {faq.q}
+                    <span aria-hidden="true" className="mt-1 text-[#87867F] transition-transform duration-200 group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-[#3D3D3A]">{faq.a}</p>
+                </details>
+              ))}
+            </div>
+
+            <div className="mt-10 rounded-2xl bg-[#F0EEE6] p-7">
+              <h3 className="mb-2 font-serif text-2xl">Still having trouble?</h3>
+              <p className="mb-5 max-w-xl text-[15px] leading-relaxed text-[#3D3D3A]">
+                If Google Play doesn’t recognise your account after joining the group, post a topic in the group or contact us directly.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a href="https://groups.google.com/g/vaiiya" target="_blank" rel="noopener noreferrer" className="btn btn-dark">
+                  Post in the group
+                </a>
+                <Link href="/contact" className="btn btn-light">Contact support</Link>
+              </div>
             </div>
           </div>
         </div>

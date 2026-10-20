@@ -1,177 +1,90 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { portfolioApps } from '@/lib/portfolio';
+import Image from 'next/image'
+import Link from 'next/link'
+import { portfolioApps } from '@/lib/portfolio'
 
-function PlatformBadge({ platform }: { platform: string }) {
-  const styles: Record<string, string> = {
-    android: 'bg-emerald-50 text-emerald-700 border-emerald-200/80',
-    ios: 'bg-blue-50 text-blue-700 border-blue-200/80',
-    web: 'bg-amber-50 text-amber-700 border-amber-200/80',
-  };
-  const labels: Record<string, string> = {
-    android: '🤖 Android',
-    ios: '🍎 iOS',
-    web: '🌐 Web',
-  };
-  return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border shadow-xs ${styles[platform] || 'bg-white text-ink/70 border-card-border'}`}>
-      {labels[platform] || platform}
-    </span>
-  );
-}
+const platformLabels: Record<string, string> = { android: 'Android', ios: 'iOS', web: 'Web' }
 
-function EngineBadge({ engine }: { engine?: string }) {
-  if (!engine || engine !== 'unity') return null;
-  return (
-    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-900/90 backdrop-blur-sm text-slate-100 border border-slate-700 shadow-xs">
-      🕹️ Unity
-    </span>
-  );
-}
+const playIcon = (
+  <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.3 2.3-8.636-8.632z" />
+  </svg>
+)
 
 export default function Portfolio() {
-  const displayedApps = portfolioApps.filter((app) => !app.hideFromPortfolio);
+  const displayedApps = portfolioApps.filter((app) => !app.hideFromPortfolio)
 
   return (
-    <section id="portfolio" className="py-24 px-4 sm:px-6 lg:px-8 bg-card">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-serif mb-6">
-            Our <span className="text-[#E25A3C]">Work</span>
-          </h2>
-          <p className="text-xl text-ink/70 max-w-3xl mx-auto">
-            A showcase of everything we&apos;ve designed, built, and shipped across mobile games and digital experiences. Each project reflects our commitment to innovation and clean code.
-          </p>
-        </div>
+    <section id="portfolio" className="mx-auto max-w-site px-4 pb-24 sm:px-6 lg:px-10 lg:pb-32">
+      <div className={`grid grid-cols-1 gap-4 md:grid-cols-2 ${displayedApps.length > 2 ? 'lg:grid-cols-3' : ''}`}>
+        {displayedApps.map((app) => {
+          const status =
+            app.status === 'closed-beta' ? 'Closed beta' : app.comingSoon ? 'Coming soon' : null
 
-        <div className={`grid ${displayedApps.length <= 2 ? 'grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'} gap-8`}>
-          {displayedApps.map((app) => {
-            return (
-              <div key={app.id} className="group bg-white border border-card-border rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
-                {/* App Visual */}
-                <div className={`relative aspect-square bg-gradient-to-br ${app.gradient} overflow-hidden`}>
-                  {app.image ? (
-                    <Image
-                      src={app.image}
-                      alt={app.name}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-24 h-24 rounded-[28px] bg-white/20 backdrop-blur-xl border border-white/30 flex items-center justify-center shadow-2xl transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
-                        <span className="text-4xl font-serif text-white">{app.id.charAt(0).toUpperCase()}</span>
-                      </div>
-                    </div>
+          return (
+            <article key={app.id} className="group flex flex-col rounded-2xl bg-[#F0EEE6] p-3">
+              <div className={`relative aspect-[4/3] overflow-hidden rounded-xl bg-gradient-to-br ${app.gradient}`}>
+                {app.image ? (
+                  <Image
+                    src={app.image}
+                    alt={app.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="font-serif text-7xl text-ivory/90">{app.id.charAt(0).toUpperCase()}</span>
+                  </div>
+                )}
+                {status && (
+                  <span className="absolute left-3 top-3 rounded-md bg-ivory px-2 py-1 text-xs font-medium text-ink">
+                    {status}
+                  </span>
+                )}
+              </div>
+
+              <div className="flex flex-1 flex-col p-4 pt-5">
+                <div className="mb-3 flex flex-wrap gap-2 text-xs text-[#5E5D59]">
+                  {app.platforms.map((p) => (
+                    <span key={p} className="rounded border border-[#D1CFC5] px-1.5 py-0.5">{platformLabels[p] ?? p}</span>
+                  ))}
+                  {app.engine === 'unity' && (
+                    <span className="rounded border border-[#D1CFC5] px-1.5 py-0.5">Unity</span>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-
-                  {app.status === 'closed-beta' ? (
-                    <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-emerald-500 text-white text-[10px] font-bold uppercase tracking-widest shadow-sm">
-                      Closed Beta Live
-                    </div>
-                  ) : app.comingSoon ? (
-                    <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-widest text-ink">
-                      Coming Soon
-                    </div>
-                  ) : null}
-
-                  <div className="absolute bottom-4 left-4 flex flex-wrap gap-1.5 z-10">
-                    {app.platforms.map((platform) => (
-                      <PlatformBadge key={platform} platform={platform} />
-                    ))}
-                    <EngineBadge engine={app.engine} />
-                  </div>
                 </div>
+                <h3 className="mb-2 font-serif text-2xl leading-tight">{app.name}</h3>
+                <p className="mb-6 flex-1 text-[15px] leading-relaxed text-[#3D3D3A]">{app.description}</p>
 
-                {/* App Info */}
-                <div className="p-8 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-serif mb-3 text-ink group-hover:text-[#E25A3C] transition-colors">
-                    {app.name}
-                  </h3>
-                  <p className="text-ink/70 leading-relaxed mb-8 flex-grow">
-                    {app.description}
-                  </p>
-
-                  <div className="flex flex-col gap-3 mt-auto">
-                    {app.status === 'closed-beta' ? (
-                      <div className="flex flex-col gap-2">
-                        {app.betaGroupUrl && (
-                          <a
-                            href={app.betaGroupUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-2xl bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700 transition-all shadow-md"
-                          >
-                            1. Join Tester Group &rarr;
-                          </a>
-                        )}
-                        {app.playTestingUrl && (
-                          <a
-                            href={app.playTestingUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-2xl bg-violet-600 text-white text-xs font-bold hover:bg-violet-700 transition-all shadow-md"
-                          >
-                            2. Opt-in on Google Play &rarr;
-                          </a>
-                        )}
-                      </div>
-                    ) : (
-                      app.playTestingUrl && (
-                        <a
-                          href={app.playTestingUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700 transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-emerald-600/20"
-                        >
-                          🚀 Early Access (Play Store)
-                        </a>
-                      )
-                    )}
-                    {app.playStoreUrl && (
-                      <a
-                        href={app.playStoreUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-ink text-white text-sm font-semibold hover:bg-black transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-black/20"
-                      >
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.3 2.3-8.636-8.632z" />
-                        </svg>
-                        Google Play
-                      </a>
-                    )}
-                    {app.appStoreUrl && (
-                      <a
-                        href={app.appStoreUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-slate-900 text-white text-sm font-semibold hover:bg-black transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-slate-900/20"
-                      >
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                        </svg>
-                        App Store
-                      </a>
-                    )}
-                    {app.projectUrl && (
-                      <Link
-                        href={app.projectUrl}
-                        className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl border border-card-border text-ink text-sm font-semibold hover:bg-card transition-all hover:scale-[1.02] active:scale-95"
-                      >
-                        View Project
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </Link>
-                    )}
-                  </div>
+                <div className="flex flex-col gap-2">
+                  {app.status === 'closed-beta' && app.betaGroupUrl && (
+                    <a href={app.betaGroupUrl} target="_blank" rel="noopener noreferrer" className="btn btn-light w-full">
+                      1. Join tester group &rarr;
+                    </a>
+                  )}
+                  {app.playTestingUrl && (
+                    <a href={app.playTestingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-light w-full">
+                      {app.status === 'closed-beta' ? '2. Opt in on Google Play' : 'Early access on Google Play'} &rarr;
+                    </a>
+                  )}
+                  {app.playStoreUrl && (
+                    <a href={app.playStoreUrl} target="_blank" rel="noopener noreferrer" className="btn btn-dark w-full">
+                      {playIcon} Google Play
+                    </a>
+                  )}
+                  {app.appStoreUrl && (
+                    <a href={app.appStoreUrl} target="_blank" rel="noopener noreferrer" className="btn btn-dark w-full">
+                      App Store
+                    </a>
+                  )}
+                  {app.projectUrl && (
+                    <Link href={app.projectUrl} className="btn btn-light w-full">
+                      View project &rarr;
+                    </Link>
+                  )}
                 </div>
               </div>
-            );
-          })}
-        </div>
+            </article>
+          )
+        })}
       </div>
     </section>
   )

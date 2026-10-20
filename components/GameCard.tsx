@@ -1,157 +1,100 @@
 import Link from 'next/link'
 import type { PortfolioApp } from '@/lib/portfolio'
 
+const platformLabels: Record<string, string> = { android: 'Android', ios: 'iOS', web: 'Web' }
+
 export default function GameCard({ game }: { game: PortfolioApp }) {
   const isClosedBeta = game.status === 'closed-beta'
   const rollingOut = Boolean(game.comingSoon) && Boolean(game.playStoreUrl)
   const isLive = (game.status === 'live' || Boolean(game.playStoreUrl)) && !rollingOut
 
+  const badge = isClosedBeta
+    ? 'Closed beta'
+    : rollingOut
+      ? 'Rolling out'
+      : isLive
+        ? 'Live'
+        : game.comingSoon || game.status === 'in-development'
+          ? 'In development'
+          : null
+
   return (
-    <div className="bg-white border border-card-border rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col sm:col-span-2 sm:max-w-md sm:mx-auto w-full">
-      {/* Feature banner */}
-      <div className="relative aspect-[2/1] overflow-hidden">
+    <article className="flex w-full flex-col rounded-2xl bg-[#F0EEE6] p-3">
+      <div className="relative aspect-[2/1] overflow-hidden rounded-xl">
         {game.featureImage ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={game.featureImage} alt={game.name} className="absolute inset-0 h-full w-full object-cover" />
         ) : (
           <div className={`absolute inset-0 bg-gradient-to-br ${game.gradient}`} />
         )}
-          <div className="absolute top-4 left-4 flex flex-wrap gap-1.5">
-            <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider">
-              {game.platforms.map((p) => p.toUpperCase()).join(' · ')}
-            </span>
-            {game.engine === 'unity' && (
-              <span className="px-2.5 py-1 rounded-full bg-violet-950/80 backdrop-blur-md border border-violet-400/40 text-violet-200 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
-                🕹️ Unity
-              </span>
-            )}
-          </div>
-
-        {isClosedBeta ? (
-          <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-emerald-500 text-white text-[10px] font-bold uppercase tracking-widest shadow-sm flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-            Closed Beta Live
-          </span>
-        ) : rollingOut ? (
-          <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-[10px] font-bold uppercase tracking-widest shadow-sm">
-            Rolling out
-          </span>
-        ) : isLive ? (
-          <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-widest text-ink">
-            Live on Store
-          </span>
-        ) : game.comingSoon || game.status === 'in-development' ? (
-          <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-widest text-ink">
-            In Development
-          </span>
-        ) : null}
+        {badge && (
+          <span className="absolute right-3 top-3 rounded-md bg-ivory px-2 py-1 text-xs font-medium text-ink">{badge}</span>
+        )}
       </div>
 
-      <div className="p-7 flex flex-col flex-grow justify-between space-y-6">
-        <div className="space-y-3">
-          <h3 className="text-3xl font-bold font-serif">{game.name}</h3>
-          <p className="text-ink/70 text-base leading-relaxed">{game.description}</p>
+      <div className="flex flex-1 flex-col p-4 pt-5">
+        <div className="mb-3 flex flex-wrap gap-2 text-xs text-[#5E5D59]">
+          {game.platforms.map((p) => (
+            <span key={p} className="rounded border border-[#D1CFC5] px-1.5 py-0.5">{platformLabels[p] ?? p}</span>
+          ))}
+          {game.engine === 'unity' && <span className="rounded border border-[#D1CFC5] px-1.5 py-0.5">Unity</span>}
         </div>
+        <h3 className="mb-2 font-serif text-2xl leading-tight">{game.name}</h3>
+        <p className="mb-6 flex-1 text-[15px] leading-relaxed text-[#3D3D3A]">{game.description}</p>
 
-        <div className="space-y-2.5 pt-4 border-t border-card-border">
+        <div className="flex flex-col gap-2">
           {isClosedBeta ? (
-            <div className="space-y-2">
-              <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-2xl text-[11px] text-emerald-800 font-medium leading-tight">
-                <strong>Closed Beta:</strong> Join our Google Group first, then opt-in on Google Play to play.
-              </div>
+            <>
+              <p className="rounded-lg bg-ivory p-3 text-[13px] leading-snug text-[#3D3D3A]">
+                <strong className="font-medium text-ink">Closed beta:</strong> join our Google Group first, then opt in on
+                Google Play.
+              </p>
               {game.betaGroupUrl && (
-                <a
-                  href={game.betaGroupUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold text-center block"
-                >
-                  1. Join Tester Google Group &rarr;
+                <a href={game.betaGroupUrl} target="_blank" rel="noopener noreferrer" className="btn btn-dark w-full">
+                  1. Join tester group &rarr;
                 </a>
               )}
               {game.playTestingUrl && (
-                <a
-                  href={game.playTestingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full btn-metamask bg-violet-600 text-white hover:bg-violet-700 text-xs font-bold text-center block"
-                >
-                  2. Opt-in on Google Play &rarr;
+                <a href={game.playTestingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-light w-full">
+                  2. Opt in on Google Play &rarr;
                 </a>
               )}
-            </div>
+            </>
           ) : (
             <>
               {game.playStoreUrl && (
-                <a
-                  href={game.playStoreUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold text-center block"
-                >
-                  {rollingOut ? 'View on Google Play (rolling out) →' : 'Get it on Google Play →'}
+                <a href={game.playStoreUrl} target="_blank" rel="noopener noreferrer" className="btn btn-dark w-full">
+                  {rollingOut ? 'View on Google Play (rolling out)' : 'Get it on Google Play'} &rarr;
                 </a>
               )}
               {game.appStoreUrl && (
-                <a
-                  href={game.appStoreUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full btn-metamask bg-slate-900 text-white hover:bg-black text-xs font-bold text-center block"
-                >
+                <a href={game.appStoreUrl} target="_blank" rel="noopener noreferrer" className="btn btn-dark w-full">
                   Download on the App Store &rarr;
                 </a>
               )}
               {game.externalUrl && (
-                <a
-                  href={game.externalUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full btn-metamask btn-outline-dark text-xs font-bold text-center block"
-                >
+                <a href={game.externalUrl} target="_blank" rel="noopener noreferrer" className="btn btn-light w-full">
                   Play the web demo
                 </a>
               )}
               {!game.playStoreUrl && !game.appStoreUrl && !game.externalUrl && (
-                <div className="text-center py-2 space-y-1.5">
-                  <p className="text-xs text-ink/50 font-medium">
-                    Upcoming release &bull; Heading to Google Play
-                  </p>
-                  {game.betaGroupUrl && (
-                    <a
-                      href={game.betaGroupUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block text-xs font-bold text-emerald-700 hover:text-emerald-900"
-                    >
-                      Join Google Group for beta alerts &rarr;
-                    </a>
-                  )}
-                </div>
+                <p className="py-1 text-center text-sm text-[#5E5D59]">Upcoming release &middot; heading to Google Play</p>
               )}
-              {rollingOut && game.betaGroupUrl && (
-                <a
-                  href={game.betaGroupUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block text-center text-xs font-bold text-emerald-700 hover:text-emerald-900"
-                >
-                  Join Google Group for early access &rarr;
+              {game.betaGroupUrl && (rollingOut || (!game.playStoreUrl && !game.appStoreUrl && !game.externalUrl)) && (
+                <a href={game.betaGroupUrl} target="_blank" rel="noopener noreferrer" className="link-arrow justify-center pt-1">
+                  Join the Google Group for early access &rarr;
                 </a>
               )}
             </>
           )}
 
           {game.projectUrl && (
-            <Link
-              href={game.projectUrl}
-              className="block text-center text-xs font-bold text-violet-700 hover:text-violet-900 pt-2"
-            >
+            <Link href={game.projectUrl} className="link-arrow justify-center pt-1">
               More about {game.name} &rarr;
             </Link>
           )}
         </div>
       </div>
-    </div>
+    </article>
   )
 }

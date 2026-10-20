@@ -1,9 +1,22 @@
 import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
+import { Instrument_Sans, Source_Serif_4 } from 'next/font/google'
 import { GeistMono } from 'geist/font/mono'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import './globals.css'
+
+const sans = Instrument_Sans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+const serif = Source_Serif_4({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  display: 'swap',
+  axes: ['opsz'],
+})
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vaiiya.vercel.app'
 
@@ -13,8 +26,8 @@ export const metadata: Metadata = {
     default: 'VAIIYA - We. As One.',
     template: '%s | VAIIYA',
   },
-  description: 'VAIIYA is a digital studio building high-performance websites, native Android & iOS apps, and mobile games for teams who want it done right.',
-  keywords: ['digital studio', 'web development', 'Next.js', 'Android apps', 'iOS apps', 'Kotlin', 'Swift', 'mobile games', 'VAIIYA'],
+  description: 'VAIIYA is a digital studio building high-performance native Android & iOS apps and mobile games.',
+  keywords: ['digital studio', 'Android apps', 'iOS apps', 'Kotlin', 'Swift', 'mobile games', 'VAIIYA'],
   authors: [{ name: 'VAIIYA', url: siteUrl }],
   creator: 'VAIIYA',
   openGraph: {
@@ -23,12 +36,12 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'VAIIYA',
     title: 'VAIIYA - We. As One.',
-    description: 'A digital studio building high-performance websites, native Android & iOS apps, and mobile games.',
+    description: 'A digital studio building native Android & iOS apps and mobile games.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'VAIIYA - We. As One.',
-    description: 'A digital studio building high-performance websites, native Android & iOS apps, and mobile games.',
+    description: 'A digital studio building native Android & iOS apps and mobile games.',
     site: '@VAIIYA_MEDIA',
     creator: '@VAIIYA_MEDIA',
   },
@@ -47,8 +60,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className="bg-white text-slate-900 m-0 p-0 antialiased flex flex-col min-h-screen">
+    <html lang="en" className={`${sans.variable} ${serif.variable} ${GeistMono.variable}`}>
+      <body className="bg-ivory text-ink m-0 p-0 antialiased flex flex-col min-h-screen">
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />

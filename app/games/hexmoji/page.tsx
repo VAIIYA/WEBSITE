@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'HEXMOJI — Android Closed Beta Live',
@@ -31,159 +32,95 @@ const EXTRAS = [
 
 export default function HexmojiPage() {
   return (
-    <main className="min-h-screen bg-cream text-ink selection:bg-violet-600 selection:text-white">
-      {/* Hero */}
-      <section className="relative pt-16 pb-12 bg-card border-b border-card-border overflow-hidden bg-dot-grid">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <Link href="/games" className="text-xs font-bold text-violet-700 hover:text-violet-900">
-            ← Back to games
-          </Link>
-
-          <div className="mt-6 rounded-3xl overflow-hidden border border-card-border shadow-sm">
-            <div className="relative aspect-[2/1]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/games/hexmoji/feature.svg"
-                alt="HEXMOJI"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
+    <main className="bg-ivory text-ink">
+      <PageHero
+        eyebrow="Android closed beta · iOS planned"
+        title="Hexmoji. Claim the board."
+        description="A cute take on the classic hexxagon / Ataxx board game. Hop your emoji across a honeycomb grid, flip everything it touches, and out-claim a surprisingly sharp CPU."
+        media={
+          <div className="relative aspect-[2/1] overflow-hidden rounded-2xl bg-[#F0EEE6]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/games/hexmoji/feature.svg" alt="HEXMOJI" className="absolute inset-0 h-full w-full object-cover" />
           </div>
+        }
+      >
+        <Link href="/games" className="btn btn-light">&larr; All games</Link>
+      </PageHero>
 
-          <div className="mt-6 flex flex-wrap items-center gap-2">
-            <span className="px-3 py-1 rounded-full bg-white border border-violet-200 text-violet-800 text-[10px] font-bold uppercase tracking-widest">
-              Android Native
-            </span>
-            <span className="px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-[10px] font-bold uppercase tracking-widest flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              Closed Beta Live
-            </span>
-            <span className="px-3 py-1 rounded-full bg-white border border-card-border text-ink/60 text-[10px] font-bold uppercase tracking-widest">
-              iOS Planned
-            </span>
+      <section className="mx-auto max-w-site px-4 pb-20 sm:px-6 lg:px-10 lg:pb-28">
+        <div className="grid grid-cols-1 gap-10 rounded-2xl bg-ink p-7 text-ivory sm:p-12 lg:grid-cols-12">
+          <div className="space-y-4 lg:col-span-5">
+            <p className="text-sm text-[#B0AEA5]">Play right now · early access</p>
+            <h2 className="font-serif text-3xl sm:text-4xl">How to get instant beta access</h2>
           </div>
-
-          <h1 className="mt-4 text-5xl md:text-6xl font-bold font-serif leading-tight">HEXMOJI</h1>
-          <p className="mt-3 text-xl text-violet-700 font-serif">Kawaii hexxagon. Claim the board.</p>
-          <p className="mt-4 text-lg text-ink/70 leading-relaxed max-w-2xl">
-            A cute take on the classic hexxagon / Ataxx board game. Hop your emoji across a honeycomb grid, flip everything
-            it touches, and out-claim a surprisingly sharp CPU. Android Closed Beta is live now!
-          </p>
-
-          {/* Closed Beta Opt-in Banner */}
-          <div className="mt-8 p-6 sm:p-8 bg-gradient-to-br from-violet-900 via-slate-900 to-black text-white rounded-3xl shadow-xl space-y-4">
-            <div className="space-y-1">
-              <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">
-                🚀 Play Right Now &bull; Early Access
-              </span>
-              <h2 className="text-2xl font-bold font-serif text-white">How to Get Instant Beta Access:</h2>
-            </div>
-
-            <ol className="space-y-2 text-sm text-slate-300 list-decimal list-inside">
+          <div className="space-y-8 lg:col-span-7">
+            <ol className="space-y-4 text-[15px] leading-relaxed text-[#D1CFC5]">
               <li>
-                <strong className="text-white">Join Google Group:</strong> Join{' '}
-                <a
-                  href="https://groups.google.com/g/vaiiya"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 font-semibold"
-                >
+                <strong className="font-medium text-ivory">1. Join the Google Group.</strong> Join{' '}
+                <a href="https://groups.google.com/g/vaiiya" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-ivory">
                   groups.google.com/g/vaiiya
                 </a>{' '}
-                with the same Google account as your Google Play Store.
+                with the same Google account as your Play Store.
               </li>
               <li>
-                <strong className="text-white">Opt-in on Google Play:</strong> Click{' '}
-                <a
-                  href="https://play.google.com/apps/testing/com.hexmoji"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-violet-300 underline underline-offset-2 hover:text-violet-200 font-semibold"
-                >
+                <strong className="font-medium text-ivory">2. Opt in on Google Play.</strong> Open{' '}
+                <a href="https://play.google.com/apps/testing/com.hexmoji" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-ivory">
                   play.google.com/apps/testing/com.hexmoji
                 </a>{' '}
-                and tap &quot;Become a Tester&quot;.
+                and tap “Become a tester”.
               </li>
               <li>
-                <strong className="text-white">Download &amp; Play:</strong> Install the closed beta directly from Google Play.
+                <strong className="font-medium text-ivory">3. Download & play.</strong> Install the closed beta directly from Google Play.
               </li>
             </ol>
-
-            <div className="pt-2 flex flex-col sm:flex-row gap-3">
-              <a
-                href="https://groups.google.com/g/vaiiya"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold text-center"
-              >
-                1. Join Google Group
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a href="https://groups.google.com/g/vaiiya" target="_blank" rel="noopener noreferrer" className="btn bg-ivory text-ink hover:bg-[#E8E6DC]">
+                1. Join the group
               </a>
-              <a
-                href="https://play.google.com/apps/testing/com.hexmoji"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-metamask bg-violet-600 text-white hover:bg-violet-700 text-xs font-bold text-center"
-              >
-                2. Opt-in on Google Play
+              <a href="https://play.google.com/apps/testing/com.hexmoji" target="_blank" rel="noopener noreferrer" className="btn border border-[#5E5D59] text-ivory hover:bg-[#262624]">
+                2. Opt in on Google Play
               </a>
-              <a
-                href="https://groups.google.com/g/vaiiya/c/FoPlDsHz-CY"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-metamask bg-slate-800 text-slate-200 hover:bg-slate-700 text-xs font-bold text-center border border-slate-700"
-              >
-                💬 Closed Beta Forum Post
+              <a href="https://groups.google.com/g/vaiiya/c/FoPlDsHz-CY" target="_blank" rel="noopener noreferrer" className="btn border border-[#5E5D59] text-ivory hover:bg-[#262624]">
+                Beta forum post
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How it plays */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold font-serif text-center mb-10">How it plays</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {RULES.map((r) => (
-              <div key={r.title} className="p-6 bg-card rounded-3xl border border-card-border">
-                <h3 className="text-lg font-bold font-serif text-violet-700">{r.title}</h3>
-                <p className="mt-2 text-sm text-ink/60 leading-relaxed">{r.body}</p>
-              </div>
-            ))}
-          </div>
+      <section className="mx-auto max-w-site px-4 pb-20 sm:px-6 lg:px-10 lg:pb-28">
+        <h2 className="mb-10 font-serif text-4xl leading-tight sm:text-5xl">How it plays</h2>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          {RULES.map((r, i) => (
+            <div key={r.title} className="rounded-2xl bg-[#F0EEE6] p-7">
+              <span className="font-mono text-xs text-[#87867F]">0{i + 1}</span>
+              <h3 className="mb-3 mt-8 font-serif text-2xl">{r.title}</h3>
+              <p className="text-[15px] leading-relaxed text-[#3D3D3A]">{r.body}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Extras */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card border-y border-card-border">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold font-serif text-center mb-8">What&apos;s in it</h2>
-          <ul className="space-y-3">
+      <section className="border-t border-[#E8E6DC]">
+        <div className="mx-auto grid max-w-site grid-cols-1 gap-8 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-28">
+          <h2 className="font-serif text-4xl leading-tight sm:text-5xl lg:col-span-5">What’s in it</h2>
+          <ul className="border-t border-[#D1CFC5] lg:col-span-7">
             {EXTRAS.map((item) => (
-              <li key={item} className="flex gap-3 text-ink/70 leading-relaxed">
-                <span className="text-violet-600 font-bold" aria-hidden>
-                  &bull;
-                </span>
-                <span>{item}</span>
+              <li key={item} className="border-b border-[#D1CFC5] py-4 text-[17px] leading-relaxed text-[#3D3D3A]">
+                {item}
               </li>
             ))}
           </ul>
         </div>
       </section>
 
-      {/* Free to play */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-2xl mx-auto space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-bold font-serif">Free to play</h2>
-          <p className="text-ink/70 leading-relaxed">
+      <section className="bg-[#F0EEE6]">
+        <div className="mx-auto max-w-2xl px-4 py-20 text-center sm:px-6">
+          <h2 className="font-serif text-4xl">Free to play</h2>
+          <p className="mt-5 text-lg leading-relaxed text-[#3D3D3A]">
             No account, no sign-up — your progress lives on your device. Free to play, supported by occasional ads.
           </p>
-          <Link
-            href="/privacy-policy"
-            className="inline-block text-xs font-bold text-violet-700 hover:text-violet-900"
-          >
-            Privacy policy &rarr;
-          </Link>
+          <Link href="/privacy-policy" className="link-arrow mt-6">Privacy policy &rarr;</Link>
         </div>
       </section>
     </main>

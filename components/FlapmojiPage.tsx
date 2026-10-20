@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import PageHero from '@/components/PageHero'
 import { portfolioApps } from '@/lib/portfolio'
 
 const game = portfolioApps.find((a) => a.id === 'flapmoji')!
@@ -33,171 +34,91 @@ export const flapmojiMetadata = {
 }
 
 export default function FlapmojiPage() {
-  const hasStoreLink = Boolean(game.playStoreUrl || game.appStoreUrl)
-
   return (
-    <main className="min-h-screen bg-cream text-ink">
-      {/* Hero */}
-      <section className="relative pt-16 pb-12 bg-card border-b border-card-border overflow-hidden bg-dot-grid">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <Link href="/games" className="text-xs font-bold text-violet-700 hover:text-violet-900">
-            ← Back to games
-          </Link>
+    <main className="bg-ivory text-ink">
+      <PageHero
+        eyebrow="Android native · iOS planned"
+        title="Flapmoji. One tap, one emoji, endless pipes."
+        description="Flap a grumpy little emoji through an endless gauntlet of glossy pipes. Pure reflexes in Classic, or Arcade chaos with power-ups, coins and a mushroom that is absolutely a trap."
+        media={
+          <div className="relative aspect-[2/1] overflow-hidden rounded-2xl bg-[#F0EEE6]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/games/flapmoji/feature.png" alt="FLAPMOJI" className="absolute inset-0 h-full w-full object-cover" />
+          </div>
+        }
+      >
+        {game.playStoreUrl && (
+          <a href={game.playStoreUrl} target="_blank" rel="noopener noreferrer" className="btn btn-dark">
+            Get it on Google Play &rarr;
+          </a>
+        )}
+        <a href="https://groups.google.com/g/vaiiya/c/2zJvHbgUggc" target="_blank" rel="noopener noreferrer" className="btn btn-light">
+          Beta thread
+        </a>
+        <Link href="/games" className="btn btn-light">&larr; All games</Link>
+      </PageHero>
 
-          <div className="mt-6 rounded-3xl overflow-hidden border border-card-border shadow-sm">
-            <div className="relative aspect-[2/1]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/games/flapmoji/feature.png"
-                alt="FLAPMOJI"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
+      <section className="mx-auto max-w-site px-4 pb-20 sm:px-6 lg:px-10 lg:pb-28">
+        <h2 className="mb-10 font-serif text-4xl leading-tight sm:text-5xl">Two ways to play</h2>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          {[
+            { name: 'Classic', text: 'Pure one-tap flappy. Just you, the pipes and your best score. No distractions.' },
+            { name: 'Arcade', text: 'Faster, tighter, wilder. Grab power-ups, hoover up coins and try not to eat a mushroom.' },
+          ].map((m) => (
+            <div key={m.name} className="rounded-2xl bg-[#F0EEE6] p-8">
+              <h3 className="mb-3 font-serif text-3xl">{m.name}</h3>
+              <p className="text-[17px] leading-relaxed text-[#3D3D3A]">{m.text}</p>
             </div>
-          </div>
-
-          <div className="mt-6 flex flex-wrap items-center gap-2">
-            <span className="px-3 py-1 rounded-full bg-white border border-violet-200 text-violet-800 text-[10px] font-bold uppercase tracking-widest">
-              Android Native
-            </span>
-            <span className="px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-800 text-[10px] font-bold uppercase tracking-widest">
-              Closed Beta Next
-            </span>
-            <span className="px-3 py-1 rounded-full bg-white border border-card-border text-ink/60 text-[10px] font-bold uppercase tracking-widest">
-              iOS Planned
-            </span>
-          </div>
-
-          <h1 className="mt-4 text-5xl md:text-6xl font-bold font-serif leading-tight">FLAPMOJI</h1>
-          <p className="mt-3 text-xl text-violet-700 font-serif">One tap. One emoji. Endless pipes.</p>
-          <p className="mt-4 text-lg text-ink/70 leading-relaxed max-w-2xl">
-            Tap to flap a grumpy little emoji through an endless gauntlet of glossy pipes. Play it pure on reflexes in
-            Classic, or dive into the Arcade chaos with power-ups, coins and a mushroom that is absolutely a trap.
-          </p>
-
-          <div className="mt-8 space-y-3 max-w-sm">
-            {game.playStoreUrl && (
-              <a
-                href={game.playStoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full btn-metamask bg-violet-600 text-white hover:bg-violet-700 text-xs font-bold text-center block"
-              >
-                Get it on Google Play &rarr;
-              </a>
-            )}
-            <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-2xl space-y-2">
-              <p className="text-xs font-semibold text-emerald-900">
-                🚀 Heading to Google Play Closed Beta
-              </p>
-              <p className="text-xs text-emerald-800 leading-relaxed">
-                Join our Google Group tester community to get first access as soon as the closed beta build drops!
-              </p>
-              <a
-                href="https://groups.google.com/g/vaiiya/c/2zJvHbgUggc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full btn-metamask bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold text-center block"
-              >
-                Join FLAPMOJI Beta Thread &rarr;
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* Two modes */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold font-serif text-center mb-10">Two ways to play</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="p-7 bg-card rounded-3xl border border-card-border">
-              <h3 className="text-2xl font-bold font-serif text-violet-700">Classic</h3>
-              <p className="mt-2 text-ink/70 leading-relaxed">
-                Pure one-tap flappy. Just you, the pipes and your best score. No distractions.
-              </p>
-            </div>
-            <div className="p-7 bg-card rounded-3xl border border-card-border">
-              <h3 className="text-2xl font-bold font-serif text-violet-700">Arcade</h3>
-              <p className="mt-2 text-ink/70 leading-relaxed">
-                Faster, tighter, wilder. Grab power-ups, hoover up coins and try not to eat a mushroom.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Power-ups */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card border-y border-card-border">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold font-serif text-center mb-10">Arcade power-ups</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <section className="bg-[#F0EEE6]">
+        <div className="mx-auto max-w-site px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+          <h2 className="mb-10 font-serif text-4xl leading-tight sm:text-5xl">Arcade power-ups</h2>
+          <ul className="grid grid-cols-1 border-t border-[#D1CFC5] sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-3">
             {POWERUPS.map((p) => (
-              <div key={p.name} className="p-5 bg-white rounded-2xl border border-card-border flex gap-4 items-start">
-                <span className="text-2xl leading-none" aria-hidden>
-                  {p.icon}
-                </span>
+              <li key={p.name} className="flex items-start gap-4 border-b border-[#D1CFC5] py-6">
+                <span className="text-2xl leading-none" aria-hidden>{p.icon}</span>
                 <div>
-                  <div className="font-bold font-serif text-violet-700">{p.name}</div>
-                  <div className="text-sm text-ink/60 mt-0.5">{p.body}</div>
+                  <h3 className="font-serif text-xl">{p.name}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-[#5E5D59]">{p.body}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* More to chase */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold font-serif text-center mb-8">More to chase</h2>
-          <ul className="space-y-3">
-            {CHASE.map((item) => (
-              <li key={item} className="flex gap-3 text-ink/70 leading-relaxed">
-                <span className="text-violet-600 font-bold" aria-hidden>
-                  &bull;
-                </span>
-                <span>{item}</span>
               </li>
             ))}
           </ul>
         </div>
       </section>
 
-      {/* Screenshots */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card border-y border-card-border">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold font-serif text-center mb-10">Screenshots</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {SHOTS.map((shot) => (
-              <div key={shot.src} className="rounded-2xl overflow-hidden border border-card-border bg-white">
-                <div className="relative aspect-[9/16]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={shot.src}
-                    alt={shot.alt}
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+      <section className="mx-auto grid max-w-site grid-cols-1 gap-8 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-28">
+        <h2 className="font-serif text-4xl leading-tight sm:text-5xl lg:col-span-5">More to chase</h2>
+        <ul className="border-t border-[#D1CFC5] lg:col-span-7">
+          {CHASE.map((item) => (
+            <li key={item} className="border-b border-[#D1CFC5] py-4 text-[17px] leading-relaxed text-[#3D3D3A]">{item}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mx-auto max-w-site px-4 pb-20 sm:px-6 lg:px-10 lg:pb-28">
+        <h2 className="mb-10 font-serif text-4xl leading-tight sm:text-5xl">Screenshots</h2>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          {SHOTS.map((shot) => (
+            <div key={shot.src} className="relative aspect-[9/16] overflow-hidden rounded-xl bg-[#F0EEE6]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={shot.src} alt={shot.alt} className="absolute inset-0 h-full w-full object-cover" />
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Free to play */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-2xl mx-auto space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-bold font-serif">Free to play</h2>
-          <p className="text-ink/70 leading-relaxed">
-            No account. No sign-up. Your progress stays on your device. Free to play, supported by occasional full-screen
-            ads between runs.
+      <section className="bg-[#F0EEE6]">
+        <div className="mx-auto max-w-2xl px-4 py-20 text-center sm:px-6">
+          <h2 className="font-serif text-4xl">Free to play</h2>
+          <p className="mt-5 text-lg leading-relaxed text-[#3D3D3A]">
+            No account. No sign-up. Your progress stays on your device. Free to play, supported by occasional
+            full-screen ads between runs.
           </p>
-          <Link
-            href="/privacy-policy"
-            className="inline-block text-xs font-bold text-violet-700 hover:text-violet-900"
-          >
-            Privacy policy &rarr;
-          </Link>
+          <Link href="/privacy-policy" className="link-arrow mt-6">Privacy policy &rarr;</Link>
         </div>
       </section>
     </main>

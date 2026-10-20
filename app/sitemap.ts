@@ -11,13 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/games',
     '/games/flapmoji',
     '/games/hexmoji',
-    '/progress',
     '/podcast',
     '/privacy-policy',
     '/terms',
     '/cookies',
-    '/projects/nightstudio',
-    '/projects/blobio',
   ]
 
   const staticEntries: MetadataRoute.Sitemap = routes.map((route) => ({

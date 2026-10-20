@@ -171,8 +171,8 @@ export default function TermsOfService() {
                         <p className="text-[#3D3D3A] text-sm mb-4">
                             For any questions regarding these terms, please reach out to:
                         </p>
-                        <a href="mailto:legal@vaiiya.com" className="text-xl font-mono text-[#C2603F] hover:text-ink transition-colors">
-                            legal@vaiiya.com
+                        <a href="mailto:vaiiya@googlegroups.com" className="text-xl font-mono text-[#C2603F] hover:text-ink transition-colors">
+                            vaiiya@googlegroups.com
                         </a>
                     </section>
                 </div>

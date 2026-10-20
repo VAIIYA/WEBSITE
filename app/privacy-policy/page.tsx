@@ -137,8 +137,8 @@ export default function PrivacyPolicy() {
                             </li>
                             <li>
                                 <strong>Email:</strong> Contact us at{" "}
-                                <a href="mailto:privacy@vaiiya.com" className="text-[#C2603F] font-mono hover:text-ink transition-colors">
-                                    privacy@vaiiya.com
+                                <a href="mailto:vaiiya@googlegroups.com" className="text-[#C2603F] font-mono hover:text-ink transition-colors">
+                                    vaiiya@googlegroups.com
                                 </a>{" "}
                                 with the subject &quot;Data Deletion&quot; and your registered email or account identifier.
                             </li>
@@ -183,8 +183,8 @@ export default function PrivacyPolicy() {
                         <p className="text-[#D1CFC5] text-sm mb-4 relative z-10">
                             For any privacy-related inquiries or to exercise your rights, please reach out to our legal team:
                         </p>
-                        <a href="mailto:privacy@vaiiya.com" className="text-xl font-mono text-[#C2603F] hover:text-white transition-colors relative z-10">
-                            privacy@vaiiya.com
+                        <a href="mailto:vaiiya@googlegroups.com" className="text-xl font-mono text-[#C2603F] hover:text-white transition-colors relative z-10">
+                            vaiiya@googlegroups.com
                         </a>
                     </section>
                 </div>

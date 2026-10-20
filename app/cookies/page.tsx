@@ -85,7 +85,7 @@ export default function CookiePolicy() {
                         <div className="absolute inset-0 bg-gradient-to-br from-metamask-orange/5 to-transparent"></div>
                         <h2 className="font-serif text-3xl text-ivory mb-2 relative z-10">Questions?</h2>
                         <p className="text-[#D1CFC5] text-sm mb-8 max-w-sm mx-auto relative z-10">If you have questions about our cookie usage, please contact our privacy team.</p>
-                        <a href="mailto:privacy@vaiiya.com" className="btn bg-ivory text-ink hover:bg-[#E8E6DC] relative z-10">
+                        <a href="mailto:vaiiya@googlegroups.com" className="btn bg-ivory text-ink hover:bg-[#E8E6DC] relative z-10">
                             Contact Privacy Team
                         </a>
                     </section>

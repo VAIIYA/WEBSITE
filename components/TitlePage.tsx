@@ -1,40 +1,10 @@
 import Link from 'next/link'
-import { displayName, portfolioApps, titlePath, type DescriptionBlock, type PortfolioApp } from '@/lib/portfolio'
+import { displayName, portfolioApps, titlePath, type PortfolioApp } from '@/lib/portfolio'
 import PageHero from '@/components/PageHero'
 import PlayButton from '@/components/PlayButton'
+import DescriptionBlocks from '@/components/DescriptionBlocks'
+import TitleBanner from '@/components/TitleBanner'
 
-
-function Description({ blocks }: { blocks: DescriptionBlock[] }) {
-  return (
-    <div className="space-y-5">
-      {blocks.map((b, i) => {
-        if (b.t === 'h') {
-          return (
-            <h3 key={i} className="!mt-10 font-serif text-2xl text-ink first:!mt-0">
-              {b.text}
-            </h3>
-          )
-        }
-        if (b.t === 'ul') {
-          return (
-            <ul key={i} className="border-t border-[#D1CFC5]">
-              {b.items.map((item) => (
-                <li key={item} className="border-b border-[#D1CFC5] py-3 text-[16px] leading-relaxed text-[#3D3D3A]">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          )
-        }
-        return (
-          <p key={i} className="text-[17px] leading-relaxed text-[#3D3D3A]">
-            {b.text}
-          </p>
-        )
-      })}
-    </div>
-  )
-}
 
 /** Detail page for one game or app. */
 export default function TitlePage({ app }: { app: PortfolioApp }) {
@@ -59,18 +29,7 @@ export default function TitlePage({ app }: { app: PortfolioApp }) {
         eyebrow={`${isGame ? 'Game' : 'App'} · Android`}
         title={displayName(app.name)}
         description={app.summary}
-        media={
-          <div className={`relative aspect-[2/1] overflow-hidden rounded-2xl bg-gradient-to-br ${app.gradient}`}>
-            {app.featureImage ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={app.featureImage} alt={displayName(app.name)} className="absolute inset-0 h-full w-full object-cover" />
-            ) : (
-              <div className="absolute inset-0 flex items-center justify-center px-6">
-                <span className="text-center font-serif text-5xl text-ivory sm:text-8xl">{displayName(app.name)}</span>
-              </div>
-            )}
-          </div>
-        }
+        media={<TitleBanner app={app} />}
       >
         {live && app.playStoreUrl ? (
           <PlayButton href={app.playStoreUrl} size="lg" />
@@ -102,8 +61,8 @@ export default function TitlePage({ app }: { app: PortfolioApp }) {
                   <PlayButton href={app.playStoreUrl} />
                 </div>
               )}
-              <Link href={app.privacyHref ?? '/privacy-policy'} className="link-arrow mt-6">
-                Privacy &amp; data deletion <span aria-hidden="true">&rarr;</span>
+              <Link href={`${titlePath(app)}/privacy-policy`} className="link-arrow mt-6">
+                Privacy policy <span aria-hidden="true">&rarr;</span>
               </Link>
               {app.links?.map((l) => (
                 <Link key={l.href} href={l.href} className="link-arrow mt-3">
@@ -117,7 +76,7 @@ export default function TitlePage({ app }: { app: PortfolioApp }) {
             <h2 className="mb-8 font-serif text-4xl leading-tight sm:text-5xl">
               About {isGame ? 'this game' : 'this app'}
             </h2>
-            <Description blocks={app.about} />
+            <DescriptionBlocks blocks={app.about} />
           </div>
         </div>
       </section>

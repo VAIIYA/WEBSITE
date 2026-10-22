@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/terms',
     '/cookies',
     ...portfolioApps.map((a) => titlePath(a)),
+    ...portfolioApps.map((a) => `${titlePath(a)}/privacy-policy`),
+    '/apps/feedme/child-safety',
   ]
 
   const staticEntries: MetadataRoute.Sitemap = routes.map((route) => ({

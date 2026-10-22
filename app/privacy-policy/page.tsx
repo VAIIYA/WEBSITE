@@ -148,7 +148,9 @@ export default function PrivacyPolicy() {
                     <section id="feedme">
                         <h2 className="font-serif text-3xl text-ink mb-5 pt-8 border-t border-[#D1CFC5]">FeedMe: public messages, ads and deletion</h2>
                         <p className="text-[#3D3D3A] leading-relaxed mb-4">
-                            This section applies specifically to our app <strong>FeedMe</strong>.
+                            This section applies specifically to our app <strong>FeedMe</strong>. Each of our apps and games
+                            also has its own privacy policy page; the FeedMe one is at{" "}
+                            <a href="/apps/feedme/privacy-policy" className="text-[#C2603F] hover:text-ink transition-colors">/apps/feedme/privacy-policy</a>.
                         </p>
                         <ul className="list-disc list-inside space-y-3 text-[#3D3D3A] ml-2 mb-4">
                             <li>

@@ -34,8 +34,6 @@ export interface PortfolioApp {
   facts?: { category?: string; rating?: string; ads?: boolean }
   /** Google Play (Android) URL */
   playStoreUrl?: string
-  /** Where the privacy / data-deletion info for this title lives */
-  privacyHref?: string
   /** Extra links shown under the privacy link in "At a glance" */
   links?: { label: string; href: string }[]
 }
@@ -216,7 +214,6 @@ export const portfolioApps: PortfolioApp[] = [
     category: 'app',
     status: 'in-development',
     facts: { category: 'Social', ads: true },
-    privacyHref: '/privacy-policy#feedme',
     links: [{ label: 'Child safety standards', href: '/apps/feedme/child-safety' }],
   },
 ]

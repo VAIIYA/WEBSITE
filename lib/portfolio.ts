@@ -36,6 +36,8 @@ export interface PortfolioApp {
   playStoreUrl?: string
   /** Where the privacy / data-deletion info for this title lives */
   privacyHref?: string
+  /** Extra links shown under the privacy link in "At a glance" */
+  links?: { label: string; href: string }[]
 }
 
 /** Path of the detail page: games live under /games, apps under /apps. */
@@ -186,15 +188,35 @@ export const portfolioApps: PortfolioApp[] = [
   {
     id: 'feedme',
     name: 'FEEDME',
-    summary: 'Our next app — coming soon to Google Play.',
+    summary: 'Short thoughts, big conversations. A calm, decentralized social feed that is yours.',
     about: [
-      p('FeedMe is the app we’re working on right now. It shows public messages in a feed and is supported by ads.'),
-      p('More details, screenshots and the Google Play link will appear here when FeedMe is released.'),
+      p('FeedMe is a social app for short thoughts and big conversations. It has the fast, open feel of a public timeline and the visual flair of a modern photo feed, in one calm, clutter-free app.'),
+      h('Your account, your rules'),
+      p('No company owns your FeedMe account. It is built on decentralized communication: your account is a private key that only you hold, and your posts travel across an open network of independent servers instead of living on one company’s platform.'),
+      h('What you can do'),
+      ul('Share short notes and reply to others', 'Follow people and read your timeline', 'Discover trending hashtags and search topics', 'See the pictures, links and videos people share', 'Send direct messages', 'Bookmark notes you want to keep', 'Mute people or report content you don’t want to see'),
+      h('Calm by design'),
+      ul('No notification spam: FeedMe sends no push notifications', 'No wallet, no payments, no clutter', 'Free, with occasional ads between posts, always labelled “Ad”'),
+      h('Safe for everyone'),
+      p('FeedMe is for adults aged 18 and over and has zero tolerance for child sexual abuse and exploitation. Read how we handle reports in our child safety standards.'),
+      h('Good to know'),
+      ul('Posts are public and can be seen by others', 'Back up your private key in Settings. If you lose it, nobody can recover your account'),
+      p('Questions or feedback? Contact vaiiya@googlegroups.com.'),
     ],
+    image: '/apps/feedme/icon.png',
+    featureImage: '/apps/feedme/feature.png',
     gradient: 'from-orange-300 to-rose-400',
+    screenshots: [
+      { src: '/apps/feedme/phone-2-trending-hashtags.png', alt: 'Trending hashtags' },
+      { src: '/apps/feedme/phone-3-advanced-search.png', alt: 'Search' },
+      { src: '/apps/feedme/phone-4-messages.png', alt: 'Direct messages' },
+      { src: '/apps/feedme/phone-5-account.png', alt: 'Account' },
+    ],
     platforms: ['android'],
     category: 'app',
     status: 'in-development',
+    facts: { category: 'Social', ads: true },
     privacyHref: '/privacy-policy#feedme',
+    links: [{ label: 'Child safety standards', href: '/apps/feedme/child-safety' }],
   },
 ]

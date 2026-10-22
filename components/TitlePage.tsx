@@ -105,6 +105,11 @@ export default function TitlePage({ app }: { app: PortfolioApp }) {
               <Link href={app.privacyHref ?? '/privacy-policy'} className="link-arrow mt-6">
                 Privacy &amp; data deletion <span aria-hidden="true">&rarr;</span>
               </Link>
+              {app.links?.map((l) => (
+                <Link key={l.href} href={l.href} className="link-arrow mt-3">
+                  {l.label} <span aria-hidden="true">&rarr;</span>
+                </Link>
+              ))}
             </div>
           </aside>
 

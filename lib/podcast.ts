@@ -1,9 +1,5 @@
 const FEED_URL = 'https://media.rss.com/vaiiya/feed.xml'
 
-/** YouTube "podcast" playlist — used for the video player on the homepage and /podcast. */
-export const YOUTUBE_PLAYLIST_ID = 'PLTw6lIvMKLpQ'
-export const YOUTUBE_PLAYLIST_URL = `https://www.youtube.com/playlist?list=${YOUTUBE_PLAYLIST_ID}`
-export const YOUTUBE_EMBED_URL = `https://www.youtube-nocookie.com/embed/videoseries?list=${YOUTUBE_PLAYLIST_ID}`
 
 export interface PodcastShow {
   title: string
@@ -30,7 +26,7 @@ export interface PodcastData {
 
 /** Every place the show is published, for the "listen anywhere" grid. */
 export const PODCAST_LINKS: { name: string; url: string; icon: string }[] = [
-  { name: 'YouTube', url: YOUTUBE_PLAYLIST_URL, icon: '▶️' },
+  { name: 'YouTube', url: 'https://www.youtube.com/@VAIIYA.International', icon: '▶️' },
   { name: 'Spotify', url: 'https://open.spotify.com/show/4ktYxE8kvOeFwTEnbEaHtB', icon: '🟢' },
   { name: 'Apple Podcasts', url: 'https://podcasts.apple.com/us/podcast/vaiiya/id6805651651', icon: '' },
   { name: 'Amazon Music', url: 'https://music.amazon.com/podcasts/329448a7-5c90-4352-adbc-d41ced63dba8/vaiiya', icon: '🅰️' },

@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
 import { getPodcast, PODCAST_LINKS } from '@/lib/podcast'
 import PageHero from '@/components/PageHero'
-import PodcastVideo from '@/components/PodcastVideo'
 import PodcastPlayer from '@/components/PodcastPlayer'
 
 export const metadata: Metadata = {
   title: 'Podcast',
   description:
-    'The VAIIYA podcast — the future of AI and robotics, explained simply. Watch on YouTube or listen wherever you get your podcasts.',
+    'The VAIIYA podcast — the future of AI and robotics, explained simply. Listen here or wherever you get your podcasts.',
 }
 
 export const revalidate = 3600
@@ -25,18 +24,14 @@ export default async function PodcastPage() {
         description={show?.description}
       />
 
-      <section className="mx-auto max-w-site px-4 pb-20 sm:px-6 lg:px-10 lg:pb-28">
-        <h2 className="mb-6 font-serif text-3xl sm:text-4xl">Watch on YouTube</h2>
-        <PodcastVideo />
-      </section>
-
       <section className="bg-[#F0EEE6]">
         <div className="mx-auto grid max-w-site grid-cols-1 gap-10 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:px-10 lg:py-28">
           <div className="lg:col-span-4">
             <h2 className="font-serif text-3xl sm:text-4xl">Listen to episodes</h2>
+            <p className="mt-4 text-lg leading-relaxed text-[#3D3D3A]">Press play, or pick any episode from the list.</p>
           </div>
           <div className="lg:col-span-8">
-            <PodcastPlayer episodes={episodes} />
+            <PodcastPlayer episodes={episodes} cover={show?.image} />
           </div>
         </div>
       </section>

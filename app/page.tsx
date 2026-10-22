@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import PodcastVideo from '@/components/PodcastVideo'
+import PodcastPlayer from '@/components/PodcastPlayer'
+import { getPodcast } from '@/lib/podcast'
 import { portfolioApps, PLAY_PROFILE_URL } from '@/lib/portfolio'
 import TitleCard from '@/components/TitleCard'
 import Wordmark from '@/components/Wordmark'
@@ -26,7 +27,11 @@ const offerings = [
   },
 ]
 
-export default function Home() {
+export const revalidate = 3600
+
+export default async function Home() {
+  const podcast = await getPodcast()
+
   return (
     <main className="w-full bg-ivory text-ink">
       {/* Hero */}
@@ -153,15 +158,15 @@ export default function Home() {
             <p className="eyebrow">The VAIIYA Podcast</p>
             <h2 className="font-serif text-4xl leading-tight sm:text-5xl">The future of AI &amp; robotics</h2>
             <p className="text-lg leading-relaxed text-[#3D3D3A]">
-              Groundbreaking technology and the people shaping it — explained simply. New episodes on YouTube and
-              every podcast app.
+              Groundbreaking technology and the people shaping it — explained simply. Listen right here or in
+              any podcast app.
             </p>
             <Link href="/podcast" className="btn btn-dark">
               All episodes
             </Link>
           </div>
           <div className="lg:col-span-8">
-            <PodcastVideo />
+            <PodcastPlayer episodes={podcast?.episodes ?? []} cover={podcast?.show.image} />
           </div>
         </div>
       </section>

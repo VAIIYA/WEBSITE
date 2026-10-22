@@ -17,6 +17,9 @@ const nextConfig = {
       { source: '/early-access', destination: '/', permanent: true },
       { source: '/android', destination: '/apps', permanent: true },
       { source: '/ios', destination: '/apps', permanent: true },
+      // FeedMe child safety page lives under /apps/feedme.
+      { source: '/child-safety', destination: '/apps/feedme/child-safety', permanent: false },
+      { source: '/app/feedme/child-safety', destination: '/apps/feedme/child-safety', permanent: false },
       // News section removed — send old links home.
       { source: '/news', destination: '/', permanent: true },
       { source: '/news/:path*', destination: '/', permanent: true },

@@ -14,6 +14,7 @@ export default function IndestructibleSocialsSection() {
       setCopiedEmail(true)
       setTimeout(() => setCopiedEmail(false), 2500)
     } catch {
+      // Clipboard unavailable: fall back to opening the mail app.
       window.location.href = `mailto:${EMAIL}`
     }
   }
@@ -25,9 +26,17 @@ export default function IndestructibleSocialsSection() {
           <p className="text-sm text-[#B0AEA5]">Email</p>
           <a href={`mailto:${EMAIL}`} className="font-serif text-3xl sm:text-4xl">{EMAIL}</a>
         </div>
-        <button onClick={handleCopyEmail} className="btn bg-ivory text-ink hover:bg-[#E8E6DC]">
-          {copiedEmail ? 'Copied' : 'Copy address'}
-        </button>
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <a href={`mailto:${EMAIL}`} className="btn bg-ivory text-ink hover:bg-[#E8E6DC]">
+            Send email
+          </a>
+          <button
+            onClick={handleCopyEmail}
+            className="btn border border-[#5E5D59] text-ivory hover:bg-[#262624]"
+          >
+            {copiedEmail ? 'Copied' : 'Copy address'}
+          </button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

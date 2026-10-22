@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'How VAIIYA collects, uses, and protects your data across its Android and iOS applications.',
+  description: 'How VAIIYA collects, uses, and protects your data across its apps and games.',
 };
 
 export default function PrivacyPolicy() {
@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
                         <p className="text-[#3D3D3A] leading-relaxed">
                             At VAIIYA, we take your digital sovereignty seriously. As a studio building mobile apps and games,
                             we are committed to transparency in how we collect and process your data. This policy applies to all
-                            products under the VAIIYA umbrella, including HEXMOJI and FlapMoji.
+                            products under the VAIIYA umbrella, including FlapMoji, HexMoji, Emoji Blocks, MatchMoji, TapeDeck and FeedMe.
                         </p>
                     </section>
 
@@ -82,10 +82,10 @@ export default function PrivacyPolicy() {
                         </div>
                     </section>
 
-                    <section>
+                    <section id="advertising">
                         <h2 className="font-serif text-3xl text-ink mb-5 pt-8 border-t border-[#D1CFC5]">5. Advertising</h2>
                         <p className="text-[#3D3D3A] leading-relaxed mb-4">
-                            Some of our apps, including <strong>FlapMoji</strong>, are free and supported by
+                            Some of our apps and games, including <strong>FlapMoji</strong> and <strong>FeedMe</strong>, are free and supported by
                             advertising served through <strong>Google AdMob</strong>. To serve and measure
                             ads, the Google Mobile Ads SDK collects and shares your device&apos;s
                             <strong> advertising identifier</strong> along with standard technical
@@ -125,7 +125,7 @@ export default function PrivacyPolicy() {
                         </p>
                     </section>
 
-                    <section>
+                    <section id="data-deletion">
                         <h2 className="font-serif text-3xl text-ink mb-5 pt-8 border-t border-[#D1CFC5]">8. Data Deletion</h2>
                         <p className="text-[#3D3D3A] leading-relaxed mb-4">
                             You may request the deletion of your account and associated personal data at any time. VAIIYA
@@ -133,7 +133,7 @@ export default function PrivacyPolicy() {
                         </p>
                         <ul className="list-disc list-inside space-y-2 text-[#3D3D3A] ml-2 mb-6">
                             <li>
-                                <strong>In-app:</strong> Use the account deletion option available within the app settings of each product.
+                                <strong>In-app:</strong> Use the data deletion option available within the app settings of each product. For FeedMe, see the FeedMe section below.
                             </li>
                             <li>
                                 <strong>Email:</strong> Contact us at{" "}
@@ -143,6 +143,39 @@ export default function PrivacyPolicy() {
                                 with the subject &quot;Data Deletion&quot; and your registered email or account identifier.
                             </li>
                         </ul>
+                    </section>
+
+                    <section id="feedme">
+                        <h2 className="font-serif text-3xl text-ink mb-5 pt-8 border-t border-[#D1CFC5]">FeedMe: public messages, ads and deletion</h2>
+                        <p className="text-[#3D3D3A] leading-relaxed mb-4">
+                            This section applies specifically to our app <strong>FeedMe</strong>.
+                        </p>
+                        <ul className="list-disc list-inside space-y-3 text-[#3D3D3A] ml-2 mb-4">
+                            <li>
+                                <strong>Public messages.</strong> FeedMe displays <strong>public messages</strong>. Messages shown
+                                in the app are public by nature and can be seen by anyone. Do not post anything you do not want
+                                others to see.
+                            </li>
+                            <li>
+                                <strong>Advertising.</strong> FeedMe is supported by advertising. To serve and measure ads, the
+                                app uses your device&apos;s <strong>advertising identifier</strong> (advertising ID), as described
+                                in <a href="#advertising" className="text-[#C2603F] hover:text-ink transition-colors">Section 5</a>.
+                                You can reset or limit your advertising ID at any time in your device settings
+                                (Android: <span className="font-mono text-sm">Settings &rarr; Privacy &rarr; Ads</span>).
+                            </li>
+                            <li>
+                                <strong>How deletion works.</strong> FeedMe does not use an email-and-password account. Your
+                                identity in the app is a <strong>key</strong> stored on your device. To delete your FeedMe data
+                                from the app, <strong>wipe the key</strong> in the app. Once the key is wiped it cannot be
+                                recovered.
+                            </li>
+                        </ul>
+                        <p className="text-[#3D3D3A] leading-relaxed">
+                            Questions about FeedMe or deletion? Contact us at{" "}
+                            <a href="mailto:vaiiya@googlegroups.com" className="text-[#C2603F] font-mono hover:text-ink transition-colors">
+                                vaiiya@googlegroups.com
+                            </a>.
+                        </p>
                     </section>
 
                     <section>

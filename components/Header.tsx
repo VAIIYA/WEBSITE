@@ -13,14 +13,11 @@ const primaryLinks = [
 
 const secondaryLinks = [
   { href: '/portfolio', name: 'Portfolio' },
-  { href: '/early-access', name: 'Early Access' },
 ]
 
 const mobileLinks = [
   { href: '/', name: 'Home' },
   ...primaryLinks,
-  { href: '/android', name: 'Android' },
-  { href: '/ios', name: 'iOS' },
   ...secondaryLinks,
   { href: '/about', name: 'About' },
 ]

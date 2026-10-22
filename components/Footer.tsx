@@ -17,17 +17,6 @@ const columns = [
     links: [
       { name: 'Apps', href: '/apps' },
       { name: 'Games', href: '/games' },
-      { name: 'Android', href: '/android' },
-      { name: 'iOS', href: '/ios' },
-    ],
-  },
-  {
-    title: 'Play',
-    links: [
-      { name: 'Early Access', href: '/early-access' },
-      { name: 'Hexmoji', href: '/games/hexmoji' },
-      { name: 'Flapmoji', href: '/games/flapmoji' },
-      { name: 'Tester Google Group', href: 'https://groups.google.com/g/vaiiya', external: true },
       { name: 'Google Play', href: 'https://play.google.com/store/apps/dev?id=7804895561285369781', external: true },
     ],
   },
@@ -47,13 +36,13 @@ export default function Footer() {
   return (
     <footer className="bg-ink text-ivory">
       <div className="mx-auto max-w-site px-4 pb-10 pt-16 sm:px-6 lg:px-10 lg:pt-20">
-        <div className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-6">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-5">
           <div className="col-span-2 space-y-6">
             <Link href="/" aria-label="VAIIYA home" className="inline-block text-ivory">
               <Wordmark className="text-[26px]" />
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-[#B0AEA5]">
-              An independent studio building apps and games for Android and iOS.
+              An independent studio building apps and games for Android.
             </p>
             <div className="flex items-center gap-4 text-[#B0AEA5]">
               {socialLinks.map((s) => (

@@ -4,7 +4,7 @@ import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'VAIIYA is a digital studio building high-performance native Android & iOS apps and mobile games.',
+  description: 'VAIIYA is a digital studio building high-performance Android apps and mobile games.',
 }
 
 const principles = [

@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next'
 
+import { portfolioApps, titlePath } from '@/lib/portfolio'
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vaiiya.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -9,12 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about',
     '/apps',
     '/games',
-    '/games/flapmoji',
-    '/games/hexmoji',
     '/podcast',
     '/privacy-policy',
     '/terms',
     '/cookies',
+    ...portfolioApps.map((a) => titlePath(a)),
   ]
 
   const staticEntries: MetadataRoute.Sitemap = routes.map((route) => ({

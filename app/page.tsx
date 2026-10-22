@@ -21,8 +21,8 @@ const offerings = [
   },
   {
     title: 'Websites',
-    description: 'A smaller part of what we do — fast, considered sites built on request.',
-    href: '/contact',
+    description: 'Fast, considered websites and PWAs built with Next.js, deployed on Vercel.',
+    href: '/websites',
   },
 ]
 
@@ -118,7 +118,7 @@ export default function Home() {
         <div className="mb-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
           <h2 className="font-serif text-4xl leading-tight sm:text-5xl lg:col-span-7">What we make</h2>
           <p className="text-lg leading-relaxed text-[#3D3D3A] lg:col-span-5">
-            Our focus is Android games and apps. Everything starts there, is tested by our community, and grows from it.
+            Our focus is Android games and apps, plus websites for clients.
           </p>
         </div>
 

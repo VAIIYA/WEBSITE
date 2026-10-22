@@ -13,7 +13,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Let’s talk."
-        description="Whether you have an app or game in mind — or just want to follow our updates — here’s where to find us."
+        description="Whether you have an app, game or website in mind — or just want to follow our updates — here’s where to find us."
       />
       <IndestructibleSocialsSection />
     </main>

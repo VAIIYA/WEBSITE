@@ -17,6 +17,7 @@ const columns = [
     links: [
       { name: 'Apps', href: '/apps' },
       { name: 'Games', href: '/games' },
+      { name: 'Websites', href: '/websites' },
       { name: 'Google Play', href: 'https://play.google.com/store/apps/dev?id=7804895561285369781', external: true },
     ],
   },
@@ -42,7 +43,7 @@ export default function Footer() {
               <Wordmark className="text-[26px]" />
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-[#B0AEA5]">
-              An independent studio building apps and games for Android.
+              An independent studio building Android apps and games, and websites.
             </p>
             <div className="flex items-center gap-4 text-[#B0AEA5]">
               {socialLinks.map((s) => (

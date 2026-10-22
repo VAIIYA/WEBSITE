@@ -2,7 +2,7 @@
 
 **We. As One.**
 
-Building beautiful native apps for Android and iOS. Agentic Engineering. Crafted with precision.
+Building Android apps and games, and websites. Agentic Engineering. Crafted with precision.
 
 ## 🚀 Getting Started
 

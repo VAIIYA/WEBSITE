@@ -31,7 +31,7 @@ export default function TermsOfService() {
                     <section>
                         <h2 className="font-serif text-3xl text-ink mb-5 pt-8 border-t border-[#D1CFC5]">2. Description of Services</h2>
                         <p className="text-[#3D3D3A] leading-relaxed">
-                            VAIIYA is a digital studio specializing in the development of mobile apps and games for Android.
+                            VAIIYA is a digital studio specializing in the development of mobile apps, games and websites.
                             Our suite of products includes but is not limited to FLAPMOJI, HEXMOJI, EMOJI BLOCKS, MATCHMOJI and TAPEDECK.
                         </p>
                     </section>

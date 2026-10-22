@@ -13,10 +13,10 @@ const nextConfig = {
       { source: '/apps/flapmoji', destination: '/games/flapmoji', permanent: true },
       { source: '/apps/emoji-blocks', destination: '/games/emoji-blocks', permanent: true },
       { source: '/apps/matchmoji', destination: '/games/matchmoji', permanent: true },
-      // Test groups and the old Android/iOS pages are gone.
+      // Test groups and the old Android/platform pages are gone.
       { source: '/early-access', destination: '/', permanent: true },
       { source: '/android', destination: '/apps', permanent: true },
-      { source: '/ios', destination: '/apps', permanent: true },
+      { source: '/ios', destination: '/', permanent: true },
       // FeedMe child safety page lives under /apps/feedme.
       { source: '/child-safety', destination: '/apps/feedme/child-safety', permanent: false },
       { source: '/app/feedme/child-safety', destination: '/apps/feedme/child-safety', permanent: false },

@@ -1,4 +1,4 @@
-export type AppPlatform = 'android' | 'ios' | 'web'
+export type AppPlatform = 'android' | 'web'
 export type AppCategory = 'app' | 'game'
 export type AppStatus = 'live' | 'in-development'
 

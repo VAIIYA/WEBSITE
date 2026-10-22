@@ -4,7 +4,7 @@ import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'VAIIYA is a digital studio building high-performance Android apps and mobile games.',
+  description: 'VAIIYA is a digital studio building Android apps, mobile games and websites.',
 }
 
 const principles = [
@@ -18,7 +18,7 @@ const principles = [
   },
   {
     title: 'Reach',
-    text: 'Google Play and the App Store connect your app to billions of people around the world.',
+    text: 'Google Play connects your app to billions of Android users around the world.',
   },
 ]
 
@@ -27,7 +27,7 @@ export default function AboutPage() {
     <main className="bg-ivory text-ink">
       <PageHero
         eyebrow="About VAIIYA"
-        title="A studio for apps and games."
+        title="A studio for Android apps, games and websites."
         description="We don’t just write code. We craft experiences that feel great to use."
       >
         <Link href="/portfolio" className="btn btn-dark">View portfolio</Link>
@@ -42,7 +42,7 @@ export default function AboutPage() {
             </p>
             <div className="grid grid-cols-1 gap-8 text-[17px] leading-relaxed text-[#3D3D3A] md:grid-cols-2">
               <p>
-                From there we design, build and ship — native apps and mobile games — with the same
+                From there we design, build and ship — Android apps, games and websites — with the same
                 attention to detail.
               </p>
               <p>
@@ -73,7 +73,7 @@ export default function AboutPage() {
           <p className="eyebrow !text-[#B0AEA5]">Our vision</p>
           <p className="mt-6 font-serif text-3xl leading-[1.25] sm:text-4xl">
             We believe the future of software isn’t just about utility, but about how it makes you feel. Meticulous
-            engineering and strong product intuition make apps and games that feel like magic.
+            engineering and strong product intuition make apps, games and websites that feel like magic.
           </p>
         </div>
       </section>

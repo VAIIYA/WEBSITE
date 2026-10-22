@@ -8,6 +8,7 @@ import Wordmark from '@/components/Wordmark'
 const primaryLinks = [
   { href: '/apps', name: 'Apps' },
   { href: '/games', name: 'Games' },
+  { href: '/websites', name: 'Web' },
   { href: '/podcast', name: 'Podcast' },
 ]
 

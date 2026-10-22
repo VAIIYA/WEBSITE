@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about',
     '/apps',
     '/games',
+    '/websites',
     '/podcast',
     '/privacy-policy',
     '/terms',

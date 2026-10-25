@@ -129,4 +129,53 @@ export const privacySections: Record<string, PolicySection[]> = {
       ],
     },
   ],
+  relay: [
+    {
+      title: 'Your messages',
+      blocks: [
+        p('RELAY is a private messenger. Every message is encrypted end to end on your phone before it leaves it, so that only you and the people you write to can read it. We build and maintain the app. We do not run a server that your messages pass through, and we cannot read them.'),
+        p('Messages travel over relays: independent servers run by many different people and organisations, not by VAIIYA. A relay sees an encrypted packet, its size, the time it arrived and the public key it is addressed to. It cannot read the message or see who sent it. A relay may keep what it receives for as long as it likes, and neither we nor you can make it delete that.'),
+      ],
+    },
+    {
+      title: 'Your account and key',
+      blocks: [
+        p('RELAY does not ask for a phone number, an email address or a name, and there is no account on a server of ours. Your identity is a key pair: a private key that only you hold and a public key you share. The private key is stored on your device in the Android Keystore, or stays in an external signer app of your choice. Back up your key when RELAY asks you to: if you lose it, nobody can recover your account.'),
+        p('If you choose a name or a picture for your profile, they are published openly on the network and anybody can read them. Your public key is public by nature.'),
+      ],
+    },
+    {
+      title: 'Photos',
+      blocks: [
+        p('A photo you send is encrypted on your phone with a one-time key and uploaded to a media server. The server stores an encrypted file it cannot open; the key travels inside the encrypted message. A profile picture is uploaded unencrypted and is public. Loading other people’s pictures is off by default; when you turn it on, the host of a picture can see your IP address.'),
+        p('Every relay and media server you connect to sees your IP address, as with any internet service. A VPN hides it.'),
+      ],
+    },
+    {
+      title: 'Permissions',
+      blocks: [
+        ul('Camera: only to scan a contact’s QR code. Images are not stored or sent', 'Notifications: to tell you about new messages. You choose how much a notification shows', 'Foreground service and start at boot: to keep a connection to your relays so that messages arrive while the app is closed. A permanent notification shows while this runs, and you can switch it off in the settings', 'Internet and network state: to reach the relays'),
+        p('RELAY does not read your contacts, your location, your microphone or your photo library. You pick a picture yourself when you want to send one.'),
+      ],
+    },
+    {
+      title: 'Payments',
+      blocks: [
+        p('RELAY Premium is a subscription sold through Google Play. Google handles the payment and tells the app only whether a subscription is active on your Google account. We never see your name, card or other payment details.'),
+        p('RELAY contains no advertising, no analytics and no tracking.'),
+      ],
+    },
+    {
+      title: 'How deletion works',
+      blocks: [
+        p('Your chats, contacts, settings and downloaded photos are stored on your phone only. Signing out in the app removes them from the phone, and a back-up you made yourself is an encrypted file that you keep or delete. Messages that others have already received, and anything published to relays, cannot be recalled by us. You can delete a message for everyone, which sends a request that other apps may or may not follow.'),
+      ],
+    },
+    {
+      title: 'Age and safety',
+      blocks: [
+        p('RELAY is for adults aged 18 and over. You can block anyone, and a message from someone you do not know stays in message requests until you accept it.'),
+      ],
+    },
+  ],
 }

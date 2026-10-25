@@ -47,7 +47,7 @@ const p = (text: string): DescriptionBlock => ({ t: 'p', text })
 const h = (text: string): DescriptionBlock => ({ t: 'h', text })
 const ul = (...items: string[]): DescriptionBlock => ({ t: 'ul', items })
 
-const BRAND_CASING: Record<string, string> = { FEEDME: 'FeedMe', FLAPMOJI: 'FlapMoji', TAPEDECK: 'TapeDeck' }
+const BRAND_CASING: Record<string, string> = { FEEDME: 'FeedMe', FLAPMOJI: 'FlapMoji', RELAY: 'RELAY', TAPEDECK: 'TapeDeck' }
 
 /** "EMOJI BLOCKS" -> "Emoji Blocks", with brand casing such as "FeedMe". */
 export function displayName(name: string): string {

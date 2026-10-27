@@ -6,7 +6,7 @@ import TitleCard from '@/components/TitleCard'
 
 export const metadata: Metadata = {
   title: 'Android Apps on Google Play',
-  description: 'Focused Android apps from VAIIYA — TAPEDECK today, FeedMe on the way.',
+  description: 'Focused Android apps from VAIIYA — TAPEDECK today, FeedMe and STICKTIC on the way.',
 }
 
 export default function AppsPage() {

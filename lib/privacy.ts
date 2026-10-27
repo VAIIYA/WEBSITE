@@ -129,6 +129,52 @@ export const privacySections: Record<string, PolicySection[]> = {
       ],
     },
   ],
+  relays: [
+    {
+      title: 'Public media and posts',
+      blocks: [
+        p('RELAYS is a media-first social app for short videos and photography. Posts, media, comments, and likes are public by nature and can be seen by anyone.'),
+        p('RELAYS is built on decentralized communication across an open network of independent relays (Nostr). We develop and maintain the app; we do not operate the global relay network, nor do we host your media on proprietary central servers.'),
+        p('Because posts travel over independent public relays, content published to the network cannot be modified or deleted by us once broadcast. Always exercise care and do not publish private media or information you do not wish to share publicly.'),
+      ],
+    },
+    {
+      title: 'Your account and keys',
+      blocks: [
+        p('RELAYS does not use traditional email/password credentials or centralized accounts. Your identity is a cryptographic key pair generated and stored locally on your device.'),
+        p('RELAYS has no internal wallets, no cryptocurrency transactions, and no payment processing. Back up your private key securely: if you lose it, your account cannot be recovered.'),
+      ],
+    },
+    {
+      title: 'Advertising',
+      blocks: [
+        p('RELAYS is free to use and supported by occasional native ads displayed inline within the media feed, clearly marked as sponsored. To serve and measure relevant ads, the app uses Google AdMob and your device’s advertising identifier (advertising ID). ' + ADS_NOTE),
+      ],
+    },
+    {
+      title: 'Permissions',
+      blocks: [
+        ul(
+          'Camera: to capture photos and videos directly within the app for publishing.',
+          'Photos & Media: to select and attach existing photos or videos from your device.',
+          'Internet and Network state: to connect to open relays and stream media.',
+        ),
+        p('RELAYS does not access your contacts, continuous location, microphone outside of video recording, or background storage.'),
+      ],
+    },
+    {
+      title: 'Data deletion',
+      blocks: [
+        p('To delete your RELAYS local data and identity, wipe your keys and cache in the app settings, or uninstall the app. Once local keys are removed, your device will no longer access that identity.'),
+      ],
+    },
+    {
+      title: 'Age and safety',
+      blocks: [
+        p('RELAYS is intended for adults aged 18 and older. In-app reporting and user muting are provided to help users manage their content experience.'),
+      ],
+    },
+  ],
   relay: [
     {
       title: 'Your messages',
@@ -175,6 +221,49 @@ export const privacySections: Record<string, PolicySection[]> = {
       title: 'Age and safety',
       blocks: [
         p('RELAY is for adults aged 18 and over. You can block anyone, and a message from someone you do not know stays in message requests until you accept it.'),
+      ],
+    },
+  ],
+  sticktic: [
+    {
+      title: 'Your stickers and favourites',
+      blocks: [
+        p('STICKTIC does not require an account or sign-up. Your favourites, recent stickers and search history are stored locally on your device in application storage.'),
+        p('STICKTIC does not collect, store or share personal contact information, identity data, chats or messages.'),
+      ],
+    },
+    {
+      title: 'WhatsApp integration',
+      blocks: [
+        p('STICKTIC uses the official WhatsApp Stickers Content Provider interface to enable adding sticker packs to WhatsApp on your device.'),
+        p('STICKTIC has no access to your WhatsApp messages, chat conversations, contacts or account details. The communication is one-way: delivering sticker image files into WhatsApp upon your confirmation.'),
+      ],
+    },
+    {
+      title: 'Advertising and device identifiers',
+      blocks: [
+        p('STICKTIC is free to use and supported by occasional advertisements served through Google AdMob.'),
+        p('To serve, personalize, measure and fight fraud in ads, Google AdMob and the Google Mobile Ads SDK collect and transmit device or other IDs (such as the Android Advertising ID / AAID) along with standard technical device diagnostics to Google.'),
+        p('All data transmitted by the Google Mobile Ads SDK is encrypted in transit using standard HTTPS/TLS protocols. ' + ADS_NOTE),
+      ],
+    },
+    {
+      title: 'Google Play Data Safety declaration',
+      blocks: [
+        p('In accordance with the Google Play User Data policy, STICKTIC declares the following data practices:'),
+        ul(
+          'Device or other IDs: Collected and shared with third-party ad networks (Google AdMob) for Advertising, Marketing and Analytics purposes.',
+          'Data encryption: All data transmitted off-device is encrypted in transit (HTTPS).',
+          'No personal data collected: No name, email address, phone number, location, financial or health data is collected or shared.',
+        ),
+      ],
+    },
+    {
+      title: 'Managing and deleting your data',
+      blocks: [
+        p('Because all app preferences, favourites and history are stored locally on your device, you can delete them at any time by clearing the app’s storage or uninstalling STICKTIC. We do not maintain user accounts on our servers.'),
+        p('You can reset or opt out of personalized advertising identifiers at any time through your Android device settings (Settings → Privacy → Ads).'),
+        p('For any questions or privacy inquiries, contact us at vaiiya@googlegroups.com.'),
       ],
     },
   ],

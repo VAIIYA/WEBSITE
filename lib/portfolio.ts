@@ -47,7 +47,7 @@ const p = (text: string): DescriptionBlock => ({ t: 'p', text })
 const h = (text: string): DescriptionBlock => ({ t: 'h', text })
 const ul = (...items: string[]): DescriptionBlock => ({ t: 'ul', items })
 
-const BRAND_CASING: Record<string, string> = { FEEDME: 'FeedMe', FLAPMOJI: 'FlapMoji', RELAY: 'RELAY', TAPEDECK: 'TapeDeck' }
+const BRAND_CASING: Record<string, string> = { FEEDME: 'FeedMe', FLAPMOJI: 'FlapMoji', RELAY: 'RELAY', TAPEDECK: 'TapeDeck', STICKTIC: 'STICKTIC' }
 
 /** "EMOJI BLOCKS" -> "Emoji Blocks", with brand casing such as "FeedMe". */
 export function displayName(name: string): string {
@@ -217,6 +217,50 @@ export const portfolioApps: PortfolioApp[] = [
     links: [{ label: 'Child safety standards', href: '/apps/feedme/child-safety' }],
   },
   {
+    id: 'relays',
+    name: 'RELAYS',
+    summary: 'Pure media, decentralized feeds. The calm, video and photo-first social experience on open relays.',
+    about: [
+      p('RELAYS is an open, media-first social feed designed for short videos and photography. Inspired by the vertical rhythm of modern video feeds, built on open, decentralized communication with no big tech algorithms dictating what you see.'),
+      h('Decentralized by design'),
+      p('Nobody owns your RELAYS account. You hold your own keys and connect directly to open Nostr relays across the globe. Your content belongs to you.'),
+      h('What you can do'),
+      ul(
+        'Immerse yourself in full-screen vertical video and high-resolution photo feeds',
+        'Post your favorite moments with videos and photos — pure media, no text-only clutter',
+        'React with likes and join conversations through threaded comments',
+        'Discover creators and media across open relays',
+        'Edit your profile with zero wallets or payments needed',
+      ),
+      h('Calm & Focused'),
+      ul(
+        'No notification spam',
+        'No crypto wallets, no zaps, no payment clutter',
+        'Free, with unobtrusive native ads between posts',
+      ),
+      h('Privacy & Safety'),
+      p('RELAYS is built for adults and maintains strict community standards. Read our privacy policy for full details on how media and data interact with open relays.'),
+      h('Good to know'),
+      ul(
+        'Media and interactions posted to open relays are public',
+        'Always back up your private key in your settings',
+      ),
+      p('Questions or feedback? Contact vaiiya@googlegroups.com.'),
+    ],
+    image: '/apps/relays/icon.png',
+    featureImage: '/apps/relays/feature.png',
+    gradient: 'from-amber-200 to-orange-400',
+    screenshots: [
+      { src: '/apps/relays/phone-1-feed.png', alt: 'Feed' },
+      { src: '/apps/relays/phone-2-search.png', alt: 'Search & Explore' },
+      { src: '/apps/relays/phone-3-profile.png', alt: 'Profile' },
+    ],
+    platforms: ['android'],
+    category: 'app',
+    status: 'in-development',
+    facts: { category: 'Social', ads: true },
+  },
+  {
     id: 'relay',
     name: 'RELAY',
     summary: 'Private messages without a big company watching. No phone number, no account.',
@@ -246,5 +290,47 @@ export const portfolioApps: PortfolioApp[] = [
     category: 'app',
     status: 'in-development',
     facts: { category: 'Communication', ads: false },
+  },
+  {
+    id: 'sticktic',
+    name: 'STICKTIC',
+    summary: 'Expressive sticker packs for WhatsApp. Browse, favourite and add in one tap.',
+    about: [
+      p('STICKTIC brings high-quality, expressive sticker packs straight to your WhatsApp chats. From cute animals and cozy vibes to memes and tech humor, find the right sticker for every mood and moment.'),
+      h('One tap to WhatsApp'),
+      p('No complicated export steps or third-party tools. Preview any pack, tap Add to WhatsApp, and the entire pack is ready in your WhatsApp sticker keyboard instantly.'),
+      h('Browse & discover'),
+      ul(
+        'Explore curated sticker packs across multiple themes: Animal, Cozy, Emoji, Meme, Tech and more',
+        'Fast search by hashtag (#animal, #coffee, #cat, #meme), sticker name or matching emoji',
+        'Save your favorite stickers with a quick tap to access them anytime in your favorites tray',
+        'Track your recent stickers and search history locally for instant re-use'
+      ),
+      h('Clean, lightweight & offline-ready'),
+      ul(
+        'Pure sticker focus with zero clutter, no accounts and no sign-up required',
+        'Smooth animations, light and dark theme support, and haptic feedback',
+        'Stickers are optimized in lightweight WebP format for fast loading and crisp resolution',
+        'Works offline once packs are downloaded to your device'
+      ),
+      h('Privacy first'),
+      p('STICKTIC respects your privacy. We do not access your WhatsApp chats, messages or contacts. All favorites and settings stay on your device.'),
+      p('Free to use, supported by occasional ads.'),
+      p('Questions or feedback? Contact vaiiya@googlegroups.com.'),
+    ],
+    image: '/apps/sticktic/icon.png',
+    featureImage: '/apps/sticktic/feature.png',
+    gradient: 'from-amber-300 to-rose-400',
+    screenshots: [
+      { src: '/apps/sticktic/promo-1.png', alt: 'Stickers for every mood' },
+      { src: '/apps/sticktic/promo-2.png', alt: 'Search by tag and keep favourites' },
+      { src: '/apps/sticktic/promo-3.png', alt: 'One tap export to WhatsApp' },
+    ],
+    platforms: ['android'],
+    category: 'app',
+    status: 'in-development',
+    tech: ['Flutter'],
+    facts: { category: 'Communication', rating: 'PEGI 3', ads: true },
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.stickmatic.app.stickmatic',
   },
 ]

@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
                         <p className="text-[#3D3D3A] leading-relaxed">
                             At VAIIYA, we take your digital sovereignty seriously. As a studio building mobile apps and games,
                             we are committed to transparency in how we collect and process your data. This policy applies to all
-                            products under the VAIIYA umbrella, including FlapMoji, HexMoji, Emoji Blocks, MatchMoji, TapeDeck and FeedMe.
+                            products under the VAIIYA umbrella, including FlapMoji, HexMoji, Emoji Blocks, MatchMoji, TapeDeck, FeedMe and STICKTIC.
                         </p>
                     </section>
 
@@ -85,7 +85,7 @@ export default function PrivacyPolicy() {
                     <section id="advertising">
                         <h2 className="font-serif text-3xl text-ink mb-5 pt-8 border-t border-[#D1CFC5]">5. Advertising</h2>
                         <p className="text-[#3D3D3A] leading-relaxed mb-4">
-                            Some of our apps and games, including <strong>FlapMoji</strong> and <strong>FeedMe</strong>, are free and supported by
+                            Some of our apps and games, including <strong>FlapMoji</strong>, <strong>FeedMe</strong> and <strong>STICKTIC</strong>, are free and supported by
                             advertising served through <strong>Google AdMob</strong>. To serve and measure
                             ads, the Google Mobile Ads SDK collects and shares your device&apos;s
                             <strong> advertising identifier</strong> along with standard technical
@@ -174,6 +174,35 @@ export default function PrivacyPolicy() {
                         </ul>
                         <p className="text-[#3D3D3A] leading-relaxed">
                             Questions about FeedMe or deletion? Contact us at{" "}
+                            <a href="mailto:vaiiya@googlegroups.com" className="text-[#C2603F] font-mono hover:text-ink transition-colors">
+                                vaiiya@googlegroups.com
+                            </a>.
+                        </p>
+                    </section>
+
+                    <section id="sticktic">
+                        <h2 className="font-serif text-3xl text-ink mb-5 pt-8 border-t border-[#D1CFC5]">STICKTIC: stickers, WhatsApp and device identifiers</h2>
+                        <p className="text-[#3D3D3A] leading-relaxed mb-4">
+                            This section applies specifically to our app <strong>STICKTIC</strong>. Each of our apps and games
+                            also has its own privacy policy page; the dedicated STICKTIC policy is at{" "}
+                            <a href="/apps/sticktic/privacy-policy" className="text-[#C2603F] hover:text-ink transition-colors">/apps/sticktic/privacy-policy</a>.
+                        </p>
+                        <ul className="list-disc list-inside space-y-3 text-[#3D3D3A] ml-2 mb-4">
+                            <li>
+                                <strong>No account required.</strong> STICKTIC requires no sign-up or login. Your favorite stickers, search history and recents are saved purely locally on your device.
+                            </li>
+                            <li>
+                                <strong>WhatsApp integration.</strong> Adding sticker packs transfers only the sticker image files to WhatsApp via the standard Android ContentProvider interface. STICKTIC never accesses your WhatsApp messages, contacts or account.
+                            </li>
+                            <li>
+                                <strong>Advertising &amp; Device IDs.</strong> STICKTIC is supported by advertising via Google AdMob. Google collects and shares your device&apos;s <strong>advertising identifier (Device or Other IDs)</strong> for ad delivery and measurement, as described in <a href="#advertising" className="text-[#C2603F] hover:text-ink transition-colors">Section 5</a>.
+                            </li>
+                            <li>
+                                <strong>Data Deletion.</strong> You can remove all locally stored data at any time by clearing the app data or uninstalling the app. You can reset your advertising ID via your Android settings.
+                            </li>
+                        </ul>
+                        <p className="text-[#3D3D3A] leading-relaxed">
+                            Questions about STICKTIC or deletion? Contact us at{" "}
                             <a href="mailto:vaiiya@googlegroups.com" className="text-[#C2603F] font-mono hover:text-ink transition-colors">
                                 vaiiya@googlegroups.com
                             </a>.

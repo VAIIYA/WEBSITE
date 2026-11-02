@@ -29,6 +29,17 @@ export default function ChildSafety() {
                     </section>
 
                     <section>
+                        <h2 className="font-serif text-3xl text-ink mb-5 pt-8 border-t border-[#D1CFC5]">Who stores what</h2>
+                        <p className="text-[#3D3D3A] leading-relaxed">
+                            Photos taken in SNAPMATIC are uploaded to a media host (a Blossom server operated by Primal), and
+                            posts, likes and comments travel across independent relays. We do not store them on servers of our
+                            own. The operators of those relays and media hosts are responsible for the content they store and
+                            can remove it from their servers. SNAPMATIC is responsible for what its own app shows, and we can
+                            also notify the operators involved when we confirm illegal content.
+                        </p>
+                    </section>
+
+                    <section>
                         <h2 className="font-serif text-3xl text-ink mb-5 pt-8 border-t border-[#D1CFC5]">What is not allowed</h2>
                         <p className="text-[#3D3D3A] leading-relaxed">
                             Any content or behaviour that sexualises, endangers or exploits minors, including CSAM, grooming,

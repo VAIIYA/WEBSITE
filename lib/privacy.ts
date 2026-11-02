@@ -154,6 +154,19 @@ export const privacySections: Record<string, PolicySection[]> = {
       ],
     },
     {
+      title: 'Services the app connects to',
+      blocks: [
+        p('SNAPMATIC does not run servers that store your photos, captions or comments. To work, the app connects to services that other parties run:'),
+        ul(
+          'Nostr relays: independent servers that store and pass on posts, likes and comments. They are run by many different people and organisations, and each relay decides for itself what it keeps or removes.',
+          'A feed and search service operated by Primal (primal.net): the app asks it for feeds, search results and profile information.',
+          'A media host (a Blossom server operated by Primal, blossom.primal.net): your photo is uploaded there when you press Post, and your post links to it.',
+        ),
+        p('Like any server you connect to, these services can see your device’s IP address and your public key. They have their own privacy practices, which we do not control. VAIIYA does not receive or store your photos, captions or comments on its own servers.'),
+        p('Because the network is decentralised, published content is held by those independent relays and hosts, and the party that operates a relay or media host is responsible for what it stores. What SNAPMATIC itself controls is what the app shows: you can report and mute in the app, and we can hide accounts for everyone through our blocklist. See our child safety standards for how we handle reports.'),
+      ],
+    },
+    {
       title: 'Advertising',
       blocks: [
         p('SNAPMATIC is free and supported by occasional ads between photos, always labelled “Sponsored”. To serve and measure ads, the app uses your device’s advertising identifier (advertising ID). ' + ADS_NOTE),

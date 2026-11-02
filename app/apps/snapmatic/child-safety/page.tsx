@@ -34,8 +34,13 @@ export default function ChildSafety() {
                             Photos taken in SNAPMATIC are uploaded to a media host (a Blossom server operated by Primal), and
                             posts, likes and comments travel across independent relays. We do not store them on servers of our
                             own. The operators of those relays and media hosts are responsible for the content they store and
-                            can remove it from their servers. SNAPMATIC is responsible for what its own app shows, and we can
-                            also notify the operators involved when we confirm illegal content.
+                            can remove it from their servers.
+                        </p>
+                        <p className="text-[#3D3D3A] leading-relaxed mt-4">
+                            SNAPMATIC is a client on the Nostr network, nothing more. We do our best within our own app:
+                            reporting, muting and our blocklist decide what the app shows, and we can notify the operators
+                            involved when we confirm illegal content. We cannot influence the Nostr network itself or the
+                            relays and media hosts that run it.
                         </p>
                     </section>
 

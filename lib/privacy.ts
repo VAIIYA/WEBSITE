@@ -163,7 +163,8 @@ export const privacySections: Record<string, PolicySection[]> = {
           'A media host (a Blossom server operated by Primal, blossom.primal.net): your photo is uploaded there when you press Post, and your post links to it.',
         ),
         p('Like any server you connect to, these services can see your device’s IP address and your public key. They have their own privacy practices, which we do not control. VAIIYA does not receive or store your photos, captions or comments on its own servers.'),
-        p('Because the network is decentralised, published content is held by those independent relays and hosts, and the party that operates a relay or media host is responsible for what it stores. What SNAPMATIC itself controls is what the app shows: you can report and mute in the app, and we can hide accounts for everyone through our blocklist. See our child safety standards for how we handle reports.'),
+        p('SNAPMATIC is a client on the Nostr network: an app for reading and publishing on it, nothing more. We do our best to keep our own app safe and pleasant, but we have no influence over the Nostr network itself or over the relays and media hosts that make it up. Because the network is decentralised, published content is held by those independent parties, and whoever operates a relay or media host is responsible for what it stores.'),
+        p('What we do control is what the app shows: you can report and mute in the app, and we can hide accounts for everyone through our blocklist. See our child safety standards for how we handle reports.'),
       ],
     },
     {

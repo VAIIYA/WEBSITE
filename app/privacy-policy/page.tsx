@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
                         <p className="text-[#3D3D3A] leading-relaxed">
                             At VAIIYA, we take your digital sovereignty seriously. As a studio building mobile apps and games,
                             we are committed to transparency in how we collect and process your data. This policy applies to all
-                            products under the VAIIYA umbrella, including FlapMoji, HexMoji, Emoji Blocks, MatchMoji, TapeDeck, FeedMe and STICKTIC.
+                            products under the VAIIYA umbrella, including FlapMoji, HexMoji, Emoji Blocks, MatchMoji, TapeDeck, FeedMe, SNAPMATIC and STICKTIC.
                         </p>
                     </section>
 
@@ -85,7 +85,7 @@ export default function PrivacyPolicy() {
                     <section id="advertising">
                         <h2 className="font-serif text-3xl text-ink mb-5 pt-8 border-t border-[#D1CFC5]">5. Advertising</h2>
                         <p className="text-[#3D3D3A] leading-relaxed mb-4">
-                            Some of our apps and games, including <strong>FlapMoji</strong>, <strong>FeedMe</strong> and <strong>STICKTIC</strong>, are free and supported by
+                            Some of our apps and games, including <strong>FlapMoji</strong>, <strong>FeedMe</strong>, <strong>SNAPMATIC</strong> and <strong>STICKTIC</strong>, are free and supported by
                             advertising served through <strong>Google AdMob</strong>. To serve and measure
                             ads, the Google Mobile Ads SDK collects and shares your device&apos;s
                             <strong> advertising identifier</strong> along with standard technical

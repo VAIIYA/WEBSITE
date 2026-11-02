@@ -129,6 +129,49 @@ export const privacySections: Record<string, PolicySection[]> = {
       ],
     },
   ],
+  snapmatic: [
+    {
+      title: 'Public photos and posts',
+      blocks: [
+        p('SNAPMATIC is a photo app. Photos, captions, hashtags, comments and likes are public by nature and can be seen by anyone.'),
+        p('SNAPMATIC is built on decentralized communication (Nostr). Your photos travel across an open network of independent servers and media hosts. We build and maintain the app; we do not operate that network, and we do not host your photos on our own servers.'),
+        p('Content published to the network cannot be changed or deleted by us once it has been broadcast. Do not post anything you do not want to share publicly.'),
+      ],
+    },
+    {
+      title: 'Your account and identity',
+      blocks: [
+        p('SNAPMATIC does not use an email-and-password account. Your account is a private key that only you hold, stored on your device. Back up your key in Settings: if you lose it, nobody can recover your account.'),
+        p('SNAPMATIC has no wallet and no payments, and it sends no push notifications.'),
+      ],
+    },
+    {
+      title: 'Camera and your photos',
+      blocks: [
+        p('Photos are taken with the in-app camera. SNAPMATIC does not read your photo gallery. Before a photo is shared, it is re-encoded so that location data (GPS) and other camera metadata are removed.'),
+        ul('Camera: to take the photos you post', 'Internet and network state: to connect to the network and load photos'),
+        p('SNAPMATIC does not access your contacts, your location, your microphone or your gallery.'),
+      ],
+    },
+    {
+      title: 'Advertising',
+      blocks: [
+        p('SNAPMATIC is free and supported by occasional ads between photos, always labelled “Sponsored”. To serve and measure ads, the app uses your device’s advertising identifier (advertising ID). ' + ADS_NOTE),
+      ],
+    },
+    {
+      title: 'How deletion works',
+      blocks: [
+        p('To delete your SNAPMATIC data from the app, wipe the key in the app. Once the key is wiped it cannot be recovered. Photos that were already published to the network may remain on independent servers and media hosts, which VAIIYA does not control.'),
+      ],
+    },
+    {
+      title: 'Age and safety',
+      blocks: [
+        p('SNAPMATIC is for adults aged 18 and over. You can mute accounts and report content in the app. Read how we handle reports in our child safety standards, linked below.'),
+      ],
+    },
+  ],
   relays: [
     {
       title: 'Public media and posts',

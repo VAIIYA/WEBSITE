@@ -148,9 +148,9 @@ export const privacySections: Record<string, PolicySection[]> = {
     {
       title: 'Camera and your photos',
       blocks: [
-        p('Photos are taken with the in-app camera. SNAPMATIC does not read your photo gallery. Before a photo is shared, it is re-encoded so that location data (GPS) and other camera metadata are removed.'),
+        p('Photos are taken with the in-app camera. SNAPMATIC does not scan or read your photo gallery in the background. Before a photo is shared, it is re-encoded so that location data (GPS) and other camera metadata are removed.'),
         ul('Camera: to take the photos you post', 'Internet and network state: to connect to the network and load photos'),
-        p('SNAPMATIC does not access your contacts, your location, your microphone or your gallery.'),
+        p('SNAPMATIC does not access your contacts or your location. It only uses the camera, and later the microphone, when you choose to record something.'),
       ],
     },
     {

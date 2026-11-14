@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/websites',
     '/podcast',
     '/privacy-policy',
+    '/account-deletion',
     '/terms',
     '/cookies',
     ...portfolioApps.map((a) => titlePath(a)),

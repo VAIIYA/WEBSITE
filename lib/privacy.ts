@@ -75,6 +75,101 @@ export const privacySections: Record<string, PolicySection[]> = {
       blocks: [p('You can reset your game data by clearing the app’s storage or uninstalling Matchmoji. For any other request, contact us.')],
     },
   ],
+  marblitz: [
+    {
+      title: 'Your data',
+      blocks: [
+        p('MARBLITZ does not require an account or sign-up. Your progress and settings live on your device.'),
+        p('In its Google Play Data safety section, MARBLITZ declares that it does not collect or share user data.'),
+      ],
+    },
+    {
+      title: 'Advertising',
+      blocks: [p('MARBLITZ is free to play. Optional rewarded ads give you an extra reroll; you never have to watch an ad to keep playing. ' + ADS_NOTE)],
+    },
+    {
+      title: 'Deleting your data',
+      blocks: [p('Because your progress is stored on your device, you can remove it at any time by clearing the app’s storage or uninstalling MARBLITZ. We hold no account data about you.')],
+    },
+  ],
+  'falling-marbles': [
+    {
+      title: 'Your data',
+      blocks: [
+        p('Falling Marbles has no account and no sign-up. Your levels, gems, unlocks and settings are stored on your device.'),
+        p('In its Google Play Data safety section, Falling Marbles declares that it collects and shares the following data, and that data is encrypted in transit:'),
+        ul('Device or other IDs (such as the advertising identifier)', 'App activity: app interactions', 'App info and performance: crash logs and diagnostics', 'Approximate location'),
+        p('This data is handled by the advertising and diagnostics services built into the game, as described in Section 5 of the general VAIIYA privacy policy.'),
+      ],
+    },
+    {
+      title: 'Advertising',
+      blocks: [p('Falling Marbles is free to play and contains ads. ' + ADS_NOTE)],
+    },
+    {
+      title: 'Deleting your data',
+      blocks: [
+        p('Your game progress is stored only on your device; clear the app’s storage or uninstall Falling Marbles to remove it. We do not hold an account for you, so there is no account data to delete. Advertising identifiers are handled by Google; you can reset or limit yours in your device settings (Android: Settings → Privacy → Ads). For any other request, contact us.'),
+      ],
+    },
+  ],
+  'mini-marbles': [
+    {
+      title: 'Your data',
+      blocks: [
+        p('Mini Marbles has no account and no sign-up. Your maps, stars, unlocks, achievements and settings are stored on your device.'),
+        p('In its Google Play Data safety section, Mini Marbles declares that it collects and shares the following data, and that data is encrypted in transit:'),
+        ul('Device or other IDs (such as the advertising identifier)', 'App activity: app interactions', 'App info and performance: diagnostics', 'Approximate location'),
+        p('This data is handled by the advertising and diagnostics services built into the game, as described in Section 5 of the general VAIIYA privacy policy.'),
+      ],
+    },
+    {
+      title: 'Advertising',
+      blocks: [p('Mini Marbles is free to play and contains ads. ' + ADS_NOTE)],
+    },
+    {
+      title: 'Deleting your data',
+      blocks: [
+        p('Your game progress is stored only on your device; clear the app’s storage or uninstall Mini Marbles to remove it. We do not hold an account for you, so there is no account data to delete. Advertising identifiers are handled by Google; you can reset or limit yours in your device settings (Android: Settings → Privacy → Ads). For any other request, contact us.'),
+      ],
+    },
+  ],
+  sumoji: [
+    {
+      title: 'Your data',
+      blocks: [
+        p('SUMOJI does not require an account or sign-up and works offline. Your progress, unlocked emoji themes and settings live on your device.'),
+        p('In its Google Play Data safety section, SUMOJI declares that it does not collect or share user data.'),
+      ],
+    },
+    {
+      title: 'Deleting your data',
+      blocks: [p('Because your progress is stored on your device, you can remove it at any time by clearing the app’s storage or uninstalling SUMOJI. We hold no account data about you.')],
+    },
+  ],
+  voxtape: [
+    {
+      title: 'Your podcasts',
+      blocks: [
+        p('VOXTAPE plays podcasts from RSS feeds. To show and play an episode, the app downloads the feed and audio directly from the podcast’s own publisher or host; those servers see a normal web request, as with any podcast player.'),
+        p('Your subscriptions, playback position and settings are stored on your device. VOXTAPE has no account and no sign-up.'),
+      ],
+    },
+    {
+      title: 'Other data',
+      blocks: [
+        p('In its Google Play Data safety section, VOXTAPE declares that it does not collect or share user data.'),
+      ],
+    },
+    {
+      title: 'Advertising',
+      blocks: [p('VOXTAPE contains ads. ' + ADS_NOTE)],
+    },
+    {
+      title: 'Deleting your data',
+      blocks: [p('Because your subscriptions and settings are stored on your device, you can remove them at any time by clearing the app’s storage or uninstalling VOXTAPE. We hold no account data about you.')],
+    },
+  ],
   tapedeck: [
     {
       title: 'Your recordings',

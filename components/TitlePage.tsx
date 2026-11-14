@@ -84,9 +84,12 @@ export default function TitlePage({ app }: { app: PortfolioApp }) {
       {app.screenshots && app.screenshots.length > 0 && (
         <section className="mx-auto max-w-site px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
           <h2 className="mb-10 font-serif text-4xl leading-tight sm:text-5xl">Screenshots</h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className={`grid gap-4 ${app.landscapeScreenshots ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-2 sm:grid-cols-4'}`}>
             {app.screenshots.map((shot) => (
-              <div key={shot.src} className="relative aspect-[9/16] overflow-hidden rounded-xl bg-[#F0EEE6]">
+              <div
+                key={shot.src}
+                className={`relative overflow-hidden rounded-xl bg-[#F0EEE6] ${app.landscapeScreenshots ? 'aspect-video' : 'aspect-[9/16]'}`}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={shot.src} alt={shot.alt} className="absolute inset-0 h-full w-full object-cover" />
               </div>

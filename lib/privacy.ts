@@ -134,6 +134,23 @@ export const privacySections: Record<string, PolicySection[]> = {
       ],
     },
   ],
+  pixeltris: [
+    {
+      title: 'Your data',
+      blocks: [
+        p('PIXELTRIS does not require an account or sign-up and plays fully offline. Your progress, trophies and settings live on your device.'),
+        p('In its Google Play Data safety section, PIXELTRIS declares that it does not collect or share user data.'),
+      ],
+    },
+    {
+      title: 'Advertising',
+      blocks: [p('PIXELTRIS contains ads. ' + ADS_NOTE)],
+    },
+    {
+      title: 'Deleting your data',
+      blocks: [p('Because your progress is stored on your device, you can remove it at any time by clearing the app’s storage or uninstalling PIXELTRIS. We hold no account data about you.')],
+    },
+  ],
   sumoji: [
     {
       title: 'Your data',

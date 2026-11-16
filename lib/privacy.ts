@@ -51,6 +51,29 @@ export const privacySections: Record<string, PolicySection[]> = {
       ],
     },
   ],
+  'jelly-chess': [
+    {
+      title: 'Your data',
+      blocks: [
+        p('Jelly Chess has no account and no sign-up. Your progress, stars, settings and chosen language stay on your device and are never sent to us.'),
+        p('Jelly Chess does not contain ads and does not use the advertising identifier. It is made for players of all ages, including children, and follows the Google Play Families policy.'),
+        p('The Unity services used by the game’s purchase library may process device identifiers and basic diagnostic data to keep the game working. We do not use this data for advertising and do not combine it with any personal information about you.'),
+      ],
+    },
+    {
+      title: 'Purchases',
+      blocks: [
+        p('The game has one optional one-time purchase, “Volledig spel”, which unlocks all lessons and opponents. Payments are handled by Google Play. We never see or store your card or payment details.'),
+        p('Before any purchase the game asks an adult question (a short multiplication) so that children cannot buy by accident. This check happens on the device and nothing is stored.'),
+      ],
+    },
+    {
+      title: 'Deleting your data',
+      blocks: [
+        p('Because your progress is stored only on your device, you can remove it at any time by clearing the app’s storage or uninstalling Jelly Chess. We hold no account data about you. A purchase can be restored on a new device through the same Google Play account.'),
+      ],
+    },
+  ],
   'emoji-blocks': [
     {
       title: 'Your data',

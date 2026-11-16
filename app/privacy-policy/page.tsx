@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
                         <p className="text-[#3D3D3A] leading-relaxed">
                             At VAIIYA, we take your digital sovereignty seriously. As a studio building mobile apps and games,
                             we are committed to transparency in how we collect and process your data. This policy applies to all
-                            products under the VAIIYA umbrella, including FlapMoji, HexMoji, Emoji Blocks, MatchMoji, TapeDeck, FeedMe, SNAPMATIC and STICKTIC.
+                            products under the VAIIYA umbrella, including FlapMoji, HexMoji, Emoji Blocks, MatchMoji, Jelly Chess, TapeDeck, FeedMe, SNAPMATIC and STICKTIC.
                         </p>
                     </section>
 

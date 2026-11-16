@@ -106,6 +106,11 @@ export default function PrivacyPolicy() {
                             FlapMoji has no account system. All game progress and settings are stored only on
                             your device and are never transmitted to us.
                         </p>
+                        <p className="text-[#3D3D3A] leading-relaxed mt-4">
+                            <strong>Jelly Chess</strong> contains no advertising and does not use the advertising identifier;
+                            see its{" "}
+                            <a href="/games/jelly-chess/privacy-policy" className="text-[#C2603F] hover:text-ink transition-colors">own privacy policy</a>.
+                        </p>
                     </section>
 
                     <section>

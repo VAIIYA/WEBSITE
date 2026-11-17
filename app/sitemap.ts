@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...portfolioApps.map((a) => titlePath(a)),
     ...portfolioApps.map((a) => `${titlePath(a)}/privacy-policy`),
     '/apps/feedme/child-safety',
+    '/apps/relays/child-safety',
   ]
 
   const staticEntries: MetadataRoute.Sitemap = routes.map((route) => ({

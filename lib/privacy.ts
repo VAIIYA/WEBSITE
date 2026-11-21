@@ -77,15 +77,15 @@ export const privacySections: Record<string, PolicySection[]> = {
   'emoji-blocks': [
     {
       title: 'Your data',
-      blocks: [p('In its Google Play Data safety section, Emoji Blocks declares that it does not collect or share user data.')],
+      blocks: [p('In its Google Play Data safety section, Emoji Blocks declares that it does not collect or share user data. The iPhone version on the App Store is a paid app and declares in its App Privacy details that it does not collect any data.')],
     },
     {
       title: 'Advertising',
-      blocks: [p('Emoji Blocks contains ads. ' + ADS_NOTE)],
+      blocks: [p('The Android version of Emoji Blocks contains ads. ' + ADS_NOTE), p('The iPhone version on the App Store is a paid app and contains no ads, no advertising identifier and no tracking.')],
     },
     {
       title: 'Deleting your data',
-      blocks: [p('We do not hold personal data about you for Emoji Blocks. You can reset your game data by clearing the app’s storage or uninstalling it. For any other request, contact us.')],
+      blocks: [p('We do not hold personal data about you for Emoji Blocks. You can reset your game data by clearing the app’s storage (Android) or deleting the app (iPhone). For any other request, contact us.')],
     },
   ],
   matchmoji: [

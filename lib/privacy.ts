@@ -13,6 +13,27 @@ const ADS_NOTE =
 
 /** Title-specific privacy policy sections, keyed by title id. */
 export const privacySections: Record<string, PolicySection[]> = {
+  'hamster-ball': [
+    {
+      title: 'Your data',
+      blocks: [
+        p('Hamster Ball has no account and no sign-up. Your progress, coins, unlocked skins and settings are saved on your device and are never sent to us.'),
+        p('We do not collect your name, e-mail address or location for the game itself.'),
+      ],
+    },
+    {
+      title: 'Advertising',
+      blocks: [p('Hamster Ball shows ads from Google AdMob: an optional rewarded ad and occasional interstitial ads. ' + ADS_NOTE + ' Before ads are shown, you see a consent form where you can choose your ad preferences, as required in the EEA, UK and Switzerland.')],
+    },
+    {
+      title: 'Deleting your data',
+      blocks: [p('Because your progress is stored on your device, you can remove it at any time by clearing the app’s storage or uninstalling Hamster Ball. We hold no account data about you.')],
+    },
+    {
+      title: 'Contact',
+      blocks: [p('For any questions or privacy inquiries, contact us at vaiiya@googlegroups.com.')],
+    },
+  ],
   hexmoji: [
     {
       title: 'Your data',
